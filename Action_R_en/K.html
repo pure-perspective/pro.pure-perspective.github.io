@@ -67,7 +67,7 @@
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                                 <li><a href="../CCC_en/main.html">The Superconducting Critical Coupling Constant Theory</a></li>
                                 <li><a href="../Action_C_en/main.html">Action Principle (Classical)</a></li>
-                                <li><a href="../Action_R_en/main.html">Action Principle (Relativistic)</a></li>
+                                <li class="active"><a href="../Action_R_en/main.html">Action Principle (Relativistic)</a></li>
                                 <li><a href="../Noether_en/main.html">Noether's Theorem</a></li>
                                 <li><a href="../STM_en/main.html">STM</a></li>
                             </ul>
@@ -83,7 +83,7 @@
                             </ul>
 
                         </li>
-                        <li  class="active"><a href="../About_en/main.html">About Me</a></li>
+                        <li><a href="../About_en/main.html">About Me</a></li>
                         <!--<li><a href="./QC_hardware/main.html">硬體導論</a></li>-->
                         <li><a href="../index.html">中文版</a></li>
                         
@@ -139,17 +139,24 @@ $$\phi 	o \phi +\delta \phi 、\partial _\mu  \phi 	o \partial _\mu  \phi +\delt
 The variation of the action is:
 
 $$\delta S=\delta \int   \mathcal{L}[\phi ,\partial _\mu  \phi ] d^4 x =\int   {\partial \mathcal{L} \over \partial \phi}  \delta \phi +{\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}  \delta \partial _\mu  \phi  d^4 x $$
-$$=\int   {\partial \mathcal{L} \over \partial \phi}  \delta \phi -\partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )} ight)\delta \phi  d^4 x +\int   \partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}  \delta \phi ight)  d^4 x $$
+$$=\int   {\partial \mathcal{L} \over \partial \phi}  \delta \phi -\partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )} 
+ight)\delta \phi  d^4 x +\int   \partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}  \delta \phi 
+ight)  d^4 x $$
 
-$$=\int   \left[{\partial \mathcal{L} \over \partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )} ight)ight]\delta \phi  d^4 x + ∮_{\partial V}   {\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}  \delta \phi  d^3 x $$
+$$=\int   \left[{\partial \mathcal{L} \over \partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )} 
+ight)
+ight]\delta \phi  d^4 x + ∮_{\partial V}   {\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}  \delta \phi  d^3 x $$
 
-$$=\int   \left[{\partial \mathcal{L} \over \partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )} ight)ight]\delta \phi  d^4 x +0$$
+$$=\int   \left[{\partial \mathcal{L} \over \partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )} 
+ight)
+ight]\delta \phi  d^4 x +0$$
 
 Since \(\delta \phi\) is arbitrary, for any classical physical quantity \(\phi\), it must satisfy the Euler-Lagrange equation:
 
 $${\partial \mathcal{L} \over \partial \phi} -\partial _\mu  {\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}=0$$
 
-Similarly, we can return to the example of the continuous field \(\mathcal{L}={1 \over 2} ho(\partial _t \eta )^2-{1 \over 2} Y( 
+Similarly, we can return to the example of the continuous field \(\mathcal{L}={1 \over 2} 
+ho(\partial _t \eta )^2-{1 \over 2} Y( 
 abla \eta )^2\), which satisfies:
 
 $${\partial \mathcal{L} \over \partial \phi} -\partial _t {\partial \mathcal{L}\over\partial (\partial _t \phi ) }- 
@@ -158,7 +165,8 @@ abla \phi ) }=0$$
 
 This quickly yields:
 
-$$-ho\partial _t^2 \eta +Y 
+$$-
+ho\partial _t^2 \eta +Y 
 abla ^2 \eta =0	o  
 abla ^2 \eta ={1\over v^2}  \partial _t^2 \eta $$
 
@@ -180,7 +188,8 @@ $$S=S_P+S_{PF}+S_F$$
 $$=-\int   P_\mu  U^\mu  d	au  -\int   {e\over c}  A_\mu  U^\mu  d	au  -\int   {1 \over 16 \pi c} F_{\mu 
 u}  F^{\mu 
 u}   d^4 x $$
-$$=\int   -ho_m c-{1 \over c^2}  A_\mu  J^\mu -{1 \over 16 \pi c} F_{\mu 
+$$=\int   -
+ho_m c-{1 \over c^2}  A_\mu  J^\mu -{1 \over 16 \pi c} F_{\mu 
 u}  F^{\mu 
 u}   d^4 x $$
 
@@ -195,14 +204,17 @@ u\) are in \(S_P\) and \(S_{PF}\), so we handle them:
 
 $$\mathcal{L}=-P_\mu  U^\mu -{e\over c}  A_\mu  U^\mu $$
 
-$${\partial \left(-{e\over c}  A_\mu  U^\mu  ight)\over\partial x^
-u} -{d\over d	au}  {\partial \left(-P_\mu  U^\mu -{e\over c}  A_\mu  U^\mu  ight)\over\partial U^
+$${\partial \left(-{e\over c}  A_\mu  U^\mu  
+ight)\over\partial x^
+u} -{d\over d	au}  {\partial \left(-P_\mu  U^\mu -{e\over c}  A_\mu  U^\mu  
+ight)\over\partial U^
 u  }=0$$
 
 $$	o -{e\over c}  U^\mu  (\partial _
 u A_\mu  )-{d\over d	au}  \left(-P_
 u-{e\over c}  A_
-u  ight)=0$$
+u  
+ight)=0$$
 $$	o-{e\over c}  U^\mu  (\partial _
 u A_\mu  )+{dP_
 u \over d	au } +{e\over c}   {dA_
@@ -232,7 +244,8 @@ $$\partial ^\mu  {\partial \mathcal{L}\over \partial (\partial ^\mu  A^
 u  ) }-{\partial \mathcal{L} \over \partial A^
 u   }=0$$
 $$\partial ^\mu  \left[-{1 \over 8 \pi c} F_{lphaeta}   {\partial F^{lphaeta}\over \partial (\partial ^\mu  A^
-u)  } ight]+{1 \over c^2}  J_
+u)  } 
+ight]+{1 \over c^2}  J_
 u=0$$
 
 Since:
@@ -246,11 +259,13 @@ u$$
 We have:
 
 $$\partial ^\mu  \left[-{1 \over 8 \pi c} F_{lphaeta}  ( \delta ^lpha _\mu   \delta ^eta  _nu- \delta ^eta  _\mu   \delta ^lpha _
-u )ight]+{1 \over c^2}  J_
+u )
+ight]+{1 \over c^2}  J_
 u=0$$
 $$\partial ^\mu  \left[-{1 \over 8 \pi c} F_{\mu
 u}+{1 \over 8 \pi c} F_{
-u\mu}  ight]+{1 \over c^2}  J_
+u\mu}  
+ight]+{1 \over c^2}  J_
 u=0$$
 
 Since \(-F_{\mu
@@ -258,7 +273,8 @@ u}=F_{
 u\mu}\):
 
 $$\partial ^\mu  \left[{1 \over 4 \pi c} F_{
-u\mu}  ight]+{1 \over c^2}  J_
+u\mu}  
+ight]+{1 \over c^2}  J_
 u=0$$
 $$\partial _
 u  F^{\mu 

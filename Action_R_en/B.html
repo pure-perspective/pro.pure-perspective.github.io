@@ -67,7 +67,7 @@
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                                 <li><a href="../CCC_en/main.html">The Superconducting Critical Coupling Constant Theory</a></li>
                                 <li><a href="../Action_C_en/main.html">Action Principle (Classical)</a></li>
-                                <li><a href="../Action_R_en/main.html">Action Principle (Relativistic)</a></li>
+                                <li class="active"><a href="../Action_R_en/main.html">Action Principle (Relativistic)</a></li>
                                 <li><a href="../Noether_en/main.html">Noether's Theorem</a></li>
                                 <li><a href="../STM_en/main.html">STM</a></li>
                             </ul>
@@ -83,7 +83,7 @@
                             </ul>
 
                         </li>
-                        <li  class="active"><a href="../About_en/main.html">About Me</a></li>
+                        <li><a href="../About_en/main.html">About Me</a></li>
                         <!--<li><a href="./QC_hardware/main.html">硬體導論</a></li>-->
                         <li><a href="../index.html">中文版</a></li>
                         
@@ -127,7 +127,8 @@
 
 <p style="text-align:justify">
 
-In this section, we aim to explore how a charged particle moves under a given EM Field (note that "given EM Field" means we do not vary the EM Field itself). In relativistic electrodynamics, we write the 4-Potential as \(A = A^\mu  \hat{e} _\mu =\left(\phi,\overrightarrow{A}ight)\), using Gaussian units here. The Action \(S_{PF}\) for the interaction of the charged particle is written as:
+In this section, we aim to explore how a charged particle moves under a given EM Field (note that "given EM Field" means we do not vary the EM Field itself). In relativistic electrodynamics, we write the 4-Potential as \(A = A^\mu  \hat{e} _\mu =\left(\phi,\overrightarrow{A}
+ight)\), using Gaussian units here. The Action \(S_{PF}\) for the interaction of the charged particle is written as:
 
 $$S_{PF}=\int _a^b  -{e \over c}  A_\mu  d\eta ^\mu   $$
 
@@ -162,7 +163,8 @@ $$\delta d\eta ^\mu =d\delta \eta ^\mu $$
 and perform integration by parts, where the boundary term vanishes:
 
 $$\delta S_{PF}=-{e\over c}  \int _a^b  \delta A_\mu \cdot d\eta ^\mu   -{e\over c}  \int _a^b  A_\mu \cdot d\delta \eta ^\mu  $$
-$$ =-{e\over c}  \int _a^b  \delta A_\mu \cdot d\eta ^\mu    \color{red}{ -\left[{e\over c}  A_\mu \cdot \delta \eta ^\mu ight]  \Big|_a^b}+{e\over c}  \int _a^b   dA _\mu \cdot \delta \eta ^\mu  $$ 
+$$ =-{e\over c}  \int _a^b  \delta A_\mu \cdot d\eta ^\mu    \color{red}{ -\left[{e\over c}  A_\mu \cdot \delta \eta ^\mu 
+ight]  \Big|_a^b}+{e\over c}  \int _a^b   dA _\mu \cdot \delta \eta ^\mu  $$ 
 
 Using Thm.3, multiplying and dividing by \(d	au \) does not affect the variation:
 
@@ -193,7 +195,8 @@ u  d	au \cdot \delta \eta ^\mu$$
 $$=-{e\over c}  \int _a^b  (\partial _
 u  A_\mu  ) u^\mu  \delta \eta ^
 u  d	au  +{e\over c}  \int _a^b  \left(\partial _
-u  A_\mu  ight) U^
+u  A_\mu  
+ight) U^
 u  \delta \eta ^\mu  d	au $$ 
 
 We want to factor out the variation \(\delta \eta ^
@@ -203,7 +206,8 @@ u\). By swapping \(\mu\) and \(
 u\) in the first term, we can combine the terms:
 
 $$\delta S_{PF}=-{e\over c}  \int _a^b  \left(\partial _\color{red}{\mu}  A_\color{red}{
-u}  ight) U^\color{red}{
+u}  
+ight) U^\color{red}{
 u}  \delta \eta ^\color{red}{\mu}  d	au  +{e\over c}  \int _a^b  (\partial _
 u  A_\mu  ) U^
 u  \delta \eta ^\mu  d	au $$
@@ -220,23 +224,28 @@ Thus:
 
 $$\delta S_P+\delta S_{PF}=\int _a^b  m {dU_\mu \over d	au}   \delta \eta ^\mu  d	au -{e\over c}  \int _a^b  \left(\partial _\mu  A_
 u -\partial _
-u  A_\mu  ight) U^
+u  A_\mu  
+ight) U^
 u  \delta \eta ^\mu  d	au  $$
 $$=\int _a^b \left[m {dU_\mu \over d	au} -{e\over c}  \left(\partial _\mu  A_
 u -\partial _
-u  A_\mu  ight) U^
-u  ight]  \delta \eta ^\mu  d	au =0$$
+u  A_\mu  
+ight) U^
+u  
+ight]  \delta \eta ^\mu  d	au =0$$
 
 We obtain:
 
 $$m {dU_\mu \over d	au} -{e\over c}  \left(\partial _\mu  A_
 u -\partial _
-u  A_\mu  ight) U^
+u  A_\mu  
+ight) U^
 u =0$$
 
 $$m {dU_\mu \over d	au} ={e\over c}  \left(\partial _\mu  A_
 u -\partial _
-u  A_\mu  ight) U^
+u  A_\mu  
+ight) U^
 u \equiv {e\over c}  F_{\mu 
 u}  U^
 u $$
@@ -258,19 +267,24 @@ abla 	imes \overrightarrow{A} $$
 Where:
 
 $$A_
-u 	o \left(\phi,-A_x,-A_y,-A_z ight)$$
-$$\partial _\mu 	o \left({\partial \over \partial x^0},{\partial \over \partial x^1 },{\partial \over \partial x^2},{\partial \over \partial x^3 }ight)=\left({\partial \over \partial ct},{\partial \over \partial x },{\partial \over \partial y},{\partial \over \partial z }ight)$$
+u 	o \left(\phi,-A_x,-A_y,-A_z 
+ight)$$
+$$\partial _\mu 	o \left({\partial \over \partial x^0},{\partial \over \partial x^1 },{\partial \over \partial x^2},{\partial \over \partial x^3 }
+ight)=\left({\partial \over \partial ct},{\partial \over \partial x },{\partial \over \partial y},{\partial \over \partial z }
+ight)$$
 
 We can calculate:
 
 $$F_{\mu 
 u} =\partial _\mu  A_
 u -\partial _
-u  A_\mu =\left(egin{matrix}0 & E_x & E_y & E_z\ -E_x & 0 & -B_z & B_y \ -E_y & B_z & 0 & -B_x \ -E_z & -B_y & B_x & 0 \end{matrix}ight)$$
+u  A_\mu =\left(egin{matrix}0 & E_x & E_y & E_z\ -E_x & 0 & -B_z & B_y \ -E_y & B_z & 0 & -B_x \ -E_z & -B_y & B_x & 0 \end{matrix}
+ight)$$
 $$F^{\mu 
 u} =\partial ^\mu  A^
 u -\partial ^
-u  A^\mu =\left(egin{matrix}0 & -E_x & -E_y & -E_z\ E_x & 0 & -B_z & B_y \ E_y & B_z & 0 & -B_x \ E_z & -B_y & B_x & 0 \end{matrix}ight)$$
+u  A^\mu =\left(egin{matrix}0 & -E_x & -E_y & -E_z\ E_x & 0 & -B_z & B_y \ E_y & B_z & 0 & -B_x \ E_z & -B_y & B_x & 0 \end{matrix}
+ight)$$
 
 </p>
 

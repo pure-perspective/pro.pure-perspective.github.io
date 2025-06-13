@@ -67,7 +67,7 @@
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                                 <li><a href="../CCC_en/main.html">The Superconducting Critical Coupling Constant Theory</a></li>
                                 <li><a href="../Action_C_en/main.html">Action Principle (Classical)</a></li>
-                                <li><a href="../Action_R_en/main.html">Action Principle (Relativistic)</a></li>
+                                <li class="active"><a href="../Action_R_en/main.html">Action Principle (Relativistic)</a></li>
                                 <li><a href="../Noether_en/main.html">Noether's Theorem</a></li>
                                 <li><a href="../STM_en/main.html">STM</a></li>
                             </ul>
@@ -83,7 +83,7 @@
                             </ul>
 
                         </li>
-                        <li  class="active"><a href="../About_en/main.html">About Me</a></li>
+                        <li><a href="../About_en/main.html">About Me</a></li>
                         <!--<li><a href="./QC_hardware/main.html">硬體導論</a></li>-->
                         <li><a href="../index.html">中文版</a></li>
                         
@@ -136,64 +136,89 @@ Where \(\eta_n\) is the amplitude at position \(n\), and \(\eta  ̇_n\) is the v
 
 In the continuous field, the Lagrangian is:
 
-$$\mathcal{L}=\int   {1 \over 2} ho\left({\partial \eta \over\partial t}ight)^2-{1 \over 2} Y\left({\partial \eta \over\partial x}ight)^2 dx $$
+$$\mathcal{L}=\int   {1 \over 2} 
+ho\left({\partial \eta \over\partial t}
+ight)^2-{1 \over 2} Y\left({\partial \eta \over\partial x}
+ight)^2 dx $$
 
-Where \(ho\) is the mass density, and \(Y\) is the Young's modulus.<br>
+Where \(
+ho\) is the mass density, and \(Y\) is the Young's modulus.<br>
  
 <a href="../Image/PoLA/P36.png"><img src="../Image/PoLA/P36.png" alt="Substitute text" width=98% height="auto"></a><br>
 
 In three dimensions, the Lagrangian is:
 
-$$\mathcal{L}=\int   {1 \over 2} ho(\partial _t \eta )^2-{1 \over 2} Y( 
+$$\mathcal{L}=\int   {1 \over 2} 
+ho(\partial _t \eta )^2-{1 \over 2} Y( 
 abla \eta )^2 dV$$ 
 
-It is evident that the Lagrangian density \(\mathcal{L}={1 \over 2} ho(\partial _t \eta )^2-{1 \over 2} Y( 
+It is evident that the Lagrangian density \(\mathcal{L}={1 \over 2} 
+ho(\partial _t \eta )^2-{1 \over 2} Y( 
 abla \eta )^2\). Similarly, we can use the variational principle to obtain the equation of motion for the continuous field. The action is:
 
-$$S=\int   Ld^4 x =\int   {1 \over 2} ho(\partial _t \eta )^2-{1 \over 2} Y( 
+$$S=\int   Ld^4 x =\int   {1 \over 2} 
+ho(\partial _t \eta )^2-{1 \over 2} Y( 
 abla \eta )^2 d^4 x $$
 
 Varying the field amplitude \(\eta (x^\mu  )	o \eta (x^\mu  )+\delta \eta (x^\mu  )\), the action should be an extremum:
  
-$$\delta S=\delta \int   {1 \over 2} ho(\partial _t \eta )^2-{1 \over 2} Y( 
+$$\delta S=\delta \int   {1 \over 2} 
+ho(\partial _t \eta )^2-{1 \over 2} Y( 
 abla \eta )^2 d^4 x $$
-$$=\int   ho\partial _t \eta *\delta (\partial _t \eta )-Y 
+$$=\int   
+ho\partial _t \eta *\delta (\partial _t \eta )-Y 
 abla \eta *\delta ( 
 abla \eta ) d^4 x $$
 
 Exchanging the variation and differentiation:
 
-$$=\int   ho\partial _t \eta \partial _t (\delta \eta )-Y 
+$$=\int   
+ho\partial _t \eta \partial _t (\delta \eta )-Y 
 abla \eta  
 abla (\delta \eta ) d^4 x $$
-$$=\int   ho\partial _t \eta \partial _t (\delta \eta ) d^4 x -\int   Y 
+$$=\int   
+ho\partial _t \eta \partial _t (\delta \eta ) d^4 x -\int   Y 
 abla \eta  
 abla (\delta \eta ) d^4 x $$
-$$=\int   \partial _t (ho\partial _t \eta \delta \eta ) d^4 x -\int   \partial _t (ho\partial _t \eta )*\delta \eta d^4 x -\int    
+$$=\int   \partial _t (
+ho\partial _t \eta \delta \eta ) d^4 x -\int   \partial _t (
+ho\partial _t \eta )*\delta \eta d^4 x -\int    
 abla (Y 
 abla \eta \delta \eta ) d^4 x +\int    
 abla (Y\eta )*\delta \eta d^4 x $$
-$$=\left[-\int   \partial _t (ho\partial _t \eta )*\delta \eta d^4 x +\int    
-abla (Y\eta )*\delta \eta d^4 x ight]+\left[\int   \partial _t (ho\partial _t \eta \delta \eta ) d^4 x -\int    
+$$=\left[-\int   \partial _t (
+ho\partial _t \eta )*\delta \eta d^4 x +\int    
+abla (Y\eta )*\delta \eta d^4 x 
+ight]+\left[\int   \partial _t (
+ho\partial _t \eta \delta \eta ) d^4 x -\int    
 abla (Y 
-abla \eta \delta \eta ) d^4 x ight]$$
+abla \eta \delta \eta ) d^4 x 
+ight]$$
 
 The boundary terms, using integration by parts, give:
 
-$$=-\int   \left[ho\partial _t^2 \eta -Y 
-abla ^2 \eta ight]*\delta \eta d^4 x +\left[\int   ho\partial _t \eta \delta \eta d^3 x \Big|_{t_1}^{t_2}- \int   Y 
-abla \eta \delta \eta d^3 x \Big|_{\partial x,\partial y,\partial z} ight]$$
-$$=-\int   [ho\partial _t^2 \eta -Y 
+$$=-\int   \left[
+ho\partial _t^2 \eta -Y 
+abla ^2 \eta 
+ight]*\delta \eta d^4 x +\left[\int   
+ho\partial _t \eta \delta \eta d^3 x \Big|_{t_1}^{t_2}- \int   Y 
+abla \eta \delta \eta d^3 x \Big|_{\partial x,\partial y,\partial z} 
+ight]$$
+$$=-\int   [
+ho\partial _t^2 \eta -Y 
 abla ^2 \eta ]*\delta \eta d^4 x +0$$
 
 Since \(\delta \eta\) is arbitrary, we obtain:
 
-$$ho\partial _t^2 \eta -Y 
+$$
+ho\partial _t^2 \eta -Y 
 abla ^2 \eta =0$$
 $$ 
-abla ^2 \eta ={ho \over Y} \partial _t^2 \eta $$
+abla ^2 \eta ={
+ho \over Y} \partial _t^2 \eta $$
 
-Setting \(v=\sqrt{{Y\over ho}}\):
+Setting \(v=\sqrt{{Y\over 
+ho}}\):
 
 $$
 abla ^2 \eta ={1\over v^2}  \partial _t^2 \eta $$

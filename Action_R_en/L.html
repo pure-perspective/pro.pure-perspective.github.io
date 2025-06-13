@@ -67,7 +67,7 @@
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                                 <li><a href="../CCC_en/main.html">The Superconducting Critical Coupling Constant Theory</a></li>
                                 <li><a href="../Action_C_en/main.html">Action Principle (Classical)</a></li>
-                                <li><a href="../Action_R_en/main.html">Action Principle (Relativistic)</a></li>
+                                <li class="active"><a href="../Action_R_en/main.html">Action Principle (Relativistic)</a></li>
                                 <li><a href="../Noether_en/main.html">Noether's Theorem</a></li>
                                 <li><a href="../STM_en/main.html">STM</a></li>
                             </ul>
@@ -83,7 +83,7 @@
                             </ul>
 
                         </li>
-                        <li  class="active"><a href="../About_en/main.html">About Me</a></li>
+                        <li><a href="../About_en/main.html">About Me</a></li>
                         <!--<li><a href="./QC_hardware/main.html">硬體導論</a></li>-->
                         <li><a href="../index.html">中文版</a></li>
                         
@@ -127,7 +127,8 @@
 <p style="text-align:justify">
 As mentioned earlier, adding a total time derivative term \(f=f(q,t)\) to the Lagrangian does not change the EoM. There is a corresponding extension in field theory, where \(\mathcal{L}	o ar{\mathcal{L}} =\mathcal{L}+\partial _\mu  f^\mu\). It is important to note that \(f^\mu =f^\mu  (\phi ,x^\mu  )\) can only be a function of \((\phi ,x^\mu  )\). This can be analyzed from two perspectives. The first is the simplest, considering the boundary of variation:
 
-$$\delta S=\delta \int   (\mathcal{L}+\partial _\mu  f^\mu  ) d^4 x =\delta \left[\int  \mathcal{L}d^4 x +\int   \partial _\mu  f^\mu  d^4 x ight]$$
+$$\delta S=\delta \int   (\mathcal{L}+\partial _\mu  f^\mu  ) d^4 x =\delta \left[\int  \mathcal{L}d^4 x +\int   \partial _\mu  f^\mu  d^4 x 
+ight]$$
 $$=\delta \int _a^b \mathcal{L}dt+\delta ∮ f^\mu   d^3 S_\mu =\delta \int _a^b \mathcal{L}dt$$
 
 Where \(\int   \partial _\mu  f^\mu  d^4 x =∮ f^\mu   d^3 S_\mu \) uses Gauss's theorem, and \(\delta ∮ f^\mu   d^3 S_\mu =0\) comes from the invariance of boundary variation.
@@ -152,19 +153,26 @@ $${\partial (\partial _\mu  f^\mu  )\over\partial (\partial _\mu  \phi )} ={\par
 
 Additionally,
 
-$${\partial (\partial _\mu  f^\mu  )\over\partial \phi }\Big|_{x^\mu}={ \partial \over\partial \phi }\Big|_{x^\mu} \left({\partial f^\mu \over\partial \phi }\Big|_{x^\mu } \partial _\mu  \phi + {\partial f^\mu \over\partial x^\mu  }\Big|_\phiight) $$
-$$={ \partial \over\partial \phi }\Big|_{x^\mu} \left({\partial f^\mu \over\partial \phi }\Big|_{x^\mu } ight)\partial _\mu  \phi +{\partial \over\partial \phi}\Big|_{x^\mu  }\left( {\partial f^\mu \over\partial x^\mu  }\Big|_\phi ight)$$
+$${\partial (\partial _\mu  f^\mu  )\over\partial \phi }\Big|_{x^\mu}={ \partial \over\partial \phi }\Big|_{x^\mu} \left({\partial f^\mu \over\partial \phi }\Big|_{x^\mu } \partial _\mu  \phi + {\partial f^\mu \over\partial x^\mu  }\Big|_\phi
+ight) $$
+$$={ \partial \over\partial \phi }\Big|_{x^\mu} \left({\partial f^\mu \over\partial \phi }\Big|_{x^\mu } 
+ight)\partial _\mu  \phi +{\partial \over\partial \phi}\Big|_{x^\mu  }\left( {\partial f^\mu \over\partial x^\mu  }\Big|_\phi 
+ight)$$
 
 $$={ \partial \over\partial \phi }\Big|_{x^\mu  } {\partial f^\mu \over\partial \phi }\Big|_{x^\mu } \partial _\mu  \phi +{ \partial \over\partial x^\mu  }\Big|_\phi  { \partial f^\mu \over\partial \phi} \Big|_{x^\mu } $$
-$$=\partial _\mu \left( {\partial f^\mu \over\partial \phi} ight)	o \partial _\mu and {\partial\over\partial \phi} commute$$
+$$=\partial _\mu \left( {\partial f^\mu \over\partial \phi} 
+ight)	o \partial _\mu and {\partial\over\partial \phi} commute$$
 
 Thus,
 
-$${\partial (\partial _\mu  f^\mu  )\over\partial \phi} -\partial _\mu  \left({\partial (\partial _\mu  f^\mu  )\over\partial (\partial _\mu  \phi ) }ight)=\partial _\mu   {\partial f^\mu \over\partial \phi} -\partial _\mu {\partial f^\mu \over\partial \phi} =0 $$
+$${\partial (\partial _\mu  f^\mu  )\over\partial \phi} -\partial _\mu  \left({\partial (\partial _\mu  f^\mu  )\over\partial (\partial _\mu  \phi ) }
+ight)=\partial _\mu   {\partial f^\mu \over\partial \phi} -\partial _\mu {\partial f^\mu \over\partial \phi} =0 $$
 
 Therefore,
 
-$${\partial (\mathcal{L}+\partial _\mu  f^\mu  )\over\partial \phi }-\partial _\mu \left({ (\partial (L+\partial _\mu  f^\mu  )\over\partial (\partial _\mu  \phi )}ight)={\partial \mathcal{L}\over\partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi ) }ight)=0$$
+$${\partial (\mathcal{L}+\partial _\mu  f^\mu  )\over\partial \phi }-\partial _\mu \left({ (\partial (L+\partial _\mu  f^\mu  )\over\partial (\partial _\mu  \phi )}
+ight)={\partial \mathcal{L}\over\partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi ) }
+ight)=0$$
 
 Adding \(\partial _\mu  f^\mu \) does not change the EoM.
 </p>

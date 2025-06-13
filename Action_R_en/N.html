@@ -67,7 +67,7 @@
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                                 <li><a href="../CCC_en/main.html">The Superconducting Critical Coupling Constant Theory</a></li>
                                 <li><a href="../Action_C_en/main.html">Action Principle (Classical)</a></li>
-                                <li><a href="../Action_R_en/main.html">Action Principle (Relativistic)</a></li>
+                                <li class="active"><a href="../Action_R_en/main.html">Action Principle (Relativistic)</a></li>
                                 <li><a href="../Noether_en/main.html">Noether's Theorem</a></li>
                                 <li><a href="../STM_en/main.html">STM</a></li>
                             </ul>
@@ -83,7 +83,7 @@
                             </ul>
 
                         </li>
-                        <li  class="active"><a href="../About_en/main.html">About Me</a></li>
+                        <li><a href="../About_en/main.html">About Me</a></li>
                         <!--<li><a href="./QC_hardware/main.html">硬體導論</a></li>-->
                         <li><a href="../index.html">中文版</a></li>
                         
@@ -159,20 +159,27 @@ $$={{\partial \mathcal{L}\over\partial \phi}  \delta \phi +{\partial \mathcal{L}
 
 Using \(\partial _\mu \) to bring to the front:
 
-$$={{\partial \mathcal{L}\over\partial \phi}  \delta \phi -\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )} ight)\delta \phi +\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi ight)}+{{\partial \mathcal{L}\over \partial x^\mu  } \delta x^\mu  }$$
+$$={{\partial \mathcal{L}\over\partial \phi}  \delta \phi -\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )} 
+ight)\delta \phi +\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi 
+ight)}+{{\partial \mathcal{L}\over \partial x^\mu  } \delta x^\mu  }$$
 
-Note that \(\left[{\partial \mathcal{L}\over\partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )} ight)ight]\delta \phi\) is the Euler-Lagrange equation, which equals zero. Therefore:
+Note that \(\left[{\partial \mathcal{L}\over\partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )} 
+ight)
+ight]\delta \phi\) is the Euler-Lagrange equation, which equals zero. Therefore:
 
-$$\delta \mathcal{L}=\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi ight)+\partial _\mu  \mathcal{L}*\delta x^\mu $$
+$$\delta \mathcal{L}=\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi 
+ight)+\partial _\mu  \mathcal{L}*\delta x^\mu $$
 
 The second term, \(\delta d^4 x\), involves the Jacobian:
 
 $$\int  \mathcal{L}\delta d^4 x =\int  \mathcal{L}d^4 ar{x}  -\int  \mathcal{L}d^4 x $$
 $$d^4 ar{x}=J\left({\partial  ar{x} ^\mu \over\partial x^
-u  }ight) d^4 x$$
+u  }
+ight) d^4 x$$
 
 \(J\left({\partial  ar{x} ^\mu \over\partial x^
-u  }ight)\) is the Jacobian determinant:
+u  }
+ight)\) is the Jacobian determinant:
 
 $${\partial  ar{x} ^\mu \over\partial x^
 u  }={\partial (x^\mu +\delta x^\mu  )\over\partial x^
@@ -183,7 +190,8 @@ u  \delta x^\mu $$
 The Jacobian determinant is calculated as:
 
 $$J\left({\partial  ar{x} ^\mu \over\partial x^
-u  }ight)=1+\partial _\mu  \delta x^\mu $$
+u  }
+ight)=1+\partial _\mu  \delta x^\mu $$
 
 So:
 
@@ -191,29 +199,44 @@ $$\int  \mathcal{L}\delta d^4 x =\int  \mathcal{L}*\partial  _\mu  \delta x^\mu 
 
 Combining the two terms:
 
-$$\delta S=\delta \int   \mathcal{L}d^4 x =\int   \left[\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi ight)+\partial _\mu  \mathcal{L}*\delta x^\mu  ight] d^4 x +\int   \left[\mathcal{L} *\partial  _\mu  \delta x^\mu  ight]  d^4 x $$
+$$\delta S=\delta \int   \mathcal{L}d^4 x =\int   \left[\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi 
+ight)+\partial _\mu  \mathcal{L}*\delta x^\mu  
+ight] d^4 x +\int   \left[\mathcal{L} *\partial  _\mu  \delta x^\mu  
+ight]  d^4 x $$
 
-$$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi ight)+\partial _\mu  (\mathcal{L}\delta x^\mu  )  d^4 x $$
-$$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi +\mathcal{L}\delta x^\mu  ight)  d^4 x $$
-$$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Delta\phi -\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}ight)\delta x^lpha ight)  d^4 x$$
+$$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi 
+ight)+\partial _\mu  (\mathcal{L}\delta x^\mu  )  d^4 x $$
+$$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi +\mathcal{L}\delta x^\mu  
+ight)  d^4 x $$
+$$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Delta\phi -\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}
+ight)\delta x^lpha 
+ight)  d^4 x$$
 
 Set
 
-$$\left(egin{matrix} \delta x^lpha \ \Delta\phi \end{matrix}ight)=arepsilon\left(egin{matrix} Χ^lpha \ \Psi \end{matrix}ight)$$
+$$\left(egin{matrix} \delta x^lpha \ \Delta\phi \end{matrix}
+ight)=arepsilon\left(egin{matrix} Χ^lpha \ \Psi \end{matrix}
+ight)$$
 
 \(Χ^lpha\) and \(\Psi\) are symmetry generators:
 
-$$\delta S=arepsilon \int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Psi-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}ight) Χ^lpha ight)  d^4 x =0$$
+$$\delta S=arepsilon \int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Psi-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}
+ight) Χ^lpha 
+ight)  d^4 x =0$$
 
 Since \(arepsilon \) is arbitrary:
 
-$$\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Psi-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}ight) Χ^lpha ight)\equiv \partial _\mu  N^\mu =0$$
+$$\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Psi-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}
+ight) Χ^lpha 
+ight)\equiv \partial _\mu  N^\mu =0$$
 
 Define the Noether current:
 
-$$N^\mu \equiv {\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Psi-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}ight) Χ^lpha $$
+$$N^\mu \equiv {\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Psi-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}
+ight) Χ^lpha $$
 
-Where \({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}\) corresponds to the conserved current for the symmetry transformation \(\Psi\) of the field \(\phi\), and \(\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}ight)\) corresponds to the conserved current under the transformation \(Χ^lpha\) of spacetime \(x^\mu\).
+Where \({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}\) corresponds to the conserved current for the symmetry transformation \(\Psi\) of the field \(\phi\), and \(\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}
+ight)\) corresponds to the conserved current under the transformation \(Χ^lpha\) of spacetime \(x^\mu\).
 
 <br><br>
 
@@ -224,7 +247,8 @@ $$N^\mu \equiv {\partial \mathcal{L}\over\partial (\partial _\mu  lpha^
 u )}  \Psi^
 u-\left({\partial \mathcal{L}\over\partial (\partial _\mu  lpha^
 u )}  \partial _lpha lpha^
-u- \delta ^\mu  _lpha \mathcal{L}ight) Χ^lpha $$
+u- \delta ^\mu  _lpha \mathcal{L}
+ight) Χ^lpha $$
 </p>
 
 

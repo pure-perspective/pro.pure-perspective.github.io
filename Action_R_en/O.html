@@ -67,7 +67,7 @@
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                                 <li><a href="../CCC_en/main.html">The Superconducting Critical Coupling Constant Theory</a></li>
                                 <li><a href="../Action_C_en/main.html">Action Principle (Classical)</a></li>
-                                <li><a href="../Action_R_en/main.html">Action Principle (Relativistic)</a></li>
+                                <li class="active"><a href="../Action_R_en/main.html">Action Principle (Relativistic)</a></li>
                                 <li><a href="../Noether_en/main.html">Noether's Theorem</a></li>
                                 <li><a href="../STM_en/main.html">STM</a></li>
                             </ul>
@@ -83,7 +83,7 @@
                             </ul>
 
                         </li>
-                        <li  class="active"><a href="../About_en/main.html">About Me</a></li>
+                        <li><a href="../About_en/main.html">About Me</a></li>
                         <!--<li><a href="./QC_hardware/main.html">硬體導論</a></li>-->
                         <li><a href="../index.html">中文版</a></li>
                         
@@ -127,14 +127,18 @@
 <p style="text-align:justify">
 When discussing spacetime symmetry, we fix the field \(\phi \) such that it is unaffected by variations (\(\Psi=0\)). We are left with:
 
-$$\partial _\mu  \left[\left({\partial \mathcal{L}\over\partial \left(\partial _\mu  \phiight) }  \partial _lpha \phi - \delta ^\mu  _lpha L ight) Χ^lpha ight]=0$$
+$$\partial _\mu  \left[\left({\partial \mathcal{L}\over\partial \left(\partial _\mu  \phi
+ight) }  \partial _lpha \phi - \delta ^\mu  _lpha L 
+ight) Χ^lpha 
+ight]=0$$
 
 We define the energy-momentum tensor \(T^{\mu
 u}\):
 
 $$T^{\mu
 u}\equiv {{\partial L}\over{\partial \left( \partial _
-u \phi ight)}}  \partial ^\mu  \phi -\eta ^{\mu
+u \phi 
+ight)}}  \partial ^\mu  \phi -\eta ^{\mu
 u} L$$
 
 The conservation current \(\partial _
@@ -174,12 +178,14 @@ Classical Noether theorem can be stated as:
 <table cellpadding="1" border="1">
 <tr><td>$$Classical Non-relativistic$$</td><td>$$Relativistic$$</td></tr>
 <tr><td>$$S=\int  Ldt $$</td><td>$$S=\int \mathcal{L}d^4 x$$</td></tr>
-<tr><td>$$N\equiv {\partial L\over\partial \dot{q} _i } Q_i-\left({\partial L\over\partial \dot{q} _i } \dot{q} _i-Light)T$$</td>
+<tr><td>$$N\equiv {\partial L\over\partial \dot{q} _i } Q_i-\left({\partial L\over\partial \dot{q} _i } \dot{q} _i-L
+ight)T$$</td>
 <td>$$N^\mu \equiv {\partial \mathcal{L}\over\partial (\partial _\mu  lpha^
 u ) }  \Psi^
 u-\left({\partial \mathcal{L}\over\partial (\partial _\mu  lpha^
 u ) }  \partial _lpha lpha^
-u- \delta ^\mu  _lpha Light) Χ^lpha $$</td></tr>
+u- \delta ^\mu  _lpha L
+ight) Χ^lpha $$</td></tr>
 </table>
 
 In classical mechanics, time \(t\) plays the role corresponding to spacetime \(x^\mu\), so time symmetry represents energy conservation. Other symmetries \(Q_i\) can represent spatial \(q_i\) or angular \(	heta_i\) coordinates, with:
