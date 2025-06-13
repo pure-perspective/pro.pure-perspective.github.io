@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Favicon
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/20250525-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/20250525-icon.png">
+
+    <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>超導量子電腦硬體指南 (2025) | 量子位元、組件與廠商全解析</title>
+    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware_2025.html" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+
+                <div class="navbar-header">                   
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                            </ul>
+                        </li>
+                        <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
+                        <li class="active"><a href="../QC_hardware/main.html">硬體導論</a></li>
+                        <li><a href="../index_en.html">English</a></li>                        
+                    </ul>
+                </div>
+
+            </div>   
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <h1>硬體導論</h1>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">硬體導論</a></li>
+                  <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
+                </ol>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="blog-post">
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
+                            <div class="post-content">
+                                <div style="text-align: center;">
+                                    <h2>熱沉解決方案</h2>
+                                    <h3></h3>
+                                </div>
+                                <h2>5. 低溫系統中外導體熱沉解決方案</h2>
+                                <p style="text-align:justify" class="dark-background">「外導體熱沉」(Thermalisation of outer conductor) 並非指單一特定組件，而是一套系統級的解決方案，旨在確保低溫系統中（尤其是稀釋製冷機內）射頻線路（如同軸電纜或波導）的外導體能有效地在各個低溫階段冷卻至該階段的溫度。這對於最大限度地減少對更冷階段的熱負載、降低熱雜訊至關重要。實現有效的熱沉通常需要結合使用特製的低溫相容電纜、連接器、熱連接/熱導帶以及可能的散熱器。</p>
+                      
+                                <h3>5.1 低溫相容電纜、連接器及組件製造商</h3>
+                                <p style="text-align:justify" class="dark-background">這些公司提供專為低溫環境設計的電纜解決方案，旨在最大限度地減少從較暖階段到較冷階段的熱傳導，同時保持射頻訊號的完整性。關鍵在於材料選擇（例如，使用熱導率低的 CuNi、NbTi 超導線材或特定塑膠）和連接器設計。</p>
+                                <p style="text-align:justify" class="dark-background">主要供應商和產品特性：</p>
+                                <ul>
+                                    <li><strong>Radiall:</strong> 提供低溫量子連接器、射頻電纜組件（例如鈮鈦 (NbTi) 半剛性電纜和銅銀 (CuPro) 無磁性手工成型電纜），並討論了透過面板和導熱絕緣體實現數十毫開爾文溫度的熱沉方案。其 QRYSTALL 系列產品專為低溫環境設計 <sup>65</sup>。</li>
+                                    <li><strong>Bluefors:</strong> 提供集成的量測基礎設施，包括同軸線纜、高密度撓性線纜，以及用於集成低溫低雜訊放大器的特定解決方案，並強調適當的熱沉（例如鍍金安裝支架）和最小化熱負載 <sup>69</sup>。其新型高密度撓性線纜 (FPC) 旨在提供更密集的訊號線路並減少熱負載 <sup>71</sup>。</li>
+                                    <li><strong>Oxford Instruments NanoScience:</strong> 為其低溫恆溫器中的射頻訊號提供同軸線纜選項，可選擇用於直視型端口的熱夾具，或將線纜嵌入冷板中以實現優良的熱沉。提供 UT085 (2.19 mm) 和 UT034 (0.86 mm) 等半剛性同軸線纜 <sup>72</sup>。</li>
+                                    <li><strong>The Phoenix Company of Chicago:</strong> 專注於客製化低溫微波電纜組件解決方案，包括預裝在適用於低溫環境的 CuNi 半剛性同軸電纜上的無磁性 SMA 連接器。其 PkZ® 稀釋製冷機系統包括熱錨固外殼和電纜管理，以實現適當的熱沉 <sup>74</sup>。</li>
+                                    <li><strong>Lake Shore Cryotronics (包括 Janis Research):</strong> 提供低溫導線和電纜（如磷青銅、錳銅、鎳鉻合金、鍍銀銅線），儘管除了普遍的低溫適用性外，未詳細說明射頻外導體的具體熱沉特性 <sup>75</sup>。</li>
+                                </ul>
+                      
+                                <h3>5.2 低溫射頻應用熱連接/熱導帶及散熱器供應商</h3>
+                                <p style="text-align:justify" class="dark-background">熱導帶和熱連接對於將組件（包括射頻電纜外導體和連接器）的熱量傳導至低溫恆溫器內的冷板至關重要。散熱器可在特定的熱沉點進一步幫助消散沿這些線路傳導的熱量。</p>
+                                <p style="text-align:justify" class="dark-background">主要供應商和產品特性：</p>
+                                <ul>
+                                    <li><strong>Technology Applications, Inc. (TAI):</strong> 全球最大的熱導帶/柔性熱連接供應商，提供 OFHC 銅和石墨熱導帶。其銅熱導帶 (CuTS®) 廣泛應用於低溫領域，包括低溫冷卻器、低溫恆溫器和稀釋製冷機，並服務於量子運算項目 <sup>81</sup>。</li>
+                                    <li><strong>Absolut System:</strong> 開發和製造用於衛星的板載熱連接，連接低溫冷卻器與待冷卻應用。材料包括高純度鋁、OFHC 銅和熱解定向石墨 (POG)。是歐洲領先的熱連接製造商 <sup>82</sup>。</li>
+                                    <li><strong>LIDAX:</strong> 提供符合太空標準的現成和客製化柔性熱導帶 (FTS)，使用高導熱材料管理儀器和有效載荷的熱負載 <sup>83</sup>。</li>
+                                    <li><strong>ThermAvant Technologies:</strong> 提供振盪熱管 (OHP) 熱導帶，用於光電和低溫組件，聲稱其導熱係數比傳統固態熱導帶高 10 至 100 倍。提供柔性、長距離和結構型多種選擇 <sup>84</sup>。</li>
+                                    <li><strong>Boyd Corporation:</strong> 製造熱導帶（金屬箔、k-Core® 封裝石墨）和熱匯流排。k-Core® 熱導帶使用退火熱解石墨 (APG) 以實現高導熱性和輕量化 <sup>85</sup>。</li>
+                                    <li><strong>DVTEST:</strong> 雖然主要專注於射頻-熱測試箱，但其提及的 PMI 泡棉具有低介電常數和低損耗角正切，適用於射頻應用，其測試箱本身也管理熱環境，可能涉及散熱原理 <sup>86</sup>。這更多是關於測試環境而非系統內組件。</li>
+                                    <li><strong>Mouser Electronics / Wakefield Thermal / Advanced Thermal Solutions:</strong> 分銷/製造各種通用型散熱器 <sup>87</sup>。雖然並非專為低溫設計，但某些材料或客製化解決方案可能適用。主要關注板級散熱器。</li>
+                                    <li><strong>ERG Aerospace:</strong> 製造鋁、銅和碳化矽泡棉製成的熱交換器，適用於低溫應用 <sup>89</sup>。</li>
+                                    <li><strong>Exergy, LLC:</strong> 製造用於低溫冷卻的殼管式熱交換器 <sup>89</sup>。</li>
+                                </ul>
+                                <p style="text-align:justify" class="dark-background">在低溫學中，「外導體熱沉」是一個系統級的設計挑戰，而非單一標準組件。射頻訊號引入低溫恆溫器時會攜帶熱量。如果同軸電纜的外導體在每個溫階沒有得到良好熱沉，它就會成為一個熱捷徑，將熱量傳導至系統最冷的部分，從而降低性能並增加低溫負載。解決方案涉及使用沿長度方向熱導率差但在錨固點橫向熱導率良好的材料，以及確保與冷板良好熱接觸的組件（熱導帶、夾具）。Radiall <sup>67</sup>、Bluefors <sup>69</sup> 和 Phoenix Co. <sup>74</sup> 等公司在其低溫射頻組件中明確提及了熱錨固/管理。</p>
+                                <p style="text-align:justify" class="dark-background">一個明顯的趨勢是，專業供應商越來越多地將熱管理功能直接集成到低溫電纜和連接器系統中。Bluefors 的帶鍍金安裝支架的放大器電源線束 <sup>69</sup> 和 Phoenix Co. 的帶熱錨固外殼的 PkZ 系統 <sup>74</sup> 即是例證。這簡化了系統組裝並確保了有效的熱沉。隨著量子位元數量的增加和量子實驗的複雜化，需要更多的射頻線路，這使得有效熱沉在管理稀釋製冷機熱負載方面的重要性日益增加。Bluefors 發布的高密度撓性線纜 <sup>71</sup> 表明，擴展實驗規模需要更密集的佈線和更低的熱負載，使得有效的熱沉更為關鍵。</p>
+                                <p style="text-align:justify" class="dark-background">因此，使用者需要將熱沉視為其低溫射頻系統設計的一個組成部分，並從理解這些挑戰的供應商處選擇組件。這可能涉及客製化解決方案或從專業目錄中仔細選擇（例如，TAI 的熱導帶 <sup>81</sup>，Radiall 的低溫連接器 <sup>66</sup>）。</p>
+                      
+                                <table>
+                                    <caption>表 4：低溫射頻熱沉解決方案主要供應商</caption>
+                                    <thead>
+                                        <tr>
+                                            <th>公司名稱</th>
+                                            <th>國家/地區</th>
+                                            <th>解決方案類型 (低溫電纜/連接器, 熱導帶/熱連接, 低溫散熱器/錨固)</th>
+                                            <th>主要特性/材料</th>
+                                            <th>企業類型 (新創/成熟)</th>
+                                            <th>與射頻外導體熱沉的相關性</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Radiall</strong></td>
+                                            <td>法國</td>
+                                            <td>低溫電纜/連接器</td>
+                                            <td>NbTi, CuPro 電纜, QRYSTALL 系列, 討論了數十 mK 的熱沉 <sup>65</sup></td>
+                                            <td>成熟</td>
+                                            <td>提供專為低溫設計的 RF 互連解決方案，包含熱管理考量。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Bluefors</strong></td>
+                                            <td>芬蘭</td>
+                                            <td>低溫電纜/連接器, 集成熱沉</td>
+                                            <td>同軸線纜, 高密度撓性線纜, 鍍金支架熱沉 LNA <sup>69</sup></td>
+                                            <td>成熟 (專業利基)</td>
+                                            <td>提供完整的低溫量測基礎設施，強調線纜的低熱負載和適當熱錨固。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Oxford Instruments NanoScience</strong></td>
+                                            <td>英國</td>
+                                            <td>低溫電纜/連接器</td>
+                                            <td>半剛性同軸線纜 (UT085, UT034), 熱夾具/嵌入式熱沉 <sup>72</sup></td>
+                                            <td>成熟</td>
+                                            <td>為其低溫恆溫器提供具有優良熱沉的同軸線纜選項。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>The Phoenix Company of Chicago</strong></td>
+                                            <td>美國</td>
+                                            <td>低溫電纜/連接器, 集成熱沉</td>
+                                            <td>CuNi 半剛性同軸電纜, PkZ® 系統含熱錨固外殼 <sup>74</sup></td>
+                                            <td>未明確</td>
+                                            <td>專注於客製化低溫微波電纜組件，強調熱沉設計。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Technology Applications, Inc. (TAI)</strong></td>
+                                            <td>美國</td>
+                                            <td>熱導帶/柔性熱連接</td>
+                                            <td>OFHC 銅, 石墨熱導帶, CuTS® 系列 <sup>81</sup></td>
+                                            <td>成熟 (專業利基)</td>
+                                            <td>為低溫設備提供高效熱連接，可用於射頻線纜外導體的熱錨固。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Absolut System</strong></td>
+                                            <td>法國</td>
+                                            <td>熱連接</td>
+                                            <td>高純度鋁, OFHC 銅, POG <sup>82</sup></td>
+                                            <td>未明確</td>
+                                            <td>製造用於衛星的熱連接，可適用於低溫系統中組件的熱管理。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>LIDAX</strong></td>
+                                            <td>西班牙</td>
+                                            <td>柔性熱導帶</td>
+                                            <td>高導熱材料, 符合太空標準 <sup>83</sup></td>
+                                            <td>未明確</td>
+                                            <td>提供用於儀器熱管理的熱導帶，可應用於低溫射頻組件。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ThermAvant Technologies</strong></td>
+                                            <td>美國</td>
+                                            <td>OHP 熱導帶</td>
+                                            <td>振盪熱管技術, 高導熱係數 <sup>84</sup></td>
+                                            <td>未明確</td>
+                                            <td>提供先進的 OHP 熱導帶，適用於低溫組件的高效散熱。</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Boyd Corporation</strong></td>
+                                            <td>美國</td>
+                                            <td>熱導帶/熱匯流排</td>
+                                            <td>金屬箔, k-Core® 封裝石墨 (APG) <sup>85</sup></td>
+                                            <td>成熟</td>
+                                            <td>提供多種導熱解決方案，其 k-Core® 技術適用於輕量化和高效導熱。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                                <p style="text-align:justify">
+                                    ▲
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
+
+                                    </span><br><br>
+                                    </p>
+
+
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                    </span>
+                                    <span class="post-category">
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                    </span>
+                                </div><!-- /.post-meta -->
+                            
+                                <div id="prev-next-nav" class="text-center"></div>
+
+                                <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
+
+    const current = location.pathname.split("/").pop();
+    const index = pages.findIndex(p => p.file === current);
+    let html = "";
+
+    if (index > 0) {
+      const prev = pages[index - 1];
+      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+    }
+
+    html += `<a class="btn btn-gray" href="../QC_hardware_en/${current}" style="margin: 0 10px;">English Version</a>`;
+
+    if (index < pages.length - 1) {
+      const next = pages[index + 1];
+      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+    }
+
+    document.getElementById("prev-next-nav").innerHTML = html;
+  });
+</script>
+
+                            </div><!-- /.post-content -->
+                        </article><!-- /.blog-post -->
+                        <!--<div id="PostComments" class="post-comments">
+                            
+                            
+                            
+                        </div> /#PostComments -->
+                        <!--<div class="respond">
+                            <h3>Post a Comment</h3>
+                            <form class="form-horizontal">
+                                <input class="form-control" type="text" placeholder="Your Name*" required>
+                                <input class="form-control" type="email" placeholder="Your Email" required>
+                                <textarea class="form-control form-control-comment" type="text" placeholder="Your Comment*" required></textarea>
+                                <button class="btn btn-green">Add a comment</button>
+                            </form>    
+                        </div> /.respond -->
+                    </div>
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            
+
+                            <div class="widget">
+                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <p>一起走進新時代的前沿科學與量子科技</p>
+                    </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li>
+                        <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
+                        <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300, Taiwan (R.O.C.)</p></li>-->
+                    </ul>
+                </div>
+                <!--<div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <h3>Featured links</h3>
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Porfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <!--<a class="twitter-bg" href="#"><i class="fab fa-twitter"></i></a>-->
+                            <!--<<a class="facebook-bg" href="https://www.facebook.com/people/Quantum-Perspectives/61576446849628/"><i class="fab fa-facebook"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/%E9%87%8F%E5%AD%90%E9%81%A0%E8%A6%8BQuantum-Perspectives/61576883632888/"><i class="fab fa-facebook-f"></i></a>-->
+                            <!--<a class="pinterest" href="#"><i class="fa-solid fa-microscope"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="linkedin-bg" href="https://www.linkedin.com/company/insight-ihbar"><i class="fab fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p><span style="font-size: 16px;">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</span></p>
+                            <p>All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+</body>
+</html>

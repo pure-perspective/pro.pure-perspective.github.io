@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Favicon
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/20250525-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/20250525-icon.png">
+
+    <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>超導量子電腦硬體指南 (2025) | 量子位元、組件與廠商全解析</title>
+    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware_2025.html" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+
+                <div class="navbar-header">                   
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                            </ul>
+                        </li>
+                        <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
+                        <li class="active"><a href="../QC_hardware/main.html">硬體導論</a></li>
+                        <li><a href="../index_en.html">English</a></li>                        
+                    </ul>
+                </div>
+
+            </div>   
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <h1>硬體導論</h1>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">硬體導論</a></li>
+                  <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
+                </ol>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="blog-post">
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
+                            <div class="post-content">
+                                <div style="text-align: center;">
+                                    <h2>微波元件解說</h2>
+                                    <h3></h3>
+                                </div>
+                                
+                                      
+                                      <p style="text-align:justify" class="dark-background">
+                                        前一節針對量子電腦稀釋制冷機內部的部件做一個簡單的綜覽，接下來我們將搭配電路圖，詳細解說各部件的功能。
+                                      </p>
+                                  
+                                      <div style="text-align: center;">
+                                        <a href="../Image/20250531-01.png">
+                                        <img src="../Image/20250531-01.png" alt="取代文字" style="width: 100%; height: auto;">
+                                        </a>
+                                      </div>
+                                      <p style="text-align:justify" class="dark-background">
+                                        ▲透過電路功能圖對照硬體，可進一步了解量子電腦中硬體元件的配置。
+                                        <br>(a) 安裝有 25 條驅動線（drive lines）、25 條磁通線（flux lines）、4 條讀出線（read-out）、6 條讀入線（read-in），以及 5 條泵浦線（pump lines）的 Bluefors XLD 型稀釋制冷機。
+                                        <br>(b) 稀釋制冷機內部電纜配置的示意圖。我們藉由下方表格來解說各個元件及端口的功能：
+                                        <table border="1" cellpadding="8" cellspacing="0">
+                                          <thead>
+                                            <tr>
+                                              <th>I/O端</th>
+                                              <th>中文翻譯</th>
+                                              <th>功能解說</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>Drive</td>
+                                              <td>驅動端</td>
+                                              <td>用於輸入控制脈衝，操控量子位元的狀態（如進行 X/Y 閘操作），通常是微波頻率訊號。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Flux</td>
+                                              <td>磁通端</td>
+                                              <td>提供直流或低頻訊號改變 SQUID 迴路的有效磁通量，進而調變量子位元或諧震器的頻率。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Pump</td>
+                                              <td>泵浦端</td>
+                                              <td>用於激發參數放大器（如 JPA 或 TWPA）所需的能量輸入，通常在特定頻率提供高功率微波。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Output</td>
+                                              <td>讀出端</td>
+                                              <td>從量子系統中讀出訊號，經由讀出共振腔與放大器鏈路輸出至室溫設備進行量測。</td>
+                                            </tr>
+                                          </tbody>
+                                          <thead>
+                                            <tr>
+                                              <th>區段</th>
+                                              <th></th>
+                                              <th></th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>4K Plate</td>
+                                              <td>4K板</td>
+                                              <td>溫度約4K。<br>此區連接第一級冷卻，安裝 HEMT 放大器、熱沉濾波器等元件。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Still Plate</td>
+                                              <td>Still板（靜置板）</td>
+                                              <td>溫度約800 mK。稀釋冷卻循環中的「Still」位置，進一步降低熱量傳導，可安裝低頻濾波器或電源線熱沉。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Cold Plate</td>
+                                              <td>冷板</td>
+                                              <td>溫度約100 mK。<br>進入量子操作區前的緩衝層，常安裝循環器、熱沉的中介點。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>MXC Plate<br>(Mixing Chamber Plate)</td>
+                                              <td>MXC板</td>
+                                              <td>溫度約10–20 mK。<br>最冷的一層，安裝量子位元晶片、TWPA、隔離器等關鍵元件，是核心操作與熱沉層。</td>
+                                            </tr>
+                                          </tbody>
+                                          <thead>
+                                            <tr>
+                                              <th>微波元件</th>
+                                              <th></th>
+                                              <th></th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>Isolator</td>
+                                              <td>隔離器</td>
+                                              <td>允許訊號單向通過，防止反射雜訊干擾敏感元件，如量子位元。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>TWPA</td>
+                                              <td>行波參數放大器</td>
+                                              <td>低溫下使用的量子放大器，具有低雜訊、寬頻帶的特性，可提升微波訊號強度。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>HEMT</td>
+                                              <td>高電子遷移率電晶體</td>
+                                              <td>常用於 4K 級的第一級放大器，提供低雜訊、高增益的訊號讀取。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Low-pass filter</td>
+                                              <td>低通濾波器</td>
+                                              <td>阻擋高頻雜訊，允許低頻訊號通過，常用於防止熱輻射進入量子元件。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Band-pass filter</td>
+                                              <td>帶通濾波器</td>
+                                              <td>僅允許某一頻率範圍內的訊號通過，用於選擇特定微波頻率。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Eccosorb filter</td>
+                                              <td>Eccosorb(品牌)濾波器</td>
+                                              <td>使用 Eccosorb 吸波材料製成的濾波器，能有效吸收高頻熱雜訊與不必要的輻射。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Circulator</td>
+                                              <td>循環器</td>
+                                              <td>三端口非互易(non-reciprocity)微波元件，訊號僅以順時針或逆時針方式循環，用來分離輸入與回波路徑。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Dir. Coupler</td>
+                                              <td>定向耦合器</td>
+                                              <td>將一部分微波訊號從主通道引導至旁路，通常用於監測、量測或訊號分離。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Termination</td>
+                                              <td>終端</td>
+                                              <td>吸收多餘訊號能量，防止訊號反射，常與隔離器、循環器搭配使用。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Thermalisation of outer conductor</td>
+                                              <td>外導體熱沉（或 外導體熱化）</td>
+                                              <td>將電纜或元件的外導體熱接至冷卻級，降低熱雜訊傳遞至低溫核心元件。</td>
+                                            </tr>
+                                            <thead>
+                                              <tr>
+                                                <th>其他註解</th>
+                                                <th></th>
+                                                <th></th>
+                                              </tr>
+                                            </thead>
+                                            <tr>
+                                              <td>NbTi</td>
+                                              <td>鈮鈦合金同軸電纜</td>
+                                              <td>使用具有超導性質的鈮鈦合金，在 mK 級連接量子位元或諧振器時，使用鈮鈦超導線路可減少耗散與熱傳導。</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Attenuator<br>10dB<br>20dB</td>
+                                              <td>衰減器</td>
+                                              <td style="text-align: center; vertical-align: middle;">
+                                                <table  style="margin: auto;" border="1" cellpadding="8" cellspacing="0">
+                                                  <thead>
+                                                    <tr>
+                                                      <th>溫區</th>
+                                                      <th>衰減器值（常見）</th>
+                                                      <th>目的</th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr>
+                                                      <td>300K → 4K</td>
+                                                      <td>20 dB</td>
+                                                      <td>阻斷熱雜訊主源</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>4K → 100 mK</td>
+                                                      <td>10–20 dB</td>
+                                                      <td>細調訊號強度與進一步降噪</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>100 mK → 10 mK</td>
+                                                      <td>10 dB（可選）</td>
+                                                      <td>控制微波脈衝精細度</td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <br><span style="font-size: 0.7em; line-height: 0.8;">Ref: Engineering cryogenic setups for 100-qubit scale superconducting circuit systems, DOI:10.1140/epjqt/s40507-019-0072-0
+                                        </span><br><br>
+                                        </p>
+                          
+                          
+                                      <div style="text-align: center;">
+                                        <a href="../Image/20250531-03.png">
+                                        <img src="../Image/20250531-03.png" alt="取代文字" style="width: 70%; height: auto;">
+                                        </a>
+                                      </div>
+                                      <p style="text-align:justify" class="dark-background">
+                                        ▲在制冷機最底端、也是最冷的部分，稱為混合室（Mixing Chamber，MXC）。此區的溫度維持在10mK以下，以操作超導量子電路。
+                                        (a) 安裝於 MXC 板上的元件：來自量子處理器的讀出訊號首先經過右側的第一組四通道磁屏蔽隔離器陣列，再通過定向耦合器、行波參數放大器（TWPA），以及左側的第二組相同的隔離器陣列。
+                                        (b) 安裝於 4K 板上的四顆 HEMT 放大器。
+                                        (c)下方為帶通濾波器安裝（搭配熱沉）於 MXC 板上，上方為安裝於冷板(100mK區段)上的四個循環器。
+                                        <br><span style="font-size: 0.7em; line-height: 0.8;">Ref: Engineering cryogenic setups for 100-qubit scale superconducting circuit systems, DOI:10.1140/epjqt/s40507-019-0072-0
+                                        </span><br><br>
+                                    </p>
+                                
+
+
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                    </span>
+                                    <span class="post-category">
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                    </span>
+                                </div><!-- /.post-meta -->
+                            
+                                <div id="prev-next-nav" class="text-center"></div>
+
+                                <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
+
+    const current = location.pathname.split("/").pop();
+    const index = pages.findIndex(p => p.file === current);
+    let html = "";
+
+    if (index > 0) {
+      const prev = pages[index - 1];
+      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+    }
+
+    html += `<a class="btn btn-gray" href="../QC_hardware_en/${current}" style="margin: 0 10px;">English Version</a>`;
+
+    if (index < pages.length - 1) {
+      const next = pages[index + 1];
+      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+    }
+
+    document.getElementById("prev-next-nav").innerHTML = html;
+  });
+</script>
+
+                            </div><!-- /.post-content -->
+                        </article><!-- /.blog-post -->
+                        <!--<div id="PostComments" class="post-comments">
+                            
+                            
+                            
+                        </div> /#PostComments -->
+                        <!--<div class="respond">
+                            <h3>Post a Comment</h3>
+                            <form class="form-horizontal">
+                                <input class="form-control" type="text" placeholder="Your Name*" required>
+                                <input class="form-control" type="email" placeholder="Your Email" required>
+                                <textarea class="form-control form-control-comment" type="text" placeholder="Your Comment*" required></textarea>
+                                <button class="btn btn-green">Add a comment</button>
+                            </form>    
+                        </div> /.respond -->
+                    </div>
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            
+
+                            <div class="widget">
+                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <p>一起走進新時代的前沿科學與量子科技</p>
+                    </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li>
+                        <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
+                        <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300, Taiwan (R.O.C.)</p></li>-->
+                    </ul>
+                </div>
+                <!--<div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <h3>Featured links</h3>
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Porfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <!--<a class="twitter-bg" href="#"><i class="fab fa-twitter"></i></a>-->
+                            <!--<<a class="facebook-bg" href="https://www.facebook.com/people/Quantum-Perspectives/61576446849628/"><i class="fab fa-facebook"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/%E9%87%8F%E5%AD%90%E9%81%A0%E8%A6%8BQuantum-Perspectives/61576883632888/"><i class="fab fa-facebook-f"></i></a>-->
+                            <!--<a class="pinterest" href="#"><i class="fa-solid fa-microscope"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="linkedin-bg" href="https://www.linkedin.com/company/insight-ihbar"><i class="fab fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p><span style="font-size: 16px;">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</span></p>
+                            <p>All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Favicon
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/20250525-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/20250525-icon.png">
+
+    <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>超導量子電腦硬體指南 (2025) | 量子位元、組件與廠商全解析</title>
+    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware_2025.html" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+
+                <div class="navbar-header">
+                   
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                            </ul>
+
+                        </li>
+                        <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
+                        <li class="active"><a href="../QC_hardware/main.html">硬體導論</a></li>
+                        <li><a href="../index_en.html">English</a></li>
+                        
+                    </ul>
+
+                </div>
+
+            </div>   
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <h1>Blog</h1>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+                  <li class="breadcrumb-item active">Blog post</li>
+                </ol>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="blog-post">
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
+                            <div class="post-content">
+                                <div style="text-align: center;">
+                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h3>構建超導量子電腦：關鍵部件、廠商、與技術挑戰深度解析</h3>
+                                  </div>
+                                    <p style="text-align:justify">
+                                      本文針對想進入超導量子計算硬體研究、開發人員的角度，提供當前超導量子電腦的硬體架構、相關元件的功能、當前市面上的廠商、技術發展瓶頸、與未來發展方向的參考。
+                                    </p>
+                                    <!-- 超導量子計算原理簡介 -->
+                                    <h3>超導量子計算原理簡介</h3>
+                                        
+                                        <p style="text-align:justify">
+                                          超導量子計算是一種利用超導電路來實現量子位元(qubit)計算的硬體設計。
+                                          其核心在於利用超導材料在極低溫度下(接近絕對零度)所展現出的零電阻特性，構建出能夠精確操控的量子系統。
+                                          這些超導電路，通常包含電容、電感以及關鍵的非線性元件：約瑟夫森結(Josephson Junction)，被設計成如同「人造原子」一般，其離散的能階可以被用來編碼量子資訊的基態\( \ket{0} \)與激發態\( \ket{1} \)。
+                                        </p>
+                                    
+                                        <p style="text-align:justify" class="dark-background">
+                                          超導量子計算機的運算能力源於量子力學的基本原理。
+                                          量子疊加 (Superposition) 使得單個量子位元可以同時處於\( \ket{0} \)和\( \ket{1} \)的組合狀態，而非像古典位元那樣只能是0或1。
+                                          量子糾纏 (Entanglement)則描述了多個量子位元之間存在的超越古典架構的自由度，對一個量子位元的測量結果會瞬間影響到與其糾纏的其他量子位元的狀態，無論它們相距多遠。通過精確控制這些量子態的演化，並利用量子干涉(Interference)來增強期望計算結果的概率、抑制非期望結果的概率，
+                                          量子計算機能在特定問題上展現超越古典計算機的指數級算力。</p>
+                                    
+                                        <p style="text-align:justify" class="dark-background">正是這種潛在的強大計算能力，使得超導量子計算在眾多領域備受期待,包括破解現有加密體系的密碼學(如利用 Shor 演算法分解大質因數)、加速機器學習和優化算法的人工智慧、模擬分子結構與化學反應以推動新材料和藥物發現的材料科學，以及解決複雜的優化問題(如供應鏈優化、金融建模)等。</p>
+                                     
+                                    
+                                    <!--硬體基礎設施的重要性-->
+                                    
+                                        <header class="major">
+                                          <h2><li>硬體基礎設施的重要性</li></h2>
+                                        </header> 
+                                        
+                                        <p style="text-align:justify" class="dark-background">
+                                          硬體是實現量子計算的物理載體，其複雜性與精密性直接決定了量子計算機的性能、穩定性和可擴展性。
+                                          一個完整的超導量子計算硬體堆疊是一個龐大且精密的系統工程，涉及多個學科領域的跨領域整合，包括基礎物理學(理解量子現象)
+                                          、材料科學(開發低損耗超導材料和介電質)、半導體製造工藝(精確圖形化和製作微奈米結構)、微波工程(設計和實現高頻控制與讀取電路)
+                                          、低溫工程(提供並維持極端低溫環境)、真空技術(隔絕環境干擾)以及計算機科學(開發控制軟體和算法接口)。
+                                        </p>
+                                    
+                                        <p style="text-align:justify" class="dark-background">
+                                          構建和運行超導量子計算硬體面臨諸多挑戰。首要挑戰是維持量子位元的相干性 (Coherence)。
+                                          量子態極其脆弱，易受環境雜訊(如熱擾動、電磁波干擾、振動)的影響而發生去相干(Decoherence)，導致量子資訊丟失。
+                                          因此，必須將量子處理器置於接近絕對零度的極低溫環境中，並輔以嚴格的電磁屏蔽和振動隔離。
+                                          其次，需要開發高精度的控制系統，能夠產生飛秒至奈秒級別的微波脈衝，精確操控量子位元的狀態以執行量子邏輯閘。
+                                          同時，讀取系統需要能夠在不顯著干擾量子態的前提下，快速、準確地測量量子位元的最終狀態，這通常需要極低雜訊的放大器來處理微弱的信號。
+                                          此外將控制和讀取信號在室溫電子設備和mK溫區的量子晶片之間有效傳輸也是一大難題，需要特殊設計的低熱導、低損耗、高密度的線纜和接頭。
+                                          這些硬體基礎設施的每一個環節都至關重要，共同決定了量子計算機的整體能力。接下來，我們將逐一解析這些關鍵硬體部件。
+                                        </p>
+                                    
+                                        <div style="text-align: center;">
+                                          <a href="../Image/IBM_QC_cloud_ch.png">
+                                            <img src="../Image/IBM_QC_cloud_ch.png" alt="取代文字" style="width: 100%; height: auto;">
+                                          </a>
+                                        </div>
+                                        <p style="text-align:justify" class="dark-background">
+                                          ▲由於當前量子電腦仍然在發展中，超導量子電腦需要運作在近乎絕對零度之下，一台原型機非常巨大且昂貴、且需要許多電子控制器協調控制個別的量子位元。由IBM、Google、IQM等生產的量子電腦原型機，透過網路介面公開，使外界可以開發新的量子應用。
+                                          圖中是由IBM發展的量子電腦雲端開發應用場景，
+                                          (1)使用者可透過雲端介面，送指令進入到IBM的系統中。
+                                          (2)指令經由古典電腦轉譯成控制訊號後(DAC，數位到類比轉換)，由微波電子設備傳送脈衝訊號。
+                                          (3)脈衝訊號透過超導同軸電纜進入到低溫環境，
+                                          (4)量子位元經過訊號運算後，將訊號經過讀取迴路送回。
+                                          (5)讀取回路包含隔離器(避免訊號返回量子位元)、
+                                          (6)量子放大器後，
+                                          (7)回到微波電子設備分析(ADC，類比到數位轉換)，
+                                          (8)儀器分析訊號後
+                                          (9)回傳到使用者。
+                                          Ref: IBM，作者譯。原圖見<a href="../Image/IBM_QC_cloud.webp">此</a>。
+                                        </p>
+                                  
+                                        <div style="text-align: center;">
+                                          <a href="../Image/IBM Q.jpg">
+                                            <img src="../Image/IBM Q.jpg" alt="取代文字" style="width: 100%; height: auto;">
+                                          </a>
+                                        </div>
+                                        <p style="text-align:justify" class="dark-background">
+                                          ▲IBM的量子電腦原型機，可以見到平台分為多個區段，我們將由下一張圖來解說相關部件的功能。Ref: <a href="https://www.forschungsfabrik-mikroelektronik.de/en/focus-topics/next-generation-computing/ibm-q-system-one.html">
+                                          IBM。
+                                          </a>
+                                          <br>
+                                          <br>
+                                        </p>
+                                        
+                                        
+                                        <div style="text-align: center;">
+                                          <a href="../Image/QC_structure_illu.png">
+                                            <img src="../Image/QC_structure_illu.png" alt="取代文字" style="width: 100%; height: auto;">
+                                          </a>
+                                        </div>
+                                        <p style="text-align:justify" class="dark-background">
+                                          ▲IBM解說自家的量子電腦原型機部件。由於量子電腦需要在近乎絕對零度的溫度下操作。溫度隔絕、熱雜訊隔絕是非常重要的議題。
+                                          稀釋製冷制冷機分為多個溫度區段，藉由階段性隔熱的方式，從室溫逐步將到15mK以下。
+                                          此外，當微波訊號從外界進入到量子位元時，訊號如果沒有經過濾波，熱雜訊會藉由訊號污染量子態。
+                                          故傳遞訊號的超導同軸電纜須經由不同階段的衰減器濾除熱雜訊。
+                                          超導量子處理器QPU被放置在制冷機底部，受磁屏蔽罩隔絕外界電磁干擾。
+                                          除了輸入端需要信號衰減外，由於量子尺度的關係，量子位元回傳的量子訊號，須經由量子放大器增益。
+                                          量子放大器是操作在量子極限的訊號增益元件，亦是透過超導材料實現量子層級的增益。
+                                          當回傳訊號通過增益後，須避免反向回傳到量子位元，故需要隔離器使訊號單向往外傳輸。
+                                          Ref: IBM，作者譯。原圖見<a href="../Image/LEPbw.jpg">此</a>。
+                                          <br>
+                                          <br>
+                                        </p>
+                            
+                            
+                                        <div style="text-align: center;">
+                                          <a href="../Image/IQM_QPU.png">
+                                            <img src="../Image/IQM_QPU.png" alt="取代文字" style="width: 100%; height: auto;">
+                                          </a>
+                                        </div>
+                                        <p style="text-align:justify" class="dark-background">
+                                          ▲IQM公司亦推出超導量子電腦整機產品，繪製出量子電腦低溫腔內的設計圖。可見類似的分階段設計與走線佈置。
+                                          Ref: IQM，作者譯。原圖見<a href="../Image/IQM QPU.webp">此</a>。
+                                          <br>
+                                          <br>
+                                        </a>
+                            
+                                      
+
+                                
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                    </span>
+                                    <span class="post-category">
+                                        <a href="../QC_hardware/main.html"><i class="fa fa-folder" aria-hidden="true"></i> 硬體導論</a>
+                                    </span>
+                                </div><!-- /.post-meta -->
+                            
+                                <div id="prev-next-nav" class="text-center"></div>
+                                <script>
+                                fetch("lessons.json")
+                                    .then(res => res.json())
+                                    .then(pages => {
+                                    const current = location.pathname.split("/").pop();
+                                    const index = pages.findIndex(p => p.file === current);
+                                    let html = "";
+                                    if (index > 0) {
+                                        const prev = pages[index - 1];
+                                        html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+                                    }
+                                    if (index < pages.length - 1) {
+                                        const next = pages[index + 1];
+                                        html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+                                    }
+                                    document.getElementById("prev-next-nav").innerHTML = html;
+                                    });
+                                </script><!--  ${prev.title}   ${next.title}-->
+                            </div><!-- /.post-content -->
+                        </article><!-- /.blog-post -->
+                        <!--<div id="PostComments" class="post-comments">
+                            
+                            
+                            
+                        </div> /#PostComments -->
+                        <!--<div class="respond">
+                            <h3>Post a Comment</h3>
+                            <form class="form-horizontal">
+                                <input class="form-control" type="text" placeholder="Your Name*" required>
+                                <input class="form-control" type="email" placeholder="Your Email" required>
+                                <textarea class="form-control form-control-comment" type="text" placeholder="Your Comment*" required></textarea>
+                                <button class="btn btn-green">Add a comment</button>
+                            </form>    
+                        </div> /.respond -->
+                    </div>
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            <!--<div class="widget widget-categories">
+                                <h4 class="widget-title">Categories</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum <span>12</span></a></li>
+                                    <li><a href="#">Oscar Wilde<span>4</span></a></li>
+                                    <li><a href="#">Jeffrey Ween<span>2</span></a></li>
+                                    <li><a href="#">Responsive Design<span>1</span></a></li>
+                                    <li><a href="#">Development<span>9</span></a></li>
+                                </ul>
+                            </div> /.widget-categories -->
+                            <!-- <div class="widget widget-tags">
+                                <h4 class="widget-title">Tags</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Web Design</a></li>
+                                    <li><a href="#">Web Development</a></li>
+                                    <li><a href="#">PSD Template</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div>/.widget-tags -->
+                            
+
+                            <div class="widget">
+                                <h4 class="widget-title">量子課程目錄</h4>
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <p>一起走進新時代的前沿科學、科技</p>
+                    </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li>
+                        <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
+                        <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300, Taiwan (R.O.C.)</p></li>-->
+                    </ul>
+                </div>
+                <!--<div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <h3>Featured links</h3>
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Porfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <!--<a class="twitter-bg" href="#"><i class="fab fa-twitter"></i></a>-->
+                            <!--<<a class="facebook-bg" href="https://www.facebook.com/people/Quantum-Perspectives/61576446849628/"><i class="fab fa-facebook"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/%E9%87%8F%E5%AD%90%E9%81%A0%E8%A6%8BQuantum-Perspectives/61576883632888/"><i class="fab fa-facebook-f"></i></a>-->
+                            <!--<a class="pinterest" href="#"><i class="fa-solid fa-microscope"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="linkedin-bg" href="https://www.linkedin.com/company/insight-hbar"><i class="fab fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p><span style="font-size: 16px;">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</span></p>
+                            <p>All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+</body>
+</html>

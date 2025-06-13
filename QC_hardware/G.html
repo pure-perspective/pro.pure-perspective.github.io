@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Favicon
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/20250525-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/20250525-icon.png">
+
+    <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>超導量子電腦硬體指南 (2025) | 量子位元、組件與廠商全解析</title>
+    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware_2025.html" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+
+                <div class="navbar-header">                   
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                            </ul>
+                        </li>
+                        <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
+                        <li class="active"><a href="../QC_hardware/main.html">硬體導論</a></li>
+                        <li><a href="../index_en.html">English</a></li>                        
+                    </ul>
+                </div>
+
+            </div>   
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <h1>硬體導論</h1>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">硬體導論</a></li>
+                  <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
+                </ol>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="blog-post">
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
+                            <div class="post-content">
+                                <div style="text-align: center;">
+                                    <h2>控制電子系統</h2>
+                                    <h3></h3>
+                                </div>
+                                
+
+
+
+                                <!--控制電子系統 (Control Electronics)-->
+                                <header class="major">
+                                    <h2><li>控制電子系統 (Control Electronics)</li></h2>
+                                  </header>
+                              
+                                  <p style="text-align:justify" class="dark-background">
+                                    量子位元的操控依賴於精確的控制電子系統，該系統產生並傳送微波或射頻 (RF) 脈衝，以執行量子閘操作並改变量子位元的狀態。
+                                  </p>
+                              
+                                  <ol>
+                                    <li>
+                                      <p style="text-align:justify" class="dark-background">
+                                        <b>功能與重要性</b><br>
+                                        控制電子系統負責將演算法指令轉換為施加到量子位元上的物理訊號。對於超導量子位元，這通常涉及產生具有特定頻率、幅度、相位和持續時間的微波脈衝。這些脈衝的精度極高，通常達到奈秒甚至更短的時間尺度。控制系統還必須能夠同步操作多個量子位元，並可能包含即時反饋和校準算法。
+                                      </p>
+                                    </li>
+                              
+                                    <li>
+                                      <p style="text-align:justify" class="dark-background">
+                                        <b>關鍵組件</b>
+                                      </p>
+                                      <ul>
+                                        <li><b>任意波形產生器 (Arbitrary Waveform Generators, AWGs)：</b> 產生複雜的、用戶定義的電壓波形，這些波形經過上變頻後驅動量子位元。AWG透過優化時間波形，可以解決相干控制、量子糾纏操控等應用中的技術問題。</li>
+                                        <li><b>數位類比轉換器 (DACs) / 類比數位轉換器 (ADCs)：</b> DACs將數位控制訊號轉換為AWG所需的類比波形；ADCs則用於讀出系統中將類比測量訊號數位化。</li>
+                                        <li><b>現場可程式化閘陣列 (FPGAs)：</b> 因其可重構性和並行處理能力，FPGAs在量子計算中用於接口和控制硬體，執行量子糾錯、量子位元控制和數據處理等複雜任務。它們在混合量子-經典系統中尤其有價值。</li>
+                                        <li><b>射頻/微波源與混頻器 (RF/Microwave Sources & Mixers)：</b> 產生微波載波訊號，並與AWG輸出的基帶脈衝進行混頻（IQ調製），以產生在量子位元共振頻率上的控制脈衝。</li>
+                                        <li><b>放大器 (Amplifiers)：</b> 放大控制訊號以達到驅動量子位元所需的功率水平。</li>
+                                      </ul>
+                                    </li>
+                              
+                                    <li>
+                                      <p style="text-align:justify" class="dark-background">
+                                        <b>代表性製造商與所在國家/地區</b>
+                                      </p>
+                                      <ul>
+                                        <li><b>美國：</b> Keysight Technologies、Tabor Quantum Solutions（Tabor Electronics 的一個部門，提供AWG、數字化儀和放大器等量子控制儀器）、Intel（研究Cryo-CMOS控制晶片）。Fermilab工程師也開發了改進性能、降低成本的新型控制電子設備。</li>
+                                        <li><b>瑞士：</b> Zurich Instruments 提供量子計算控制系統，包括AWG和數字化儀，其產品被IQM等公司用於量子糾錯平台的開發。</li>
+                                        <li><b>以色列：</b> Quantum Machines 開發了量子編排平台 (Quantum Orchestration Platform, QOP) 和 OPX+ 控制器，專注於量子系統的控制和操作。</li>
+                                        <li><b>德國：</b> Rohde & Schwarz 等公司也提供相關的測試與測量設備，可用於量子控制。</li>
+                                        <li><b>中國：</b> Origin Quantum（本源量子）聲稱其業務範圍包括量子測控系統。</li>
+                                      </ul>
+                                      <p style="text-align:justify" class="dark-background">
+                                        全球範圍內，許多大學和研究機構也在開發客製化的控制電子系統。
+                                      </p>
+                                    </li>
+                              
+                                    <li>
+                                      <p style="text-align:justify" class="dark-background">
+                                        <b>價格範圍</b><br>
+                                        控制電子系統的成本可以很高。傳統上，研究人員通常需要將十幾個昂貴的現成商業組件串聯起來，導致每量子位元的控制系統成本高達數萬美元。一個包含稀釋製冷機、控制電子設備等的量子計算研究實驗室，其設置成本在500萬到5000萬美元之間，其中控制電子設備（每個設置超過10萬美元）是重要組成部分。Fermilab開發的緊湊型控制板成本比傳統系統低約10倍，可以控制8個量子位元。<br>
+                                        整體量子電腦的價格也反映了控制系統的成本：教育和小型量子電腦起價約5萬美元（通常非超導），中端量子電腦起價100萬美元，而工業級量子電腦（如IBM、Google、SpinQ生產的系統）起價則高達1000萬美元，這些系統需要包括控制電子在內的龐大基礎設施和專業團隊。IBM的Eagle處理器（127量子位元）的開發成本估計達數千萬美元，Google的Sycamore處理器（53量子位元）據報導成本超過5000萬美元，這些成本中都包含了複雜的控制系統開發。
+                                      </p>
+                                    </li>
+                              
+                                    <li>
+                                      <p style="text-align:justify" class="dark-background"><b>技術門檻</b></p>
+                                      <ul>
+                                        <li><b>脈衝精度與同步：</b> 控制脈衝的形狀、時序和相位必須極其精確，且多個通道之間需要高度同步，以實現高保真度的量子閘操作。</li>
+                                        <li><b>可擴展性：</b> 隨著量子位元數量的增加，控制通道的數量也隨之增加，對控制系統的複雜性、成本和物理尺寸都提出了巨大挑戰。</li>
+                                        <li><b>低延遲與即時反饋：</b> 許多先進的量子演算法和量子糾錯協議需要快速的測量和基於測量結果的即時反饋控制，這對控制系統的延遲提出了嚴格要求。</li>
+                                        <li><b>低雜訊：</b> 控制訊號中的雜訊會直接影響量子位元的相干性和操作保真度。</li>
+                                        <li><b>低溫整合（Cryo-CMOS）：</b> 將部分控制電子（特別是靠近QPU的部分）集成到低溫環境中，可以顯著減少從室溫到QPU的佈線數量，降低熱負載，並減少訊號延遲和失真。然而，在極低溫下設計和運行複雜的CMOS電路本身就是一個巨大的技術挑戰，包括元件性能變化、功耗管理和散熱等。</li>
+                                        <li><b>頻寬：</b> 需要足夠的頻寬來產生快速的脈衝邊緣和複雜的波形。</li>
+                                        <li><b>軟體集成與校準：</b> 控制硬體需要與高層軟體緊密集成，並需要複雜的自動化校準程序來優化脈衝參數並補償硬體缺陷。</li>
+                                      </ul>
+                                      <p style="text-align:justify" class="dark-background">
+                                        控制電子系統正從使用通用實驗室儀器向專用化、集成化和低溫化方向發展。Cryo-CMOS技術被認為是解決大規模量子電腦控制瓶頸的關鍵途徑之一，它有望將控制功能更靠近量子位元，從而提高性能並降低系統複雜性。然而，這也意味著控制系統的設計必須與QPU和低溫系統的設計更加緊密地耦合。
+                                      </p>
+                                    </li>
+                                  </ol>
+                      
+                                  <ul>
+                                    <li><strong>控制與讀取電子設備(Control and 讀出 Electronics):</strong> Quantum Machines, Qblox, Zurich Instruments, SpinQ (詳見 Section II.C)<sup>14</sup>。</li>
+                                  </ul>
+                              
+                              
+                                
+                              <!--C.控制與讀取電子設備(Control and 讀出 Electronics)-->
+                                  <header class="major">
+                                    <h2><li>解說</li></h2>
+                                  </header>
+                                
+                      
+                      
+                                  <h3>C.控制與讀取電子設備(Control and 讀出 Electronics)</h3>
+                      
+                                  <h4>1.功能與需求</h4>
+                      
+                                  <p style="text-align:justify" class="dark-background">控制與讀取電子設備構成了經典世界與量子世界之間的接口,是實現量子計算算法的關鍵執行層。其主要功能和需求包括:</p>
+                      
+                                  <ul>
+                                      <li><strong>量子態操控(Quantum State Manipulation):</strong> 產生精確定時、定形、定幅和定相的微波脈衝信號。這些脈衝作用於量子位元,驅動其在布洛赫球(Bloch sphere)上進行旋轉,從而實現量子態的初始化、疊加態製備、量子邏輯閘操作(如單量子位元旋轉閘 Hadamard, X, Y, Z 和兩量子位元糾纏閘 CNOT, CZ)以及執行完整的量子算法序列<sup>1</sup>。</li>
+                                      <li><strong>量子態讀取(Quantum State 讀出):</strong> 量子計算結束時,需要測量每個量子位元的最終狀態(是\( \ket{0} \)還是\( \ket{1} \))。這通常通過向與量子位元耦合的讀出諧振腔發送一個探測微波脈衝,並測量透射或反射信號的相位和幅度變化來實現。由於讀取信號非常微弱(單光子量級),需要低雜訊放大器將其放大到可檢測水平,然後由電子設備進行採集和數字化處理<sup>7, 8</sup>。</li>
+                                      <li><strong>高精度與穩定性(High Precision and Stability):</strong> 控制脈衝的參數(時間、頻率、幅度、相位)必須極其精確和穩定,任何微小的偏差都可能導致量子操作的錯誤累積。時間精度通常要求達到奈秒(ns) 甚至皮秒(ps)量級<sup>14</sup>。</li>
+                                      <li><strong>低延遲(Low Latency):</strong> 特別是對於需要根據測量結果快速做出響應的應用,如量子糾錯(Quantum Error Correction, QEC) 和主動重置(Active Reset),控制系統的內部處理和反饋延遲必須非常短(通常在數百奈秒內)<sup>48</sup>。</li>
+                                      <li><strong>多通道同步(Multi-channel Synchronization):</strong> 大型量子處理器包含數十至數百甚至更多的量子位元,控制系統必須能夠同步生成和採集所有通道的信號,確保多量子位元操作的協調一致<sup>48</sup>。</li>
+                                      <li><strong>可擴展性(Scalability):</strong> 控制系統的架構需要支持平滑擴展,以適應未來更大規模量子處理器的需求,而不會顯著增加複雜性或成本<sup>14</sup>。</li>
+                                      <li><strong>實時反饋與處理(Real-time Feedback and Processing):</strong> 系統需要具備在量子實驗運行過程中,根據中間測量結果實時調整後續脈衝序列的能力。這對於實現自適應實驗協議、動態校準和量子糾錯至關重要<sup>48</sup>。</li>
+                                  </ul>
+                      
+                                  <h4>2. 關鍵硬體元件</h4>
+                      
+                                  <p style="text-align:justify" class="dark-background">為了滿足上述複雜需求,現代量子控制系統通常集成以下關鍵硬體元件:</p>
+                                  
+                                  <ul>
+                                      <li><strong>任意波形產生器(Arbitrary Waveform Generators, AWGs):</strong> 這是產生控制脈衝的核心。高性能 AWG 能夠以極高的時間分辨率(取樣率達 GSa/s)和幅度分辨率(如16位)生成用戶定義的任意複雜波形<sup>14</sup>。它們通常具有多個輸出通道,並支持觸發和序列播放功能<sup>53</sup>。</li>
+                                      <li><strong>現場可程式化邏輯閘陣列(Field-Programmable Gate Arrays, FPGAs):</strong> FPGA 是實現實時控制邏輯的關鍵。它們被編程來執行高速的脈衝序列生成、參數計算、條件分支、觸發管理、數據採集與處理、以及與其他儀器的同步<sup>14</sup>。FPGA的並行處理能力和低延遲特性使其非常適合量子控制的實時性要求。</li>
+                                      <li><strong>數位類比轉換器(Digital-to-Analog Converters, DACs):</strong> 將FPGA或AWG 輸出的數字波形數據轉換為模擬電壓信號<sup>49</sup>。其分辨率和速度直接影響控制脈衝的精度。</li>
+                                      <li><strong>類比數位轉換器(Analog-to-Digital Converters, ADCs):</strong> 將來自量子位元的經過放大的模擬讀取信號轉換為數字數據,供FPGA或後續處理單元分析<sup>49</sup>。其取樣率和分辨率決定了讀取速度和精度。</li>
+                                      <li><strong>上/下變頻模塊(Up/Down-conversion Modules):</strong> 由於AWG 通常產生的是基帶或中頻(IF)信號,需要使用混頻器(Mixers)和本地振盪器(Local Oscillators, LO)將這些信號上變頻(Up-conversion)到量子位元操作所需的千兆赫茲(GHz)微波頻段<sup>18</sup>。同樣,讀取時需要將來自量子位元的 GHz 信號下變頻(Down-conversion) 到ADC 可以處理的頻率。這些模塊的雜訊性能和線性度非常重要。</li>
+                                      <li><strong>低溫放大器 (Cryogenic Amplifiers):</strong> 為了放大極其微弱的量子位元讀取信號(通常只有幾個光子),同時盡可能少地引入額外雜訊(接近量子極限),需要在稀釋製冷機的低溫級(通常是4K級和/或mK級)安裝特殊的低雜訊放大器<sup>15</sup>。常用的包括:
+                                          <ul>
+                                              <li><strong>高電子遷移率晶體管放大器(High-Electron-Mobility Transistor, HEMT):</strong> 通常放置在4K級,提供較高的增益和相對較低的雜訊溫度<sup>15</sup>。</li>
+                                              <li><strong>參量放大器 (Parametric Amplifiers):</strong> 如約瑟夫森參量放大器(JPA)或行波參量放大器(Traveling Wave Parametric Amplifier, TWPA),可以放置在mK級,非常接近量子晶片,能夠提供接近量子極限的雜訊性能和高增益帶寬<sup>15</sup>。</li>
+                                          </ul>
+                                      </li>
+                                      <li><strong>濾波器(Filters)和衰減器(Attenuators):</strong> 安裝在信號線路的不同溫度級,用於濾除帶外雜訊、整形信號頻譜、精確控制到達量子位元的信號功率,並幫助線纜實現熱化(吸收來自高溫級的熱輻射雜訊)<sup>10</sup>。</li>
+                                  </ul>
+                      
+                                  <h4>3.主要供應商與系統特點</h4>
+                      
+                                  <p style="text-align:justify" class="dark-background">近年來,出現了一批專門為量子計算提供控制和讀取電子設備解決方案的公司:</p>
+                                  <ul>
+                                      <li><strong>Quantum Machines (以色列):</strong> 其核心產品是OPX+控制器,採用獨特的基於處理器的架構(Pulse Processor Unit, PPU / Hybrid Processing Unit, HPU),將實時序列生成、波形操控、測量處理和古典計算(包括控制流)緊密集成在一個 FPGA平台上<sup>50</sup>。其突出特點是極低的實時反饋延遲(讀取到響應約224ns),以及強大的脈衝級編程語言 QUA,使得用戶可以方便地編寫複雜的、包含實時邏輯的量子實驗序列<sup>50</sup>。該系統易於擴展,並已與 Rigetti、NVIDIA 等合作展示了AI 輔助校準等高級功能<sup>51</sup>。</li>
+                                      <li><strong>Qblox (荷蘭):</strong> 提供模組化的Cluster 控制系統<sup>48</sup>。每個模塊(如脈衝產生器、數字化儀、邏輯控制單元)都基於FPGA,通過其專有的高速同步協議 SYNQ和LINQ 連接,確保所有通道之間的皮秒級同步和低延遲通信<sup>48</sup>。系統支持高達18.5 GHz 的直接微波合成和採集,架構設計易於擴展至數百個量子位元<sup>48</sup>。他們也與 Bluefors 等低溫系統供應商合作<sup>37</sup>。</li>
+                                      <li><strong>Zurich Instruments (瑞士):</strong> 提供一套完整的量子計算控制系統(QCCS),由多個儀器組成,包括HDAWG(高密度 AWG)、UHFQA(量子分析儀,用於並行讀取)、PQSC(可程式量子系統控制器,用於多儀器同步和實時決策)等<sup>53</sup>。其系統強調高通道密度、低觸發延遲(&lt;50 ns)、出色的信號保真度和強大的LabOne 控制軟體(包括LabOne Q Python 框架)<sup>53</sup>。 </li>
+                                      <li><strong>SpinQ (中國):</strong> 提供 SPINQ QCM(量子控制與測量)系統,同樣基於FPGA 進行硬件加速,支持4-8 GHz 頻段的射頻脈衝收發<sup>14</sup>。該系統採用模組化設計,提供開放的API接口和自動化的量子位元參數校準軟件,旨在提供高性價比的解決方案<sup>14</sup>。</li>
+                                  </ul>
+                      
+                                  <p style="text-align:justify" class="dark-background">除了這些專業供應商,傳統的測試測量儀器公司如 Keysight Technologies、Rohde & Schwarz等也在提供適用於量子研究的高頻 AWG、VNA 和信號分析儀等單個儀器。</p>
+                      
+                                  <p style="text-align:justify" class="dark-background">總體來看,現代量子控制系統的發展趨勢是整合化、模組化和軟體定義化。供應商傾向於提供包含硬件和配套軟件(固件、API、高級編程框架)的完整解決方案,以簡化系統集成和實驗編程。系統架構越來越強調實時處理能力和低延遲反饋,以支持更高級的量子計算協議和糾錯需求。</p>
+                      
+                                  <h4>4.發展趨勢分析</h4>
+                      
+                                  <p style="text-align:justify" class="dark-background">量子控制電子設備領域正在經歷快速演進,體現出兩大關鍵趨勢。首先,控制系統正從早期依賴通用儀器拼湊組合的方式,轉變為採用專門設計、高度整合的量子控制平台。在量子計算研究的初期階段,研究人員通常使用市面上可獲得的通用 AWG、數字化儀、信號源等儀器來搭建控制系統<sup>49</sup>。然而,隨著量子位元數量的增加和量子算法複雜性的提升,管理和同步大量離散儀器變得極其困難,成為系統擴展和性能提升的瓶頸<sup>54</sup>。更重要的是,量子計算對控制系統提出了特殊要求,例如超低延遲的實時反饋、複雜的條件邏輯執行以及皮秒級的跨通道同步,這些很難用標準的現成儀器高效實現<sup>48</sup>。這種需求推動了 Quantum Machines、Qblox、Zurich Instruments、SpinQ 等專業供應商的崛起,他們開發出集成了AWG、數字化儀、FPGA 處理單元以及專用控制軟件和固件(如QM的QUA 語言<sup>50</sup> 或ZI的LabOne Q框架<sup>53</sup>)的整體解決方案<sup>14</sup>。這些專用平台大大簡化了實驗室的系統搭建和編程工作,並使執行更複雜、更依賴實時響應的量子協議成為可能。</p>
+                      
+                                  <p style="text-align:justify" class="dark-background">其次,將實時古典計算能力(通常基於FPGA 或處理器)直接整合到控制迴路中,正變得日益重要,甚至是不可或缺。這對於實現量子糾錯、動態校準等高級應用尤為關鍵。量子態極其脆弱,且控制參數會隨時間漂移<sup>11</sup>。量子糾錯方案要求系統能夠快速測量輔助量子位元的狀態(稱為 syndrome),進行經典的解碼計算以判斷發生了何種錯誤,然後迅速將對應的修正操作應用到數據量子位元上,整個過程必須在量子位元的相干時間內完成<sup>5</sup>。同樣,動態校準也需要在實驗過程中實時測量量子位元的參數(如頻率漂移),並即時調整控制脈衝的參數加以補償<sup>52</sup>。這些任務都需要在奈秒到微秒的時間尺度內完成大量的古典計算和決策<sup>48</sup>。因此,現代控制系統的核心是強大的 FPGA<sup>14</sup> 或專用處理器<sup>50</sup>,甚至開始探索與 GPU 等高性能計算單元的緊密集成(如NVIDIA DGX Quantum<sup>60</sup>),將古典計算能力盡可能地靠近量子硬件,實現低延遲的實時處理。這一趨勢標誌著量子計算正走向一種硬件層面深度融合的混合量子-古典計算架構。</p>
+                      
+                                  <h4>5. 潛在表格</h4>
+                      
+                                  <p style="text-align:justify" class="dark-background">表3:主要量子控制電子設備供應商及其系統比較</p>
+                                  
+                                  <table border="1">
+                                      <thead>
+                                          <tr>
+                                              <th>供應商 (Supplier)</th>
+                                              <th>系統/主要產品 (System/Key Products)</th>
+                                              <th>核心技術 (Core Technology)</th>
+                                              <th>主要特點(Key Features)</th>
+                                              <th>目標應用(Target Applications)</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr>
+                                              <td>Quantum Machines (QM)</td>
+                                              <td>OPX+</td>
+                                              <td>Processor-based (HPU/FPGA)</td>
+                                              <td>極低反饋延遲 (&lt;230ns), QUA 脈衝級語言,集成經典處理, 易於擴展<sup>50</sup> </td>
+                                              <td>通用量子控制, QEC,實時反饋,AI校準</td>
+                                          </tr>
+                                          <tr>
+                                              <td>Qblox</td>
+                                              <td>Cluster System</td>
+                                              <td>FPGA-based, Modular</td>
+                                              <td>高達 18.5 GHz,低延遲同步(SYNQ/LINQ),可擴展至數百量子位元, Python API<sup>48</sup></td>
+                                              <td>超導、自旋、NV色心等量子位元控制與讀取</td>
+                                          </tr>
+                                          <tr>
+                                              <td>Zurich Instruments (ZI)</td>
+                                              <td>QCCS (HDAWG, UHFQA, PQSC)</td>
+                                              <td>FPGA-based, Multi-instrument</td>
+                                              <td>高通道密度,低觸發延遲(&lt;50ns),LabOne Q 框架,多儀器精密同步<sup>53</sup></td>
+                                              <td>通用量子控制, NMR/EPR,半導體測試</td>
+                                          </tr>
+                                          <tr>
+                                              <td>SpinQ</td>
+                                              <td>SPINQ QCM System</td>
+                                              <td>FPGA-based, Modular</td>
+                                              <td>4-8 GHz 頻段,高垂直分辨率,自動化校準軟件,開放API,性價比較高<sup>14</sup></td>
+                                              <td>超導量子位元控制、測量與校準</td>
+                                          </tr>
+                                          <tr>
+                                              <td>Keysight / R&S / etc.</td>
+                                              <td>AWGS, VNAS, Signal Analyzers</td>
+                                              <td>(通用儀器技術)</td>
+                                              <td>高性能單項儀器</td>
+                                              <td>基礎量子研究,元件表徵</td>
+                                          </tr>
+                                          <tr>
+                                              <td>NVIDIA/QM</td>
+                                              <td>DGX Quantum</td>
+                                              <td>GPU + QM OPX (Processor-based)</td>
+                                              <td>整合高性能古典計算(GPU)與量子控制,實現低延遲量子-古典計算<sup>60</sup></td>
+                                              <td>QEC,AI 輔助量子算法/校準,混合計算</td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                                  <p style="text-align:justify" class="dark-background">資料來源:14</p>
+                                
+                              
+                                
+                                <p style="text-align:justify">
+                                    ▲
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
+
+                                    </span><br><br>
+                                    </p>
+
+
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                    </span>
+                                    <span class="post-category">
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                    </span>
+                                </div><!-- /.post-meta -->
+                            
+                                <div id="prev-next-nav" class="text-center"></div>
+
+                                <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
+
+    const current = location.pathname.split("/").pop();
+    const index = pages.findIndex(p => p.file === current);
+    let html = "";
+
+    if (index > 0) {
+      const prev = pages[index - 1];
+      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+    }
+
+    html += `<a class="btn btn-gray" href="../QC_hardware_en/${current}" style="margin: 0 10px;">English Version</a>`;
+
+    if (index < pages.length - 1) {
+      const next = pages[index + 1];
+      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+    }
+
+    document.getElementById("prev-next-nav").innerHTML = html;
+  });
+</script>
+
+                            </div><!-- /.post-content -->
+                        </article><!-- /.blog-post -->
+                        <!--<div id="PostComments" class="post-comments">
+                            
+                            
+                            
+                        </div> /#PostComments -->
+                        <!--<div class="respond">
+                            <h3>Post a Comment</h3>
+                            <form class="form-horizontal">
+                                <input class="form-control" type="text" placeholder="Your Name*" required>
+                                <input class="form-control" type="email" placeholder="Your Email" required>
+                                <textarea class="form-control form-control-comment" type="text" placeholder="Your Comment*" required></textarea>
+                                <button class="btn btn-green">Add a comment</button>
+                            </form>    
+                        </div> /.respond -->
+                    </div>
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            
+
+                            <div class="widget">
+                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <p>一起走進新時代的前沿科學與量子科技</p>
+                    </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li>
+                        <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
+                        <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300, Taiwan (R.O.C.)</p></li>-->
+                    </ul>
+                </div>
+                <!--<div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <h3>Featured links</h3>
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Porfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <!--<a class="twitter-bg" href="#"><i class="fab fa-twitter"></i></a>-->
+                            <!--<<a class="facebook-bg" href="https://www.facebook.com/people/Quantum-Perspectives/61576446849628/"><i class="fab fa-facebook"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/%E9%87%8F%E5%AD%90%E9%81%A0%E8%A6%8BQuantum-Perspectives/61576883632888/"><i class="fab fa-facebook-f"></i></a>-->
+                            <!--<a class="pinterest" href="#"><i class="fa-solid fa-microscope"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="linkedin-bg" href="https://www.linkedin.com/company/insight-ihbar"><i class="fab fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p><span style="font-size: 16px;">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</span></p>
+                            <p>All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+</body>
+</html>

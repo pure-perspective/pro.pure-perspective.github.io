@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Favicon
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/20250525-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/20250525-icon.png">
+
+    <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>超導量子電腦硬體指南 (2025) | 量子位元、組件與廠商全解析</title>
+    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware_2025.html" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+
+                <div class="navbar-header">                   
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                            </ul>
+                        </li>
+                        <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
+                        <li class="active"><a href="../QC_hardware/main.html">硬體導論</a></li>
+                        <li><a href="../index_en.html">English</a></li>                        
+                    </ul>
+                </div>
+
+            </div>   
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <h1>硬體導論</h1>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">硬體導論</a></li>
+                  <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
+                </ol>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="blog-post">
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
+                            <div class="post-content">
+                                <div style="text-align: center;">
+                                    <h2>特殊導線與接頭</h2>
+                                    <h3></h3>
+                                </div>
+                                <!--III. 特殊導線與接頭-->
+                                <header class="major">
+                                    <h2><li>解說</li></h2>
+                                  </header>
+                                
+                                  <h2>III. 特殊導線與接頭</h2>
+                      
+                                  <p style="text-align:justify" class="dark-background">在超導量子計算機中,連接室溫控制電子設備和位於稀釋製冷機毫開爾文溫區的量子晶片的線纜和接頭,是至關重要但又極具挑戰性的環節。它們不僅要傳輸精密的控制和讀取信號,還必須在極端的溫度梯度下最大限度地減少熱洩漏和雜訊干擾。</p>
+                      
+                                  <h3>A.需求與挑戰</h3>
+                      
+                                  <p style="text-align:justify" class="dark-background">為超導量子計算設計的低溫線纜和接頭需要滿足一系列苛刻的要求:</p>
+                      
+                                  <ul>
+                                      <li><strong>信號傳輸功能 (Signal Transmission Function):</strong> 必須能夠有效地傳輸多種類型的信號,包括用於量子位元操控和讀出的高頻RF/微波信號(通常在4-8 GHz 或更高頻段),以及用於量子位元頻率調諧或磁通偏置的低頻或直流(DC)信號<sup>9</sup>。</li>
+                                      <li><strong>極低的熱導率(Ultra-Low Thermal Conductivity):</strong> 這是最關鍵的要求之一。線纜橫跨從室溫(~300K)到毫開爾文(~10mK)的巨大溫差。任何通過線纜傳導的熱量都會增加稀釋製冷機各個冷級的熱負載,尤其是在冷卻功率極其有限的最低溫級<sup>10</sup>。過高的熱負載會導致製冷機無法達到目標溫度,或顯著降低可用於冷卻量子晶片本身的冷卻功率,從而嚴重限制了系統可支持的量子位元數量<sup>17</sup>。 因此,線纜材料的選擇和結構設計必須以最小化熱傳導為首要目標。</li>
+                                      <li><strong>優良的RF/微波性能(Good RF/Microwave Performance):</strong> 對於傳輸高頻信號的線纜,需要在目標工作頻率範圍內實現低插入損耗(Low Insertion Loss)或低衰減(Low Attenuation),以確保信號強度不會過度減弱<sup>59</sup>。同時,需要保持良好的阻抗匹配(通常為 50Ω)以減少信號反射,並具有高信號隔離度(Low Crosstalk)以防止通道間的干擾<sup>68</sup>。</li>
+                                      <li><strong>低雜訊貢獻(Low Noise Contribution):</strong> 線纜本身不應引入過多的雜訊。一個主要來源是熱雜訊,即線纜作為一個具有溫度的物體會產生黑體輻射,這些雜訊光子如果到達量子位元,會引起去相干<sup>15</sup>。為了抑制這種雜訊,信號線需要在製冷機的各個溫度級進行充分的熱化(Thermalization),通常通過串聯衰減器(Attenuators)來實現,衰減器在衰減信號功率的同時也吸收熱量並將線纜的有效雜訊溫度降低到接近該級的物理溫度<sup>10</sup>。此外,線纜還需要具備良好的電磁屏蔽性能,以阻擋外部環境的電磁干擾<sup>73</sup>。紅外濾波器(Infrared Filters)也常被集成在線纜中,以阻止高頻熱輻射沿介電層傳播<sup>10</sup>。</li>
+                                      <li><strong>高密度集成(High Density Integration):</strong> 隨著量子處理器規模的擴大,需要連接的信號通道數量急劇增加,可能達到數百甚至數千條<sup>45</sup>。稀釋製冷機內部的空間非常有限,尤其是在較冷的溫級。因此,線纜和接頭必須具有高密度、小尺寸的特點,以便在有限的空間內容納大量通道<sup>10</sup>。</li>
+                                      <li><strong>低溫兼容性與可靠性 (Cryogenic Compatibility and Reliability):</strong> 線纜和接頭所使用的材料必須能夠承受從室溫到毫開爾文溫度的巨大溫度變化和反覆的熱循環,而不會發生物理損壞(如開裂、變脆)或性能顯著下降<sup>10</sup>。對於柔性線纜,還要求在低溫下保持一定的柔韌性以便於安裝和佈線<sup>10</sup>。</li>
+                                      <li><strong>非磁性要求(Non-Magnetic Requirement):</strong> 由於量子位元(尤其是磁通量子位元)和用於讀取的超導量子干涉儀(SQUID)等元件對磁場非常敏感,線纜和接頭應盡可能使用非磁性材料製造,以避免產生或擾亂局部磁場<sup>68</sup>。通常要求材料的磁化率 (Magnetic Susceptibility) 極低(如&lt;10<sup>-5</sup>)<sup>68</sup>。</li>
+                                      <li><strong>氣密性(Hermeticity):</strong> 對於需要穿過稀釋製冷機真空外殼或內部真空隔斷的接頭(饋通 Feedthroughs),必須達到超高真空的氣密性標準,防止外部氣體洩漏到低溫真空環境中<sup>59</sup>。典型的氦氣洩漏率要求低於1×10<sup>-7</sup>或1×10<sup>-8</sup> mbar L/s<sup>59</sup>。</li>
+                                  </ul>
+                      
+                                  <p style="text-align:justify" class="dark-background">滿足所有這些要求是一個巨大的工程挑戰,需要在材料科學、微波工程、低溫物理和精密製造等多個方面進行創新。</p>
+                      
+                                  <h3>B.導線類型與材料</h3>
+                      
+                                  <p style="text-align:justify" class="dark-background">為了應對上述挑戰,研究人員和供應商開發了多種類型的低溫導線:</p>
+                      
+                                  <ul>
+                                      <li><strong>低熱導同軸電纜(Low Thermal Conductivity Coaxial Cables):</strong> 這是傳統的解決方案,但在低溫應用中進行了特殊優化。
+                                          <ul>
+                                              <li><strong>材料選擇:</strong> 關鍵在於選擇低熱導率的導體和介電材料。
+                                                  <ul>
+                                                      <li><strong>導體:</strong> 不再使用高導熱性的銅,而是採用熱導率低得多的合金,如不銹鋼(Stainless Steel, SS)或銅鎳合金(CuproNickel, CuNi)<sup>71</sup>。在需要極低熱導的最冷級,可以使用超導材料,如鈮鈦合金(Niobium-Titanium, NbTi),它在超導轉變溫度(約9-10K)以下不僅電阻為零,熱導率也急劇下降<sup>44</sup>。為了改善 RF性能,有時會在低熱導基材上鍍一層薄薄的良導體,如銀(Ag)<sup>59</sup>。 </li>
+                                                      <li><strong>介電材料:</strong> 常用的介電材料是聚四氟乙烯(PTFE),但其在低溫下的損耗和熱性能需要仔細評估。</li>
+                                                  </ul>
+                                              </li>
+                                              <li><strong>結構:</strong> 有半剛性(Semi-rigid)和柔性(Flexible)兩種形式。半剛性電纜通常具有實心的外導體,提供較好的屏蔽性能,但安裝不便。柔性同軸電纜更易於佈線。</li>
+                                              <li><strong>熱負載分析:</strong> 線纜的熱負載包括靜態熱負載(由材料熱導率和溫差決定)和動態熱負載(由信號電流引起的歐姆損耗和衰減器散熱決定)<sup>17</sup>。精確的熱模型對於預測和管理大規模系統的總熱負載至關重要<sup>17</sup>。</li>
+                                          </ul>
+                                      </li>
+                                      <li><strong>柔性帶狀線纜/印刷電路板(Flexible Ribbon Cables / PCBs):</strong> 這是近年來越來越受歡迎的解決方案,旨在解決高密度和易安裝性的問題<sup>10</sup>。
+                                          <ul>
+                                              <li><strong>結構:</strong> 通常採用聚酰亞胺(Polyimide,如Kapton®)作為柔性基板和介電層,導電線路(可以是微帶線或帶狀線結構)通過印刷電路工藝製作在基板上<sup>59</sup>。多條信號通道可以並排集成在一條柔性帶上,形成帶狀線纜<sup>59</sup>。</li>
+                                              <li><strong>材料:</strong> 導體材料同樣可以選擇銀(Ag)或超導的鈮鈦(NbTi),以平衡RF 性能和熱負載<sup>44</sup>。MIT Lincoln Lab 的方案使用了磷青銅(Phosphor Bronze)作為導體<sup>67</sup>。</li>
+                                              <li><strong>優點:</strong>
+                                                  <ul>
+                                                      <li><strong>高密度:</strong> 可以在很小的寬度內容納多個通道(例如Delft Circuits的 Cri/oFlex® 可在10mm 寬度內容納8個通道<sup>70</sup>)。</li>
+                                                      <li><strong>柔韌性:</strong> 非常柔軟,易於彎曲和佈線,適應複雜的低溫結構<sup>67</sup>。</li>
+                                                      <li><strong>低熱負載:</strong> 由於導體截面積小,且可使用NbTi等超導材料,其熱導率可以做得非常低<sup>10</sup>。</li>
+                                                      <li><strong>集成能力:</strong> 可以在柔性基板上直接集成無源元件,如衰減器和濾波器,進一步節省空間並減少連接點<sup>10</sup>。</li>
+                                                  </ul>
+                                              </li>
+                                              <li><strong>代表性產品:</strong> Delft Circuits 的Cri/oFlex® 系列(包括Ag 和NbTi版本,以及針對不同信號類型優化的Flux line, Drive line, Signal line等)<sup>10</sup>, Maybell Quantum 的 Flexlines<sup>32</sup>,以及MIT Lincoln Lab 開發的技術<sup>67</sup>。</li>
+                                          </ul>
+                                      </li>
+                                      <li><strong>雙絞線(Twisted Pairs):</strong> 主要用於傳輸低頻模擬信號或DC 偏置信號,其RF性能有限,但成本較低,結構簡單。Bluefors 將其作為一種線纜選項提供<sup>37</sup>。</li>
+                                      <li><strong>光纖(Optical Fibers):</strong> 光纖具有極低的熱導率和極高的帶寬潛力,被認為是未來可能替代電纜的方案,尤其是在需要傳輸大量數據或對熱負載極其敏感的場合。目前仍在探索階段,Bluefors 也提供此選項<sup>37</sup>。</li>
+                                      <li><strong>超導線纜/塗層(Superconducting Wiring/Coatings):</strong> 在低於超導轉變溫度的冷級(通常是4K及以下),使用NbTi等超導材料可以實現幾乎無損耗的DC和RF 信號傳輸,並顯著降低熱導率<sup>44</sup>。這對於減少最低溫級的熱負載尤為重要。</li>
+                                  </ul>
+                      
+                                  <h3>C.接頭類型與特點</h3>
+                      
+                                  <p style="text-align:justify" class="dark-background">將這些特殊的低溫線纜可靠地連接到設備、樣品架以及穿過真空法蘭,需要同樣經過特殊設計的接頭:</p>
+                      
+                                  <ul>
+                                      <li><strong>標準 RF 同軸接頭的低溫/非磁性版本(Cryogenic/Non-Magnetic Versions of Standard RF Coaxial Connectors):</strong>
+                                          <ul>
+                                              <li>最常見的接口類型包括 SMA、SMP、Mini-SMP、SMPM、SMPS、2.92mm (K型)、2.4mm 等<sup>59</sup>。</li>
+                                              <li>為了用於低溫和量子計算環境,這些標準接頭必須進行改造: 
+                                                  <ul>
+                                                      <li><strong>材料:</strong> 必須使用在低溫下性能穩定且磁化率極低的材料製造。常用的金屬部件材料包括特定牌號的無磁不銹鋼、鈹銅(BeCu)、磷青銅、黃銅等,絕緣體通常使用 PEEK或PTFE<sup>68</sup>。</li>
+                                                      <li><strong>電鍍:</strong> 表面通常鍍金(Gold Plating)以確保良好的電接觸和抗氧化性<sup>74</sup>。</li>
+                                                  </ul>
+                                              </li>
+                                              <li><strong>供應商:</strong> Quantum Microwave<sup>76</sup>, Rosenberger<sup>74</sup>, Delft Circuits (用於其 Cri/oFlex®)<sup>59</sup>等公司提供這類非磁性低溫接頭。</li>
+                                          </ul>
+                                      </li>
+                                      <li><strong>高密度接頭(High-Density Connectors):</strong> 為了應對不斷增長的通道數量,開發了能夠在有限空間內實現大量連接的高密度方案。
+                                          <ul>
+                                              <li><strong>多端口同軸連接器(Multiport Coaxial Connectors):</strong> 例如 Rosenberger的Multiport Mini-Coax系統,以及其在 qSolid 項目中研發的、旨在實現&lt;3mm 通道間距的多端口連接器<sup>74</sup>。這些連接器允許一次性插拔多個同軸通道。</li>
+                                              <li><strong>板對板/線對板高密度接口 (Board-to-Board / Cable-to-Board High-Density Interfaces):</strong>
+                                                  <ul>
+                                                      <li>一些方案採用基於彈性觸點陣列的板級連接器,如Ardent Concepts 的產品,被 QuantWare 用於其高密度 QPU 封裝(Contralto, VIO-176)<sup>79</sup>。</li>
+                                                      <li>Delft Circuits 的T2B (Tabbi/2Board)是一種緊湊的柔性線纜到 PCB 的連接方案,可在20mm 寬度內連接8個通道<sup>59</sup>。</li>
+                                                      <li>還有一些通用的高密度方案,使用恆定阻抗的盲插觸點(blind mate constant impedance contacts),可以集成衰減器,並通過單次插拔操作連接數十甚至上百個微波線路<sup>68</sup>。</li>
+                                                  </ul>
+                                              </li>
+                                              <li><strong>優點:</strong> 顯著提高連接密度,簡化大規模系統的組裝和維護。</li>
+                                          </ul>
+                                      </li>
+                                      <li><strong>氣密接頭/饋通(Hermetic Connectors / Feedthroughs):</strong> 這是將信號線從常壓環境引入超高真空低溫環境的關鍵接口。
+                                          <ul>
+                                              <li><strong>密封技術:</strong> 必須實現極高的氣密性,防止氣體洩漏。常用的密封技術是玻璃-金屬封裝(Glass-to-Metal Seal)或陶瓷-金屬封裝<sup>74</sup>。接頭體通常由 Kovar 合金(一種熱膨脹係數與玻璃匹配的鐵鎳鈷合金)或不銹鋼製成<sup>74</sup>。</li>
+                                              <li><strong>接口形式:</strong> 可以提供標準的真空法蘭接口,如KF (QF)、CF (ConFlat)或ISO<sup>59</sup>,也可以根據客戶需求定製法蘭設計<sup>74</sup>。</li>
+                                              <li><strong>通道密度:</strong> 饋通可以設計成單通道或多通道。例如,Delft Circuits 提供 KF25(最多16 通道)、KF40(最多32通道)和ISO100(最多256通道)的真空饋通<sup>59</sup>。Rosenberger 也提供多通道氣密法蘭<sup>74</sup>。</li>
+                                              <li><strong>低溫性能:</strong> 除了氣密性,用於低溫的氣密接頭還需要考慮材料的低溫穩定性和非磁性要求。Amphenol Aerospace 的Cryo-Seal 系列是專門為極低溫 (-195°C) 設計的氣密接頭,基於MIL-DTL-38999標準,並經過嚴格的低溫測試<sup>78</sup>。</li>
+                                              <li><strong>供應商:</strong> Martec<sup>77</sup>, Amphenol Aerospace<sup>78</sup>, Rosenberger<sup>74</sup>, Delft Circuits <sup>59</sup> 等公司提供各種類型的低溫氣密接頭和饋通。</li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+                      
+                                  <h3>D.主要供應商</h3>
+                      
+                                  <p style="text-align:justify" class="dark-background">匯總來看,低溫導線與接頭領域的主要供應商包括:</p>
+                      
+                                  <ul>
+                                      <li><strong>線纜(Wiring):</strong>
+                                          <ul>
+                                              <li><strong>柔性線纜:</strong> Delft Circuits (Cri/oFlex® - Ag/NbTi)<sup>10</sup>, Maybell Quantum (Flexlines)<sup>32</sup>, MIT Lincoln Lab(技術授權)<sup>67</sup>。 </li>
+                                              <li><strong>同軸電纜:</strong> Rosenberger (半剛性/半柔性/特殊低溫組件-SS, CuNi, NbTi)<sup>74</sup>, CryoCoax (SS, BeCu, CuNi)<sup>71</sup>, EZ Form Cable (SS)<sup>71</sup>。</li>
+                                              <li><strong>集成方案:</strong> Bluefors(提供多種線纜選項作為其係統的一部分)<sup>37</sup>。</li>
+                                          </ul>
+                                      </li>
+                                      <li><strong>接頭(Connectors):</strong>
+                                          <ul>
+                                              <li><strong>標準RF(非磁性/低溫):</strong> Quantum Microwave (SMA, SMP family)<sup>76</sup>, Rosenberger (SMA, SMP family, RPC-2.92等)<sup>74</sup>。</li>
+                                              <li><strong>高密度:</strong> Rosenberger (Multiport Mini-Coax,研發中產品)<sup>74</sup>, Ardent Concepts(用於封裝)<sup>79</sup>, Delft Circuits (T2B)<sup>59</sup>。</li>
+                                              <li><strong>氣密接頭/饋通:</strong> Martec<sup>77</sup>, Amphenol Aerospace (Cryo-Seal 38999)<sup>78</sup>, Rosenberger (定製法蘭)<sup>74</sup>, Delft Circuits (KF/ISO 法蘭饋通)<sup>59</sup>。</li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+                      
+                                  <h3>E.發展趨勢分析</h3>
+                      
+                                  <p style="text-align:justify" class="dark-background">超導量子計算對互連技術的需求正在推動兩個核心趨勢。其一,對更高密度和更強集成能力的追求是創新的主要驅動力。隨著量子處理器從幾十個量子位元向數百乃至數千個量子位元擴展<sup>5</sup>,所需的信號線路數量呈爆炸式增長。然而,稀釋製冷機內部,尤其是最冷的mK級,空間極其寶貴<sup>68</sup>。傳統的、相對笨重的同軸電纜和單個接頭很快就會佔滿可用空間,並帶來巨大的熱負載和組裝複雜性<sup>68</sup>。這就迫切需要新的解決方案。柔性帶狀線纜技術(如Delft Circuits 的Cri/oFlex®、Maybell 的Flexlines、MIT LL的方案)應運而生,它們能在極小的橫截面積內容納多個通道,並具有良好的彎曲性,極大提高了佈線密度和安裝便利性<sup>10</sup>。與此同時,高密度連接器技術(如Rosenberger 的多端口系統、Ardent Concepts 的板級連接器、Delft Circuits 的T2B)允許在更小的面積上實現更多連接點,並通過單次插拔操作連接大量線路,簡化了組裝和維護流程<sup>59</sup>。此外,將濾波器、衰減器等無源元件直接集成到柔性線纜上<sup>10</sup>,不僅進一步節省了寶貴的低溫空間,還減少了接點數量,提高了系統的整體可靠性。</p>
+                      
+                                  <p style="text-align:justify" class="dark-background">其二,材料科學在平衡多重苛刻需求方面扮演著核心角色。低溫線纜和接頭需要在從室溫到接近絕對零度的極端溫度範圍內可靠工作<sup>15</sup>。這意味著材料必須同時滿足相互衝突的要求:既要導電性好以低損耗傳輸 RF 信號,又要導熱性差以最大限度減少熱洩漏<sup>16</sup>。同時,材料還需具備良好的機械性能(如低溫下的柔韌性、抗熱循環疲勞)和電磁特性(如非磁性)<sup>10</sup>。為了實現這種精密的平衡,供應商和研究機構正在不斷探索和優化材料體系。例如,採用不銹鋼、銅鎳合金或磷青銅等低熱導合金作為導體基材<sup>67</sup>,並在需要時輔以薄層良導體(如銀)來改善 RF性能。在最冷的溫級,則利用鈮鈦(NbTi)等超導材料的獨特性質,同時實現零電阻和極低熱導<sup>44</sup>。介電材料的選擇(如聚酰亞胺)也需兼顧低溫柔韌性和低損耗特性<sup>59</sup>。尋找能夠在所有這些方面都表現出色的新材料或複合結構,仍然是該領域持續研發的重點。</p>
+                      
+                                  <h3>F.潛在表格</h3>
+                      
+                                  <p style="text-align:justify" class="dark-background">表4:低溫導線解決方案比較</p>
+                                  
+                                  <table border="1">
+                                      <thead>
+                                          <tr>
+                                              <th>方案類型 (Solution Type)</th>
+                                              <th>代表供應商/產品 (Representative Supplier/Product)</th>
+                                              <th>主要材料(Key Materials - Conductor/Dielectric)</th>
+                                              <th>主要優點 (Key Advantages)</th>
+                                              <th>主要挑戰/缺點(Key Challenges/Disadvantages)</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr>
+                                              <td>低熱導同軸電纜 (Coax)</td>
+                                              <td>Rosenberger, CryoCoax, EZ Form Cable</td>
+                                              <td>SS, CuNi, NbTi / PTFE</td>
+                                              <td>技術成熟, 屏蔽性好</td>
+                                              <td>密度低,安裝較複雜,柔性有限(半剛性)</td>
+                                          </tr>
+                                          <tr>
+                                              <td>柔性帶狀線纜 (Flex Ribbon) - Ag </td>
+                                              <td>Delft Circuits (Cri/oFlex® Ag), Maybell (Flexlines)</td>
+                                              <td>Ag / Polyimide</td>
+                                              <td>高密度, 極佳柔韌性, 易安裝, 成本相對較低</td>
+                                              <td>熱導率相對 NbTi高, RF損耗相對 NbTi高</td>
+                                          </tr>
+                                          <tr>
+                                              <td>柔性帶狀線纜 (Flex Ribbon) - NbTi</td>
+                                              <td>Delft Circuits (Cri/oFlex® NbTi)</td>
+                                              <td>NbTi / Polyimide</td>
+                                              <td>高密度, 極佳柔韌性, 易安裝, 極低熱導率 (&lt;T<sub>c</sub>), 極低 RF 損耗 (&lt;T<sub>c</sub>), 可集成元件</td>
+                                              <td>成本較高, 僅在低溫下超導</td>
+                                          </tr>
+                                          <tr>
+                                              <td>柔性線纜 (Flex Wiring) - 其他</td>
+                                              <td>MIT LL</td>
+                                              <td>Phosphor Bronze / Flexible Layers</td>
+                                              <td>高密度, 柔韌性好</td>
+                                              <td>RF 性能和熱導率數據不明</td>
+                                          </tr>
+                                          <tr>
+                                              <td>雙絞線 (Twisted Pair)</td>
+                                              <td>Bluefors (Option)</td>
+                                              <td>(銅或合金線) / (絕緣層)</td>
+                                              <td>成本低, 適用於DC/低頻</td>
+                                              <td>RF性能差, 屏蔽性差, 密度不高</td>
+                                          </tr>
+                                          <tr>
+                                              <td>光纖 (Optical Fiber)</td>
+                                              <td>Bluefors (Option)</td>
+                                              <td>Glass / Polymer</td>
+                                              <td>極低熱導, 極高帶寬, 抗電磁干擾</td>
+                                              <td>技術仍在發展中, 光電轉換接口複雜, 成本高</td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                                  <p style="text-align:justify" class="dark-background">資料來源:10</p>
+                      
+                                  <p style="text-align:justify" class="dark-background">表5:低溫接頭供應商與類型</p>
+                                  
+                                  <table border="1">
+                                      <thead>
+                                          <tr>
+                                              <th>供應商 (Supplier)</th>
+                                              <th>接頭類型(Connector Type)</th>
+                                              <th>主要特點(Key Features)</th>
+                                              <th>適用線纜 (Compatible Wiring)</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr>
+                                              <td>Quantum Microwave</td>
+                                              <td>SMA, SMP, Mini-SMP, SMPM, SMPS</td>
+                                              <td>非磁性, 低溫兼容</td>
+                                              <td>同軸電纜</td>
+                                          </tr>
+                                          <tr>
+                                              <td>Rosenberger</td>
+                                              <td>SMA, RPC-2.92, SMP family, WSMP®, Multiport Mini-Coax (Kovar)</td>
+                                              <td>非磁性選項, 寬頻率範圍(up to 110 GHz), 高密度選項, 可定製氣密法蘭</td>
+                                              <td>同軸電纜, 柔性線纜, 帶狀線纜</td>
+                                          </tr>
+                                          <tr>
+                                              <td>Amphenol Aerospace </td>
+                                              <td>Cryo-Seal Hermetic (38999 Series I, II, III, 2M)</td>
+                                              <td>極低溫(-195°C), 高氣密性(1E-7 He leak rate), 玻璃-金屬密封, 符合軍規標準</td>
+                                              <td>(未說明, 可能為多芯線纜)</td>
+                                          </tr>
+                                          <tr>
+                                              <td>Martec</td>
+                                              <td>Hermetic Connectors/Feedthroughs (Custom, Standard Flanges)</td>
+                                              <td>低溫兼容, 真空友好(低釋氣, 低殘留體積), 氣密性</td>
+                                              <td>(未說明)</td>
+                                          </tr>
+                                          <tr>
+                                              <td>Delft Circuits</td>
+                                              <td>SMA, SMP, Mini-SMP Connectors; Vacuum Feedthroughs (KF, ISO); T2B</td>
+                                              <td>非磁性選項, 與 Cri/oFlex® 匹配, 高密度饋通(up to 256 ch), 高氣密性(1E-9 leak rate)</td>
+                                              <td>Cri/oFlex® 柔性線纜</td>
+                                          </tr>
+                                          <tr>
+                                              <td>Ardent Concepts</td>
+                                              <td>(高密度板級連接器)</td>
+                                              <td>用於QPU 封裝的高密度連接</td>
+                                              <td>(板對板或線對板)</td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                                  <p style="text-align:justify" class="dark-background">資料來源: 59</p>
+                                
+                                <p style="text-align:justify">
+                                    ▲
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
+
+                                    </span><br><br>
+                                    </p>
+
+
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                    </span>
+                                    <span class="post-category">
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                    </span>
+                                </div><!-- /.post-meta -->
+                            
+                                <div id="prev-next-nav" class="text-center"></div>
+
+                                <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
+
+    const current = location.pathname.split("/").pop();
+    const index = pages.findIndex(p => p.file === current);
+    let html = "";
+
+    if (index > 0) {
+      const prev = pages[index - 1];
+      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+    }
+
+    html += `<a class="btn btn-gray" href="../QC_hardware_en/${current}" style="margin: 0 10px;">English Version</a>`;
+
+    if (index < pages.length - 1) {
+      const next = pages[index + 1];
+      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+    }
+
+    document.getElementById("prev-next-nav").innerHTML = html;
+  });
+</script>
+
+                            </div><!-- /.post-content -->
+                        </article><!-- /.blog-post -->
+                        <!--<div id="PostComments" class="post-comments">
+                            
+                            
+                            
+                        </div> /#PostComments -->
+                        <!--<div class="respond">
+                            <h3>Post a Comment</h3>
+                            <form class="form-horizontal">
+                                <input class="form-control" type="text" placeholder="Your Name*" required>
+                                <input class="form-control" type="email" placeholder="Your Email" required>
+                                <textarea class="form-control form-control-comment" type="text" placeholder="Your Comment*" required></textarea>
+                                <button class="btn btn-green">Add a comment</button>
+                            </form>    
+                        </div> /.respond -->
+                    </div>
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            
+
+                            <div class="widget">
+                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <p>一起走進新時代的前沿科學與量子科技</p>
+                    </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li>
+                        <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
+                        <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300, Taiwan (R.O.C.)</p></li>-->
+                    </ul>
+                </div>
+                <!--<div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <h3>Featured links</h3>
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Porfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <!--<a class="twitter-bg" href="#"><i class="fab fa-twitter"></i></a>-->
+                            <!--<<a class="facebook-bg" href="https://www.facebook.com/people/Quantum-Perspectives/61576446849628/"><i class="fab fa-facebook"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/%E9%87%8F%E5%AD%90%E9%81%A0%E8%A6%8BQuantum-Perspectives/61576883632888/"><i class="fab fa-facebook-f"></i></a>-->
+                            <!--<a class="pinterest" href="#"><i class="fa-solid fa-microscope"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="linkedin-bg" href="https://www.linkedin.com/company/insight-ihbar"><i class="fab fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p><span style="font-size: 16px;">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</span></p>
+                            <p>All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+</body>
+</html>

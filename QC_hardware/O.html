@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Favicon
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/20250525-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/20250525-icon.png">
+
+    <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>超導量子電腦硬體指南 (2025) | 量子位元、組件與廠商全解析</title>
+    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware_2025.html" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+
+                <div class="navbar-header">                   
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                            </ul>
+                        </li>
+                        <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
+                        <li class="active"><a href="../QC_hardware/main.html">硬體導論</a></li>
+                        <li><a href="../index_en.html">English</a></li>                        
+                    </ul>
+                </div>
+
+            </div>   
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <h1>硬體導論</h1>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">硬體導論</a></li>
+                  <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
+                </ol>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="blog-post">
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
+                            <div class="post-content">
+                                <div style="text-align: center;">
+                                    <h2>低溫佈線與互連-廠商</h2>
+                                    <h3></h3>
+                                </div>
+                                
+                                <!--低溫佈線與互連 (Cryogenic Wiring and Interconnects)-->
+                                <header class="major">
+                                    <h2><li>低溫佈線與互連 (Cryogenic Wiring and Interconnects)</li></h2>
+                                  </header>
+                                  <p style="text-align:justify" class="dark-background">
+                                    在室溫控制電子設備和位於極低溫環境中的QPU之間可靠地傳輸高頻控制和讀出訊號，同時最大限度地減少熱量洩漏到低溫系統中，是超導量子電腦面臨的關鍵工程挑戰之一，通常被稱為「佈線問題」(wiring problem)。
+                                  </p>
+                                  <ol>
+                                    <li>
+                                      <p style="text-align:justify" class="dark-background"><b>功能與重要性</b><br>低溫佈線系統必須滿足多個看似矛盾的要求：</p>
+                                      <ul>
+                                        <li><b>電學性能：</b> 在寬頻率範圍內（從直流到數GHz）提供良好的訊號傳輸特性，包括低損耗、低色散和受控的阻抗，以確保控制脈衝的保真度和讀出訊號的完整性。</li>
+                                        <li><b>熱學性能：</b> 具有極低的熱導率，以最大限度地減少從室溫到mK級的熱洩漏，否則會超出稀釋製冷機的冷卻能力。</li>
+                                        <li><b>機械性能：</b> 能夠承受多次熱循環（從室溫到極低溫再返回）而不發生損壞或性能下降。</li>
+                                        <li><b>可擴展性與密度：</b> 隨著量子位元數量的增加，所需的訊號線數量也急劇增加。佈線系統必須能夠以高密度方式容納數百甚至數千條線路，同時適應稀釋製冷機內部有限的空間。</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      <p style="text-align:justify" class="dark-background"><b>關鍵組件與材料</b></p>
+                                      <ul>
+                                        <li><b>同軸電纜 (Coaxial Cables)：</b> 是傳輸射頻 (RF) 和微波訊號的常用選擇。通常使用由特殊材料製成的同軸電纜，如：
+                                          <ul>
+                                            <li><b>超導電纜：</b> 例如使用鈮鈦 (NbTi) 合金作為導體，可以在超導態下實現近乎無損的訊號傳輸。Delft Circuits 的 Cri/oFlex® 技術採用柔性 NbTi 帶狀線，在6 GHz時損耗低至1.5 dB/m。</li>
+                                            <li><b>低熱導率導體：</b> 如不銹鋼或銅鎳合金 (CuNi) 用於外導體，以減少熱洩漏。</li>
+                                          </ul>
+                                        </li>
+                                        <li><b>柔性印刷電路 (Flexible Printed Circuits, FPCs) / 帶狀線 (Striplines)：</b> 如 Delft Circuits 的 Cri/oFlex®，提供高密度、靈活的佈線解決方案，更易於集成和安裝。</li>
+                                        <li><b>連接器 (Connectors)：</b> 需要特製的低溫兼容連接器，如微型SMA或更高密度的「ganged」連接器，以在不同溫級之間或與QPU封裝進行連接。</li>
+                                        <li><b>熱錨 (Thermal Anchors)：</b> 將線纜在稀釋製冷機的各個溫級進行熱錨定，以逐步散去傳導下來的熱量。通常使用高純度銀線等材料。</li>
+                                        <li><b>衰減器和濾波器 (Attenuators and Filters)：</b> 集成在訊號線路中，用於衰減訊號、管理雜訊和抑制不需要的頻率。</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      <p style="text-align:justify" class="dark-background"><b>代表性製造商與所在國家/地區</b></p>
+                                      <ul>
+                                        <li><b>荷蘭：</b> Delft Circuits 是柔性低溫電纜技術的領導者，其 Cri/oFlex® 產品被全球眾多量子計算研究機構和公司採用。該公司源於QuTech量子技術集群。</li>
+                                        <li><b>英國：</b> CryoCoax (Intelliconnect 的一個部門) 專門製造和供應低溫應用的射頻互連和子系統。他們開發了用於低溫系統的高密度射頻連接器。</li>
+                                        <li><b>美國、中國等：</b> 這些國家在量子計算領域的整體投入也推動了對先進低溫佈線解決方案的需求和研發。</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      <p style="text-align:justify" class="dark-background"><b>價格範圍</b><br>低溫佈線和互連組件非常昂貴。</p>
+                                      <ul>
+                                        <li><b>超導同軸電纜：</b> NbTi-NbTi 超導同軸電纜的價格約為每米1500美元。</li>
+                                        <li><b>完整佈線方案：</b> 為一個包含數十到數百量子位元的系統構建完整的低溫佈線方案，成本可能達到數萬甚至數十萬美元。</li>
+                                      </ul>
+                                      <p style="text-align:justify" class="dark-background">這部分成本是構建和升級量子電腦時需要考慮的重要因素。</p>
+                                    </li>
+                                  
+                                    <li>
+                                      <p style="text-align:justify" class="dark-background"><b>技術門檻</b></p>
+                                      <ul>
+                                        <li><b>熱導率 vs. 電導率的權衡：</b> 良好的導電材料通常也是良好的導熱材料，這在低溫佈線中是一個核心矛盾。需要找到既能有效傳輸高頻訊號又能最大限度減少熱洩漏的材料和設計方案。</li>
+                                        <li><b>訊號完整性：</b> 在極端溫度梯度和長距離傳輸中保持訊號的幅度和相位完整性，避免失真、反射和串擾，是一大挑戰。阻抗匹配在所有溫級都非常重要。</li>
+                                        <li><b>可擴展性與密度：</b> 「佈線瓶頸」是阻礙量子電腦規模擴展的主要因素之一。如何在有限的低溫空間內集成越來越多的訊號線，同時管理其熱負載和避免串擾，變得極其困難。Planckian 等公司正在開發新的QPU架構，例如「傳送帶」設計，旨在通過共享控制線來減少外部佈線的數量。</li>
+                                        <li><b>機械可靠性與熱循環：</b> 低溫線纜和連接器必須能夠承受多次從室溫到mK級溫度的劇烈變化而不發生機械故障或性能退化。不同材料的熱膨脹係數差異可能導致接頭應力。</li>
+                                        <li><b>集成與安裝：</b> 將大量細小的線纜和連接器安裝到複雜的稀釋製冷機中是一項耗時且容易出錯的工作。柔性、高密度的解決方案有助於簡化這一過程。</li>
+                                        <li><b>成本：</b> 特殊材料和複雜的製造工藝使得高性能低溫線纜非常昂貴。</li>
+                                      </ul>
+                                      <p style="text-align:justify" class="dark-background">解決「佈線問題」是實現大規模容錯量子計算的關鍵。目前的研究方向包括開發新型低熱導率、高電導率的材料，設計更高密度的互連方案（如3D集成、柔性帶狀線），以及探索將部分控制電子集成到低溫環境（Cryo-CMOS）以減少對大量室溫佈線的需求。Intelliconnect 的高密度「ganged」連接器等創新，旨在通過減小每個通道的佔用面積來支持量子設備技術在空間受限的稀釋製冷機環境中的擴展。</p>
+                                    </li>
+                                  </ol>
+                                  
+                                
+                                <table border="1">
+                                  <thead>
+                                      <tr>
+                                          <th>供應商 (Supplier)</th>
+                                          <th>國家/地區 (Country/Region)</th>
+                                          <th>主要產品/服務(Key Products/Services)</th>
+                                          <th>關鍵特點/技術(Key Features/Technology)</th>
+                                      </tr>
+                                  </thead>
+                                    <tr>
+                                      <td colspan="4"><strong>低溫導線/接頭</strong></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Delft Circuits</td>
+                                      <td>荷蘭</td>
+                                      <td>Cri/oFlex® 柔性線纜 (Ag/NbTi),低溫接頭,氣密饋通</td>
+                                      <td>高密度,低熱導,可集成元件,超導選項<sup>44</sup></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Rosenberger</td>
+                                      <td>德國</td>
+                                      <td>低溫同軸電纜(SS, CuNi, NbTi),非磁性 RF 接頭 (SMA, SMP等),高密度接頭,氣密法蘭</td>
+                                      <td>產品線寬,定制能力強<sup>74</sup></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Amphenol Aerospace </td>
+                                      <td>美國</td>
+                                      <td>Cryo-Seal 氣密接頭(38999)</td>
+                                      <td>極低溫(-195°C)性能保證,高氣密性<sup>78</sup></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Martec</td>
+                                      <td>英國</td>
+                                      <td>低溫氣密接頭/饋通</td>
+                                      <td>真空友好,低釋氣材料<sup>77</sup></td>
+                                  </tr>
+                                  <tr>
+                      
+                                  </tbody>
+                                </table>
+                                <ul>
+                                  <li><strong>低溫導線與接頭(Cryogenic Wiring & Connectors):</strong> Delft Circuits, Maybell Quantum, Rosenberger, Amphenol Aerospace, Martec, Quantum Microwave, CryoCoax, EZ Form Cable (詳見 Section III.D)<sup>10</sup>。</li>
+                                  <li><strong>真空系統部件(Vacuum System Components):</strong> Leybold, Edwards Vacuum, Pfeiffer Vacuum, SAES Getters, Gamma Vacuum, Busch Vacuum Solutions, Agilent/Varian, Welch, VAT (詳見 Section IV.A)<sup>11</sup>。</li>
+                                  <li><strong>磁屏蔽材料/系統(Magnetic Shielding Materials/Systems):</strong> Amuneal Manufacturing Corp., Magnetic Shields Limited (詳見 Section IV.B)<sup>87</sup>。 </li>
+                                  <li><strong>低溫測量儀器/感測器(Cryogenic Measurement Instruments/Sensors):</strong> Lake Shore Cryotronics, Paragraf (詳見 Section IV.C)<sup>94</sup>。 </li>
+                              </ul>
+                                
+                                <table border="1">
+                                    <thead>
+                                        <tr>
+                                            <th>供應商 (Supplier)</th>
+                                            <th>國家/地區 (Country/Region)</th>
+                                            <th>主要產品/服務(Key Products/Services)</th>
+                                            <th>關鍵特點/技術(Key Features/Technology)</th>
+                                        </tr>
+                                    </thead>
+                                      <td colspan="4"><strong>輔助系統部件</strong></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Leybold, Edwards, Pfeiffer, etc.</td>
+                                      <td>(多國)</td>
+                                      <td>各類真空幫浦(旋片,乾式,渦輪,離子等)</td>
+                                      <td>成熟真空技術供應商<sup>11</sup></td>
+                                  </tr>
+                                  <tr>
+                                      <td>SAES Getters</td>
+                                      <td>意大利</td>
+                                      <td>NEG 真空幫浦</td>
+                                      <td>高H<sub>2</sub> 抽速,無振動/磁場/污染<sup>80</sup></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Amuneal, Magnetic Shields Ltd.</td>
+                                      <td>美國,英國</td>
+                                      <td>磁屏蔽材料/系統</td>
+                                      <td>高磁導率材料,低溫屏蔽,主動屏蔽<sup>87</sup></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Lake Shore Cryotronics</td>
+                                      <td>美國</td>
+                                      <td>低溫溫度/磁場傳感器,測量儀器,探針台</td>
+                                      <td>低溫測量專家<sup>94</sup></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                                
+                                <p style="text-align:justify">
+                                    ▲
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
+
+                                    </span><br><br>
+                                    </p>
+
+
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                    </span>
+                                    <span class="post-category">
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                    </span>
+                                </div><!-- /.post-meta -->
+                            
+                                <div id="prev-next-nav" class="text-center"></div>
+
+                                <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
+
+    const current = location.pathname.split("/").pop();
+    const index = pages.findIndex(p => p.file === current);
+    let html = "";
+
+    if (index > 0) {
+      const prev = pages[index - 1];
+      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+    }
+
+    html += `<a class="btn btn-gray" href="../QC_hardware_en/${current}" style="margin: 0 10px;">English Version</a>`;
+
+    if (index < pages.length - 1) {
+      const next = pages[index + 1];
+      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+    }
+
+    document.getElementById("prev-next-nav").innerHTML = html;
+  });
+</script>
+
+                            </div><!-- /.post-content -->
+                        </article><!-- /.blog-post -->
+                        <!--<div id="PostComments" class="post-comments">
+                            
+                            
+                            
+                        </div> /#PostComments -->
+                        <!--<div class="respond">
+                            <h3>Post a Comment</h3>
+                            <form class="form-horizontal">
+                                <input class="form-control" type="text" placeholder="Your Name*" required>
+                                <input class="form-control" type="email" placeholder="Your Email" required>
+                                <textarea class="form-control form-control-comment" type="text" placeholder="Your Comment*" required></textarea>
+                                <button class="btn btn-green">Add a comment</button>
+                            </form>    
+                        </div> /.respond -->
+                    </div>
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            
+
+                            <div class="widget">
+                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <p>一起走進新時代的前沿科學與量子科技</p>
+                    </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li>
+                        <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
+                        <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300, Taiwan (R.O.C.)</p></li>-->
+                    </ul>
+                </div>
+                <!--<div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <h3>Featured links</h3>
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Porfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <!--<a class="twitter-bg" href="#"><i class="fab fa-twitter"></i></a>-->
+                            <!--<<a class="facebook-bg" href="https://www.facebook.com/people/Quantum-Perspectives/61576446849628/"><i class="fab fa-facebook"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/%E9%87%8F%E5%AD%90%E9%81%A0%E8%A6%8BQuantum-Perspectives/61576883632888/"><i class="fab fa-facebook-f"></i></a>-->
+                            <!--<a class="pinterest" href="#"><i class="fa-solid fa-microscope"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="linkedin-bg" href="https://www.linkedin.com/company/insight-ihbar"><i class="fab fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p><span style="font-size: 16px;">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</span></p>
+                            <p>All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+</body>
+</html>

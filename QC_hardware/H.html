@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Favicon
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/20250525-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/20250525-icon.png">
+
+    <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>超導量子電腦硬體指南 (2025) | 量子位元、組件與廠商全解析</title>
+    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware_2025.html" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+
+                <div class="navbar-header">                   
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                            </ul>
+                        </li>
+                        <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
+                        <li class="active"><a href="../QC_hardware/main.html">硬體導論</a></li>
+                        <li><a href="../index_en.html">English</a></li>                        
+                    </ul>
+                </div>
+
+            </div>   
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <h1>硬體導論</h1>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">硬體導論</a></li>
+                  <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
+                </ol>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="blog-post">
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
+                            <div class="post-content">
+                                <div style="text-align: center;">
+                                    <h2>微波元件廠商</h2>
+                                    <h3></h3>
+                                </div>
+                                
+
+
+                                  
+                                  <!------------->
+                                  <p style="text-align:justify" class="dark-background">
+                                    在量子運算結束時，需要讀出量子位元的最終狀態以獲得計算結果。對於超導量子位元，這通常是透過測量與量子位元耦合的諧振器的響應來實現的。</p>
+                                    <h3>功能與重要性</h3>
+                                      <p style="text-align:justify" class="dark-background">
+                                      讀出系統的任務是將量子位元的量子態（通常是 \( \ket{0} \) 或 \( \ket{1} \) 的疊加態）以高保真度轉換為古典的數位訊號。
+                                      測量過程本身具有破壞性，會使量子位元的疊加態塌縮到一個確定的古典狀態。
+                                      測量保真度直接影響量子糾錯的效率和整體計算結果的準確性。
+                                    </p>
+                                    <h3>關鍵組件與技術</h3>
+                                      <p style="text-align:justify" class="dark-background"></p>
+                                      <ul>
+                                        <li><b>諧振器 (Resonators)：</b> 每個超導量子位元通常耦合到一個微波諧振器。量子位元的狀態會影響諧振器的共振頻率或相位，透過探測諧振器的響應可以推斷出量子位元的狀態。</li>
+                                        <li><b>量子放大器 (Quantum Amplifiers)：</b> 來自諧振器的讀出訊號非常微弱，需要接近量子極限的低雜訊放大器進行放大，才能被後續的古典電子設備檢測到。
+                                          <ul>
+                                            <li><b>約瑟夫森參量放大器 (Josephson Parametric Amplifiers, JPAs)：</b> 利用約瑟夫森結的非線性特性實現微波訊號的低雜訊放大。JPAs可以工作在相位敏感模式（放大單個正交分量而不增加雜訊）或相位保持模式。它們通常具有較窄的帶寬，但可以實現高增益。</li>
+                                            <li><b>行波參量放大器 (Traveling Wave Parametric Amplifiers, TWPAs)：</b> 例如QuantWare的Crescendo-S，是一種基於約瑟夫森結鏈的行波放大器，能夠在較寬的頻寬內提供高增益和接近量子極限的雜訊性能，非常適合多路復用讀出。與JPA不同，TWPA是透射式而非諧振式器件，因此帶寬不受諧振器限制。</li>
+                                          </ul>
+                                        </li>
+                                        <li><b>低雜訊半導體放大器：</b> 通常放置在低溫系統的較高溫級（如4K級），用於進一步放大來自量子放大器的訊號。</li>
+                                        <li><b>混頻器、濾波器和ADC：</b> 用於將放大的微波訊號下變頻到中頻，濾除雜訊，然後由ADC轉換為數位訊號進行處理。</li>
+                                      </ul>
+
+
+                                      <p style="text-align:justify" class="dark-background"><b>代表性製造商/研究機構與所在國家/地區</b></p>
+                                      <ul>
+                                        <li><b>荷蘭：</b> QuantWare 開發並商業化了Crescendo-S TWPA，專為量子位元讀出設計。</li>
+                                        <li><b>美國：</b> 耶魯大學在JPA的研究方面處於領先地位，開發了適用於量子位元讀出的JPA原型。費米實驗室的研究人員也開發了用於量子電腦的新型控制和讀出電子設備，旨在提高性能並降低成本。</li>
+                                        <li><b>全球：</b> 許多大學研究實驗室和量子計算公司都在內部開發或客製化其讀出系統的關鍵組件，特別是量子放大器，因為這是實現高保真度讀出的核心。</li>
+                                      </ul>
+                                
+                                      <p style="text-align:justify" class="dark-background"><b>技術門檻</b></p>
+                                      <ul>
+                                        <li><b>測量保真度：</b> 準確區分量子位元的 \( \ket{0} \) 和 \( \ket{1} \) 狀態至關重要。</li>
+                                        <li><b>測量速度：</b> 快速讀出對於執行需要即時反饋的演算法和最大化量子電腦的有效計算時間至關重要。</li>
+                                        <li><b>多路復用能力：</b> 隨著量子位元數量的增加，需要能夠同時讀出多個量子位元的狀態。</li>
+                                        <li><b>量子極限放大：</b> 第一級放大器必須增加盡可能少的雜訊，理想情況下達到海森堡不確定性原理所允許的量子極限。</li>
+                                        <li><b>串擾：</b> 讀出一個量子位元的操作不應影響相鄰量子位元的狀態。</li>
+                                        <li><b>破壞性測量：</b> 測量會塌縮量子態。某些應用需要開發量子非破壞性 (QND) 測量技術。</li>
+                                        <li><b>可擴展性與集成：</b> 設計可擴展的讀出架構並與QPU和低溫環境有效集成是一大挑戰。</li>
+                                        <li><b>讀出問題的根本性：</b> 測量是概率性且擾動性的，隨著系統規模增加，誤差也更難控制。</li>
+                                      </ul>
+                                      <p style="text-align:justify" class="dark-background">
+                                        讀出系統的發展與QPU和控制系統的發展緊密相連。實現高保真度、快速且可擴展的讀出是實用量子計算的關鍵。TWPA等寬帶量子放大器的出現，為解決大規模量子位元系統的多路復用讀出問題提供了有希望的途徑。
+                                      </p>
+                                  
+                              <!--全球射頻、微波及低溫組件製造商研究：包含新創企業分析-->
+                                  <h3>全球射頻、微波及低溫組件製造商研究：包含新創企業分析</h3>
+                                  
+                      
+                                <h2>1. 執行摘要</h2>
+                                <p style="text-align:justify" class="dark-background">本報告旨在全面分析十種特定射頻 (RF)、微波及低溫組件的全球製造商格局，包括隔離器、行波參數放大器 (TWPA)、高電子遷移率電晶體 (HEMT)、外導體熱沉、低通濾波器、帶通濾波器、Eccosorb 濾波器、循環器、定向耦合器及終端器。研究結果揭示了一個雙軌市場：一方面，成熟的製造商主導傳統射頻與微波組件市場；另一方面，一個充滿活力且高度專業化的新創企業生態系統正在興起，尤其是在量子運算和低溫應用等尖端領域。</p>
+                                <p style="text-align:justify" class="dark-background">這些組件的需求強烈暗示著其應用目標主要集中在建構或改進量子運算系統，或其他類似的先進低溫實驗裝置。諸如 TWPA、低溫隔離器/循環器、用於低溫低雜訊放大器 (LNA) 的 HEMT，以及專用濾波器等組件，均為量子量測與控制的關鍵要素。「外導體熱沉」的需求更直接指向低溫環境的應用。</p>
+                                <p style="text-align:justify" class="dark-background">分析顯示，在最先進的利基組件（例如用於量子應用的約瑟夫森行波參數放大器 J-TWPA）方面，傳統大型製造商並非主要供應來源。此一「創新缺口」正由專業新創公司填補，其中許多是大學研究機構的衍生企業<sup>1</sup>。這種現象凸顯了在先進系統開發中，採購策略需兼顧成熟技術供應商與前瞻創新型新創企業。全球在量子技術領域的投資和關注度持續增長<sup>3</sup>，這不僅推動了對專業組件的需求，也促進了相關新創企業的發展，特別是在歐洲和美國等地<sup>4</sup>。本報告將深入探討各類組件的供應商情況，並剖析其對先進研發及專業系統建構的影響。</p>
+                      
+                                
+                                
+                                
+                      
+                                
+                      
+                                
+                      
+                                
+                      
+                                <h2>12. 新興創新者：量子組件生態系統中的新創企業焦點</h2>
+                                <p style="text-align:justify" class="dark-background">前述各節的分析揭示，在量子運算和相關先進低溫應用所需的特種組件領域，新創企業和高度專業化的小型公司扮演著至關重要的角色。這些企業通常源於大學的研發成果，專注於滿足量子技術的獨特需求，例如約瑟夫森行波參數放大器 (J-TWPA)、低溫被動組件（隔離器、循環器、濾波器、耦合器、終端器）等，並在推動整個量子產業的創新方面發揮著關鍵作用。</p>
+                      
+                                <h3>12.1 主要新創及利基專業廠商概覽</h3>
+                                <h4>TWPA領域:</h4>
+                                <ul>
+                                    <li><strong>Silent Waves (法國):</strong> 成立於 2022 年，專注於基於約瑟夫森結的超低雜訊超導放大器，其產品如 Carthago 和 Dreadnought 專為高保真量子位元讀取而設計 <sup>1</sup>。</li>
+                                    <li><strong>QuantWare (荷蘭):</strong> 成立於 2020/2021 年，提供 Crescendo-S J-TWPA，強調可擴展性和易用性，旨在加速量子電腦的普及 <sup>2</sup>。</li>
+                                    <li><strong>QET Sweden (瑞典):</strong> 查爾姆斯理工大學的衍生公司，2024 年與 SCALINQ 合作推出 QET Vidar TWPA，具有寬廣的增益頻寬和多 TWPA 集成技術 <sup>32</sup>。</li>
+                                    <li><strong>QphoX (荷蘭):</strong> 成立於 2021 年，開發量子數據機和 AI-TWPA-C 放大器，專注於量子網路和高效量子位元讀取 <sup>5</sup>。</li>
+                                </ul>
+                      
+                                <h4>低溫隔離器/循環器/被動組件領域:</h4>
+                                <ul>
+                                    <li><strong>Low Noise Factory (瑞典):</strong> 雖然是成熟的專業公司 (成立於 2005 年)，但在低溫組件領域持續創新，提供用於量子運算的低溫隔離器/循環器 <sup>15</sup>。</li>
+                                    <li><strong>Quantum Microwave (美國):</strong> 不僅分銷 LNF 等品牌的低溫組件，也開發自有品牌的低溫微波組件，是量子研發領域的重要供應商 <sup>18</sup>。</li>
+                                    <li><strong>Metamagnetics (美國):</strong> 成立於 2009 年，開發自偏置微型循環器和隔離器等先進射頻解決方案，對緊湊型低溫系統具有吸引力 <sup>22</sup>。</li>
+                                    <li><strong>Raditek (美國):</strong> 提供明確標註用於量子運算、可在極低溫 (0.01-4K) 下工作的隔離器和循環器 <sup>25</sup>。</li>
+                                    <li><strong>XMA Corporation (美國):</strong> 提供可在 20mK 下工作的低溫衰減器和終端器 <sup>151</sup>。</li>
+                                </ul>
+                      
+                                <h4>HEMT (創新型/專業型) 領域:</h4>
+                                <ul>
+                                    <li><strong>Finwave Semiconductor (美國):</strong> 源於麻省理工學院的創新，開發 GaN-on-Si FinFET 等新型 HEMT 架構，與 GlobalFoundries 合作生產，目標是 5G/6G 等市場 <sup>62</sup>。</li>
+                                    <li><strong>Low Noise Factory (瑞典):</strong> 其 InP HEMT 技術是其超低雜訊低溫放大器的核心，代表了在特定高性能應用中 HEMT 的頂尖水平 <sup>15</sup>。</li>
+                                </ul>
+                      
+                                <h4>專業濾波器 (低溫/量子) 領域:</h4>
+                                <ul>
+                                    <li><strong>SCALINQ (瑞典):</strong> 量子硬體新創公司，提供 LPF，並與 QET Sweden 合作 TWPA <sup>32</sup>。</li>
+                                    <li><strong>Filtronic (英國):</strong> 雖然是成熟公司，但在量子運算濾波器領域積極投入，提供客製化解決方案 <sup>102</sup>。</li>
+                                    <li><strong>Quantum Machines (以色列):</strong> 新創公司，提供專為量子系統設計的 QFilter-II 低溫多級 LPF <sup>103</sup>。</li>
+                                </ul>
+                      
+                                <h4>熱管理 (專業低溫) 領域:</h4>
+                                <ul>
+                                    <li><strong>Technology Applications, Inc. (TAI) (美國):</strong> 全球最大的熱導帶供應商，其產品廣泛用於低溫和量子運算項目 <sup>81</sup>。</li>
+                                    <li><strong>Absolut System (法國), LIDAX (西班牙), ThermAvant Technologies (美國):</strong> 這些公司提供用於太空和低溫應用的專業熱連接和熱導帶解決方案 <sup>82</sup>。</li>
+                                </ul>
+                      
+                                <h3>12.2 觀察到的趨勢與影響</h3>
+                                <ul>
+                                    <li><strong>大學衍生企業的關鍵角色：</strong> 許多量子組件新創企業，如 QET Sweden（源自查爾姆斯理工大學 <sup>32</sup>）、Finwave Semiconductor（源自麻省理工學院 <sup>64</sup>）以及 Silent Waves（創始人具有深厚研究背景 <sup>28</sup>），均源於大學的科研成果。這反映了深厚的技術專長和新穎的突破往往首先在學術環境中孕育，然後透過新創公司實現商業化。量子運算仍是一個研究密集型領域，大學是材料科學、組件物理學和量子現象基礎發現的中心，新創公司則為將這些發現轉化為實際產品提供了途徑。</li>
+                                    <li><strong>專注於量子利基市場：</strong> 這些新創企業並非試圖在廣泛市場上與大型製造商競爭，而是專注於滿足量子運算的特定且嚴苛的要求，如超低雜訊、mK 級操作、無磁性、高保真度等。量子市場雖然在增長，但與主流電子市場相比仍屬利基市場，這使得小型、靈活的公司能夠通過解決高度特定的技術挑戰而蓬勃發展。量子計算的物理學對組件施加了獨特的限制（例如相干時間、量子位元敏感性），新創公司通常由這些特定量子現象的專家創立，因此能夠相應地客製化解決方案。</li>
+                                    <li><strong>生態系統內的合作：</strong> 新創企業之間以及新創企業與大型實體或研究機構之間的合作非常普遍。例如 SCALINQ 與 QET Sweden 在 TWPA 上的合作 <sup>32</sup>，QuantWare 與 QphoX 在量子介面上的合作 <sup>37</sup>，以及 Finwave 與 GlobalFoundries（代工）和 RFMW（分銷）的合作 <sup>63</sup>。量子系統的複雜性鼓勵了合作。新創公司可能專注於某一種組件，同時與其他公司合作開發其他組件或擴大製造/分銷規模。沒有任何單一實體通常擁有建構整個量子電腦或其完整供應鏈所需的所有專業知識或資源，合作有助於發揮互補優勢。</li>
+                                    <li><strong>資金投入與增長：</strong> 大量風險資本和政府投資正流向量子新創企業 <sup>3</sup>，為創新和產品開發注入了動力。量子運算的變革潛力吸引了大量投資，使新創公司能夠進行高風險、高回報的研發。<sup>4</sup> 的資料顯示，量子新創企業獲得了數十億美元的資金，且數量迅速增長。這種資金支持對於這些公司開發複雜硬體並將其推向市場至關重要。</li>
+                                </ul>
+                                <p style="text-align:justify" class="dark-background">量子運算的進步在很大程度上依賴於這個專業化的新創組件生態系統。對於任何從事量子硬體建構或使用的機構而言，識別並與這些創新者合作至關重要。</p>
+                      
+                                <table>
+                                    <caption>表 11：量子組件領域值得關注的新創企業和利基創新者</caption>
+                                    <thead>
+                                        <tr>
+                                            <th>新創公司名稱</th>
+                                            <th>國家/地區</th>
+                                            <th>主要組件焦點 (例如 TWPA, 低溫隔離器)</th>
+                                            <th>關鍵技術/創新</th>
+                                            <th>備註 (例如大學衍生, 主要合作夥伴, 提及的資金情況)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Silent Waves</strong></td>
+                                            <td>法國</td>
+                                            <td>TWPA</td>
+                                            <td>約瑟夫森結, 克爾反轉, 超低雜訊</td>
+                                            <td>2022 年成立, 研究背景深厚 <sup>1</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>QuantWare</strong></td>
+                                            <td>荷蘭</td>
+                                            <td>TWPA, QPU</td>
+                                            <td>J-TWPA (Crescendo-S), 可擴展 QPU</td>
+                                            <td>2020/2021 年成立, TU Delft/QuTech 衍生 <sup>2</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>QET Sweden</strong></td>
+                                            <td>瑞典</td>
+                                            <td>TWPA</td>
+                                            <td>Vidar TWPA, 4 GHz 頻寬, 多 TWPA 集成</td>
+                                            <td>2024 年成立, 查爾姆斯理工大學衍生, 與 SCALINQ 合作 <sup>32</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>QphoX</strong></td>
+                                            <td>荷蘭</td>
+                                            <td>TWPA, 量子數據機</td>
+                                            <td>AI-TWPA-C, 微波到光學量子轉導</td>
+                                            <td>2021 年成立, 獲 1380 萬美元融資 <sup>5</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Finwave Semiconductor</strong></td>
+                                            <td>美國</td>
+                                            <td>GaN HEMT</td>
+                                            <td>GaN-on-Si FinFET, E-mode MISHEMT</td>
+                                            <td>前身為 Cambridge Electronics (2012), MIT 衍生, 獲 820 萬美元融資 <sup>63</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Metamagnetics</strong></td>
+                                            <td>美國</td>
+                                            <td>低溫隔離器/循環器</td>
+                                            <td>自偏置微型組件</td>
+                                            <td>2009 年成立, 退伍軍人創辦 <sup>22</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Quantum Machines</strong></td>
+                                            <td>以色列</td>
+                                            <td>低溫低通濾波器</td>
+                                            <td>QFilter-II, mK 級電子溫度濾波</td>
+                                            <td><sup>103</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>SCALINQ</strong></td>
+                                            <td>瑞典</td>
+                                            <td>量子硬體, 低溫 LPF, TWPA (合作)</td>
+                                            <td>多量子位元封裝解決方案</td>
+                                            <td>查爾姆斯理工大學研究基礎, 與 QET Sweden 合作 <sup>32</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Technology Applications, Inc.</strong></td>
+                                            <td>美國</td>
+                                            <td>低溫熱導帶</td>
+                                            <td>CuTS® 銅熱導帶, 石墨熱導帶</td>
+                                            <td>全球最大熱導帶供應商 <sup>81</sup></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                      
+                                <h2>13. 結論與戰略採購考量</h2>
+                                <p style="text-align:justify" class="dark-background">本報告對十種關鍵射頻、微波及低溫組件的全球製造商格局進行了深入分析。研究結果清晰地表明，針對通用射頻/微波應用與高度專業化的低溫/量子應用，其供應鏈呈現顯著差異。</p>
+                      
+                                <h3>核心結論：</h3>
+                                <ul>
+                                    <li><strong>雙軌供應生態：</strong> 對於如標準 HEMT、室溫隔離器、循環器、濾波器、耦合器和終端器等成熟技術，市場上存在眾多大型、成熟的製造商，它們能夠提供廣泛的產品選擇和規模化生產能力 <sup>7</sup>。然而，對於量子運算等尖端應用所需的特種組件，如約瑟夫森行波參數放大器 (J-TWPA)、mK 級工作的低溫隔離器/循環器、專用低溫濾波器以及創新型 HEMT 架構，供應鏈則主要由專業的新創公司和利基市場參與者主導。這些企業通常源於學術界的突破性研究，並專注於解決極端環境下的技術挑戰 <sup>1</sup>。</li>
+                                    <li><strong>「解決方案」而非「單一部件」：</strong> 諸如「外導體熱沉」和「Eccosorb 濾波器」等需求，更多地指向系統級的集成解決方案或客製化設計，而非單一類型的現成組件。有效的低溫外導體熱沉涉及特製電纜、連接器和熱管理硬體（如熱導帶）的組合 <sup>67</sup>。同樣，Eccosorb 濾波器通常是利用 Eccosorb 材料（由 Laird/DuPont 等公司供應）進行客製化製造，以滿足特定的吸收或屏蔽需求，尤其是在缺乏標準商業產品的低溫環境中 <sup>113</sup>。</li>
+                                    <li><strong>創新引擎：</strong> 新創企業在量子組件領域扮演著創新引擎的角色。它們不僅填補了大型製造商在超專業領域留下的空白，還積極推動技術邊界，開發出具有更高性能、更小尺寸和更易於集成的組件，這對於量子電腦從實驗室走向實用化至關重要 <sup>4</sup>。</li>
+                                </ul>
+                      
+                                <h3>戰略採購建議：</h3>
+                                <ul>
+                                    <li><strong>明確應用需求：</strong> 採購方首先必須清晰定義其應用環境（室溫 vs. 低溫/mK 級）、性能指標（雜訊、頻寬、功率、磁兼容性等）以及集成要求。這將直接決定是應尋求大型成熟供應商還是專業新創企業。</li>
+                                    <li><strong>採用混合採購策略：</strong> 建構如量子電腦這樣的先進系統，往往需要混合採購策略。對於系統中的標準射頻組件或成熟的半導體器件，可以依賴大型供應商的穩定性和規模。但對於決定系統核心性能的尖端量子組件（如 J-TWPA、超低雜訊低溫 HEMT、專用低溫被動件），則必須積極與專業新創公司和利基供應商接洽。</li>
+                                    <li><strong>盡職調查與合作夥伴評估：</strong>
+                                        <ul>
+                                            <li><strong>對於新創企業：</strong> 需仔細評估其技術路線圖、團隊的專業知識、研發能力、製造合作夥伴關係（如 Finwave 與 GlobalFoundries 的合作 <sup>63</sup>）以及資金狀況。由於新創企業的產品可能仍在快速迭代，建立緊密的技術溝通與合作關係尤為重要。</li>
+                                            <li><strong>對於成熟供應商：</strong> 雖然其產品穩定性高、供應鏈成熟，但在涉及低溫或特殊應用時，必須嚴格驗證其產品在目標工作條件下的性能，並確認其是否具備提供客製化解決方案的能力。</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>關注集成與系統兼容性：</strong> 許多低溫組件（如濾波器、循環器）越來越趨向於集成到更大的模組或佈線系統中，以節省空間、減少連接損耗並優化熱管理 <sup>69</sup>。採購時應考慮組件的集成便利性和與現有系統的兼容性。</li>
+                                    <li><strong>持續市場監測：</strong> 量子技術及其組件市場正處於高速發展階段，新的參與者和技術不斷湧現，供應商格局也可能隨之快速變化。因此，持續的市場監測和技術追蹤對於做出明智的採購決策至關重要。</li>
+                                </ul>
+                                <p style="text-align:justify" class="dark-background">總之，為先進的射頻、微波及低溫系統（尤其是量子運算系統）採購組件，是一項複雜但至關重要的任務。它要求採購方不僅要了解各類組件的技術細節，還要洞察供應商市場的動態和不同層級供應商的特點。透過審慎的評估和戰略性的合作，才能確保獲得最適合的組件，從而推動科研和技術創新的成功。</p>
+                      
+                    
+                              
+
+                                
+                                <p style="text-align:justify">
+                                    ▲
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
+
+                                    </span><br><br>
+                                    </p>
+
+
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                    </span>
+                                    <span class="post-category">
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                    </span>
+                                </div><!-- /.post-meta -->
+                            
+                                <div id="prev-next-nav" class="text-center"></div>
+
+                                <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
+
+    const current = location.pathname.split("/").pop();
+    const index = pages.findIndex(p => p.file === current);
+    let html = "";
+
+    if (index > 0) {
+      const prev = pages[index - 1];
+      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+    }
+
+    html += `<a class="btn btn-gray" href="../QC_hardware_en/${current}" style="margin: 0 10px;">English Version</a>`;
+
+    if (index < pages.length - 1) {
+      const next = pages[index + 1];
+      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+    }
+
+    document.getElementById("prev-next-nav").innerHTML = html;
+  });
+</script>
+
+                            </div><!-- /.post-content -->
+                        </article><!-- /.blog-post -->
+                        <!--<div id="PostComments" class="post-comments">
+                            
+                            
+                            
+                        </div> /#PostComments -->
+                        <!--<div class="respond">
+                            <h3>Post a Comment</h3>
+                            <form class="form-horizontal">
+                                <input class="form-control" type="text" placeholder="Your Name*" required>
+                                <input class="form-control" type="email" placeholder="Your Email" required>
+                                <textarea class="form-control form-control-comment" type="text" placeholder="Your Comment*" required></textarea>
+                                <button class="btn btn-green">Add a comment</button>
+                            </form>    
+                        </div> /.respond -->
+                    </div>
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            
+
+                            <div class="widget">
+                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <p>一起走進新時代的前沿科學與量子科技</p>
+                    </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li>
+                        <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
+                        <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300, Taiwan (R.O.C.)</p></li>-->
+                    </ul>
+                </div>
+                <!--<div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <h3>Featured links</h3>
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Porfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <!--<a class="twitter-bg" href="#"><i class="fab fa-twitter"></i></a>-->
+                            <!--<<a class="facebook-bg" href="https://www.facebook.com/people/Quantum-Perspectives/61576446849628/"><i class="fab fa-facebook"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/%E9%87%8F%E5%AD%90%E9%81%A0%E8%A6%8BQuantum-Perspectives/61576883632888/"><i class="fab fa-facebook-f"></i></a>-->
+                            <!--<a class="pinterest" href="#"><i class="fa-solid fa-microscope"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="linkedin-bg" href="https://www.linkedin.com/company/insight-ihbar"><i class="fab fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p><span style="font-size: 16px;">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</span></p>
+                            <p>All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+</body>
+</html>

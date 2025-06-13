@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Favicon
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/20250525-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/20250525-icon.png">
+
+    <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>超導量子電腦硬體指南 (2025) | 量子位元、組件與廠商全解析</title>
+    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware_2025.html" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+
+                <div class="navbar-header">                   
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">科普介紹<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="../SCQ_elementary/main.html">超導量子位元(科普版)</a></li>
+                              <li><a href="../SCQ_advanced/main.html">超導量子位元(進階版)</a></li>
+                            </ul>
+                        </li>
+                        <!--<li class="active"><a href="../SCQ_elementary/main.html">科普介紹</a></li>-->
+                        <li class="active"><a href="../QC_hardware/main.html">硬體導論</a></li>
+                        <li><a href="../index_en.html">English</a></li>                        
+                    </ul>
+                </div>
+
+            </div>   
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <h1>硬體導論</h1>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">硬體導論</a></li>
+                  <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
+                </ol>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="blog-post">
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
+                            <div class="post-content">
+                                <div style="text-align: center;">
+                                    <h2>稀釋製冷機</h2>
+                                    <h3></h3>
+                                </div>
+                                
+
+                                <!--低溫系統:稀釋製冷機(Cryogenic Systems: Dilution Refrigerators)-->
+                                <header class="major">
+                                    <h2><li>解說</li></h2>
+                                  </header>
+                                
+                                  <h3>B.低溫系統:稀釋製冷機(Cryogenic Systems: Dilution Refrigerators)</h3>
+                      
+                                  <h4>1.工作原理</h4>
+                      
+                                  <p style="text-align:justify" class="dark-background">稀釋製冷機(Dilution Refrigerator, DR)是目前能夠實現mK級極低溫度的關鍵設備,為超導量子位元的穩定運行提供了必要的環境。其工作原理基於氦的兩種穩定同位素——氦-3 (<sup>3</sup>He)和氦-4 (<sup>4</sup>He)混合物在極低溫下的獨特物理性質<sup>28</sup>。</p>
+                      
+                                  <p style="text-align:justify" class="dark-background">簡單的蒸發致冷,即通過抽取液體表面的蒸氣來降低溫度,存在其物理極限。即使對於沸點極低的液氦(<sup>4</sup>He),通過減壓蒸發最低也只能達到約1.2K的溫度,因為隨著溫度降低,飽和蒸氣壓急劇下降,蒸發效率隨之降低<sup>28</sup>。</p>
+                      
+                                  <p style="text-align:justify" class="dark-background">稀釋製冷技術則利用了 <sup>3</sup>He 和 <sup>4</sup>He 混合物在溫度低於約0.87K時會發生相分離的現象。由於量子統計效應和相互作用力的差異,混合物會分成富含 <sup>3</sup>He 的濃相(Concentrated Phase)和富含 <sup>4</sup>He 的稀相 (Dilute Phase)。在極低溫下(接近0K),濃相幾乎是純的 <sup>3</sup>He,而稀相中仍會溶解約6.4%的<sup>3</sup>He<sup>28</sup>。由於密度差異,<sup>3</sup>He 濃相會浮在<sup>4</sup>He 稀相之上。</p>
+                      
+                                  <p style="text-align:justify" class="dark-background">稀釋製冷的關鍵在於從位於混合室(Mixing Chamber)底部的稀相中選擇性地“抽取”<sup>3</sup>He原子。當稀相中的<sup>3</sup>He 被移除時,為了維持6.4%的平衡濃度,濃相中的<sup>3</sup>He原子會自發地“溶解”或“蒸發”進入稀相。這個<sup>3</sup>He 從濃相跨越相界面進入稀相的過程是一個吸熱過程(類似於液體蒸發吸熱),從而對混合室進行冷卻<sup>28</sup>。</p>
+                      
+                                  <p style="text-align:justify" class="dark-background">為了實現連續製冷,被抽走的<sup>3</sup>He 氣體需要在外部循環系統中經過純化、壓縮、冷凝和預冷,然後重新注入混合室。這個循環過程涉及到幾個關鍵部件<sup>12</sup>:</p>
+                      
+                                  <ul>
+                                      <li><strong>混合室(Mixing Chamber):</strong> 發生相分離和<sup>3</sup>He 跨相界溶解致冷的核心區域,量子晶片通常安裝在這裡。</li>
+                                      <li><strong>蒸餾器(Still):</strong> 位於混合室上方,溫度維持在約0.7-0.8K。利用<sup>3</sup>He 相對於<sup>4</sup>He (此溫度下為超流體,幾乎無蒸氣壓)高得多的蒸氣壓,通過加熱將混合液中的<sup>3</sup>He蒸發出來,實現<sup>3</sup>He的提取和循環。</li>
+                                      <li><strong>熱交換器(Heat Exchanger):</strong> 在<sup>3</sup>He 返回混合室的途中,利用從Still 流出的冷 <sup>3</sup>He 氣體來預冷流入的較熱的<sup>3</sup>He液體,提高製冷效率。</li>
+                                      <li><strong>1K 預冷罐(1K Pot):</strong> 在傳統的濕式(Wet)稀釋製冷機中,使用一個通過減壓抽空的液<sup>4</sup>He 儲罐將循環的<sup>3</sup>He 預冷至約1K。</li>
+                                  </ul>
+                      
+                                  <p style="text-align:justify" class="dark-background">現代稀釋製冷機多採用乾式(Dry / Cryogen-free)設計。它們使用機械式製冷機,通常是脈衝管製冷機(Pulse Tube Cryocooler, PTC),來替代液氮和液氦浴以及1K Pot 提供預冷<sup>28</sup>。PTC 可以將系統冷卻到約4K,為稀釋製冷循環提供必要的冷卻平台。乾式系統的主要優點是無需消耗昂貴且難以處理的液氦,操作更為自動化和便捷<sup>28</sup>。然而,PTC的機械運動可能會引入振動,需要採取額外的減振措施來保護敏感的量子實驗<sup>28</sup>。</p>
+                      
+                                  <h4>2.極低溫需求與理由</h4>
+                      
+                                  <p style="text-align:justify" class="dark-background">超導量子計算機必須在接近絕對零度的極低溫環境下運行,通常要求量子處理器的工作溫度維持在 10 到20 mK範圍內<sup>1</sup>。如此嚴苛的溫度要求源於以下幾個關鍵原因<sup>9</sup>: </p>
+                      
+                                  <ul>
+                                      <li><strong>實現超導特性 (Enable Superconductivity):</strong> 量子位元所依賴的超導電路(如鋁、鈮)只有在遠低於其臨界溫度時才能表現出零電阻和邁斯納效應等超導特性。</li>
+                                      <li><strong>維持量子態能隙(Preserve Energy Gap):</strong> 量子位元的\( \ket{0} \)和 \( \ket{1} \) 態之間存在一個特定的能量差(能隙)。在較高溫度下,環境中的熱能(k<sub>B</sub>T)可能會超過這個能隙,導致量子位元在沒有外部控制的情況下隨機地在兩個狀態之間躍遷,從而引入計算錯誤。極低的溫度確保了熱能遠小於能隙,維持了量子態的穩定性。</li>
+                                      <li><strong>延長相干時間 (Increase Coherence Times):</strong> 溫度是影響量子位元相干時間的主要因素之一。熱雜訊會引起量子態的隨機漲落和能量弛豫,導致量子疊加和糾纏態的衰減(去相干)。溫度越低,熱雜訊越小,量子位元能夠保持其量子特性的時間(相干時間)就越長,從而允許執行更複雜、更長時間的量子計算。</li>
+                                      <li><strong>降低熱雜訊和振動(Reduce Thermal Noise and Vibrations):</strong> 量子位元對環境的微小擾動非常敏感。低溫可以極大地抑制材料內部的熱運動以及來自外部環境的熱傳導和熱輻射雜訊。同時,低溫系統的設計也需要考慮減少機械振動對量子位元的影響。</li>
+                                      <li><strong>提高操作精度(Improve Accuracy and Precision):</strong> 量子計算依賴於對量子位元狀態的精確操控(通過微波脈衝)和測量。溫度的穩定性對於確保這些操作的準確性和可重複性至關重要。任何溫度波動都可能導致控制參數的漂移和測量結果的不確定性。</li>
+                                      <li><strong>實現超高真空(Allow Ultrahigh Vacuums):</strong> 低溫表面具有強大的吸附能力(低溫沉降),有助於在量子晶片周圍維持超高真空環境,進一步減少殘餘氣體分子對量子位元的碰撞和干擾。</li>
+                                      <li><strong>簡化控制電子設備的隔離(Simplify Control Electronics Isolation):</strong> 將某些控制或讀取電子元件(如低雜訊放大器)放置在低溫環境中,可以利用低溫降低這些元件自身的雜訊,並更容易實現與量子晶片的電磁隔離。</li>
+                                  </ul>
+                      
+                                  <p style="text-align:justify" class="dark-background">總之,極低溫是克服環境雜訊、維持量子態穩定性、實現高保真度量子操作和測量的物理基礎,是超導量子計算不可或缺的條件。</p>
+                      
+                                  <h4>3.主要製造商與規格</h4>
+                      
+                                  <p style="text-align:justify" class="dark-background">全球範圍內,提供用於量子計算研究的高性能稀釋製冷機的主要製造商包括:</p>
+                      
+                                  <ul>
+                                      <li><strong>Bluefors (芬蘭):</strong> 是市場上的領導者之一,提供多種型號的乾式稀釋製冷機系統,以其可靠性、易用性和廣泛的配置選項而聞名<sup>31</sup>。其產品線包括適用於不同規模實驗需求的SD(小型快速冷卻)、LD(標準)、XLD(大型實驗空間) 和KIDE (超大型,支持&gt;1000量子位元) 系列<sup>36</sup>。Bluefors 還提供集成的低溫測量基礎設施,包括線纜、電子元件和樣品架<sup>37</sup>。</li>
+                                      <li><strong>Oxford Instruments NanoScience(英國):</strong> 擁有悠久的低溫技術歷史,提供包括 Proteox 和 Kelvinox 系列在內的乾式和濕式稀釋製冷機<sup>24</sup>。Proteox 系列是其現代化的乾式系統平台,具有模組化設計,可根據需求配置實驗空間和測量接口<sup>24</sup>。他們也強調達到極低的基礎溫度(例如Proteox5mK 型號)<sup>29</sup>。</li>
+                                      <li><strong>ULVAC (日本):</strong> 作為一家真空和低溫設備製造商,ULVAC 近年來積極投入量子計算用稀釋製冷機的研發和生產,特別是與IBM合作,旨在加強日本在該領域的本土供應能力<sup>24</sup>。其產品強調高冷卻性能、模組化設計和國內生產<sup>24</sup>。</li>
+                                      <li><strong>Maybell Quantum (美國):</strong> 是一家相對較新的公司,專注於開發更緊湊、更易於集成和擴展的稀釋製冷機解決方案,如其"Fridge"和"Big Fridge"產品,旨在以更小的佔地面積提供相當的量子位元容量<sup>32</sup>。他們也提供創新的低熱負載柔性線纜(Flexlines)<sup>32</sup>。</li>
+                                  </ul>
+                      
+                                  <p style="text-align:justify" class="dark-background">評估稀釋製冷機性能的關鍵規格包括:</p> 
+                                  <ul>
+                                      <li><strong>基礎溫度(Base Temperature):</strong> 系統在無外部熱負載時能達到的最低溫度。通常要求低於10mK,高性能系統可達5-8 mK<sup>29</sup>。</li>
+                                      <li><strong>冷卻功率(Cooling Power):</strong> 在特定溫度點(通常是混合室的溫度,如20mK或100 mK)能夠帶走的最大熱量。這是衡量製冷機承載量子晶片、線纜和低溫電子元件散熱能力的關鍵指標。隨著量子位元數量的增加,所需的冷卻功率也隨之增加<sup>31</sup>。例如,Bluefors LD400在100 mK 時提供約400-500µW 的冷卻功率<sup>38</sup>,而更大的XLD1000sl 在100 mK 時可提供超過1000 µW<sup>40</sup>。</li>
+                                      <li><strong>冷卻時間(Cooldown Time):</strong> 從室溫冷卻到基礎溫度所需的時間。對於空載系統,通常在 12-24 小時左右,但實際加載樣品和線纜後會更長<sup>38</sup>。快速冷卻對於提高實驗效率很重要。</li>
+                                      <li><strong>實驗空間(Experimental Space):</strong> 通常由混合室法蘭(MXC Flange) 的直徑和各級冷板之間的可用高度決定,需要足夠容納量子處理器封裝、樣品架、屏蔽層和其他低溫元件<sup>38</sup>。</li>
+                                      <li><strong>振動水平(Vibration Level):</strong> 對於乾式系統,脈衝管製冷機引入的振動需要被有效抑制,以避免干擾量子位元。製造商通常會提供振動數據或採用減振設計<sup>31</sup>。</li>
+                                      <li><strong>維護週期(Maintenance Interval):</strong> 乾式系統的脈衝管冷頭和氦氣壓縮機需要定期維護。Bluefors 系統的氣體處理系統(泵和壓縮機)維護間隔可長達3年<sup>36</sup>。</li>
+                                  </ul>
+                      
+                                  <h4>4.發展趨勢分析</h4>
+                      
+                                  <p style="text-align:justify" class="dark-background">稀釋製冷機技術的發展與量子計算的需求緊密相連。一個核心趨勢是乾式(無液氦)稀釋製冷機已成為市場主導。傳統的濕式系統需要持續供應液氮和液氦進行預冷<sup>12</sup>,這不僅運行成本高昂,而且在操作和物流上也帶來諸多不便。脈衝管製冷機技術的成熟使得乾式系統成為可能<sup>28</sup>。幾乎所有主要的稀釋製冷機供應商,如Bluefors、Oxford Instruments、ULVAC 和 Maybell Quantum,都將乾式系統作為其主力產品<sup>24</sup>。乾式系統實現了「一鍵式」操作<sup>43</sup>,大大簡化了實驗流程,降低了對專業低溫操作人員的依賴,並減少了對日益稀缺的氦資源的消耗,從而提高了量子計算研究的可及性。儘管乾式系統需要仔細處理脈衝管帶來的振動問題<sup>28</sup>,但其總體優勢使其成為當前和未來量子計算實驗室的標準配置。</p>
+                      
+                                  <p style="text-align:justify" class="dark-background">另一個重要趨勢是,隨著量子位元數量的增加,對稀釋製冷機冷卻功率的需求也在不斷增長。量子計算機的規模擴展,即增加量子位元的數量以提升計算能力,是該領域的主要目標之一<sup>5</sup>。然而,每個量子位元都需要至少幾條控制和讀取線纜從室溫連接到 mK溫區<sup>17</sup>。這些線纜不可避免地會將熱量從高溫級傳導至低溫級,形成熱負載<sup>16</sup>。此外,安裝在低溫級的低雜訊放大器、濾波器、衰減器等元件也會產生熱量<sup>15</sup>。當量子位元數量從幾十個擴展到數百甚至數千個時,總的熱負載會顯著增加<sup>17</sup>。這就要求稀釋製冷機,特別是在最低的混合室溫級(mK級)以及中間的4K和100 mK 溫級,必須提供足夠強大的冷卻功率來抵消這些熱量,維持量子晶片的穩定工作溫度<sup>17</sup>。因此,製造商正致力於開發具有更大冷卻功率的系統(如Bluefors 的XLD 和KIDE 系列<sup>37</sup>)和提高現有系統的製冷效率,以支持更大規模量子處理器的運行。</p>
+                      
+                                  <table border="1">
+                                    <thead>
+                                        <tr>
+                                            <th>供應商 (Supplier)</th>
+                                            <th>國家/地區 (Country/Region)</th>
+                                            <th>主要產品/服務(Key Products/Services)</th>
+                                            <th>關鍵特點/技術(Key Features/Technology)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="4"><strong>低溫系統</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bluefors</td>
+                                        <td>芬蘭</td>
+                                        <td>稀釋製冷機(SD, LD, XLD, KIDE),低溫測量基礎設施</td>
+                                        <td>市場領導者,乾式系統,性能可靠,選項豐富<sup>37</sup></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Oxford Instruments NanoSci.</td>
+                                        <td>英國</td>
+                                        <td>稀釋製冷機(Proteox, Kelvinox)</td>
+                                        <td>乾式/濕式系統,模組化設計,可達極低溫<sup>24</sup></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ULVAC</td>
+                                        <td>日本</td>
+                                        <td>稀釋製冷機</td>
+                                        <td>日本本土製造,與IBM合作,高穩定性<sup>24</sup></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maybell Quantum</td>
+                                        <td>美國</td>
+                                        <td>稀釋製冷機(Fridge, Big Fridge),柔性線纜 (Flexlines)</td>
+                                        <td>緊湊設計,高密度,集成線纜方案<sup>32</sup></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4"><strong>控制電子設備</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quantum Machines</td>
+                                        <td>以色列</td>
+                                        <td>OPX+控制器,QUA 語言</td>
+                                        <td>Processor-based,極低延遲反饋(&lt;230ns)<sup>50</sup></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Qblox</td>
+                                        <td>荷蘭</td>
+                                        <td>Cluster 控制系統</td>
+                                        <td>FPGA-based,模組化,低延遲同步(SYNQ/LINQ),高頻(18.5 GHz)<sup>48</sup></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Zurich Instruments</td>
+                                        <td>瑞士</td>
+                                        <td>QCCS (HDAWG, UHFQA, PQSC)</td>
+                                        <td>FPGA-based,高密度,低觸發延遲(&lt;50ns), LabOne Q 框架<sup>53</sup></td>
+                                    </tr>
+                      
+                                  </tbody>
+                                </table>
+                                <ul>
+                                  <li><strong>稀釋製冷機 (Dilution Refrigerators):</strong> Bluefors, Oxford Instruments NanoScience, ULVAC, Maybell Quantum (詳見 Section II.B)<sup>24</sup>。</li>
+                                  </ul>
+                              
+                      
+                              <!--低溫系統 (Cryogenic Systems)-->
+                                  <header class="major">
+                                    <h2><li>低溫系統 (Cryogenic Systems)</li></h2>
+                                  </header>
+                              
+                                  <p style="text-align:justify" class="dark-background">
+                                    超導量子位元必須在接近絕對零度的極低溫環境下運行，以維持其超導特性和量子態的穩定性。這使得低溫系統成為超導量子電腦不可或缺的組成部分。
+                                  </p>
+                              
+                                  <ol>
+                                    <li>
+                                      <p style="text-align:justify" class="dark-background">
+                                        <b>功能與重要性</b><br>
+                                        低溫系統，通常是稀釋製冷機 (Dilution Refrigerators)，用於將QPU冷卻至約10-20毫開爾文 (mK) 的工作溫度。在如此低的溫度下：
+                                      </p>
+                                      <ul>
+                                        <li><b>實現超導性：</b>使量子位元電路材料（如鋁、鈮）進入超導態，消除電阻，減少能量耗散。</li>
+                                        <li><b>保護能量間隙：</b>量子位元的量子態由能量間隙分隔。高溫下的熱能足以引起非受控的態轉變，導致錯誤。低溫確保熱能不足以引起此類非預期轉變。</li>
+                                        <li><b>延長相干時間：</b>最小化熱擾動，從而減少退相干，延長量子位元的壽命。</li>
+                                        <li><b>降低熱雜訊：</b>提高訊號雜訊比，有利於精確控制和讀出量子位元狀態。</li>
+                                      </ul>
+                                      <p style="text-align:justify" class="dark-background">
+                                        這些系統通常採用多級冷卻結構，從室溫逐級降溫至mK溫區。
+                                      </p>
+                                    </li>
+                              
+                                    <li>
+                                      <p style="text-align:justify" class="dark-background">
+                                        <b>核心技術：稀釋製冷機</b><br>
+                                        稀釋製冷機利用氦-3 (<sup>3</sup>He) 和氦-4 (<sup>4</sup>He) 同位素混合物在極低溫下的相分離和蒸發吸熱原理來達到mK級的溫度。其關鍵部件包括預冷用的脈衝管製冷機 (Pulse Tube Cryocoolers)、熱交換器和混合室 (Mixing Chamber)，QPU通常安裝在混合室中。
+                                      </p>
+                                    </li>
+                              
+                                    <li>
+                                      <p style="text-align:justify" class="dark-background">
+                                        <b>代表性製造商與所在國家/地區</b>
+                                      </p>
+                                      <ul>
+                                        <li><b>芬蘭：</b>Bluefors 是全球領先的稀釋製冷機製造商之一，其產品被Google等公司廣泛使用。Aalto大學的低溫實驗室 (LTL) 為該國量子計算硬體生態系統奠定了基礎。</li>
+                                        <li><b>英國：</b>Oxford Instruments 是另一家主要的稀釋製冷機供應商。</li>
+                                        <li><b>日本：</b>ULVAC 成功開發了用於量子計算的稀釋製冷機，並已應用於日本首台完全國產化的量子電腦中。也與IBM合作開發下一代稀釋製冷機，預計2026年實現部署。</li>
+                                        <li><b>美國、澳洲等：</b>例如德國的 Linde Engineering 為 PsiQuantum 在澳洲建造的大型低溫工廠提供支持。</li>
+                                        <li><b>加拿大：</b>Zero Point Cryogenics 也是該領域的參與者。</li>
+                                      </ul>
+                              
+                                      <p style="text-align:justify" class="dark-background"><b>表4：部分低溫系統 (稀釋製冷機) 製造商比較</b></p>
+                                      <table>
+                                        <thead>
+                                          <tr>
+                                            <th>製造商</th>
+                                            <th>總部所在國家/地區</th>
+                                            <th>主要產品/特點</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>Bluefors</td>
+                                            <td>芬蘭</td>
+                                            <td>業界廣泛使用的高性能稀釋製冷機</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Oxford Instruments</td>
+                                            <td>英國</td>
+                                            <td>提供多種規格的稀釋製冷機及低溫測量解決方案</td>
+                                          </tr>
+                                          <tr>
+                                            <td>ULVAC</td>
+                                            <td>日本</td>
+                                            <td>自主研發稀釋製冷機，支持日本國產量子電腦，與IBM合作開發下一代系統</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Leiden Cryogenics</td>
+                                            <td>荷蘭</td>
+                                            <td>提供客製化的稀釋製冷機系統</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Linde Engineering</td>
+                                            <td>德國/全球</td>
+                                            <td>大型低溫設備工程，為 PsiQuantum 澳洲項目提供低溫工廠</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </li>
+                              
+                                    <li>
+                                      <p style="text-align:justify" class="dark-background">
+                                        <b>價格範圍</b><br>
+                                        稀釋製冷機是量子電腦中最昂貴的單一部件之一。根據尺寸、冷卻功率和複雜性，其價格範圍通常在 <b>$500,000 到 $3,000,000</b> 之間，甚至更高。例如，D-Wave 的量子退火器（包含複雜的冷卻系統）售價約為1500萬美元。運行這些製冷機的年度電力成本也相當可觀，僅冷卻一項就可能達到每年2萬美元以上。建立一個量子計算研究實驗室的總成本在500萬到5000萬美元不等，其中稀釋製冷機是主要開支之一。
+                                      </p>
+                                    </li>
+                              
+                                    <li>
+                                      <p style="text-align:justify" class="dark-background"><b>技術門檻</b></p>
+                                      <ul>
+                                        <li><b>冷卻功率與可擴展性：</b>隨著QPU中量子位元數量的增加，所需的總冷卻功率也隨之增大。現有製冷機的冷卻能力對未來百萬級量子位元的系統可能構成瓶頸。</li>
+                                        <li><b>尺寸、成本與功耗：</b>目前的稀釋製冷機體積龐大、價格昂貴且耗電量大，限制了量子電腦的部署和可及性。</li>
+                                        <li><b>熱負載管理：</b>連接QPU的控制和讀出線纜會將熱量從室溫端傳導至低溫端，必須有效管理這些熱負載，即使微瓦級的熱量也可能使系統不穩定。</li>
+                                        <li><b>震動隔離：</b>製冷機（尤其是脈衝管製冷機）產生的機械震動會干擾量子位元的穩定性，需要精密的震動隔離設計。</li>
+                                        <li><b>與控制電子的整合：</b>將部分控制電子元件集成到低溫環境中（如 Cryo-CMOS 技術）是減少延遲和佈線複雜性的趨勢，但也帶來新的散熱與機構整合挑戰。</li>
+                                        <li><b>材料在極低溫下的特性：</b>設計和維護低溫系統需考慮材料在極低溫下的熱導率與機械性能。</li>
+                                      </ul>
+                                      <p style="text-align:justify" class="dark-background">
+                                        低溫系統的發展趨勢是追求更高的冷卻效率、更緊湊的設計、更低的成本以及與QPU和其他子系統更緊密的集成。ULVAC等公司採用模組化架構，以適應從實驗室到實際量子計算平台的演進。緊湊型稀釋製冷機和低溫光子學等創新正在解決這些挑戰。
+                                      </p>
+                                    </li>
+                                  </ol>
+                                
+                                <p style="text-align:justify">
+                                    ▲
+                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
+
+                                    </span><br><br>
+                                    </p>
+
+
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                    </span>
+                                    <span class="post-category">
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                    </span>
+                                </div><!-- /.post-meta -->
+                            
+                                <div id="prev-next-nav" class="text-center"></div>
+
+                                <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
+
+    const current = location.pathname.split("/").pop();
+    const index = pages.findIndex(p => p.file === current);
+    let html = "";
+
+    if (index > 0) {
+      const prev = pages[index - 1];
+      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+    }
+
+    html += `<a class="btn btn-gray" href="../QC_hardware_en/${current}" style="margin: 0 10px;">English Version</a>`;
+
+    if (index < pages.length - 1) {
+      const next = pages[index + 1];
+      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+    }
+
+    document.getElementById("prev-next-nav").innerHTML = html;
+  });
+</script>
+
+                            </div><!-- /.post-content -->
+                        </article><!-- /.blog-post -->
+                        <!--<div id="PostComments" class="post-comments">
+                            
+                            
+                            
+                        </div> /#PostComments -->
+                        <!--<div class="respond">
+                            <h3>Post a Comment</h3>
+                            <form class="form-horizontal">
+                                <input class="form-control" type="text" placeholder="Your Name*" required>
+                                <input class="form-control" type="email" placeholder="Your Email" required>
+                                <textarea class="form-control form-control-comment" type="text" placeholder="Your Comment*" required></textarea>
+                                <button class="btn btn-green">Add a comment</button>
+                            </form>    
+                        </div> /.respond -->
+                    </div>
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            
+
+                            <div class="widget">
+                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a href="../index.html" class="site-title">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                    <p>一起走進新時代的前沿科學與量子科技</p>
+                    </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li>
+                        <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
+                        <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300, Taiwan (R.O.C.)</p></li>-->
+                    </ul>
+                </div>
+                <!--<div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <h3>Featured links</h3>
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Porfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <!--<a class="twitter-bg" href="#"><i class="fab fa-twitter"></i></a>-->
+                            <!--<<a class="facebook-bg" href="https://www.facebook.com/people/Quantum-Perspectives/61576446849628/"><i class="fab fa-facebook"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/%E9%87%8F%E5%AD%90%E9%81%A0%E8%A6%8BQuantum-Perspectives/61576883632888/"><i class="fab fa-facebook-f"></i></a>-->
+                            <!--<a class="pinterest" href="#"><i class="fa-solid fa-microscope"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="linkedin-bg" href="https://www.linkedin.com/company/insight-ihbar"><i class="fab fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p><span style="font-size: 16px;">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</span></p>
+                            <p>All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+</body>
+</html>
