@@ -237,14 +237,14 @@ fetch("lessons.json")
 
     if (index > 0) {
       const prev = pages[index - 1];
-      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+      html += `<a class="btn btn-gray" href="${prev.file}">← Previous</a> `;
     }
 
     html += `<a class="btn btn-gray" href="../Action_R/${current}" style="margin: 0 10px;">中文版</a>`;
 
     if (index < pages.length - 1) {
       const next = pages[index + 1];
-      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+      html += `<a class="btn btn-gray" href="${next.file}">Next →</a>`;
     }
 
     document.getElementById("prev-next-nav").innerHTML = html;
