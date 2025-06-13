@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Favicon
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/PP.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/PP.png">
+
+    <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</title>
+    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware_2025.html" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+
+                <div class="navbar-header">                   
+                    <a href="../index.html" class="site-title">𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</a>
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">物理筆記<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                <li><a href="../CCC/main.html">超導臨界耦合常數理論</a></li>
+                                <li><a href="../Action_C/main.html">古典最小作用量原理</a></li>
+                                <li><a href="../Action_R/main.html">相對論性最小作用量原理</a></li>
+                                <li><a href="../Noether/main.html">諾特定理</a></li>
+                                <li><a href="../STM/main.html">STM</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">工程筆記<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="../CVT/main.html">確動式CVT專利</a></li>
+                              <li><a href="../EA-1/main.html">EA-1 低溫電性量測</a></li>
+                              <li><a href="../EA-2/main.html">EA-2 自動粉末配粉機</a></li>
+                              <li><a href="../TWing/main.html">雙主翼風洞實驗</a></li>
+                            </ul>
+
+                        </li>
+                        <li  class="active"><a href="../About/main.html">About Me</a></li>
+                        <!--<li><a href="./QC_hardware/main.html">最小作用量原理（古典）</a></li>-->
+                        <li><a href="../index_en.html">English</a></li>
+                        
+                    </ul>
+
+                </div>
+
+            </div>   
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <h1>最小作用量原理（古典）</h1>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">最小作用量原理（古典）</a></li>
+                  <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
+                </ol>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="blog-post">
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
+                            <div class="post-content">
+                                <div style="text-align: center;">
+                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h3></h3>
+                                </div>
+                                
+                                
+                                Ostrogradsky instability與高次微分
+
+<p style="text-align:justify">
+
+
+    傳統上，我們可以透過許多方式，判斷 EoM 最多是二次微分方程式。例如邊界條件，在牛頓力學中只需要知道以下其中一個資訊：
+    <ol>
+        <li>起始位置時間 \((q, t_i)\) 與終點位置時間 \((q_f, t_f)\)</li>
+        <li>起始位置時間 \((q_i, t_i)\) 與起始速度 \( \dot{q}_i \)</li>
+    </ol>
+    就可以唯一決定物體的運動行為。換句話說，物理的路徑只跟前述條件擇一有關。這對應到 EoM 是二次微分方程式，例如 \(F = m \ddot{x}\)，起始條件只需要起始位置與起始速度。在 Lagrangian 體系中，EoM 是 Euler-Lagrange equation：
+    \[
+    rac{d}{dt} rac{\partial L}{\partial \dot{q}} - rac{\partial L}{\partial q} = 0
+    \]
+    注意 \(rac{d}{dt}\) 會讓物理量升一次微分，如果要讓 EoM 最多是二次微分，那 Lagrangian \(L\) 只能是 \(L(\dot{q}, q, t)\) 的函數。除了我們從經驗上（實驗上）判斷 EoM 是二次微分、\(L\) 只能是 \(L(\dot{q}, q, t)\) 的函數，事實上如果 Lagrangian \(L\) 包含更高階的導數，還會引發更嚴重的問題：
+    如果 \(L\) 包含二階以上的導數，則系統的 Hamiltonian \(H\)（即能量 \(E\)）不存在下限，我們稱之為 Ostrogradsky instability。能量 \(E\) 不存在下限在物理學上是非常嚴重的事情，在量子力學中，代表「不存在基態 Ground State」，粒子可以無下限地進入到負無窮的能量態；在熱統計力學中，配分函數（Partition function）
+    \[
+    Z = \sum_{E_i} e^{-rac{E_i}{k_B T}}
+    \]
+    不收斂（\(Z 	o +\infty ecause \exists E_i  	o -\infty \)），無法決定不同組態的機率
+    \[
+    
+ho_i = rac{1}{Z} e^{-rac{E_i}{k_B T}}
+    \]
+    所有物理量無法有效預測。
+<br><br>
+    <h3>傳統 Lagrangian 的 Hamiltonian</h3>
+    我們先回到傳統 Lagrangian \(L(\dot{q}, q, t)\) 對應的 Hamiltonian：
+    \[
+    H = rac{\partial L}{\partial \dot{q}} \dot{q} - L
+    \]
+    我們從朗道（Landau）的論證中，因為我們相信空間的均向性（isotropic, or homogenous in space and time）與座標獨立性（frame independent，即相對性原理 Principle of relativity，物理不與座標選取、正負號選取有關），Lagrangian \(L\) 只會是 \(\dot{q}^{2n}\) 和 \(q^{2n}\)，都是偶數次方，且 \(L\) 必須是純量。
+    更仔細地說，因為 \(\overrightarrow{\dot{q}}\)、\(\overrightarrow{q}\) 是向量，為了滿足上述需求，\(\overrightarrow{\dot{q}} 	o \overrightarrow{\dot{q}} \cdot \overrightarrow{\dot{q}} = |\dot{q}|^2\)、\(\overrightarrow{q} 	o \overrightarrow{q} \cdot \overrightarrow{q} = |q|^2\)，只與物理量的大小、不與方向有關，為偶數次方。
+    最簡單的簡諧震盪：
+    \[
+    L = rac{m}{2} \dot{q}^2 - rac{k}{2} q^2 \implies H = rac{\partial L}{\partial \dot{q}} \dot{q} - L = rac{m}{2} \dot{q}^2 + rac{k}{2} q^2
+    \]
+    可以注意到 \(rac{\partial L}{\partial \dot{q}} \dot{q} = m \dot{q}^2 \) 依舊維持偶數次方，能量 \(E\) 有下限。
+<br><br>
+    <h3>當 \(L\) 包含二次導數</h3>
+    如果我們允許 Lagrangian \(L\) 包含二次導數，即 \(L = L(\ddot{q}, \dot{q}, q, t)\)，首先可以用變分原理推導出 EoM：
+    
+        \[
+        \delta L = rac{\partial L}{\partial \ddot{q}} \delta \ddot{q} + rac{\partial L}{\partial \dot{q}} \delta \dot{q} + rac{\partial L}{\partial q} \delta q
+        \]
+        \[
+        = rac{\partial L}{\partial \ddot{q}} rac{d}{dt} \delta \dot{q} + rac{\partial L}{\partial \dot{q}} rac{d}{dt} \delta q + rac{\partial L}{\partial q} \delta q
+        \]
+        \[
+        = rac{d}{dt} \left(rac{\partial L}{\partial \ddot{q}} \delta \dot{q}
+ight) - rac{d}{dt} \left(rac{\partial L}{\partial \ddot{q}}
+ight) \delta \dot{q} + rac{d}{dt} \left(rac{\partial L}{\partial \dot{q}} \delta q
+ight) - rac{d}{dt} \left(rac{\partial L}{\partial \dot{q}}
+ight) \delta q + rac{\partial L}{\partial q} \delta q
+        \]
+        \[
+        = rac{d}{dt} \left(rac{\partial L}{\partial \ddot{q}} \delta \dot{q} + rac{\partial L}{\partial \dot{q}} \delta q
+ight) - rac{d}{dt} \left[rac{d}{dt} \left(rac{\partial L}{\partial \ddot{q}}
+ight) \delta q
+ight] + rac{d^2}{dt^2} \left(rac{\partial L}{\partial \ddot{q}}
+ight) \delta q + \left(rac{\partial L}{\partial q} - rac{d}{dt} rac{\partial L}{\partial \dot{q}}
+ight) \delta q
+        \]
+        \[
+        = rac{d}{dt} \left[rac{\partial L}{\partial \ddot{q}} \delta \dot{q} + \left(rac{\partial L}{\partial \dot{q}} - rac{d}{dt} rac{\partial L}{\partial \ddot{q}}
+ight) \delta q
+ight] + \left(rac{\partial L}{\partial q} - rac{d}{dt} rac{\partial L}{\partial \dot{q}} + rac{d^2}{dt^2} rac{\partial L}{\partial \ddot{q}}
+ight) \delta q
+        \]
+
+第一項是邊界項，第二項即是EoM:
+
+    \[
+    rac{d^2}{dt^2} rac{\partial L}{\partial \ddot{q}} - rac{d}{dt} rac{\partial L}{\partial \dot{q}} + rac{\partial L}{\partial q} = 0
+    \]
+EoM 因為 \(rac{d^2}{dt^2} rac{\partial L}{\partial \ddot{q}}\)，這導致 EoM 成為四次微分方程，微分方程需要依賴起始位置 \(q(0)\)、起始速度 \(\dot{q}(0)\)、起始加速度 \(\ddot{q}(0)\) 外，還需要起始急跳度 \(\dddot{q}(0)\)！
+    即便 \(L\) 多考慮二次導數，EoM 卻需要考慮到三次微分，這顯得不合理。
+<br><br>
+    <h3>Hamiltonian 的影響</h3>
+從 Lagrangian \(L\) 開始，我們考慮以下公式：
+        \[
+        rac{dL}{dt} = rac{\partial L}{\partial \ddot{q}} rac{d\ddot{q}}{dt} + rac{\partial L}{\partial \dot{q}} rac{d\dot{q}}{dt} + rac{\partial L}{\partial q} rac{dq}{dt} + rac{\partial L}{\partial t}
+        \]
+        移項並整理後，可以得到：
+    
+        \[
+        rac{\partial L}{\partial t} = rac{dL}{dt} - rac{\partial L}{\partial \ddot{q}} rac{d\ddot{q}}{dt} - rac{\partial L}{\partial \dot{q}} rac{d\dot{q}}{dt} - rac{\partial L}{\partial q} \dot{q}
+        \]
+        \[
+        = rac{dL}{dt} - rac{d}{dt} \left( rac{\partial L}{\partial \ddot{q}} \ddot{q} 
+ight) + rac{d}{dt} \left( rac{\partial L}{\partial \ddot{q}} 
+ight) \ddot{q} - rac{d}{dt} \left( rac{\partial L}{\partial \dot{q}} \dot{q} 
+ight) + rac{d}{dt} \left( rac{\partial L}{\partial \dot{q}} 
+ight) \dot{q} - rac{\partial L}{\partial q} \dot{q}
+        \]
+        \[
+        = rac{dL}{dt} - rac{d}{dt} \left( rac{\partial L}{\partial \ddot{q}} \ddot{q} 
+ight) + rac{d}{dt} \left[ rac{d}{dt} \left( rac{\partial L}{\partial \ddot{q}} 
+ight) \dot{q} 
+ight] - rac{d^2}{dt^2} \left( rac{\partial L}{\partial \ddot{q}} 
+ight) \dot{q} - rac{d}{dt} \left( rac{\partial L}{\partial \dot{q}} \dot{q} 
+ight) + rac{d}{dt} \left( rac{\partial L}{\partial \dot{q}} 
+ight) \dot{q} - rac{\partial L}{\partial q} \dot{q}
+        \]
+        \[
+        = rac{d}{dt} \left[ L - rac{\partial L}{\partial \ddot{q}} \ddot{q} + \left( rac{d}{dt} rac{\partial L}{\partial \ddot{q}} - rac{\partial L}{\partial \dot{q}} 
+ight) \dot{q} 
+ight] - \left( rac{d^2}{dt^2} rac{\partial L}{\partial \ddot{q}} - rac{d}{dt} rac{\partial L}{\partial \dot{q}} + rac{\partial L}{\partial q} 
+ight) \dot{q}
+        \]
+    第二項即為 EoM = 0，而第一項為 Hamiltonian：    
+
+    \[
+    H = rac{\partial L}{\partial \ddot{q}} \ddot{q} + \left( rac{\partial L}{\partial \dot{q}} - rac{d}{dt} rac{\partial L}{\partial \ddot{q}} 
+ight) \dot{q} - L
+    \]
+    。在前面討論中，因為均向性和相對性原理的要求，我們可以推論 \(\ddot{q}\)、\(\dot{q}\)、\(q\) 在 Lagrangian \(L\) 中都是偶數次方，所以 
+        \[
+        rac{\partial L}{\partial \ddot{q}} \ddot{q}, \quad rac{\partial L}{\partial \dot{q}} \dot{q}
+        \]
+        依然為偶數次，並且恆正。然而
+        \[
+        \left( rac{d}{dt}  rac{\partial L}{\partial \ddot{q}} 
+ight) \dot{q}
+        \]
+        會導致 \(\ddot{q}\) 與 \(\dot{q}\) 形成奇數次，從而允許 Hamiltonian \(H\) 沒有下限。此即為 Ostrogradsky 不穩定性。<br><br>
+
+
+<table cellpadding="1" border="1">
+<tr><td>
+    <h3>更一般的情況</h3>
+    如果讀者有興趣，可以考慮 \(L = L\left(rac{d^n q}{dt^n}, \dots, rac{dq}{dt}, q, t
+ight)\)，對應的 EoM 和 Hamiltonian 為：
+    \[
+    \sum_{i=0}^n (-1)^i rac{d^i}{dt^i} \left[ rac{\partial L}{\partial \left(rac{d^i q}{dt^i}
+ight)} 
+ight] = 0
+    \]
+    \[
+    H = \sum_{i=1}^n \sum_{j=1}^i (-1)^{i-j} \left[ rac{d^{i-j}}{dt^{i-j}} rac{\partial L}{\partial \left(rac{d^i q}{dt^i}
+ight)} 
+ight] rac{d^j q}{dt^j} - L
+    \]
+    可以注意幾點：
+    <ol>
+        <li>如果 \(L\) 依賴於 \(n\) 次導數，則 EoM 會變成 \(2n\) 次微分方程，起始條件會依賴到 \(2n-1\) 次微分，\(2n-1≥n\)，等號成立於\(n=1\)，故不讓起始條件超出原本\(L\)依賴的次數僅可能為\(1\)。</li>
+        <li>一旦 \(n > 1\)，Hamiltonian \(H\) 會出現奇次項，導致 \(H\) 沒有下限。</li>
+    </ol>
+    以上論述使得 \(L\) 依賴於一次導數較為合理。
+</td></tr>
+</table>
+
+</p>
+
+
+
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                    </span>
+                                    <span class="post-category">
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>最小作用量原理（古典）</a>
+                                    </span>
+                                </div><!-- /.post-meta -->
+                            
+                                <div id="prev-next-nav" class="text-center"></div>
+
+                                <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
+
+    const current = location.pathname.split("/").pop();
+    const index = pages.findIndex(p => p.file === current);
+    let html = "";
+
+    if (index > 0) {
+      const prev = pages[index - 1];
+      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+    }
+
+    html += `<a class="btn btn-gray" href="../QC_hardware_en/${current}" style="margin: 0 10px;">English Version</a>`;
+
+    if (index < pages.length - 1) {
+      const next = pages[index + 1];
+      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+    }
+
+    document.getElementById("prev-next-nav").innerHTML = html;
+  });
+</script>
+
+                            </div><!-- /.post-content -->
+                        </article><!-- /.blog-post -->
+                        <!--<div id="PostComments" class="post-comments">
+                            
+                            
+                            
+                        </div> /#PostComments -->
+                        <!--<div class="respond">
+                            <h3>Post a Comment</h3>
+                            <form class="form-horizontal">
+                                <input class="form-control" type="text" placeholder="Your Name*" required>
+                                <input class="form-control" type="email" placeholder="Your Email" required>
+                                <textarea class="form-control form-control-comment" type="text" placeholder="Your Comment*" required></textarea>
+                                <button class="btn btn-green">Add a comment</button>
+                            </form>    
+                        </div> /.respond -->
+                    </div>
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            
+
+                            <div class="widget">
+                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a href="../index.html" class="site-title">𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</a>
+                    <p>
+                        <b><span class="blue">水</span>
+                        <span class="black">木</span>
+                        <span class="blue">湛</span>
+                        <span class="black">清</span>
+                        <span class="black">華</span></b><br>
+                        <span style="font-size: 0.7em; line-height: 0.8;">－《文選．謝混．遊西池詩》<br>
+                        致12年的<span class="purple">清華</span>歲月 2012-2024</span>
+                    </p>
+                </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li>
+                        <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
+                        <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300, Taiwan (R.O.C.)</p></li>-->
+                    </ul>
+                </div>
+                <!--<div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <h3>Featured links</h3>
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Porfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <!--<a class="twitter-bg" href="#"><i class="fab fa-twitter"></i></a>-->
+                            <!--<<a class="facebook-bg" href="https://www.facebook.com/people/Quantum-Perspectives/61576446849628/"><i class="fab fa-facebook"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/%E9%87%8F%E5%AD%90%E9%81%A0%E8%A6%8BQuantum-Perspectives/61576883632888/"><i class="fab fa-facebook-f"></i></a>-->
+                            <!--<a class="pinterest" href="#"><i class="fa-solid fa-microscope"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="linkedin-bg" href="https://www.linkedin.com/in/peir-ru-wang"><i class="fab fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p><span style="font-size: 16px;">𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</span></p>
+                            <p>All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        details.dark-background {
+          background-color: #f5f5f5;
+          border: 1px solid #ddd;
+          padding: 10px;
+          border-radius: 5px;
+        }
+        details.dark-background summary {
+          cursor: pointer;
+          font-weight: bold;
+          background-color: #e0e0e0;
+          padding: 5px;
+          border-radius: 3px;
+        }
+      </style>
+    <style>
+        .blue {
+            color: rgb(62, 134, 196); /* 蓝色 */
+        }
+.black {
+            color: rgb(0, 0, 0); /* 黑色 */
+        }
+.green {
+            color: rgb(69, 185, 147); /* 率色 */
+        }
+.blue_2{
+	color:#417cb0
+	}
+    .purple{
+        color: rgb(127, 16, 132); /* 率色 */
+
+    }
+    </style>
+  
+</body>
+</html>
