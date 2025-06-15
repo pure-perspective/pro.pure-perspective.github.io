@@ -126,11 +126,12 @@
 <p style="text-align:justify">
 
     前一部分介紹了簡單的變分法概念，但是需要引入任意的函數\(\eta (t)\)，手法上稍嫌煩瑣，不利於後續操作。第二部分以相同的概念，採用比較抽象的想法但相同的數學手法，演示一次變分法的操作。有點像將變分的操作類同於微分操作。
-    <table cellpadding="1" border="1">
+    </p>
+    <table width="100%" cellpadding="1" border="1">
     <tr><td><a href="../Image/PoLA/P29.png"><img src="../Image/PoLA/P27.png" alt="取代文字" width=98% height="auto"></a></td><td><a href="../Image/PoLA/P28.png"><img src="../Image/PoLA/P30.png" alt="取代文字" width=98% height="auto"></a></td></tr>
     </table>
      
-    
+    <p style="text-align:justify">
     針對同一種泛函（Functional）的積分問題
     $$S[F(x,\dot{x},t)]=\int_a^b F(x,\dot{x},t)dt $$
     當我們針對\(x\)做變分， 
@@ -145,16 +146,16 @@
     $$\delta S=\delta \int _a^b Fdt=\int _a^b \delta Fdt=0$$
     概念上很好理解的是，\(\delta F\)的變化和\(\delta x\)、\(\delta \dot{x}\)有關，所以將\(\delta F\)展開
     $$\delta S=\int _a^b \delta Fdt=\int _a^b { \partial F\over\partial x }\delta x+{\partial F\over \partial \dot{x} } \delta \dot{x} dt $$
-    
-    <table cellpadding="1" border="1">
-    <tr><td>
+    </p>
+    <table width="100%" cellpadding="1" border="1">
+    <tr><td><p style="text-align:justify">
     進階：Thm.1 :微分與變分對調<br>
     如果今天微分與變分針對的對象不同，如對\(t\)微分 \(d \over dt\)、對\(x\)變分\(\delta x\)，則 \(d \over dt\)與\(\delta \)可以對調。
     $$\delta \dot{f}=\dot{f} (x+\delta x)-\dot{f}(x)$$
-    $$= {d \over dt} \left(f(x+\delta x)-f(x)\right)= {d \over dt} \delta f$$
+    $$= {d \over dt} \left(f(x+\delta x)-f(x)\right)= {d \over dt} \delta f$$</p>
     </td></tr>
     </table>
-    
+    <p style="text-align:justify">
     將\(\delta \dot{x}\)對調 \({d \over dt} \delta x\)<br>
     $$\delta S=\int _a^b   {\partial F\over\partial x} \delta xdt+  \int _a^b   {\partial F\over \partial \dot{x} }  \left( {d \over dt} \delta x\right)dt $$
     同樣的手法對第二項做分部積分
@@ -167,34 +168,36 @@
     
     $$ {\partial F\over\partial x}- {d \over dt}   {\partial F\over \partial \dot{x} } =0$$ 
     Euler-Lagrange equation <br>
-    <table cellpadding="1" border="1">
-    <tr><td>
+    </p>
+    <table width="100%" cellpadding="1" border="1">
+    <tr><td><p style="text-align:justify">
     進階：Thm.2:變分的Chain rule
     $$\delta (FG)={\partial (FG)\over\partial x} \delta x+{\partial (FG)\over \partial \dot{x} } \delta \dot{x}$$
     $$=\left( {\partial F\over\partial x} G+F {\partial G\over\partial x}\right)\delta x+\left( {\partial F\over \partial \dot{x} }  G+F {\partial G\over\partial \dot{x}} \right)\delta \dot{x}$$
     $$=\left( {\partial F\over\partial x} \delta x+ {\partial F\over \partial \dot{x} }  \delta \dot{x} \right)G+F\left({\partial G\over\partial x} \delta x+{\partial G\over\partial \dot{x}}  \delta \dot{x} \right)$$
-    $$= \delta F\cdot G+F\cdot \delta G$$
+    $$= \delta F\cdot G+F\cdot \delta G$$</p>
     </td></tr>
     </table>
+
     <br>
     
-    <table cellpadding="1" border="1">
+    <table width="100%" cellpadding="1" border="1">
     <tr><td>
+        <p style="text-align:justify">
     進階：Thm.3:針對函數F同乘同除另一函數G，不影響變分
     $$\delta F=\delta \left(F\cdot {G\over G}\right)=\delta \left(F\cdot G\cdot G^{-1} \right)$$
     $$=\delta F\cdot G\cdot G^{-1}+F\cdot \delta G\cdot G^{-1}+F\cdot G\cdot \delta (G^{-1} )$$
     $$=\delta F+F\cdot \delta G\cdot G^{-1}+F\cdot G\cdot \left(-{\delta G\over G^2} \right)$$
-    $$=\delta F$$
+    $$=\delta F$$</p>
     </td></tr>
     </table>
     
-    </p>
 
 
 
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                        <a href="../About/main.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
                                     </span>
                                     <span class="post-category">
                                         <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>最小作用量原理（古典）</a>

@@ -126,11 +126,11 @@
 
 
     In the previous section, we introduced the basic concept of the variational method, but it required introducing an arbitrary function \(\eta(t)\), which made the process somewhat cumbersome and less conducive to further operations. In this section, we will demonstrate the variational method using the same concept but with a more abstract approach and similar mathematical techniques. This approach is somewhat analogous to treating the variational operation similarly to differentiation.
-    
-    <table cellpadding="1" border="1">
+    </p>
+    <table width="100%" cellpadding="1" border="1">
     <tr><td><a href="../Image/PoLA/P29.png"><img src="../Image/PoLA/P27.png" alt="Image Placeholder" width=98% height="auto"></a></td><td><a href="../Image/PoLA/P28.png"><img src="../Image/PoLA/P30.png" alt="Image Placeholder" width=98% height="auto"></a></td></tr>
     </table>
-    
+    <p style="text-align:justify">
     For the same integral problem involving a functional:
     $$S[F(x,\dot{x},t)] = \int_a^b F(x,\dot{x},t)\, dt$$
     When we perform a variation with respect to \(x\):
@@ -144,16 +144,16 @@
     $$\delta S = \delta \int_a^b F\, dt = \int_a^b \delta F\, dt = 0$$
     Conceptually, it is easy to understand that the variation \(\delta F\) is related to \(\delta x\) and \(\delta \dot{x}\), so expanding \(\delta F\), we get:
     $$\delta S = \int_a^b \delta F\, dt = \int_a^b \left( \frac{\partial F}{\partial x} \delta x + \frac{\partial F}{\partial \dot{x}} \delta \dot{x} \right)\, dt$$
-    
-    <table cellpadding="1" border="1">
-    <tr><td>
+    </p>
+    <table width="100%" cellpadding="1" border="1">
+    <tr><td><p style="text-align:justify">
     Advanced: Thm. 1: Interchangeability of Differentiation and Variation<br>
     If differentiation and variation are applied to different objects, such as differentiation with respect to \(t\), \( \frac{d}{dt} \) and variation with respect to \(x\), \left(\frac{\partial q}{\partial s}\right) d\dot{s} \(\delta x\), then \( \frac{d}{dt} \) and \( \delta \) can be interchanged.
     $$\delta \dot{f} = \dot{f}(x + \delta x) - \dot{f}(x)$$
-    $$= \frac{d}{dt} \left( f(x + \delta x) - f(x) \right) = \frac{d}{dt} \delta f$$
+    $$= \frac{d}{dt} \left( f(x + \delta x) - f(x) \right) = \frac{d}{dt} \delta f$$</p>
     </td></tr>
     </table>
-    
+    <p style="text-align:justify">
     Interchanging \(\delta \dot{x}\) with \(\frac{d}{dt} \delta x\):
     $$\delta S = \int_a^b \frac{\partial F}{\partial x} \delta x\, dt + \int_a^b \frac{\partial F}{\partial \dot{x}} \left( \frac{d}{dt} \delta x \right)\, dt$$
     Using the same method, we perform integration by parts on the second term:
@@ -167,38 +167,39 @@
     $$ \frac{\partial F}{\partial x} - \frac{d}{dt} \frac{\partial F}{\partial \dot{x}} = 0$$ 
     This is the Euler-Lagrange equation.
     <br>
-    
-    <table cellpadding="1" border="1">
-    <tr><td>
+    </p>
+    <table width="100%" cellpadding="1" border="1">
+    <tr><td><p style="text-align:justify">
     Advanced: Thm. 2: Chain Rule for Variation
     $$\delta (FG) = \frac{\partial (FG)}{\partial x} \delta x + \frac{\partial (FG)}{\partial \dot{x}} \delta \dot{x}$$
     $$= \left( \frac{\partial F}{\partial x} G + F \frac{\partial G}{\partial x} \right) \delta x + \left( \frac{\partial F}{\partial \dot{x}} G + F \frac{\partial G}{\partial \dot{x}} \right) \delta \dot{x}$$
     $$= \left( \frac{\partial F}{\partial x} \delta x + \frac{\partial F}{\partial \dot{x}} \delta \dot{x} \right) G + F \left( \frac{\partial G}{\partial x} \delta x + \frac{\partial G}{\partial \dot{x}} \delta \dot{x} \right)$$
-    $$= \delta F \cdot G + F \cdot \delta G$$
+    $$= \delta F \cdot G + F \cdot \delta G$$</p>
     </td></tr>
     </table>
     <br>
     
-    <table cellpadding="1" border="1">
-    <tr><td>
+    <table width="100%" cellpadding="1" border="1">
+    <tr><td><p style="text-align:justify">
     Advanced: Thm. 3: Multiplying and Dividing Function \(F\) by Another Function \(G\) Does Not Affect the Variation
     $$\delta F = \delta \left( F \cdot \frac{G}{G} \right) = \delta \left( F \cdot G \cdot G^{-1} \right)$$
     $$= \delta F \cdot G \cdot G^{-1} + F \cdot \delta G \cdot G^{-1} + F \cdot G \cdot \delta (G^{-1})$$
     $$= \delta F + F \cdot \delta G \cdot G^{-1} + F \cdot G \cdot \left( -\frac{\delta G}{G^2} \right)$$
-    $$= \delta F$$
+    $$= \delta F$$</p>
     </td></tr>
     </table>
-    
-    
-    
-    </p>
 
 
 
 
+                                <p>
+                                    <span style="font-size: 0.5em; line-height: 0.8;">
+                                        Originally written in Chinese by the author, these articles are translated into English to invite cross-language resonance.
+                                    </span>
+                                </p>
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
+                                        <a href="../About_en/main.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
                                         <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Action Principle (Classical)</a>

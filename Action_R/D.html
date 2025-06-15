@@ -146,13 +146,13 @@
                                     $$=-{1 \over 8 \pi c} \int   \delta (\partial _\mu  A_\nu -\partial _\nu  A_\mu  )\cdot F^{\mu \nu}  d^4 x $$
                                     $$=-{1 \over 8 \pi c} \int   \delta (\partial _\mu  A_\nu  )\cdot F^{\mu \nu}  d^4 x +{1 \over 8 \pi c} \int   \delta (\partial _\nu  A_\mu  )\cdot F^{\mu \nu}  d^4 x $$
                                     因為每一項\(\mu\) 、\(\nu\) 都是Dummy index，可以互換\(\mu \leftrightarrow \nu \)，我們把第一項的\(\mu\) 、\(\nu\) 互換，就可以把兩項合併
-                                    $$\delta S_F=-{1 \over 8 \pi c} \int   \delta (\partial _\color{red}{\nu}  A_\color{red}{\mu}  )\cdot F^\color{red}{\nu \mu}  d^4 x +{1 \over 8 \pi c} \int   \delta (\partial _\nu  A_\mu  )\cdot F^{\mu \nu}  d^4 x $$
+                                    $$\delta S_F=-{1 \over 8 \pi c} \int   \delta (\partial _{\color{red}{\nu}}  A_{\color{red}{\mu}}  )\cdot F^{\color{red}{\nu \mu}}  d^4 x +{1 \over 8 \pi c} \int   \delta (\partial _\nu  A_\mu  )\cdot F^{\mu \nu}  d^4 x $$
                                     $$={1 \over 8 \pi c} \int   \delta (\partial _\nu  A_\mu  )\cdot (-F^\nu \mu +F^{\mu \nu}  ) d^4 x $$
                                     回憶電磁張量
                                     $$F^{\mu \nu} =\partial ^\mu  A^\nu -\partial ^\nu  A^\mu =\left(\begin{matrix}0 & -E_x & -E_y & -E_z\\ E_x & 0 & -B_z & B_y \\ E_y & B_z & 0 & -B_x \\ E_z & -B_y & B_x & 0 \end{matrix}\right)$$
                                     \(F^{\mu \nu} \)是一個反對稱張量，所以\(F^\nu \mu =-F^{\mu \nu} \)
                                     代回去會多兩倍
-                                    $$\delta S_F={1 \over 8 \pi c} \int   \delta (\partial _\nu  A_\mu  )\cdot (F^\color{red}{\mu \nu} +F^{\mu \nu}  ) d^4 x ={1 \over 4 \pi c} \int   \delta (\partial _\nu  A_\mu  )\cdot F^{\mu \nu}  d^4 x $$
+                                    $$\delta S_F={1 \over 8 \pi c} \int   \delta (\partial _\nu  A_\mu  )\cdot (F^{\color{red}{\mu \nu}} +F^{\mu \nu}  ) d^4 x ={1 \over 4 \pi c} \int   \delta (\partial _\nu  A_\mu  )\cdot F^{\mu \nu}  d^4 x $$
                                     利用Thm.1的方法，我們將\(\delta\) 和\(\partial _\nu \)對調
                                     $$\delta (\partial _\nu  A_\mu  )=\partial _\nu  (\delta A_\mu  )$$
                                     $$\delta S_F={1 \over 4 \pi c} \int   \partial _\nu  (\delta A_\mu  )\cdot F^{\mu \nu}  d^4 x $$
@@ -161,7 +161,7 @@
                                     將積分拆成兩項
                                     $$\delta S_F={1 \over 4 \pi c} \int   \partial _\nu  (\delta A_\mu \cdot F^{\mu \nu}  ) d^4 x -{1 \over 4 \pi c} \int   \delta A_\mu \cdot \partial _\nu  (F^{\mu \nu}  ) d^4 x $$
                                     
-                                    <table cellpadding="1" border="1">
+                                    <table width="100%" cellpadding="1" border="1">
                                     <tr><td>
                                     回憶Divergence theorem
                                     $$\int    \nabla \cdot \overrightarrow{F}dV =∮  \overrightarrow{F}\cdot d\overrightarrow{S}  $$
@@ -184,7 +184,7 @@
                                     $$\partial _\nu  F^{\mu \nu} =-{4\pi \over c} J^\mu $$
                                     
                                     
-                                    <table cellpadding="1" border="1">
+                                    <table width="100%" cellpadding="1" border="1">
                                     <tr><td>
                                     Recall Maxwell's equation in Gaussian Unit
                                     $$ \nabla \cdot \overrightarrow{E}=4\pi \rho_e$$
@@ -194,7 +194,7 @@
                                     </td></tr>
                                     </table>
                                     
-                                    <table cellpadding="1" border="1">
+                                    <table width="100%" cellpadding="1" border="1">
                                     <tr><td>
                                     $$\partial _\nu  F^{\mu \nu} =-{4\pi \over c} J^\mu \to \left( \begin{matrix}  \nabla \cdot \overrightarrow{E}=4\pi \rho_e \\ \nabla ×\overrightarrow{B}={4\pi \over c} \overrightarrow{J}+{1 \over c}  {\partial \overrightarrow{E}\over \partial t}  \end{matrix}\right)$$
                                     </td></tr>
@@ -208,7 +208,7 @@
                                     $$\partial _\omega  \partial _\mu  A_\nu -\partial _\omega  \partial _\nu  A_\mu +\partial _\mu  \partial _\nu  A_\omega -\partial _\mu  \partial _\omega  A_\nu +\partial _\nu  \partial _\omega  A_\mu -\partial _\nu  \partial _\mu  A_\omega =0$$
                                     這條關係式會得到
                                     
-                                    <table cellpadding="1" border="1">
+                                    <table width="100%" cellpadding="1" border="1">
                                     <tr><td>
                                     $$ \partial _\omega  F_{\mu \nu} +\partial _\mu  F_\nu \omega +\partial _\nu  F_\omega \mu =0 \to \left( \begin{matrix}  \nabla \cdot \overrightarrow{B}=0 \\ \nabla ×\overrightarrow{E}=-{1 \over c}  {\partial \overrightarrow{B} \over \partial t}  \end{matrix}\right)$$
                                     </td></tr>
@@ -221,7 +221,7 @@
 
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                        <a href="../About/main.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
                                     </span>
                                     <span class="post-category">
                                         <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>最小作用量原理（相對論性）</a>

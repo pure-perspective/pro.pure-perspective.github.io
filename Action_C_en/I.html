@@ -126,10 +126,12 @@
 <p style="text-align:justify">
 
     Traditionally, we can use various methods to determine that the EoM is at most a second-order differential equation. For example, in Newtonian mechanics, we only need to know one of the following boundary conditions:<br>
+    </p>
     <ol>
-        <li>Initial position and time \((q, t_i)\) and final position and time \((q_f, t_f)\)</li>
-        <li>Initial position and time \((q_i, t_i)\) and initial velocity \( \dot{q}_i \)</li>
+        <li><p style="text-align:justify">Initial position and time \((q, t_i)\) and final position and time \((q_f, t_f)\)</p></li>
+        <li><p style="text-align:justify">Initial position and time \((q_i, t_i)\) and initial velocity \( \dot{q}_i \)</p></li>
     </ol>
+    <p style="text-align:justify">
     to uniquely determine the motion of an object. In other words, the physical path only depends on one of the aforementioned conditions. This corresponds to the EoM being a second-order differential equation, such as \(F = m \ddot{x}\), where the initial conditions only require the initial position and velocity. In the Lagrangian framework, the EoM is given by the Euler-Lagrange equation:
     \[
     \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} - \frac{\partial L}{\partial q} = 0
@@ -145,8 +147,10 @@ Beyond empirical and experimental observations suggesting that the EoM is second
     \rho_i = \frac{1}{Z} e^{-\frac{E_i}{k_B T}}
     \]
     and rendering all physical quantities unpredictable.
+    </p>
 <br><br>
     <h3>The Hamiltonian of a Traditional Lagrangian</h3>
+    <p style="text-align:justify">
     Returning to the traditional Lagrangian \(L(\dot{q}, q, t)\), the Hamiltonian is defined as:
     \[
     H = \frac{\partial L}{\partial \dot{q}} \dot{q} - L
@@ -157,8 +161,10 @@ Beyond empirical and experimental observations suggesting that the EoM is second
     L = \frac{m}{2} \dot{q}^2 - \frac{k}{2} q^2 \implies H = \frac{\partial L}{\partial \dot{q}} \dot{q} - L = \frac{m}{2} \dot{q}^2 + \frac{k}{2} q^2
     \]
     Notably, \(\frac{\partial L}{\partial \dot{q}} \dot{q} = m \dot{q}^2 \) remains even powers, ensuring the energy \(E\) has a lower bound.
+    </p>
 <br><br>
     <h3>When \(L\) Includes Higher-Order Derivatives</h3>
+    <p style="text-align:justify">
     If we allow the Lagrangian \(L\) to include second derivatives, i.e., \(L = L(\ddot{q}, \dot{q}, q, t)\), we can derive the EoM using the principle of variation:
     
     
@@ -188,10 +194,10 @@ Beyond empirical and experimental observations suggesting that the EoM is second
     
     
         The EoM involves \(\frac{d^2}{dt^2} \frac{\partial L}{\partial \ddot{q}}\), leading to a fourth-order differential equation. Such an equation requires not only the initial position \(q(0)\), initial velocity \(\dot{q}(0)\), and initial acceleration \(\ddot{q}(0)\), but also the initial jerk \(\dddot{q}(0)\). Even though \(L\) includes only second derivatives, the EoM demands consideration of third derivatives, which seems unreasonable.
-    
+    </p>
     <br><br>
     <h3>The Effect on the Hamiltonian</h3>
-    
+    <p style="text-align:justify">
         Starting from the Lagrangian \(L\), consider the following formula:
     
     
@@ -239,12 +245,13 @@ Beyond empirical and experimental observations suggesting that the EoM is second
     
     
         introduces odd terms involving \(\ddot{q}\) and \(\dot{q}\), allowing the Hamiltonian \(H\) to lack a lower bound. This is the essence of Ostrogradsky instability.
-
+</p>
 <br><br>
 
-<table cellpadding="1" border="1">
+<table width="100%" cellpadding="1" border="1">
 <tr><td>
     <h3>More General Case</h3>
+    <p style="text-align:justify">
     For readers interested in a more general case, consider \(L = L\left(\frac{d^n q}{dt^n}, \dots, \frac{dq}{dt}, q, t\right)\). The corresponding EoM and Hamiltonian are:
     \[
     \sum_{i=0}^n (-1)^i \frac{d^i}{dt^i} \left[ \frac{\partial L}{\partial \left(\frac{d^i q}{dt^i}\right)} \right] = 0
@@ -252,21 +259,27 @@ Beyond empirical and experimental observations suggesting that the EoM is second
     \[
     H = \sum_{i=1}^n \sum_{j=1}^i (-1)^{i-j} \left[ \frac{d^{i-j}}{dt^{i-j}} \frac{\partial L}{\partial \left(\frac{d^i q}{dt^i}\right)} \right] \frac{d^j q}{dt^j} - L
     \]
-    Key observations:
+    Key observations:</p>
     <ol>
-        <li>If \(L\) depends on \(n\)-th derivatives, the EoM becomes a \(2n\)-th order differential equation, requiring initial conditions up to \((2n-1)\)-th derivatives. \(2n-1 \geq n\), with equality holding when \(n=1\). Therefore, to ensure that the initial conditions do not exceed the order of derivatives that \(L\) depends on, \(n\) can only be \(1\).</li>
-        <li>For \(n > 1\), the Hamiltonian \(H\) introduces odd-power terms, causing \(H\) to lack a lower bound.</li>
+        <li><p style="text-align:justify">If \(L\) depends on \(n\)-th derivatives, the EoM becomes a \(2n\)-th order differential equation, requiring initial conditions up to \((2n-1)\)-th derivatives. \(2n-1 \geq n\), with equality holding when \(n=1\). Therefore, to ensure that the initial conditions do not exceed the order of derivatives that \(L\) depends on, \(n\) can only be \(1\).</p></li>
+        <li><p style="text-align:justify">For \(n > 1\), the Hamiltonian \(H\) introduces odd-power terms, causing \(H\) to lack a lower bound.</p></li>
     </ol>
-    These arguments suggest that restricting \(L\) to first-order derivatives is more reasonable.
+    <p style="text-align:justify">
+    These arguments suggest that restricting \(L\) to first-order derivatives is more reasonable.</p>
 </td></tr>
 </table>
 
 </p>
 
 
+                                <p>
+                                    <span style="font-size: 0.5em; line-height: 0.8;">
+                                        Originally written in Chinese by the author, these articles are translated into English to invite cross-language resonance.
+                                    </span>
+                                </p>
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
+                                        <a href="../About_en/main.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
                                         <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Action Principle (Classical)</a>
