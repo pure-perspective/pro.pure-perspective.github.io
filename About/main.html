@@ -113,56 +113,116 @@
         <section class="site-section subpage-site-section section-blog">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-9">
                         <article class="blog-post">
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <!--<div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
-                                    <h3></h3>
+                                    <h2>關於𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</h2>
+                                    <h3>深入的量子科技知識平台</h3>
                                 </div>-->
-                                <div>
-                                    <h3>王培儒<br>Wang, Peir-Ru</h3>
-                                    <h3></h3>
-                                </div>
+                                
+
                                 <table style="width:100%; border-collapse:collapse;">
                                     <tr>
-                                        <td style="width:20%; vertical-align:top;">
+                                        <td style="width:20%; vertical-align:middle;">
                                             <img src="../Image/IMG_0964_2.JPG" alt="描述圖片" style="max-width:100%; height:auto;">
                                         </td>
-                                        <td style="width:80%; vertical-align:top; padding:10px;">
-                                            <h3>簡介</h3>
-                                            <p></p>
+                                        <td style="width:80%; vertical-align:middle; padding:10px;">
+                                            <div style="text-align: center;">
+                                                <h3>王培儒<br>Wang, Peir-Ru
+                                                    <a class="linkedin-bg" href="https://www.linkedin.com/in/peir-ru-wang">
+                                                        <i class="fab fa-linkedin fa"></i> <!-- 可放大 icon -->
+                                                    </a>
+                                                </h3>
+                                            </div>
+                                            <p style="text-align: center;">
+                                                獨立工程師和研究者。<br>
+                                                畢業自清大材料博士班，<br>大學在清大主修機械、輔系物理。<br><br>
+                                                
+                                                
+                                                喜歡用物理的角度解構世界，<br>也喜歡用工程的角度建構世界。<br><br>
+                                            
+                                                <span class="blue">
+                                                    <i>即便人生回到了原點，<br>
+                                                    至少還有個相位差，<br>
+                                                    和樂而不為？</i>
+                                                </span>
+                                            </p>
                                         </td>
                                     </tr>
                                 </table>
                                 
-                                <p style="text-align:justify">
-                                    ▲
-                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
-
-                                    </span><br><br>
-                                    </p>
-
-
+                                <div class="text-left">
+                                    <h3>相關文章</h3>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-4 col-xs-6">
+                                        <div class="portfolio-item">
+                                            <img src="../Image/SCQ-ele.jpg" class="img-res" alt="">
+                                            <h4 class="portfolio-item-title">超導量子位元<br>科普版</h4>
+                                            <a href="../SCQ_elementary/main.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                        </div><!-- /.portfolio-item -->
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-xs-6">
+                                        <div class="portfolio-item">
+                                            <img src="../Image/SCQ-adv.jpg" class="img-res" alt="">
+                                            <h4 class="portfolio-item-title">超導量子位元<br>進階版</h4>
+                                            <a href="../SCQ_advanced/main.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                        </div><!-- /.portfolio-item -->
+                                    </div>
+                                    
+                                    <div class="col-lg-3 col-md-4 col-xs-6">
+                                        <div class="portfolio-item">
+                                            <img src="../Image/SCQ-hardware.jpg" class="img-res" alt="">
+                                            <h4 class="portfolio-item-title">硬體解說</h4>
+                                            <a href="../QC_hardware/main.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                        </div><!-- /.portfolio-item -->
+                                    </div>
+                                </div>
                                 
-                                
+
+                                <!-- <div class="post-meta">
+                                    <span class="post-author">
+                                        <a href="../About/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                    </span>
+                                    <span class="post-category">
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                    </span>
+                                </div>/.post-meta -->
+                            
+                                <div id="prev-next-nav" class="text-center"></div>
+
+                                <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
+
+    const current = location.pathname.split("/").pop();
+    const index = pages.findIndex(p => p.file === current);
+    let html = "";
+
+    if (index > 0) {
+      const prev = pages[index - 1];
+      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+    }
+
+    html += `<a class="btn btn-gray" href="../About_en/${current}" style="margin: 0 10px;">English Version</a>`;
+
+    if (index < pages.length - 1) {
+      const next = pages[index + 1];
+      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+    }
+
+    document.getElementById("prev-next-nav").innerHTML = html;
+  });
+</script>
+
                             </div><!-- /.post-content -->
                         </article><!-- /.blog-post -->
-                        <!--<div id="PostComments" class="post-comments">
-                            
-                            
-                            
-                        </div> /#PostComments -->
-                        <!--<div class="respond">
-                            <h3>Post a Comment</h3>
-                            <form class="form-horizontal">
-                                <input class="form-control" type="text" placeholder="Your Name*" required>
-                                <input class="form-control" type="email" placeholder="Your Email" required>
-                                <textarea class="form-control form-control-comment" type="text" placeholder="Your Comment*" required></textarea>
-                                <button class="btn btn-green">Add a comment</button>
-                            </form>    
-                        </div> /.respond -->
+                        
                     </div>
                     <aside class="col-md-3">
                         <div class="sidebar">
@@ -185,7 +245,27 @@
                             </div> /.widget-recent-posts -->
                             
 
-                            
+                            <div class="widget">
+                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+
+  
                         </div><!-- /.sidebar -->
                         
                     </aside>
@@ -195,7 +275,7 @@
         <section class="site-section subpage-site-section section-related-projects">
             <div class="container">
                 <div class="text-left">
-                    <h2>Related Projects</h2>
+                    <h3>Related Projects</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-4 col-xs-6">
@@ -221,9 +301,9 @@
                     </div>
                     <div class="col-lg-3 col-md-4 col-xs-6">
                         <div class="portfolio-item">
-                            <img src="../Image/EA-2-full-2.jpg" class="img-res" alt="">
-                            <h4 class="portfolio-item-title">EA-2 Scamander<br>自動粉末配粉機</h4>
-                            <a href="../QC_hardware/main.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            <img src="../Image/STM-Si-1.5V_Port.PNG" class="img-res" alt="">
+                            <h4 class="portfolio-item-title">STM<br>掃描穿隧式電子顯微鏡</h4>
+                            <a href="../STM/main.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                         </div><!-- /.portfolio-item -->
                     </div>
                 </div>
