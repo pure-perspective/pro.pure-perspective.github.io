@@ -1,5 +1,5 @@
 [
     { "title": "關於我", "file": "main.html" },
-    { "title": "CV", "file": "A.html" },
-    { "title": "TA助教獎", "file": "B.html" }
+    { "title": "CV", "file": "CV.html" },
+    { "title": "TA助教獎", "file": "TA.html" }
 ]
