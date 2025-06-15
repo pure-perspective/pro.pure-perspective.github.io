@@ -98,10 +98,10 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>硬體導論</h1>
+                <h1>Action Principle (Relativistic)</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="./main.html">硬體導論</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">Action Principle (Relativistic)</a></li>
                   <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
@@ -118,188 +118,119 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>Variation and Equations of Motion for a Charged Particle in an EM Field</h2>
                                     <h3></h3>
                                 </div>
                                 
-                                
-                                Variation and Equations of Motion for a Charged Particle in an EM Field
 
 <p style="text-align:justify">
 
-In this section, we aim to explore how a charged particle moves under a given EM Field (note that "given EM Field" means we do not vary the EM Field itself). In relativistic electrodynamics, we write the 4-Potential as \(A = A^\mu  \hat{e} _\mu =\left(\phi,\overrightarrow{A}
-ight)\), using Gaussian units here. The Action \(S_{PF}\) for the interaction of the charged particle is written as:
-
-$$S_{PF}=\int _a^b  -{e \over c}  A_\mu  d\eta ^\mu   $$
-
-The complete description of the motion of the charged particle is given by:
-
-$$S=S_P+S_{PF}=\int _a^b  -mc^2 d	au  +\int _a^b  -{e\over c}  A_\mu  d\eta ^\mu   $$
-
-Here, we consider varying the path \(\eta ^\mu\) of the charged particle in spacetime:
-
-$$\eta ^\mu 	o \eta ^\mu +\delta \eta ^\mu $$
-
-Although we do not vary the EM Field \(A^\mu\), the potential experienced by the particle depends on the path taken. Hence, the Action for different paths will involve different values of \(A^\mu\) (meaning the change in \(A^\mu\) comes from the different paths \(\eta ^\mu\) rather than from varying \(A^\mu\)):
-
-$$A^\mu  (\eta ^\mu  )	o A^\mu  (\eta ^\mu +\delta \eta ^\mu  )=A^\mu  (\eta ^\mu  )+\delta A^\mu $$
-
-<table cellpadding="1" border="1">
-<tr><td><a href="../Image/PoLA/P31.png"><img src="../Image/PoLA/P31.png" alt="Substitute text" width=70% height="auto"></a></td></tr>
-</table>
-<table cellpadding="1" border="1">
-<tr><td><a href="../Image/PoLA/P32.png"><img src="../Image/PoLA/P32.png" alt="Substitute text" width=98% height="auto"></a></td></tr>
-</table>
-
-We calculate how \(\delta S_{PF}\) varies:
-
-$$\delta S_{PF}=\delta \int _a^b  -{e\over c}  A_\mu  d\eta ^\mu  $$
-$$ =-{e\over c}  \int _a^b  \delta A_\mu \cdot d\eta ^\mu   -{e\over c}  \int _a^b  A_\mu \cdot \delta d\eta ^\mu  $$ 
-
-Using the method of Thm.1, we exchange \(\delta d\eta ^\mu \) with \(d\delta \eta ^\mu\):
-
-$$\delta d\eta ^\mu =d\delta \eta ^\mu $$
-
-and perform integration by parts, where the boundary term vanishes:
-
-$$\delta S_{PF}=-{e\over c}  \int _a^b  \delta A_\mu \cdot d\eta ^\mu   -{e\over c}  \int _a^b  A_\mu \cdot d\delta \eta ^\mu  $$
-$$ =-{e\over c}  \int _a^b  \delta A_\mu \cdot d\eta ^\mu    \color{red}{ -\left[{e\over c}  A_\mu \cdot \delta \eta ^\mu 
-ight]  \Big|_a^b}+{e\over c}  \int _a^b   dA _\mu \cdot \delta \eta ^\mu  $$ 
-
-Using Thm.3, multiplying and dividing by \(d	au \) does not affect the variation:
-
-$$\delta S_{PF}=-{e\over c}  \int _a^b  \delta A_\mu \cdot d\eta ^\mu   +{e\over c}  \int _a^b   dA _\mu \cdot \delta \eta ^\mu  $$
-$$ =-{e\over c}  \int _a^b  \delta A_\mu \cdot {d\eta ^\mu \over \color{red}{d	au}}  \color{red}{d	au}  +{e\over c}  \int _a^b   {dA _\mu \over \color{red}{d	au}}  \color{red}{d	au} \cdot \delta \eta ^\mu   $$
-
-Since:
-
-$$\delta A_\mu ={\partial A_\mu \over \partial x ^
-u } \delta \eta ^
-u $$
-
-and
-
-$${dA_\mu \over d	au} ={\partial A_\mu \over \partial x^
-u  }  {d\eta ^
-u \over d	au} ={\partial A_\mu \over \partial x^
-u  } U^
-u $$
-
-Substituting these, we get:
-
-$$\delta S_{PF}=-{e\over c}  \int _a^b  {\partial A_\mu \over\partial x^
-u } \delta \eta ^
-u \cdot u^\mu  d	au  +{e\over c}  \int _a^b  {\partial A_\mu \over \partial x^
-u  } U^
-u  d	au \cdot \delta \eta ^\mu$$   
-$$=-{e\over c}  \int _a^b  (\partial _
-u  A_\mu  ) u^\mu  \delta \eta ^
-u  d	au  +{e\over c}  \int _a^b  \left(\partial _
-u  A_\mu  
-ight) U^
-u  \delta \eta ^\mu  d	au $$ 
-
-We want to factor out the variation \(\delta \eta ^
-u \) and \(\delta \eta ^\mu\) together, but the indices do not match. However, since each term's indices \(\mu\) and \(
-u\) are dummy indices, we can interchange them \(\mu \leftrightarrow 
-u\). By swapping \(\mu\) and \(
-u\) in the first term, we can combine the terms:
-
-$$\delta S_{PF}=-{e\over c}  \int _a^b  \left(\partial _\color{red}{\mu}  A_\color{red}{
-u}  
-ight) U^\color{red}{
-u}  \delta \eta ^\color{red}{\mu}  d	au  +{e\over c}  \int _a^b  (\partial _
-u  A_\mu  ) U^
-u  \delta \eta ^\mu  d	au $$
-$$=-{e\over c}  \int _a^b  (\partial _\mu  A_
-u -\partial _
-u  A_\mu  ) U^
-u  \delta \eta ^\mu  d	au  $$
-
-Considering the full motion of the charged particle in the EM Field:
-
-$$\delta S=\delta S_P+\delta S_{PF}=0$$
-
-Thus:
-
-$$\delta S_P+\delta S_{PF}=\int _a^b  m {dU_\mu \over d	au}   \delta \eta ^\mu  d	au -{e\over c}  \int _a^b  \left(\partial _\mu  A_
-u -\partial _
-u  A_\mu  
-ight) U^
-u  \delta \eta ^\mu  d	au  $$
-$$=\int _a^b \left[m {dU_\mu \over d	au} -{e\over c}  \left(\partial _\mu  A_
-u -\partial _
-u  A_\mu  
-ight) U^
-u  
-ight]  \delta \eta ^\mu  d	au =0$$
-
-We obtain:
-
-$$m {dU_\mu \over d	au} -{e\over c}  \left(\partial _\mu  A_
-u -\partial _
-u  A_\mu  
-ight) U^
-u =0$$
-
-$$m {dU_\mu \over d	au} ={e\over c}  \left(\partial _\mu  A_
-u -\partial _
-u  A_\mu  
-ight) U^
-u \equiv {e\over c}  F_{\mu 
-u}  U^
-u $$
-
-We define the electromagnetic tensor:
-
-$$F_{\mu 
-u} =\partial _\mu  A_
-u -\partial _
-u  A_\mu $$
-
-The relationship between the electric field \(\overrightarrow{E}\), the magnetic field \(\overrightarrow{B}\), and the potentials \(\phi\), \(\overrightarrow{A}\) (in Gaussian units):
-
-$$ \overrightarrow{E}=-
-abla \phi-{1\over c}  {\partial \overrightarrow{A}\over \partial t}$$
-$$\overrightarrow{B}=
-abla 	imes \overrightarrow{A} $$
-
-Where:
-
-$$A_
-u 	o \left(\phi,-A_x,-A_y,-A_z 
-ight)$$
-$$\partial _\mu 	o \left({\partial \over \partial x^0},{\partial \over \partial x^1 },{\partial \over \partial x^2},{\partial \over \partial x^3 }
-ight)=\left({\partial \over \partial ct},{\partial \over \partial x },{\partial \over \partial y},{\partial \over \partial z }
-ight)$$
-
-We can calculate:
-
-$$F_{\mu 
-u} =\partial _\mu  A_
-u -\partial _
-u  A_\mu =\left(egin{matrix}0 & E_x & E_y & E_z\ -E_x & 0 & -B_z & B_y \ -E_y & B_z & 0 & -B_x \ -E_z & -B_y & B_x & 0 \end{matrix}
-ight)$$
-$$F^{\mu 
-u} =\partial ^\mu  A^
-u -\partial ^
-u  A^\mu =\left(egin{matrix}0 & -E_x & -E_y & -E_z\ E_x & 0 & -B_z & B_y \ E_y & B_z & 0 & -B_x \ E_z & -B_y & B_x & 0 \end{matrix}
-ight)$$
-
-</p>
-
-
-
-
+    In this section, we aim to explore how a charged particle moves under a given EM Field (note that "given EM Field" means we do not vary the EM Field itself). In relativistic electrodynamics, we write the 4-Potential as \(A = A^\mu  \hat{e} _\mu =\left(\phi,\overrightarrow{A}\right)\), using Gaussian units here. The Action \(S_{PF}\) for the interaction of the charged particle is written as:
+    
+    $$S_{PF}=\int _a^b  -{e \over c}  A_\mu  d\eta ^\mu   $$
+    
+    The complete description of the motion of the charged particle is given by:
+    
+    $$S=S_P+S_{PF}=\int _a^b  -mc^2 d\tau  +\int _a^b  -{e\over c}  A_\mu  d\eta ^\mu   $$
+    
+    Here, we consider varying the path \(\eta ^\mu\) of the charged particle in spacetime:
+    
+    $$\eta ^\mu \to \eta ^\mu +\delta \eta ^\mu $$
+    
+    Although we do not vary the EM Field \(A^\mu\), the potential experienced by the particle depends on the path taken. Hence, the Action for different paths will involve different values of \(A^\mu\) (meaning the change in \(A^\mu\) comes from the different paths \(\eta ^\mu\) rather than from varying \(A^\mu\)):
+    
+    $$A^\mu  (\eta ^\mu  )\to A^\mu  (\eta ^\mu +\delta \eta ^\mu  )=A^\mu  (\eta ^\mu  )+\delta A^\mu $$
+    
+    <table cellpadding="1" border="1">
+    <tr><td><a href="../Image/PoLA/P31.png"><img src="../Image/PoLA/P31.png" alt="Substitute text" width=70% height="auto"></a></td></tr>
+    </table>
+    <table cellpadding="1" border="1">
+    <tr><td><a href="../Image/PoLA/P32.png"><img src="../Image/PoLA/P32.png" alt="Substitute text" width=98% height="auto"></a></td></tr>
+    </table>
+    
+    We calculate how \(\delta S_{PF}\) varies:
+    
+    $$\delta S_{PF}=\delta \int _a^b  -{e\over c}  A_\mu  d\eta ^\mu  $$
+    $$ =-{e\over c}  \int _a^b  \delta A_\mu \cdot d\eta ^\mu   -{e\over c}  \int _a^b  A_\mu \cdot \delta d\eta ^\mu  $$ 
+    
+    Using the method of Thm.1, we exchange \(\delta d\eta ^\mu \) with \(d\delta \eta ^\mu\):
+    
+    $$\delta d\eta ^\mu =d\delta \eta ^\mu $$
+    
+    and perform integration by parts, where the boundary term vanishes:
+    
+    $$\delta S_{PF}=-{e\over c}  \int _a^b  \delta A_\mu \cdot d\eta ^\mu   -{e\over c}  \int _a^b  A_\mu \cdot d\delta \eta ^\mu  $$
+    $$ =-{e\over c}  \int _a^b  \delta A_\mu \cdot d\eta ^\mu    \color{red}{ -\left[{e\over c}  A_\mu \cdot \delta \eta ^\mu \right]  \Big|_a^b}+{e\over c}  \int _a^b   dA _\mu \cdot \delta \eta ^\mu  $$ 
+    
+    Using Thm.3, multiplying and dividing by \(d\tau \) does not affect the variation:
+    
+    $$\delta S_{PF}=-{e\over c}  \int _a^b  \delta A_\mu \cdot d\eta ^\mu   +{e\over c}  \int _a^b   dA _\mu \cdot \delta \eta ^\mu  $$
+    $$ =-{e\over c}  \int _a^b  \delta A_\mu \cdot {d\eta ^\mu \over \color{red}{d\tau}}  \color{red}{d\tau}  +{e\over c}  \int _a^b   {dA _\mu \over \color{red}{d\tau}}  \color{red}{d\tau} \cdot \delta \eta ^\mu   $$
+    
+    Since:
+    
+    $$\delta A_\mu ={\partial A_\mu \over \partial x ^\nu } \delta \eta ^\nu $$
+    
+    and
+    
+    $${dA_\mu \over d\tau} ={\partial A_\mu \over \partial x^\nu  }  {d\eta ^\nu \over d\tau} ={\partial A_\mu \over \partial x^\nu  } U^\nu $$
+    
+    Substituting these, we get:
+    
+    $$\delta S_{PF}=-{e\over c}  \int _a^b  {\partial A_\mu \over\partial x^\nu } \delta \eta ^\nu \cdot u^\mu  d\tau  +{e\over c}  \int _a^b  {\partial A_\mu \over \partial x^\nu  } U^\nu  d\tau \cdot \delta \eta ^\mu$$   
+    $$=-{e\over c}  \int _a^b  (\partial _\nu  A_\mu  ) u^\mu  \delta \eta ^\nu  d\tau  +{e\over c}  \int _a^b  \left(\partial _\nu  A_\mu  \right) U^\nu  \delta \eta ^\mu  d\tau $$ 
+    
+    We want to factor out the variation \(\delta \eta ^\nu \) and \(\delta \eta ^\mu\) together, but the indices do not match. However, since each term's indices \(\mu\) and \(\nu\) are dummy indices, we can interchange them \(\mu \leftrightarrow \nu\). By swapping \(\mu\) and \(\nu\) in the first term, we can combine the terms:
+    
+    $$\delta S_{PF}=-{e\over c}  \int _a^b  \left(\partial _\color{red}{\mu}  A_\color{red}{\nu}  \right) U^\color{red}{\nu}  \delta \eta ^\color{red}{\mu}  d\tau  +{e\over c}  \int _a^b  (\partial _\nu  A_\mu  ) U^\nu  \delta \eta ^\mu  d\tau $$
+    $$=-{e\over c}  \int _a^b  (\partial _\mu  A_\nu -\partial _\nu  A_\mu  ) U^\nu  \delta \eta ^\mu  d\tau  $$
+    
+    Considering the full motion of the charged particle in the EM Field:
+    
+    $$\delta S=\delta S_P+\delta S_{PF}=0$$
+    
+    Thus:
+    
+    $$\delta S_P+\delta S_{PF}=\int _a^b  m {dU_\mu \over d\tau}   \delta \eta ^\mu  d\tau -{e\over c}  \int _a^b  \left(\partial _\mu  A_\nu -\partial _\nu  A_\mu  \right) U^\nu  \delta \eta ^\mu  d\tau  $$
+    $$=\int _a^b \left[m {dU_\mu \over d\tau} -{e\over c}  \left(\partial _\mu  A_\nu -\partial _\nu  A_\mu  \right) U^\nu  \right]  \delta \eta ^\mu  d\tau =0$$
+    
+    We obtain:
+    
+    $$m {dU_\mu \over d\tau} -{e\over c}  \left(\partial _\mu  A_\nu -\partial _\nu  A_\mu  \right) U^\nu =0$$
+    
+    $$m {dU_\mu \over d\tau} ={e\over c}  \left(\partial _\mu  A_\nu -\partial _\nu  A_\mu  \right) U^\nu \equiv {e\over c}  F_{\mu \nu}  U^\nu $$
+    
+    We define the electromagnetic tensor:
+    
+    $$F_{\mu \nu} =\partial _\mu  A_\nu -\partial _\nu  A_\mu $$
+    
+    The relationship between the electric field \(\overrightarrow{E}\), the magnetic field \(\overrightarrow{B}\), and the potentials \(\phi\), \(\overrightarrow{A}\) (in Gaussian units):
+    
+    $$ \overrightarrow{E}=-\nabla \phi-{1\over c}  {\partial \overrightarrow{A}\over \partial t}$$
+    $$\overrightarrow{B}=\nabla \times \overrightarrow{A} $$
+    
+    Where:
+    
+    $$A_\nu \to \left(\phi,-A_x,-A_y,-A_z \right)$$
+    $$\partial _\mu \to \left({\partial \over \partial x^0},{\partial \over \partial x^1 },{\partial \over \partial x^2},{\partial \over \partial x^3 }\right)=\left({\partial \over \partial ct},{\partial \over \partial x },{\partial \over \partial y},{\partial \over \partial z }\right)$$
+    
+    We can calculate:
+    
+    $$F_{\mu \nu} =\partial _\mu  A_\nu -\partial _\nu  A_\mu =\left(\begin{matrix}0 & E_x & E_y & E_z\\ -E_x & 0 & -B_z & B_y \\ -E_y & B_z & 0 & -B_x \\ -E_z & -B_y & B_x & 0 \end{matrix}\right)$$
+    $$F^{\mu \nu} =\partial ^\mu  A^\nu -\partial ^\nu  A^\mu =\left(\begin{matrix}0 & -E_x & -E_y & -E_z\\ E_x & 0 & -B_z & B_y \\ E_y & B_z & 0 & -B_x \\ E_z & -B_y & B_x & 0 \end{matrix}\right)$$
+    
+    </p>
+    
+    
 
 
 
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Action Principle (Relativistic)</a>
                                     </span>
                                 </div><!-- /.post-meta -->
                             

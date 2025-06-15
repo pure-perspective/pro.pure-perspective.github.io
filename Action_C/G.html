@@ -118,84 +118,76 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>一般教科書上守恆量的推導</h2>
                                     <h3></h3>
                                 </div>
                                 
                                 
-                                一般教科書上守恆量的推導
 
 <h3>動量守恆</h3>
 <p style="text-align:justify">
     
         對於動量守恆，我們可以直接從 EoM 出發：
         \[
-        rac{\partial L}{\partial q} - rac{d}{dt} rac{\partial L}{\partial \dot{q}} = 0 \implies rac{d}{dt} rac{\partial L}{\partial \dot{q}} = rac{\partial L}{\partial q}。
+        \frac{\partial L}{\partial q} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} = 0 \implies \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} = \frac{\partial L}{\partial q}。
         \]
-        如果 \(L\) 不是軌跡 \(q\) 的顯函數，則 \(rac{\partial L}{\partial q} = 0\)，從而：
+        如果 \(L\) 不是軌跡 \(q\) 的顯函數，則 \(\frac{\partial L}{\partial q} = 0\)，從而：
         \[
-        rac{d}{dt} rac{\partial L}{\partial \dot{q}} = 0
+        \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} = 0
         \]
         這意味著動量：
         \[
-        p = rac{\partial L}{\partial \dot{q}} = constant
+        p = \frac{\partial L}{\partial \dot{q}} = constant
         \]
-        \(rac{\partial L}{\partial q} = 0\) 的另一個含義是，當 \(q 	o q + \delta q\)（但不改變 \(\dot{q}\) 時），有：
+        \(\frac{\partial L}{\partial q} = 0\) 的另一個含義是，當 \(q \to q + \delta q\)（但不改變 \(\dot{q}\) 時），有：
         \[
-        \delta L = rac{\partial L}{\partial q} \delta q = 0
+        \delta L = \frac{\partial L}{\partial q} \delta q = 0
         \]
     </p>
     <h3>能量守恆與 Hamiltonian</h3>
 <p style="text-align:justify">
         再來，我們討論 Hamiltonian \(H\)：
         \[
-        rac{dL}{dt} = rac{\partial L}{\partial \dot{q}} rac{d\dot{q}}{dt} + rac{\partial L}{\partial q} rac{dq}{dt} + rac{\partial L}{\partial t}
+        \frac{dL}{dt} = \frac{\partial L}{\partial \dot{q}} \frac{d\dot{q}}{dt} + \frac{\partial L}{\partial q} \frac{dq}{dt} + \frac{\partial L}{\partial t}
         \]
         移項並整理後，可以得到：
         \[
-        rac{\partial L}{\partial t} = rac{dL}{dt} - rac{\partial L}{\partial \dot{q}} rac{d\dot{q}}{dt} - rac{\partial L}{\partial q} \dot{q}
+        \frac{\partial L}{\partial t} = \frac{dL}{dt} - \frac{\partial L}{\partial \dot{q}} \frac{d\dot{q}}{dt} - \frac{\partial L}{\partial q} \dot{q}
         \]
         \[
-        = rac{dL}{dt} - rac{d}{dt} \left( rac{\partial L}{\partial \dot{q}} \dot{q} 
-ight) + rac{d}{dt} \left( rac{\partial L}{\partial \dot{q}} 
-ight) \dot{q} - rac{\partial L}{\partial q} \dot{q}
+        = \frac{dL}{dt} - \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} \right) + \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right) \dot{q} - \frac{\partial L}{\partial q} \dot{q}
         \]
         \[
-        = -rac{d}{dt} \left( rac{\partial L}{\partial \dot{q}} \dot{q} - L 
-ight) + \left( rac{d}{dt} rac{\partial L}{\partial \dot{q}} - rac{\partial L}{\partial q} 
-ight) \dot{q}
+        = -\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} - L \right) + \left( \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} - \frac{\partial L}{\partial q} \right) \dot{q}
         \]
         第二項即是 \(EoM = 0\)，所以：
         \[
-        rac{\partial L}{\partial t} = -rac{d}{dt} \left( rac{\partial L}{\partial \dot{q}} \dot{q} - L 
-ight)
+        \frac{\partial L}{\partial t} = -\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} - L \right)
         \]
-        如果 \(L\) 不是時間 \(t\) 的顯函數，則 \(rac{\partial L}{\partial t} = 0\)，從而：
+        如果 \(L\) 不是時間 \(t\) 的顯函數，則 \(\frac{\partial L}{\partial t} = 0\)，從而：
         \[
-        rac{d}{dt} \left( rac{\partial L}{\partial \dot{q}} \dot{q} - L 
-ight) = 0
+        \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} - L \right) = 0
         \]
         能量：
         \[
-        E = rac{\partial L}{\partial \dot{q}} \dot{q} - L =  constant
+        E = \frac{\partial L}{\partial \dot{q}} \dot{q} - L =  constant
         \]
-        \(rac{\partial L}{\partial t} = 0\) 的另一個含義是，當 \(t 	o t + \delta t\)（但不改變 \(q, \dot{q}\) 時），有：
+        \(\frac{\partial L}{\partial t} = 0\) 的另一個含義是，當 \(t \to t + \delta t\)（但不改變 \(q, \dot{q}\) 時），有：
         \[
-        \delta L = rac{\partial L}{\partial t} \delta t = 0
+        \delta L = \frac{\partial L}{\partial t} \delta t = 0
         \]
     </p>
     <h3>全域與局域變換</h3>
 <p style="text-align:justify">
         在前一節中，我們討論了作用量 \(S\) 的對稱性，即 \(\delta S = 0\)。而在這一節中，我們討論的是 \(L\) 不為於 \(q\) 或 \(t\)的顯函數，即 \(\delta L = 0\)。兩者的差別體現在：
         \[
-        \delta S = \delta \left( \int L \, dt 
-ight) = \int \delta L \, dt + \int L \delta dt，
+        \delta S = \delta \left( \int L \, dt \right) = \int \delta L \, dt + \int L \delta dt，
         \]
         第二項產生了差異。由之前的推導：
         \[
-        \int L \delta dt = \int L rac{d \delta t}{dt} dt
+        \int L \delta dt = \int L \frac{d \delta t}{dt} dt
         \]
-        若 \(rac{d \delta t}{dt} = 0\)，則 \(\delta L = 0 \iff \delta S = 0\)
+        若 \(\frac{d \delta t}{dt} = 0\)，則 \(\delta L = 0 \iff \delta S = 0\)
         更仔細地比較如下表：
 </p>
     <table border="1" cellpadding="5">
@@ -204,34 +196,27 @@ ight) = \int \delta L \, dt + \int L \delta dt，
             <td>\[\delta S = 0\]</td>
         </tr>
         <tr>
-            <td>\[rac{\partial L}{\partial q} = rac{d}{dt} rac{\partial L}{\partial \dot{q}} = 0\]</td>
-            <td>\[rac{d}{dt} \left( rac{\partial L}{\partial \dot{q}} \Delta q 
-ight) = 0\]</td>
+            <td>\[\frac{\partial L}{\partial q} = \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} = 0\]</td>
+            <td>\[\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \Delta q \right) = 0\]</td>
         </tr>
         <tr>
             <td>
 \[
-rac{\partial L}{\partial t} = -rac{d}{dt} \left( rac{\partial L}{\partial \dot{q}} \dot{q} - L 
-ight)=0
+\frac{\partial L}{\partial t} = -\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} - L \right)=0
 \]
 </td>
 <td>
-                \[rac{d}{dt} \left[ \left( rac{\partial L}{\partial \dot{q}} \dot{q} - L 
-ight) \delta t 
-ight] = 0\]
+                \[\frac{d}{dt} \left[ \left( \frac{\partial L}{\partial \dot{q}} \dot{q} - L \right) \delta t \right] = 0\]
             </td>
         </tr>
     </table>
 <p style="text-align:justify">
-        當 \(\Delta q\) 的變分不是時間的函數（即 \(rac{d}{dt} \Delta q = 0\)），則 \(\delta L = 0\) 與 \(\delta S = 0\) 的結果相同。同樣，當 \(rac{d}{dt} \delta t = 0\) 時，兩者的守恆量相等。
+        當 \(\Delta q\) 的變分不是時間的函數（即 \(\frac{d}{dt} \Delta q = 0\)），則 \(\delta L = 0\) 與 \(\delta S = 0\) 的結果相同。同樣，當 \(\frac{d}{dt} \delta t = 0\) 時，兩者的守恆量相等。
 <br>
 <br>
         這引入了全域變換（Global Transformation）與局域變換（Local Transformation）的概念。全域變換是指變分量與時間無關，即各時間點上的變化量固定。局域變換則允許變分量是時間的函數，表示各時間點上的變化量有更高自由度。顯然，全域變換是局域變換的一個特例。討論 \(\delta L = 0\) 能迅速得到全域變換的守恆量，而局域變換則會引出新的方向，例如規範理論（Gauge Theory），未來會有機會撰文討論。
     </p>
 
-
-
-										HERE"g">
 
 
 

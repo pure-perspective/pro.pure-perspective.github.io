@@ -118,12 +118,10 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>邁向廣義相對論</h2>
                                     <h3></h3>
                                 </div>
                                 
-                                
-                                邁向廣義相對論
 
             <p style="text-align:justify">
                 古典場論的大基礎：電磁學和廣義相對論。古典電磁學因為線性的特性，常作為許多物理理論的試驗典範，常利用電磁學作為相對論性最小作用原理的示範基礎，量子化的量子場論也率先由量子電動力學打頭陣。
@@ -132,73 +130,34 @@
                 另一方面，廣義相對論透過等效性原理與廣義化的相對性原理，成功將重力效應整合進時空的曲率中，將時空的物理實在性提供了新的見解。同樣的，愛因斯坦場方程式也可以透過希爾伯特-愛因斯坦作用量 (Hilbert-Einstein action) 變分推得。
             </p>
             <p style="text-align:justify">
-                希爾伯特-愛因斯坦作用量由希爾伯特在 1915 年，幾乎與愛因斯坦同時得到愛因斯坦場方程式。廣義相對論核心的數學模型為（偽）黎曼幾何（pseudo-Riemann geometry），簡單來說利用流形 (manifold) 的切叢 (Tangent bundle) 上給予逐點可變的度規 \(g_{\mu
-u}\)（metric），賦予其相異於平直的歐式空間新的結構，屬於非歐幾何重要的一個分支。
+                希爾伯特-愛因斯坦作用量由希爾伯特在 1915 年，幾乎與愛因斯坦同時得到愛因斯坦場方程式。廣義相對論核心的數學模型為（偽）黎曼幾何（pseudo-Riemann geometry），簡單來說利用流形 (manifold) 的切叢 (Tangent bundle) 上給予逐點可變的度規 \(g_{\mu\nu}\)（metric），賦予其相異於平直的歐式空間新的結構，屬於非歐幾何重要的一個分支。
             </p>
             <p style="text-align:justify">
                 希爾伯特-愛因斯坦作用量寫為：
                 \[
-                S = \int \mathcal{L} \sqrt{-g} \, d^4x = rac{c^4}{16\pi G} \int R \sqrt{-g} \, d^4x + \int \mathcal{L}_M \sqrt{-g} \, d^4x
+                S = \int \mathcal{L} \sqrt{-g} \, d^4x = \frac{c^4}{16\pi G} \int R \sqrt{-g} \, d^4x + \int \mathcal{L}_M \sqrt{-g} \, d^4x
                 \]
                 其中：
                 \[
-                \mathcal{L} = \left( rac{c^4}{16\pi G} R + \mathcal{L}_M 
-ight) \sqrt{-g} = \left( rac{1}{2\kappa} R + \mathcal{L}_M 
-ight) \sqrt{-g}
+                \mathcal{L} = \left( \frac{c^4}{16\pi G} R + \mathcal{L}_M \right) \sqrt{-g} = \left( \frac{1}{2\kappa} R + \mathcal{L}_M \right) \sqrt{-g}
                 \]
-                \(R = g^{\mu
-u} R_{\mu
-u} = g^{\mu
-u} \delta^eta_lpha R^lpha_{\mueta
-u}\) 是 Ricci scalar，\(R_{\mu
-u}\) 是 Ricci curvature tensor，\(R^lpha_{\mueta
-u}\) 是 Riemann curvature tensor（黎曼曲率張量），\(g = \det(g_{\mu
-u})\)，\(\mathcal{L}_M\) 是物質的 Lagrangian density。
+                \(R = g^{\mu\nu} R_{\mu\nu} = g^{\mu\nu} \delta^\beta_\alpha R^\alpha_{\mu\beta\nu}\) 是 Ricci scalar，\(R_{\mu\nu}\) 是 Ricci curvature tensor，\(R^\alpha_{\mu\beta\nu}\) 是 Riemann curvature tensor（黎曼曲率張量），\(g = \det(g_{\mu\nu})\)，\(\mathcal{L}_M\) 是物質的 Lagrangian density。
             </p>
             <p style="text-align:justify">
-                曲率張量 \(R^lpha_{\mueta
-u}\) 定義如下：
+                曲率張量 \(R^\alpha_{\mu\beta\nu}\) 定義如下：
                 \[
-                R^
-ho_{\sigma\mu
-u} = \partial_\mu \Gamma^
-ho_{
-u\sigma} - \partial_
-u \Gamma^
-ho_{\mu\sigma} + \Gamma^
-ho_{\mu\lambda} \Gamma^\lambda_{
-u\sigma} - \Gamma^
-ho_{
-u\lambda} \Gamma^\lambda_{\mu\sigma}
+                R^\rho_{\sigma\mu\nu} = \partial_\mu \Gamma^\rho_{\nu\sigma} - \partial_\nu \Gamma^\rho_{\mu\sigma} + \Gamma^\rho_{\mu\lambda} \Gamma^\lambda_{\nu\sigma} - \Gamma^\rho_{\nu\lambda} \Gamma^\lambda_{\mu\sigma}
                 \]
-                其中 \(\Gamma^
-ho_{
-u\sigma}\) 是切叢聯絡（Tangent connection），在基礎的廣義相對論教科書中稱為 Christoffel symbol，可以簡單理解為非平直座標係下不同點基底向量的變化。
+                其中 \(\Gamma^\rho_{\nu\sigma}\) 是切叢聯絡（Tangent connection），在基礎的廣義相對論教科書中稱為 Christoffel symbol，可以簡單理解為非平直座標係下不同點基底向量的變化。
             </p>
             <p style="text-align:justify">
-                有趣的是，切叢聯絡 \(\Gamma^
-ho_{
-u\sigma}\) 與曲率張量 \(R^lpha_{\mueta
-u}\) 在數學語言中，地位與電磁場的 \(A_\sigma\)、\(F_{eta\mu}\) 相同。事實上，只要把切叢聯絡 \(\Gamma^
-ho_{
-u\sigma}\) 與曲率張量 \(R^lpha_{\mueta
-u}\) 的前兩個指標「藏起來」，可以得到：
+                有趣的是，切叢聯絡 \(\Gamma^\rho_{\nu\sigma}\) 與曲率張量 \(R^\alpha_{\mu\beta\nu}\) 在數學語言中，地位與電磁場的 \(A_\sigma\)、\(F_{\beta\mu}\) 相同。事實上，只要把切叢聯絡 \(\Gamma^\rho_{\nu\sigma}\) 與曲率張量 \(R^\alpha_{\mu\beta\nu}\) 的前兩個指標「藏起來」，可以得到：
                 \[
-                \Gamma^
-ho_{
-u\sigma} = \left(\Gamma^
-ho_
-u 
-ight)_\sigma = 
+                \Gamma^\rho_{\nu\sigma} = \left(\Gamma^\rho_\nu \right)_\sigma = 
 \mathbf{\Gamma}_\sigma \leftrightarrow A_\sigma
                 \]
                 \[
-                R^lpha_{\mueta
-u} = \left(R^lpha_\mu 
-ight)_{eta
-u} = \mathbf{R}_{eta
-u} \leftrightarrow F_{eta
-u}
+                R^\alpha_{\mu\beta\nu} = \left(R^\alpha_\mu \right)_{\beta\nu} = \mathbf{R}_{\beta\nu} \leftrightarrow F_{\beta\nu}
                 \]
             </p>
             <p style="text-align:justify">
@@ -209,8 +168,6 @@ u}
             </p>
 
 
-
-<section id="x2">
 
 
 

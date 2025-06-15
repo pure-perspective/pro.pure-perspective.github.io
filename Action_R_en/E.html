@@ -98,10 +98,10 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>硬體導論</h1>
+                <h1>Action Principle (Relativistic)</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="./main.html">硬體導論</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">Action Principle (Relativistic)</a></li>
                   <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
@@ -118,137 +118,95 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>Gauge Invariance in Electromagnetism</h2>
                                     <h3></h3>
                                 </div>
                                 
                                 
-                                Gauge Invariance in Electromagnetism
 <p style="text-align:justify">
-In electromagnetism, we define the relationship between the potentials \(\phi\), \(\overrightarrow{A}\), and the electric field \(\overrightarrow{E}\), and the magnetic field \(\overrightarrow{B}\):
-
-$$ \overrightarrow{E}=- 
-abla \phi -{1 \over c}  {\partial \overrightarrow{A}\over \partial t}$$
-$$\overrightarrow{B}= 
-abla ×\overrightarrow{A} $$
-
-However, the potentials \(\phi\) and \(\overrightarrow{A}\) are not unique, and we can introduce a gauge function \(G(ct,\overrightarrow{x})\):
-
-$$ar{\phi} =\phi +{1 \over c}  {\partial G \over \partial t}$$
-$$\overrightarrow{ar{A}}=\overrightarrow{A}- 
-abla G$$
-
-The electric field \(\overrightarrow{E}\) and the magnetic field \(\overrightarrow{B}\) remain unchanged:
-
-$$\overrightarrow{ar{E}}=- 
-abla ar{\phi}-{1 \over c}  {\partial \overrightarrow{ar{A}}\over \partial t}$$
-$$=- 
-abla \phi - \color{red}{
-abla {1 \over c}  {\partial G \over \partial t}}-{1 \over c}  {\partial \overrightarrow{A}\over \partial t}+\color{red}{{1 \over c}  {\partial ( 
-abla G)\over\partial t}}$$
-$$=- 
-abla \phi -{1 \over c}  {\partial \overrightarrow{A}\over \partial t}=\overrightarrow{E}$$
-
-$$\overrightarrow{ar{B}}= 
-abla ×\overrightarrow{ar{A}}= 
-abla ×\overrightarrow{A}- 
-abla × 
-abla G= 
-abla ×\overrightarrow{A}=\overrightarrow{B} $$
-
-<table cellpadding="1" border="1">
-<tr><td>
-Note: \(
-abla × 
-abla G=0\)
-$$( 
-abla × 
-abla G)_i=arepsilon _{ijk} \partial _j \partial _k G$$
-$$={1 \over 2} arepsilon _{ijk} \partial _j \partial _k G+{1 \over 2} arepsilon _{ijk} \partial _j \partial _k G$$
-$$={1 \over 2} arepsilon _{ijk} \partial _j \partial _k G+{1 \over 2} arepsilon _{i\color{red}{kj}} \partial _\color{red}{k} \partial _\color{red}{j} G$$
-$$={1 \over 2} arepsilon _{ijk} \partial _j \partial _k G \color{red}{-}{1 \over 2} arepsilon _{i\color{red}{jk}} \partial _j \partial _k G=0$$
-</td></tr>
-</table>
-
-In relativity, the above operation can be written in the form of 4-potentials:
-
-$$(ar{\phi},\overrightarrow{ar{A}} )=(\phi ,\overrightarrow{A} )+(\partial _{ct} G,- 
-abla G)=(\phi ,\overrightarrow{A} )+(\partial _{ct},- 
-abla )G$$
-
-Recall:
-
-$$\partial ^\mu =(\partial _{ct},- 
-abla )$$
-
-Thus:
-
- $$ar{A} ^\mu =A^\mu +\partial ^\mu  G$$
-
-<table cellpadding="1" border="1">
-<tr><td>
-Coulomb gauge condition: Non-relativistic
-$$ 
-abla \cdot \overrightarrow{A}=0$$
-</td></tr>
-</table>
-
-<table cellpadding="1" border="1">
-<tr><td>
-Lorenz gauge condition: Relativistic, satisfies Lorentz transformation
-$$ 
-abla \cdot \overrightarrow{A}+{1 \over c}  {\partial \phi \over \partial t}=0$$
-Written in scalar form:
-$$\partial _\mu  A^\mu =0$$
-Thus, it satisfies the relativistic transformation.
-</td></tr>
-</table>
-
-As previously shown, the electric field \(\overrightarrow{E}\) and the magnetic field \(\overrightarrow{B}\) remain unchanged under a gauge transformation:
-
-$$\overrightarrow{ar{E}}=\overrightarrow{E}$$
-$$\overrightarrow{ar{B}}=\overrightarrow{B}$$
-
-This indicates that \(F^{\mu 
-u}\) also remains unchanged under a gauge transformation:
-
-$$ ar{F} ^{\mu 
-u} =F^{\mu 
-u} $$
-
-We can also prove this:
-
-$$ar{F} ^{\mu 
-u} =\partial ^\mu   ar{A} ^
-u -\partial ^
-u   ar{A} ^\mu$$
-$$=\partial ^\mu  (A^
-u +\partial ^
-u  G)-\partial ^
-u  (A^\mu +\partial ^\mu  G)$$
-$$=\partial ^\mu  A^
-u +\color{red}{\partial ^\mu  \partial ^
-u  G}-\partial ^
-u  A^\mu -\color{red}{\partial ^
-u  \partial ^\mu  G}$$
-$$=\partial ^\mu  A^
-u -\partial ^
-u  A^\mu =F^{\mu 
-u} $$
-
-</p>
-
-
-
-
-
+    In electromagnetism, we define the relationship between the potentials \(\phi\), \(\overrightarrow{A}\), and the electric field \(\overrightarrow{E}\), and the magnetic field \(\overrightarrow{B}\):
+    
+    $$ \overrightarrow{E}=- \nabla \phi -{1 \over c}  {\partial \overrightarrow{A}\over \partial t}$$
+    $$\overrightarrow{B}= \nabla ×\overrightarrow{A} $$
+    
+    However, the potentials \(\phi\) and \(\overrightarrow{A}\) are not unique, and we can introduce a gauge function \(G(ct,\overrightarrow{x})\):
+    
+    $$\bar{\phi} =\phi +{1 \over c}  {\partial G \over \partial t}$$
+    $$\overrightarrow{\bar{A}}=\overrightarrow{A}- \nabla G$$
+    
+    The electric field \(\overrightarrow{E}\) and the magnetic field \(\overrightarrow{B}\) remain unchanged:
+    
+    $$\overrightarrow{\bar{E}}=- \nabla \bar{\phi}-{1 \over c}  {\partial \overrightarrow{\bar{A}}\over \partial t}$$
+    $$=- \nabla \phi - \color{red}{\nabla {1 \over c}  {\partial G \over \partial t}}-{1 \over c}  {\partial \overrightarrow{A}\over \partial t}+\color{red}{{1 \over c}  {\partial ( \nabla G)\over\partial t}}$$
+    $$=- \nabla \phi -{1 \over c}  {\partial \overrightarrow{A}\over \partial t}=\overrightarrow{E}$$
+    
+    $$\overrightarrow{\bar{B}}= \nabla ×\overrightarrow{\bar{A}}= \nabla ×\overrightarrow{A}- \nabla × \nabla G= \nabla ×\overrightarrow{A}=\overrightarrow{B} $$
+    
+    <table cellpadding="1" border="1">
+    <tr><td>
+    Note: \(\nabla × \nabla G=0\)
+    $$( \nabla × \nabla G)_i=\varepsilon _{ijk} \partial _j \partial _k G$$
+    $$={1 \over 2} \varepsilon _{ijk} \partial _j \partial _k G+{1 \over 2} \varepsilon _{ijk} \partial _j \partial _k G$$
+    $$={1 \over 2} \varepsilon _{ijk} \partial _j \partial _k G+{1 \over 2} \varepsilon _{i\color{red}{kj}} \partial _\color{red}{k} \partial _\color{red}{j} G$$
+    $$={1 \over 2} \varepsilon _{ijk} \partial _j \partial _k G \color{red}{-}{1 \over 2} \varepsilon _{i\color{red}{jk}} \partial _j \partial _k G=0$$
+    </td></tr>
+    </table>
+    
+    In relativity, the above operation can be written in the form of 4-potentials:
+    
+    $$(\bar{\phi},\overrightarrow{\bar{A}} )=(\phi ,\overrightarrow{A} )+(\partial _{ct} G,- \nabla G)=(\phi ,\overrightarrow{A} )+(\partial _{ct},- \nabla )G$$
+    
+    Recall:
+    
+    $$\partial ^\mu =(\partial _{ct},- \nabla )$$
+    
+    Thus:
+    
+     $$\bar{A} ^\mu =A^\mu +\partial ^\mu  G$$
+    
+    <table cellpadding="1" border="1">
+    <tr><td>
+    Coulomb gauge condition: Non-relativistic
+    $$ \nabla \cdot \overrightarrow{A}=0$$
+    </td></tr>
+    </table>
+    
+    <table cellpadding="1" border="1">
+    <tr><td>
+    Lorenz gauge condition: Relativistic, satisfies Lorentz transformation
+    $$ \nabla \cdot \overrightarrow{A}+{1 \over c}  {\partial \phi \over \partial t}=0$$
+    Written in scalar form:
+    $$\partial _\mu  A^\mu =0$$
+    Thus, it satisfies the relativistic transformation.
+    </td></tr>
+    </table>
+    
+    As previously shown, the electric field \(\overrightarrow{E}\) and the magnetic field \(\overrightarrow{B}\) remain unchanged under a gauge transformation:
+    
+    $$\overrightarrow{\bar{E}}=\overrightarrow{E}$$
+    $$\overrightarrow{\bar{B}}=\overrightarrow{B}$$
+    
+    This indicates that \(F^{\mu \nu}\) also remains unchanged under a gauge transformation:
+    
+    $$ \bar{F} ^{\mu \nu} =F^{\mu \nu} $$
+    
+    We can also prove this:
+    
+    $$\bar{F} ^{\mu \nu} =\partial ^\mu   \bar{A} ^\nu -\partial ^\nu   \bar{A} ^\mu$$
+    $$=\partial ^\mu  (A^\nu +\partial ^\nu  G)-\partial ^\nu  (A^\mu +\partial ^\mu  G)$$
+    $$=\partial ^\mu  A^\nu +\color{red}{\partial ^\mu  \partial ^\nu  G}-\partial ^\nu  A^\mu -\color{red}{\partial ^\nu  \partial ^\mu  G}$$
+    $$=\partial ^\mu  A^\nu -\partial ^\nu  A^\mu =F^{\mu \nu} $$
+    
+    </p>
+    
+    
 
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Action Principle (Relativistic)</a>
                                     </span>
                                 </div><!-- /.post-meta -->
                             

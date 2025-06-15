@@ -118,57 +118,39 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>規範不變與Action的變分性</h2>
                                     <h3></h3>
                                 </div>
-                                
-                                
-                                規範不變與Action的變分
-<p style="text-align:justify">
-這部分要討論的是，加入Gauge不會改變Action的變分，意味著運動方程不會受到Gauge的改變，也代表Gauge Invariance。當加入Gauge時。：
-$$ ar{A} ^\mu =A^\mu +\partial ^\mu  G$$
-我們來觀察一下Action \(S=S_P+S_{PF}+S_F\)有誰會受到影響：
-$$S_P=-mc^2 \int _a^b d	au =\int   -
-ho_m cd^4 x $$
-$$S_{PF}=-{e\over c}  \int _a^b  A_\mu  dx^\mu   =-{1 \over c^2}  \int   A_\mu  J^\mu  d^4 x $$
-$$S_F=\int   -{1 \over 16 \pi c} F_{\mu 
-u}  F^{\mu 
-u}  d^4 x $$
-因為剛剛已經證明，\(F^{\mu 
-u}\) 不受到Gauge的影響，而\(S_P\)沒有\(A^\mu\) 相關，所以唯一受到影響的是\(S_{PF}\)
-$$ar{S}_{PF}=-{e\over c}  \int _a^b   ar{A} _\mu  dx^\mu   =-{1 \over c^2}  \int    ar{A} _\mu  J^\mu  d^4 x $$
-針對\(ar{S}_{PF}\)變分
-$$\delta ar{S}_{PF}=-{1 \over c^2}  \delta \int    ar{A} _\mu  J^\mu  d^4 x =-{1 \over c^2}  \delta \int   A_\mu  J^\mu  d^4 x \color{red}{-{1 \over c^2}  \delta \int   \partial _\mu  G \cdot J ^\mu  d^4 x }$$
-將後面那一項利用微分的Chain rule
-$$\partial _\mu  G \cdot J ^\mu =\partial _\mu  (GJ^\mu  )-G\partial _\mu  J^\mu $$
-$$\delta ar{S}_{PF}=-{1 \over c^2}  \delta \int   A_\mu  J^\mu  d^4 x \color{red}{-{1 \over c^2} { \delta \int  \partial _\mu  \left(GJ^\mu 
-ight) d^4 x + {1 \over c^2}  \delta \int   G\partial _\mu  J^\mu  d^4 x} } $$
-中間項利用Divergence theorem改寫成
-$$\delta ar{S}_{PF}=-{1 \over c^2}  \delta \int   A_\mu  J^\mu  d^4 x \color{red}{-{1 \over c^2}  {\delta \left[ ∮  GJ^\mu  dS_\mu   
-ight]}{ +{1 \over c^2}  \delta \int G \left[\partial _\mu  J^\mu  
-ight] d^4 x }}$$
-中間項因為Boundary上的變分為0，所以中間項為0：
-$$\color{red}{\delta \left[∮  GJ^\mu  dS_\mu   
-ight]=0}$$
-最後一項回憶（由實驗觀察到的）連續性方程Continuity equation
-$${\partial 
-ho_e \over \partial t}+ 
-abla \cdot \overrightarrow{J}=0$$
-寫成相對論性
-$$\partial _\mu  J^\mu =0$$
-導致最後一項也為0
-$$\color{red}{\delta \int   G \left[\partial _\mu  J^\mu  
-ight] d^4 x =0}$$
-所以
-$$\delta ar{S}_{PF}=-{1 \over c^2}  \delta \int   A_\mu  J^\mu  d^4 x =\delta S_{PF}$$
-這表示加入Gauge不會改變Action的變分，整套物理滿足Gauge Invariance。
-
-</p>
-
-
-<section id="o">
-
-
+                                <p style="text-align:justify">
+                                    這部分要討論的是，加入Gauge不會改變Action的變分，意味著運動方程不會受到Gauge的改變，也代表Gauge Invariance。當加入Gauge時。：
+                                    $$ \bar{A} ^\mu =A^\mu +\partial ^\mu  G$$
+                                    我們來觀察一下Action \(S=S_P+S_{PF}+S_F\)有誰會受到影響：
+                                    $$S_P=-mc^2 \int _a^b d\tau =\int   -\rho_m cd^4 x $$
+                                    $$S_{PF}=-{e\over c}  \int _a^b  A_\mu  dx^\mu   =-{1 \over c^2}  \int   A_\mu  J^\mu  d^4 x $$
+                                    $$S_F=\int   -{1 \over 16 \pi c} F_{\mu \nu}  F^{\mu \nu}  d^4 x $$
+                                    因為剛剛已經證明，\(F^{\mu \nu}\) 不受到Gauge的影響，而\(S_P\)沒有\(A^\mu\) 相關，所以唯一受到影響的是\(S_{PF}\)
+                                    $$\bar{S}_{PF}=-{e\over c}  \int _a^b   \bar{A} _\mu  dx^\mu   =-{1 \over c^2}  \int    \bar{A} _\mu  J^\mu  d^4 x $$
+                                    針對\(\bar{S}_{PF}\)變分
+                                    $$\delta \bar{S}_{PF}=-{1 \over c^2}  \delta \int    \bar{A} _\mu  J^\mu  d^4 x =-{1 \over c^2}  \delta \int   A_\mu  J^\mu  d^4 x \color{red}{-{1 \over c^2}  \delta \int   \partial _\mu  G \cdot J ^\mu  d^4 x }$$
+                                    將後面那一項利用微分的Chain rule
+                                    $$\partial _\mu  G \cdot J ^\mu =\partial _\mu  (GJ^\mu  )-G\partial _\mu  J^\mu $$
+                                    $$\delta \bar{S}_{PF}=-{1 \over c^2}  \delta \int   A_\mu  J^\mu  d^4 x \color{red}{-{1 \over c^2} { \delta \int  \partial _\mu  \left(GJ^\mu \right) d^4 x + {1 \over c^2}  \delta \int   G\partial _\mu  J^\mu  d^4 x} } $$
+                                    中間項利用Divergence theorem改寫成
+                                    $$\delta \bar{S}_{PF}=-{1 \over c^2}  \delta \int   A_\mu  J^\mu  d^4 x \color{red}{-{1 \over c^2}  {\delta \left[ ∮  GJ^\mu  dS_\mu   \right]}{ +{1 \over c^2}  \delta \int G \left[\partial _\mu  J^\mu  \right] d^4 x }}$$
+                                    中間項因為Boundary上的變分為0，所以中間項為0：
+                                    $$\color{red}{\delta \left[∮  GJ^\mu  dS_\mu   \right]=0}$$
+                                    最後一項回憶（由實驗觀察到的）連續性方程Continuity equation
+                                    $${\partial \rho_e \over \partial t}+ \nabla \cdot \overrightarrow{J}=0$$
+                                    寫成相對論性
+                                    $$\partial _\mu  J^\mu =0$$
+                                    導致最後一項也為0
+                                    $$\color{red}{\delta \int   G \left[\partial _\mu  J^\mu  \right] d^4 x =0}$$
+                                    所以
+                                    $$\delta \bar{S}_{PF}=-{1 \over c^2}  \delta \int   A_\mu  J^\mu  d^4 x =\delta S_{PF}$$
+                                    這表示加入Gauge不會改變Action的變分，整套物理滿足Gauge Invariance。
+                                    
+                                    </p>
+                                    
 
                                 <div class="post-meta">
                                     <span class="post-author">

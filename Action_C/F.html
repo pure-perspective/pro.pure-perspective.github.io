@@ -118,91 +118,63 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>古典諾特定理</h2>
                                     <h3></h3>
                                 </div>
                                 
                                 
-                                古典諾特定理
-
 <p style="text-align:justify">=
-諾特定理作為古典力學重要的定理，也是Lagrangian、Hamiltonian超越牛頓力學的重要原因。諾特定理的表述為，當系統滿足EoM、或最小作用量原理之下，我們若給予Action S一個變化\(\delta lpha\)卻可以保持\(\delta S=0\)，諾特定理表明會對應到一個守恆量。在這邊我們討論同時對時間\(t\)跟物理軌跡\(q\)做變分
-$$q 	o ar{q} = q+\delta q$$
-$$t 	o ar{t} =t+\delta t$$
-但值得注意的是，軌跡\(q\)作為時間\(t\)的函數，會受到自身變分的影響之外，也會受到時間改變的有影響，定義\(\Delta q\)表示完整影響
-$$\Delta q\equiv ar{q} (ar{t}  )-q(t)$$
-$$=ar{q} (ar{t}  )-q(ar{t}  )+-q(ar{t}  )-q(t)$$
-$$=\delta q+\dot{q} \delta t$$
-考慮變分前後的差別
-$$\delta S=\delta \int  L dt=\int  \delta L dt+\int  L d\delta t$$
-第一項仔細寫下為
-$$\delta L=L \left(ar{q} (ar{t}  ),\dot{ar{q}}(ar{t}  ),ar{t}  
-ight)-L\left(q(t),\dot{q} (t),t
-ight)$$
-$$=L \left(ar{q} (ar{t}  ),\dot{ar{q}}(ar{t}  ),ar{t}  
-ight)-L\left(q(ar{t}  ),\dot{q} (ar{t}  ),ar{t}  
-ight)+L\left(q(ar{t}  ),\dot{q} (ar{t}  ),ar{t}  
-ight)-L\left(q(t),\dot{q} (t),t
-ight)$$
-
-$$={\partial L\over\partial q}  \delta q+{\partial L\over \partial \dot{q} }  \delta \dot{q} +{dL\over dt}  \delta t$$
-
-
-$$={\partial L\over\partial q}  \delta q-\left({d\over dt}   {\partial L\over \partial \dot{q} }
-ight) \delta q+{d\over dt}  \left({\partial L\over \partial \dot{q} }  \delta q
-ight)+{dL\over dt}  \delta t$$
-
-
-$$=\left[{\partial L\over\partial q} -{d\over dt}   {\partial L\over \partial \dot{q} } 
-ight]\delta q+{d\over dt}  \left({\partial L\over \partial \dot{q} }  \delta q
-ight)+{dL\over dt}  \delta t$$
-因為Lagrangian滿足EoM
-$${\partial L\over\partial q} -{d\over dt}   {\partial L\over \partial \dot{q} } =0 $$
-所以第一項只剩下
-$$\delta L={d\over dt}  \left({\partial L\over \partial \dot{q} }  \delta q
-ight)+{dL\over dt}  \delta t$$
-第二項單純改寫
-$$\int  L d\delta t=\int   L {d\delta t\over dt}  dt$$
-將兩項合併
-$$\delta S=\int  \left[{d\over dt}  \left({\partial L\over \partial \dot{q} }  \delta q
-ight)+{dL\over dt}  \delta t
-ight]  dt+\int   {L d\delta t\over dt}  dt$$
-$$=\int   {d\over dt}  \left[{\partial L\over \partial \dot{q} }  \delta q+L\delta t
-ight]   dt$$
-
-
-但因為\(\delta q\)只是軌跡自身的變分，必須考慮到完整的變化\(\Delta q\)，利用
-
-$$\delta q=\Delta q-\dot{q} \delta t$$
-代入
-$$\delta S=\int   {d\over dt}  \left[{\partial L\over \partial \dot{q} }  \left(\Delta q-\delta t 
-ight)+L\delta t
-ight]   dt$$
-$$=\int   {d\over dt}  \left[{\partial L\over \partial \dot{q} }  \Delta q-\left({\partial L\over \partial \dot{q} }  \dot{q} -L
-ight)\delta t
-ight]   dt$$
-
-
-如果經過變分後不變，即\(\delta S=0\)，代表
-$$ {d\over dt}  \left[{\partial L\over \partial \dot{q} }  \Delta q
-ight]=0 	o {\partial L\over \partial \dot{q} }  \Delta q =const.$$
-$$ {d\over dt}  \left[ \left({\partial L\over \partial \dot{q} }  \dot{q} -L
-ight)\delta t
-ight]=0 	o \left({\partial L\over \partial \dot{q} }  \dot{q} -L
-ight)\delta t = const.$$
-對應軌跡q變分不變的守恆量為
-$${\partial L\over \partial \dot{q} } =p$$
-，為動量守恆。<br>
-對應時間t變分不變的守恆量為
-$$H={\partial L\over \partial \dot{q} }  \dot{q} -L$$
-為能量守恆。
-</p>
-
-
-										HERE"f1">
-
-
-
+    諾特定理作為古典力學重要的定理，也是Lagrangian、Hamiltonian超越牛頓力學的重要原因。諾特定理的表述為，當系統滿足EoM、或最小作用量原理之下，我們若給予Action S一個變化\(\delta \alpha\)卻可以保持\(\delta S=0\)，諾特定理表明會對應到一個守恆量。在這邊我們討論同時對時間\(t\)跟物理軌跡\(q\)做變分
+    $$q \to \bar{q} = q+\delta q$$
+    $$t \to \bar{t} =t+\delta t$$
+    但值得注意的是，軌跡\(q\)作為時間\(t\)的函數，會受到自身變分的影響之外，也會受到時間改變的有影響，定義\(\Delta q\)表示完整影響
+    $$\Delta q\equiv \bar{q} (\bar{t}  )-q(t)$$
+    $$=\bar{q} (\bar{t}  )-q(\bar{t}  )+-q(\bar{t}  )-q(t)$$
+    $$=\delta q+\dot{q} \delta t$$
+    考慮變分前後的差別
+    $$\delta S=\delta \int  L dt=\int  \delta L dt+\int  L d\delta t$$
+    第一項仔細寫下為
+    $$\delta L=L \left(\bar{q} (\bar{t}  ),\dot{\bar{q}}(\bar{t}  ),\bar{t}  \right)-L\left(q(t),\dot{q} (t),t\right)$$
+    $$=L \left(\bar{q} (\bar{t}  ),\dot{\bar{q}}(\bar{t}  ),\bar{t}  \right)-L\left(q(\bar{t}  ),\dot{q} (\bar{t}  ),\bar{t}  \right)+L\left(q(\bar{t}  ),\dot{q} (\bar{t}  ),\bar{t}  \right)-L\left(q(t),\dot{q} (t),t\right)$$
+    
+    $$={\partial L\over\partial q}  \delta q+{\partial L\over \partial \dot{q} }  \delta \dot{q} +{dL\over dt}  \delta t$$
+    
+    
+    $$={\partial L\over\partial q}  \delta q-\left({d\over dt}   {\partial L\over \partial \dot{q} }\right) \delta q+{d\over dt}  \left({\partial L\over \partial \dot{q} }  \delta q\right)+{dL\over dt}  \delta t$$
+    
+    
+    $$=\left[{\partial L\over\partial q} -{d\over dt}   {\partial L\over \partial \dot{q} } \right]\delta q+{d\over dt}  \left({\partial L\over \partial \dot{q} }  \delta q\right)+{dL\over dt}  \delta t$$
+    因為Lagrangian滿足EoM
+    $${\partial L\over\partial q} -{d\over dt}   {\partial L\over \partial \dot{q} } =0 $$
+    所以第一項只剩下
+    $$\delta L={d\over dt}  \left({\partial L\over \partial \dot{q} }  \delta q\right)+{dL\over dt}  \delta t$$
+    第二項單純改寫
+    $$\int  L d\delta t=\int   L {d\delta t\over dt}  dt$$
+    將兩項合併
+    $$\delta S=\int  \left[{d\over dt}  \left({\partial L\over \partial \dot{q} }  \delta q\right)+{dL\over dt}  \delta t\right]  dt+\int   {L d\delta t\over dt}  dt$$
+    $$=\int   {d\over dt}  \left[{\partial L\over \partial \dot{q} }  \delta q+L\delta t\right]   dt$$
+    
+    
+    但因為\(\delta q\)只是軌跡自身的變分，必須考慮到完整的變化\(\Delta q\)，利用
+    
+    $$\delta q=\Delta q-\dot{q} \delta t$$
+    代入
+    $$\delta S=\int   {d\over dt}  \left[{\partial L\over \partial \dot{q} }  \left(\Delta q-\delta t \right)+L\delta t\right]   dt$$
+    $$=\int   {d\over dt}  \left[{\partial L\over \partial \dot{q} }  \Delta q-\left({\partial L\over \partial \dot{q} }  \dot{q} -L\right)\delta t\right]   dt$$
+    
+    
+    如果經過變分後不變，即\(\delta S=0\)，代表
+    $$ {d\over dt}  \left[{\partial L\over \partial \dot{q} }  \Delta q\right]=0 \to {\partial L\over \partial \dot{q} }  \Delta q =const.$$
+    $$ {d\over dt}  \left[ \left({\partial L\over \partial \dot{q} }  \dot{q} -L\right)\delta t\right]=0 \to \left({\partial L\over \partial \dot{q} }  \dot{q} -L\right)\delta t = const.$$
+    對應軌跡q變分不變的守恆量為
+    $${\partial L\over \partial \dot{q} } =p$$
+    ，為動量守恆。<br>
+    對應時間t變分不變的守恆量為
+    $$H={\partial L\over \partial \dot{q} }  \dot{q} -L$$
+    為能量守恆。
+    </p>
+    
+    
                                 <div class="post-meta">
                                     <span class="post-author">
                                         <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>

@@ -118,12 +118,11 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>Ostrogradsky instability與高次微分</h2>
                                     <h3></h3>
                                 </div>
                                 
                                 
-                                Ostrogradsky instability與高次微分
 
 <p style="text-align:justify">
 
@@ -135,118 +134,90 @@
     </ol>
     就可以唯一決定物體的運動行為。換句話說，物理的路徑只跟前述條件擇一有關。這對應到 EoM 是二次微分方程式，例如 \(F = m \ddot{x}\)，起始條件只需要起始位置與起始速度。在 Lagrangian 體系中，EoM 是 Euler-Lagrange equation：
     \[
-    rac{d}{dt} rac{\partial L}{\partial \dot{q}} - rac{\partial L}{\partial q} = 0
+    \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} - \frac{\partial L}{\partial q} = 0
     \]
-    注意 \(rac{d}{dt}\) 會讓物理量升一次微分，如果要讓 EoM 最多是二次微分，那 Lagrangian \(L\) 只能是 \(L(\dot{q}, q, t)\) 的函數。除了我們從經驗上（實驗上）判斷 EoM 是二次微分、\(L\) 只能是 \(L(\dot{q}, q, t)\) 的函數，事實上如果 Lagrangian \(L\) 包含更高階的導數，還會引發更嚴重的問題：
+    注意 \(\frac{d}{dt}\) 會讓物理量升一次微分，如果要讓 EoM 最多是二次微分，那 Lagrangian \(L\) 只能是 \(L(\dot{q}, q, t)\) 的函數。除了我們從經驗上（實驗上）判斷 EoM 是二次微分、\(L\) 只能是 \(L(\dot{q}, q, t)\) 的函數，事實上如果 Lagrangian \(L\) 包含更高階的導數，還會引發更嚴重的問題：
     如果 \(L\) 包含二階以上的導數，則系統的 Hamiltonian \(H\)（即能量 \(E\)）不存在下限，我們稱之為 Ostrogradsky instability。能量 \(E\) 不存在下限在物理學上是非常嚴重的事情，在量子力學中，代表「不存在基態 Ground State」，粒子可以無下限地進入到負無窮的能量態；在熱統計力學中，配分函數（Partition function）
     \[
-    Z = \sum_{E_i} e^{-rac{E_i}{k_B T}}
+    Z = \sum_{E_i} e^{-\frac{E_i}{k_B T}}
     \]
-    不收斂（\(Z 	o +\infty ecause \exists E_i  	o -\infty \)），無法決定不同組態的機率
+    不收斂（\(Z \to +\infty \because \exists E_i  \to -\infty \)），無法決定不同組態的機率
     \[
-    
-ho_i = rac{1}{Z} e^{-rac{E_i}{k_B T}}
+    \rho_i = \frac{1}{Z} e^{-\frac{E_i}{k_B T}}
     \]
     所有物理量無法有效預測。
 <br><br>
     <h3>傳統 Lagrangian 的 Hamiltonian</h3>
     我們先回到傳統 Lagrangian \(L(\dot{q}, q, t)\) 對應的 Hamiltonian：
     \[
-    H = rac{\partial L}{\partial \dot{q}} \dot{q} - L
+    H = \frac{\partial L}{\partial \dot{q}} \dot{q} - L
     \]
     我們從朗道（Landau）的論證中，因為我們相信空間的均向性（isotropic, or homogenous in space and time）與座標獨立性（frame independent，即相對性原理 Principle of relativity，物理不與座標選取、正負號選取有關），Lagrangian \(L\) 只會是 \(\dot{q}^{2n}\) 和 \(q^{2n}\)，都是偶數次方，且 \(L\) 必須是純量。
-    更仔細地說，因為 \(\overrightarrow{\dot{q}}\)、\(\overrightarrow{q}\) 是向量，為了滿足上述需求，\(\overrightarrow{\dot{q}} 	o \overrightarrow{\dot{q}} \cdot \overrightarrow{\dot{q}} = |\dot{q}|^2\)、\(\overrightarrow{q} 	o \overrightarrow{q} \cdot \overrightarrow{q} = |q|^2\)，只與物理量的大小、不與方向有關，為偶數次方。
+    更仔細地說，因為 \(\overrightarrow{\dot{q}}\)、\(\overrightarrow{q}\) 是向量，為了滿足上述需求，\(\overrightarrow{\dot{q}} \to \overrightarrow{\dot{q}} \cdot \overrightarrow{\dot{q}} = |\dot{q}|^2\)、\(\overrightarrow{q} \to \overrightarrow{q} \cdot \overrightarrow{q} = |q|^2\)，只與物理量的大小、不與方向有關，為偶數次方。
     最簡單的簡諧震盪：
     \[
-    L = rac{m}{2} \dot{q}^2 - rac{k}{2} q^2 \implies H = rac{\partial L}{\partial \dot{q}} \dot{q} - L = rac{m}{2} \dot{q}^2 + rac{k}{2} q^2
+    L = \frac{m}{2} \dot{q}^2 - \frac{k}{2} q^2 \implies H = \frac{\partial L}{\partial \dot{q}} \dot{q} - L = \frac{m}{2} \dot{q}^2 + \frac{k}{2} q^2
     \]
-    可以注意到 \(rac{\partial L}{\partial \dot{q}} \dot{q} = m \dot{q}^2 \) 依舊維持偶數次方，能量 \(E\) 有下限。
+    可以注意到 \(\frac{\partial L}{\partial \dot{q}} \dot{q} = m \dot{q}^2 \) 依舊維持偶數次方，能量 \(E\) 有下限。
 <br><br>
     <h3>當 \(L\) 包含二次導數</h3>
     如果我們允許 Lagrangian \(L\) 包含二次導數，即 \(L = L(\ddot{q}, \dot{q}, q, t)\)，首先可以用變分原理推導出 EoM：
     
         \[
-        \delta L = rac{\partial L}{\partial \ddot{q}} \delta \ddot{q} + rac{\partial L}{\partial \dot{q}} \delta \dot{q} + rac{\partial L}{\partial q} \delta q
+        \delta L = \frac{\partial L}{\partial \ddot{q}} \delta \ddot{q} + \frac{\partial L}{\partial \dot{q}} \delta \dot{q} + \frac{\partial L}{\partial q} \delta q
         \]
         \[
-        = rac{\partial L}{\partial \ddot{q}} rac{d}{dt} \delta \dot{q} + rac{\partial L}{\partial \dot{q}} rac{d}{dt} \delta q + rac{\partial L}{\partial q} \delta q
+        = \frac{\partial L}{\partial \ddot{q}} \frac{d}{dt} \delta \dot{q} + \frac{\partial L}{\partial \dot{q}} \frac{d}{dt} \delta q + \frac{\partial L}{\partial q} \delta q
         \]
         \[
-        = rac{d}{dt} \left(rac{\partial L}{\partial \ddot{q}} \delta \dot{q}
-ight) - rac{d}{dt} \left(rac{\partial L}{\partial \ddot{q}}
-ight) \delta \dot{q} + rac{d}{dt} \left(rac{\partial L}{\partial \dot{q}} \delta q
-ight) - rac{d}{dt} \left(rac{\partial L}{\partial \dot{q}}
-ight) \delta q + rac{\partial L}{\partial q} \delta q
+        = \frac{d}{dt} \left(\frac{\partial L}{\partial \ddot{q}} \delta \dot{q}\right) - \frac{d}{dt} \left(\frac{\partial L}{\partial \ddot{q}}\right) \delta \dot{q} + \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}} \delta q\right) - \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}}\right) \delta q + \frac{\partial L}{\partial q} \delta q
         \]
         \[
-        = rac{d}{dt} \left(rac{\partial L}{\partial \ddot{q}} \delta \dot{q} + rac{\partial L}{\partial \dot{q}} \delta q
-ight) - rac{d}{dt} \left[rac{d}{dt} \left(rac{\partial L}{\partial \ddot{q}}
-ight) \delta q
-ight] + rac{d^2}{dt^2} \left(rac{\partial L}{\partial \ddot{q}}
-ight) \delta q + \left(rac{\partial L}{\partial q} - rac{d}{dt} rac{\partial L}{\partial \dot{q}}
-ight) \delta q
+        = \frac{d}{dt} \left(\frac{\partial L}{\partial \ddot{q}} \delta \dot{q} + \frac{\partial L}{\partial \dot{q}} \delta q\right) - \frac{d}{dt} \left[\frac{d}{dt} \left(\frac{\partial L}{\partial \ddot{q}}\right) \delta q\right] + \frac{d^2}{dt^2} \left(\frac{\partial L}{\partial \ddot{q}}\right) \delta q + \left(\frac{\partial L}{\partial q} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}}\right) \delta q
         \]
         \[
-        = rac{d}{dt} \left[rac{\partial L}{\partial \ddot{q}} \delta \dot{q} + \left(rac{\partial L}{\partial \dot{q}} - rac{d}{dt} rac{\partial L}{\partial \ddot{q}}
-ight) \delta q
-ight] + \left(rac{\partial L}{\partial q} - rac{d}{dt} rac{\partial L}{\partial \dot{q}} + rac{d^2}{dt^2} rac{\partial L}{\partial \ddot{q}}
-ight) \delta q
+        = \frac{d}{dt} \left[\frac{\partial L}{\partial \ddot{q}} \delta \dot{q} + \left(\frac{\partial L}{\partial \dot{q}} - \frac{d}{dt} \frac{\partial L}{\partial \ddot{q}}\right) \delta q\right] + \left(\frac{\partial L}{\partial q} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} + \frac{d^2}{dt^2} \frac{\partial L}{\partial \ddot{q}}\right) \delta q
         \]
 
 第一項是邊界項，第二項即是EoM:
 
     \[
-    rac{d^2}{dt^2} rac{\partial L}{\partial \ddot{q}} - rac{d}{dt} rac{\partial L}{\partial \dot{q}} + rac{\partial L}{\partial q} = 0
+    \frac{d^2}{dt^2} \frac{\partial L}{\partial \ddot{q}} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} + \frac{\partial L}{\partial q} = 0
     \]
-EoM 因為 \(rac{d^2}{dt^2} rac{\partial L}{\partial \ddot{q}}\)，這導致 EoM 成為四次微分方程，微分方程需要依賴起始位置 \(q(0)\)、起始速度 \(\dot{q}(0)\)、起始加速度 \(\ddot{q}(0)\) 外，還需要起始急跳度 \(\dddot{q}(0)\)！
+EoM 因為 \(\frac{d^2}{dt^2} \frac{\partial L}{\partial \ddot{q}}\)，這導致 EoM 成為四次微分方程，微分方程需要依賴起始位置 \(q(0)\)、起始速度 \(\dot{q}(0)\)、起始加速度 \(\ddot{q}(0)\) 外，還需要起始急跳度 \(\dddot{q}(0)\)！
     即便 \(L\) 多考慮二次導數，EoM 卻需要考慮到三次微分，這顯得不合理。
 <br><br>
     <h3>Hamiltonian 的影響</h3>
 從 Lagrangian \(L\) 開始，我們考慮以下公式：
         \[
-        rac{dL}{dt} = rac{\partial L}{\partial \ddot{q}} rac{d\ddot{q}}{dt} + rac{\partial L}{\partial \dot{q}} rac{d\dot{q}}{dt} + rac{\partial L}{\partial q} rac{dq}{dt} + rac{\partial L}{\partial t}
+        \frac{dL}{dt} = \frac{\partial L}{\partial \ddot{q}} \frac{d\ddot{q}}{dt} + \frac{\partial L}{\partial \dot{q}} \frac{d\dot{q}}{dt} + \frac{\partial L}{\partial q} \frac{dq}{dt} + \frac{\partial L}{\partial t}
         \]
         移項並整理後，可以得到：
     
         \[
-        rac{\partial L}{\partial t} = rac{dL}{dt} - rac{\partial L}{\partial \ddot{q}} rac{d\ddot{q}}{dt} - rac{\partial L}{\partial \dot{q}} rac{d\dot{q}}{dt} - rac{\partial L}{\partial q} \dot{q}
+        \frac{\partial L}{\partial t} = \frac{dL}{dt} - \frac{\partial L}{\partial \ddot{q}} \frac{d\ddot{q}}{dt} - \frac{\partial L}{\partial \dot{q}} \frac{d\dot{q}}{dt} - \frac{\partial L}{\partial q} \dot{q}
         \]
         \[
-        = rac{dL}{dt} - rac{d}{dt} \left( rac{\partial L}{\partial \ddot{q}} \ddot{q} 
-ight) + rac{d}{dt} \left( rac{\partial L}{\partial \ddot{q}} 
-ight) \ddot{q} - rac{d}{dt} \left( rac{\partial L}{\partial \dot{q}} \dot{q} 
-ight) + rac{d}{dt} \left( rac{\partial L}{\partial \dot{q}} 
-ight) \dot{q} - rac{\partial L}{\partial q} \dot{q}
+        = \frac{dL}{dt} - \frac{d}{dt} \left( \frac{\partial L}{\partial \ddot{q}} \ddot{q} \right) + \frac{d}{dt} \left( \frac{\partial L}{\partial \ddot{q}} \right) \ddot{q} - \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} \right) + \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right) \dot{q} - \frac{\partial L}{\partial q} \dot{q}
         \]
         \[
-        = rac{dL}{dt} - rac{d}{dt} \left( rac{\partial L}{\partial \ddot{q}} \ddot{q} 
-ight) + rac{d}{dt} \left[ rac{d}{dt} \left( rac{\partial L}{\partial \ddot{q}} 
-ight) \dot{q} 
-ight] - rac{d^2}{dt^2} \left( rac{\partial L}{\partial \ddot{q}} 
-ight) \dot{q} - rac{d}{dt} \left( rac{\partial L}{\partial \dot{q}} \dot{q} 
-ight) + rac{d}{dt} \left( rac{\partial L}{\partial \dot{q}} 
-ight) \dot{q} - rac{\partial L}{\partial q} \dot{q}
+        = \frac{dL}{dt} - \frac{d}{dt} \left( \frac{\partial L}{\partial \ddot{q}} \ddot{q} \right) + \frac{d}{dt} \left[ \frac{d}{dt} \left( \frac{\partial L}{\partial \ddot{q}} \right) \dot{q} \right] - \frac{d^2}{dt^2} \left( \frac{\partial L}{\partial \ddot{q}} \right) \dot{q} - \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} \right) + \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right) \dot{q} - \frac{\partial L}{\partial q} \dot{q}
         \]
         \[
-        = rac{d}{dt} \left[ L - rac{\partial L}{\partial \ddot{q}} \ddot{q} + \left( rac{d}{dt} rac{\partial L}{\partial \ddot{q}} - rac{\partial L}{\partial \dot{q}} 
-ight) \dot{q} 
-ight] - \left( rac{d^2}{dt^2} rac{\partial L}{\partial \ddot{q}} - rac{d}{dt} rac{\partial L}{\partial \dot{q}} + rac{\partial L}{\partial q} 
-ight) \dot{q}
+        = \frac{d}{dt} \left[ L - \frac{\partial L}{\partial \ddot{q}} \ddot{q} + \left( \frac{d}{dt} \frac{\partial L}{\partial \ddot{q}} - \frac{\partial L}{\partial \dot{q}} \right) \dot{q} \right] - \left( \frac{d^2}{dt^2} \frac{\partial L}{\partial \ddot{q}} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} + \frac{\partial L}{\partial q} \right) \dot{q}
         \]
     第二項即為 EoM = 0，而第一項為 Hamiltonian：    
 
     \[
-    H = rac{\partial L}{\partial \ddot{q}} \ddot{q} + \left( rac{\partial L}{\partial \dot{q}} - rac{d}{dt} rac{\partial L}{\partial \ddot{q}} 
-ight) \dot{q} - L
+    H = \frac{\partial L}{\partial \ddot{q}} \ddot{q} + \left( \frac{\partial L}{\partial \dot{q}} - \frac{d}{dt} \frac{\partial L}{\partial \ddot{q}} \right) \dot{q} - L
     \]
     。在前面討論中，因為均向性和相對性原理的要求，我們可以推論 \(\ddot{q}\)、\(\dot{q}\)、\(q\) 在 Lagrangian \(L\) 中都是偶數次方，所以 
         \[
-        rac{\partial L}{\partial \ddot{q}} \ddot{q}, \quad rac{\partial L}{\partial \dot{q}} \dot{q}
+        \frac{\partial L}{\partial \ddot{q}} \ddot{q}, \quad \frac{\partial L}{\partial \dot{q}} \dot{q}
         \]
         依然為偶數次，並且恆正。然而
         \[
-        \left( rac{d}{dt}  rac{\partial L}{\partial \ddot{q}} 
-ight) \dot{q}
+        \left( \frac{d}{dt}  \frac{\partial L}{\partial \ddot{q}} \right) \dot{q}
         \]
         會導致 \(\ddot{q}\) 與 \(\dot{q}\) 形成奇數次，從而允許 Hamiltonian \(H\) 沒有下限。此即為 Ostrogradsky 不穩定性。<br><br>
 
@@ -254,17 +225,12 @@ ight) \dot{q}
 <table cellpadding="1" border="1">
 <tr><td>
     <h3>更一般的情況</h3>
-    如果讀者有興趣，可以考慮 \(L = L\left(rac{d^n q}{dt^n}, \dots, rac{dq}{dt}, q, t
-ight)\)，對應的 EoM 和 Hamiltonian 為：
+    如果讀者有興趣，可以考慮 \(L = L\left(\frac{d^n q}{dt^n}, \dots, \frac{dq}{dt}, q, t\right)\)，對應的 EoM 和 Hamiltonian 為：
     \[
-    \sum_{i=0}^n (-1)^i rac{d^i}{dt^i} \left[ rac{\partial L}{\partial \left(rac{d^i q}{dt^i}
-ight)} 
-ight] = 0
+    \sum_{i=0}^n (-1)^i \frac{d^i}{dt^i} \left[ \frac{\partial L}{\partial \left(\frac{d^i q}{dt^i}\right)} \right] = 0
     \]
     \[
-    H = \sum_{i=1}^n \sum_{j=1}^i (-1)^{i-j} \left[ rac{d^{i-j}}{dt^{i-j}} rac{\partial L}{\partial \left(rac{d^i q}{dt^i}
-ight)} 
-ight] rac{d^j q}{dt^j} - L
+    H = \sum_{i=1}^n \sum_{j=1}^i (-1)^{i-j} \left[ \frac{d^{i-j}}{dt^{i-j}} \frac{\partial L}{\partial \left(\frac{d^i q}{dt^i}\right)} \right] \frac{d^j q}{dt^j} - L
     \]
     可以注意幾點：
     <ol>

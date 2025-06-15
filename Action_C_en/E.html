@@ -98,10 +98,10 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>硬體導論</h1>
+                <h1>Action Principle (Classical)</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="./main.html">硬體導論</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">Action Principle (Classical)</a></li>
                   <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
@@ -118,40 +118,36 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>Lagrangian in Momentum Space</h2>
                                     <h3></h3>
                                 </div>
                                 
                                 
-                                Lagrangian in Momentum Space
 <p style="text-align:justify">
-The Lagrangian equation can be described not only in \((q,\dot{q} ,t)\) space but also in momentum space \((p,\dot{p} ,t)\). The transformation is as follows:
-$$ p={\partial L \over \partial \dot{q}}  $$
-
-$$\dot{p} ={d\over dt}  {\partial L\over\partial \dot{q}}={\partial L\over\partial q}$$
-\(p\) is the generalized momentum. Using \(L=L(q,\dot{q} ,t)\),
-$$dL=\dot{p} dq+pd\dot{q} +{\partial L\over\partial t} dt$$
-$$=d(\dot{p} q)-qd\dot{p} +d(p\dot{q}  )-\dot{q} dp+{\partial L\over\partial t} dt$$
-$$=\color{red}{d(\dot{p} q+p\dot{q}  )}-qd\dot{p} -\dot{q} dp+{\partial L\over\partial t} dt$$
-
-Moving the <font color="red">red term</font> to the other side:
-$$d \left(L\color{red}{-\dot{p} q-p\dot{q}} 
-ight)=-qd\dot{p} -\dot{q} dp+{\partial L\over\partial t} dt$$
-Define a new Lagrangian \(ar{L}\):
-$$ar{L} \equiv L-\dot{p} q-p\dot{q} =L-{d\over dt} (pq)$$
-We get \(dar{L}\):
-$$ dar{L}=-qd\dot{p} -\dot{q} dp+{\partial L\over\partial t} dt$$
-
-Comparing the left and right sides, we get:
-$${\partial ar{L}\over\partial \dot{p} }=-q$$
-$${\partial ar{L}\over\partial p}=-\dot{q}$$
-$$	o {d\over dt} {\partial ar{L}\over\partial \dot{p}}={\partial ar{L}\over\partial p}$$
-This is the EoM in momentum space. It is noteworthy that the form is invariant.
-
-</p>
-
-
-
+    The Lagrangian equation can be described not only in \((q,\dot{q} ,t)\) space but also in momentum space \((p,\dot{p} ,t)\). The transformation is as follows:
+    $$ p={\partial L \over \partial \dot{q}}  $$
+    
+    $$\dot{p} ={d\over dt}  {\partial L\over\partial \dot{q}}={\partial L\over\partial q}$$
+    \(p\) is the generalized momentum. Using \(L=L(q,\dot{q} ,t)\),
+    $$dL=\dot{p} dq+pd\dot{q} +{\partial L\over\partial t} dt$$
+    $$=d(\dot{p} q)-qd\dot{p} +d(p\dot{q}  )-\dot{q} dp+{\partial L\over\partial t} dt$$
+    $$=\color{red}{d(\dot{p} q+p\dot{q}  )}-qd\dot{p} -\dot{q} dp+{\partial L\over\partial t} dt$$
+    
+    Moving the <font color="red">red term</font> to the other side:
+    $$d \left(L\color{red}{-\dot{p} q-p\dot{q}} \right)=-qd\dot{p} -\dot{q} dp+{\partial L\over\partial t} dt$$
+    Define a new Lagrangian \(\bar{L}\):
+    $$\bar{L} \equiv L-\dot{p} q-p\dot{q} =L-{d\over dt} (pq)$$
+    We get \(d\bar{L}\):
+    $$ d\bar{L}=-qd\dot{p} -\dot{q} dp+{\partial L\over\partial t} dt$$
+    
+    Comparing the left and right sides, we get:
+    $${\partial \bar{L}\over\partial \dot{p} }=-q$$
+    $${\partial \bar{L}\over\partial p}=-\dot{q}$$
+    $$\to {d\over dt} {\partial \bar{L}\over\partial \dot{p}}={\partial \bar{L}\over\partial p}$$
+    This is the EoM in momentum space. It is noteworthy that the form is invariant.
+    
+    </p>
+    
 
 
 

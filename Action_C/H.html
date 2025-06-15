@@ -118,58 +118,35 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>Maximal Symmetry Action</h2>
                                     <h3></h3>
                                 </div>
                                 
-                                
-                                Maximal Symmetry Action
-
 <p style="text-align:justify">
-<b><font color="red">本節為筆者推論，還不確定是否正確</font></b><br>
-前面提到Lagrangian L的不唯一性，我們可以添加全微分項\(\dot{f}\) 而不改變EoM。以下來討論添加\(\dot{f}\) 對諾特定理的影響。我們只需先將\(L	oar{L} =L+\dot{f} \)改寫結論即可
-
-
-$$\delta S=\int   {d\over dt}  \left[{\partial ar{L} \over \partial \dot{q} }  \Delta q-\left({\partial ar{L} \over \partial \dot{q} }  \dot{q} -ar{L}  
-ight)\delta t
-ight]   dt$$
-
-
-$$=\int   {d\over dt} \left[\left({\partial L\over \partial \dot{q} } +{\partial \dot{f} \over \partial \dot{q} } 
-ight)\Delta q-\left(\left({\partial L\over \partial \dot{q} } +{\partial \dot{f} \over \partial \dot{q} } 
-ight) \dot{q} -L-\dot{f}  
-ight)\delta t
-ight]   dt$$
-
-
-
-注意\(f=f(q,t)\)，適用dot cancellation，\({\partial \dot{f} \over \partial \dot{q} } ={\partial f\over\partial q}\)，另外代入\( p={\partial L\over \partial \dot{q}}\)，所以
-
-
-$$\delta S=\int   {d\over dt}  \left[\left({\partial L\over \partial \dot{q} } +{\partial f\over\partial q}
-ight)\Delta q-\left(\left(p +{\partial f\over\partial q}
-ight) \dot{q} -L-\dot{f} 
-ight)\delta t
-ight]   dt$$
-$$=\int   {d\over dt}  \left[\left({\partial L\over \partial \dot{q} } +{\partial f\over\partial q}
-ight)\Delta q-\left(p\dot{q} +{\partial f\over\partial q}\dot{q}  -L-\dot{f} 
-ight)\delta t
-ight]   dt$$
-$$=\int   {d\over dt}  \left[\left({\partial L\over \partial \dot{q} } +{\partial f\over\partial q}
-ight)\Delta q-\left(H -{\partial f\over\partial t} 
-ight)\delta t
-ight]   dt$$
-
-如果當原本的Lagrangian \(L\)不具備對稱性，我們有機會透過\({\partial f \over \partial q}\)做修正，因為\(f=f(q,t)\)所以\({\partial f\over\partial q}={\partial \over\partial q}f(q,t)\)，只要\({\partial L\over \partial \dot{q} }\) 不是\(\dot{q}\) 的函數，我們可以用\({\partial f\over\partial q}=-{\partial L\over \partial \dot{q} } +const\)消除微分不為零的部分，使得\(\delta S=0\)，對應軌跡\(q\)變分不變的守恆量為
-$${\partial L\over \partial \dot{q} } +{\partial f\over\partial q}=ar{p}$$
-，我們可以稱作此Lagrangian \(ar{L}= L+\dot{f}\) 對應的Action \(ar{S}\)為Maximal Symmetry Action。
-
-</p>
-
-
-										HERE"g1">
-
-
+    <b><font color="red">本節為筆者推論，還不確定是否正確</font></b><br>
+    前面提到Lagrangian L的不唯一性，我們可以添加全微分項\(\dot{f}\) 而不改變EoM。以下來討論添加\(\dot{f}\) 對諾特定理的影響。我們只需先將\(L\to\bar{L} =L+\dot{f} \)改寫結論即可
+    
+    
+    $$\delta S=\int   {d\over dt}  \left[{\partial \bar{L} \over \partial \dot{q} }  \Delta q-\left({\partial \bar{L} \over \partial \dot{q} }  \dot{q} -\bar{L}  \right)\delta t\right]   dt$$
+    
+    
+    $$=\int   {d\over dt} \left[\left({\partial L\over \partial \dot{q} } +{\partial \dot{f} \over \partial \dot{q} } \right)\Delta q-\left(\left({\partial L\over \partial \dot{q} } +{\partial \dot{f} \over \partial \dot{q} } \right) \dot{q} -L-\dot{f}  \right)\delta t\right]   dt$$
+    
+    
+    
+    注意\(f=f(q,t)\)，適用dot cancellation，\({\partial \dot{f} \over \partial \dot{q} } ={\partial f\over\partial q}\)，另外代入\( p={\partial L\over \partial \dot{q}}\)，所以
+    
+    
+    $$\delta S=\int   {d\over dt}  \left[\left({\partial L\over \partial \dot{q} } +{\partial f\over\partial q}\right)\Delta q-\left(\left(p +{\partial f\over\partial q}\right) \dot{q} -L-\dot{f} \right)\delta t\right]   dt$$
+    $$=\int   {d\over dt}  \left[\left({\partial L\over \partial \dot{q} } +{\partial f\over\partial q}\right)\Delta q-\left(p\dot{q} +{\partial f\over\partial q}\dot{q}  -L-\dot{f} \right)\delta t\right]   dt$$
+    $$=\int   {d\over dt}  \left[\left({\partial L\over \partial \dot{q} } +{\partial f\over\partial q}\right)\Delta q-\left(H -{\partial f\over\partial t} \right)\delta t\right]   dt$$
+    
+    如果當原本的Lagrangian \(L\)不具備對稱性，我們有機會透過\({\partial f \over \partial q}\)做修正，因為\(f=f(q,t)\)所以\({\partial f\over\partial q}={\partial \over\partial q}f(q,t)\)，只要\({\partial L\over \partial \dot{q} }\) 不是\(\dot{q}\) 的函數，我們可以用\({\partial f\over\partial q}=-{\partial L\over \partial \dot{q} } +const\)消除微分不為零的部分，使得\(\delta S=0\)，對應軌跡\(q\)變分不變的守恆量為
+    $${\partial L\over \partial \dot{q} } +{\partial f\over\partial q}=\bar{p}$$
+    ，我們可以稱作此Lagrangian \(\bar{L}= L+\dot{f}\) 對應的Action \(\bar{S}\)為Maximal Symmetry Action。
+    
+    </p>
+    
 
                                 <div class="post-meta">
                                     <span class="post-author">

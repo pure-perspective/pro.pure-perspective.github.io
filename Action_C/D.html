@@ -118,101 +118,57 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>Point Transformation、Form Invariant和Principle of Relativity</h2>
                                     <h3></h3>
                                 </div>
                                 
-                                
-                                Point Transformation、Form Invariant和Principle of Relativity
 <p style="text-align:justify">
 
-在學物理的時候，最基本的物理法則就是相對性原理 (Principle of Relativity)。其中一種描述為：對所有慣性座標系而言 (本文至少目前不談論廣義相對論)，具有相同的物理定律。換句話說，就是所有慣性觀察者用的都是同一套物理、都具有一樣的物理方程式，也就是說「形式不變」(Form Invariant)。以牛頓力學來說，\(F=ma\) 換一個慣性座標還是\(ar{F} = mar{a}\) 。我的老師，周定一老師，常常用很生動的比喻：如果今天物理定律不具有相對性原理，那無窮多個慣性座標就會有無窮多套物理定律，做出來的手機根本就不能用，因為搭上飛機就會換一套物理定律，地面做出來的裝置用的物理就在飛機上變得不適用。可以說相對性原理是研究物理學裡面一個最基本的假設。既然牛頓力學具有形式不變，那我們也要來討論 Euler-Lagrange equation 是否也在不同座標系下，也能「形式不變」。<br>
-
-在這邊我們先討論最基本的例子，稱為點變換 (Point Transformation)。假設今天在\(q\)慣性座標系研究出來的物理滿足：
-
-$$L = L(\dot{q}, q, t)$$
-$$rac{d}{dt} rac{\partial L}{\partial \dot{q}} - rac{\partial L}{\partial q} = 0$$
-
-有另外一位觀察者，他寫下的座標採用 \(s\) 座標系，兩者之間有一個可逆的函數關係：
-
-$$s = s(q, t) \leftrightarrow q = q(s, t)$$
-$$dq = rac{\partial q}{\partial s} ds + rac{\partial q}{\partial t} dt$$
-$$
-ightarrow \dot{q} = rac{\partial q}{\partial s} \dot{s} + rac{\partial q}{\partial t}$$
-$$
-ightarrow d\dot{q} = d\left(rac{\partial q}{\partial s}
-ight) \dot{s} + \left(rac{\partial q}{\partial s}
-ight)d\dot{s} + d\left(rac{\partial q}{\partial t}
-ight)$$
-$$=\left(rac{\partial q}{\partial s}
-ight) d\dot{s} + \dot{s}\left(rac{\partial^2 q}{\partial s^2} ds + rac{\partial^2 q}{\partial t \partial s} dt
-ight) + \left(rac{\partial^2 q}{\partial s \partial t} ds + rac{\partial^2 q}{\partial t^2} dt
-ight)$$
-$$=rac{\partial q}{\partial s} d\dot{s} + \left[\dot{s} rac{\partial^2 q}{\partial s^2} + rac{\partial^2 q}{\partial s \partial t}
-ight]ds + \left[rac{\partial^2 q}{\partial t \partial s} + rac{\partial^2 q}{\partial t^2}
-ight]dt$$
-$$\equiv rac{\partial \dot{q}}{\partial \dot{s}} d\dot{s} + rac{\partial \dot{q}}{\partial s} ds + rac{\partial \dot{q}}{\partial t} dt$$
-$$
-ightarrow \dot{q} = \dot{q}(\dot{s}, s, t)$$
-
-首先先看一下 Lagrangian \(L\)：
-
-$$dL = rac{\partial L}{\partial \dot{q}} d\dot{q} + rac{\partial L}{\partial q} dq + rac{\partial L}{\partial t} dt$$
-$$=rac{\partial L}{\partial \dot{q}} \left(rac{\partial \dot{q}}{\partial \dot{s}} d\dot{s} + rac{\partial \dot{q}}{\partial s} ds + rac{\partial \dot{q}}{\partial t} dt
-ight) + rac{\partial L}{\partial q} \left(rac{\partial q}{\partial s} ds + rac{\partial q}{\partial t} dt
-ight) + rac{\partial L}{\partial t} dt$$
-$$=\left(rac{\partial L}{\partial \dot{q}} rac{\partial \dot{q}}{\partial \dot{s}} d\dot{s} + rac{\partial L}{\partial \dot{q}} rac{\partial \dot{q}}{\partial s} ds + rac{\partial L}{\partial \dot{q}} rac{\partial \dot{q}}{\partial t} dt
-ight) + \left(rac{\partial L}{\partial q} rac{\partial q}{\partial s} ds + rac{\partial L}{\partial q} rac{\partial q}{\partial t} dt
-ight) + rac{\partial L}{\partial t} dt$$
-$$=rac{\partial L}{\partial \dot{q}} rac{\partial \dot{q}}{\partial \dot{s}} d\dot{s} + \left(rac{\partial L}{\partial \dot{q}} rac{\partial \dot{q}}{\partial s} + rac{\partial L}{\partial q} rac{\partial q}{\partial s}
-ight)ds + \left(rac{\partial L}{\partial \dot{q}} rac{\partial \dot{q}}{\partial t} + rac{\partial L}{\partial q} rac{\partial q}{\partial t}
-ight)dt + rac{\partial L}{\partial t} dt$$
-$$\equiv rac{\partial L}{\partial \dot{s}} d\dot{s} + rac{\partial L}{\partial s} ds + rac{\partial L}{\partial t} dt$$
-$$
-ightarrow L = L(\dot{s}, s, t)$$
-
-確認在 Point Transformation 之後，Lagrangian \(L\) 在 \(s\) 座標下仍然只是 \(\dot{s}, s, t\)的函數。在此我們可以直接套用變分流程，就說明 Lagrangian \(L(\dot{s}, s, t)\) 滿足：
-$$rac{d}{dt} rac{\partial L}{\partial \dot{s}} - rac{\partial L}{\partial s} = 0$$
-
-當然，也可以採用數學直接計算。從原本的 Euler-Lagrange equation 出發：
-$$rac{d}{dt} rac{\partial L}{\partial \dot{q}} - rac{\partial L}{\partial q} = 0 
-ightarrow rac{d}{dt} \left(rac{\partial L}{\partial \dot{s}} \color{red}{rac{\partial \dot{s}}{\partial \dot{q}}}
-ight) - \left(rac{\partial L}{\partial \dot{s}} rac{\partial \dot{s}}{\partial q} + rac{\partial L}{\partial s} rac{\partial s}{\partial q}
-ight) = 0$$
-紅色利用 dot cancellation \(\color{red}{rac{\partial \dot{s}}{\partial \dot{q}} = rac{\partial s}{\partial q}}\)：
-$$
-ightarrow rac{d}{dt} \left(rac{\partial L}{\partial \dot{s}} \color{red}{rac{\partial s}{\partial q}}
-ight) - \left(rac{\partial L}{\partial \dot{s}} rac{\partial \dot{s}}{\partial q} + rac{\partial L}{\partial s} rac{\partial s}{\partial q}
-ight) = 0$$
-$$
-ightarrow rac{d}{dt} \left(rac{\partial L}{\partial \dot{s}}
-ight) rac{\partial s}{\partial q} + rac{\partial L}{\partial \dot{s}} rac{\partial \dot{s}}{\partial q} - rac{\partial L}{\partial \dot{s}} rac{\partial \dot{s}}{\partial q} - rac{\partial L}{\partial s} rac{\partial s}{\partial q} = 0$$
-因為 \(rac{d}{dt} \left(rac{\partial s}{\partial q}
-ight) = rac{\partial \dot{s}}{\partial q}\) (only if \(s = s(q, t)\))：
-$$
-ightarrow rac{d}{dt} \left(rac{\partial L}{\partial \dot{s}}
-ight) rac{\partial s}{\partial q} + rac{\partial L}{\partial \dot{s}} rac{\partial \dot{s}}{\partial q} - rac{\partial L}{\partial \dot{s}} rac{\partial \dot{s}}{\partial q} - rac{\partial L}{\partial s} rac{\partial s}{\partial q} = 0$$
-$$
-ightarrow \left[rac{d}{dt} \left(rac{\partial L}{\partial \dot{s}}
-ight) - rac{\partial L}{\partial s}
-ight] rac{\partial s}{\partial q} = 0$$
-因為 \(rac{\partial s}{\partial q}\) 可逆且任意，所以：
-$$rac{d}{dt} \left(rac{\partial L}{\partial \dot{s}}
-ight) - rac{\partial L}{\partial s} = 0$$
-
-在 \(s\) 座標下仍然滿足 Euler-Lagrange equation。在這邊可以注意到，\(s = s(q, t)\) 其實不一定是慣性座標，但仍然滿足 Euler-Lagrange equation，可見 Euler-Lagrange equation 強大的地方。
-
-</p>
-
-
-
-
-
-
-
-										HERE"e">
-
-
+    在學物理的時候，最基本的物理法則就是相對性原理 (Principle of Relativity)。其中一種描述為：對所有慣性座標系而言 (本文至少目前不談論廣義相對論)，具有相同的物理定律。換句話說，就是所有慣性觀察者用的都是同一套物理、都具有一樣的物理方程式，也就是說「形式不變」(Form Invariant)。以牛頓力學來說，\(F=ma\) 換一個慣性座標還是\(\bar{F} = m\bar{a}\) 。我的老師，周定一老師，常常用很生動的比喻：如果今天物理定律不具有相對性原理，那無窮多個慣性座標就會有無窮多套物理定律，做出來的手機根本就不能用，因為搭上飛機就會換一套物理定律，地面做出來的裝置用的物理就在飛機上變得不適用。可以說相對性原理是研究物理學裡面一個最基本的假設。既然牛頓力學具有形式不變，那我們也要來討論 Euler-Lagrange equation 是否也在不同座標系下，也能「形式不變」。<br>
+    
+    在這邊我們先討論最基本的例子，稱為點變換 (Point Transformation)。假設今天在\(q\)慣性座標系研究出來的物理滿足：
+    
+    $$L = L(\dot{q}, q, t)$$
+    $$\frac{d}{dt} \frac{\partial L}{\partial \dot{q}} - \frac{\partial L}{\partial q} = 0$$
+    
+    有另外一位觀察者，他寫下的座標採用 \(s\) 座標系，兩者之間有一個可逆的函數關係：
+    
+    $$s = s(q, t) \leftrightarrow q = q(s, t)$$
+    $$dq = \frac{\partial q}{\partial s} ds + \frac{\partial q}{\partial t} dt$$
+    $$\rightarrow \dot{q} = \frac{\partial q}{\partial s} \dot{s} + \frac{\partial q}{\partial t}$$
+    $$\rightarrow d\dot{q} = d\left(\frac{\partial q}{\partial s}\right) \dot{s} + \left(\frac{\partial q}{\partial s}\right)d\dot{s} + d\left(\frac{\partial q}{\partial t}\right)$$
+    $$=\left(\frac{\partial q}{\partial s}\right) d\dot{s} + \dot{s}\left(\frac{\partial^2 q}{\partial s^2} ds + \frac{\partial^2 q}{\partial t \partial s} dt\right) + \left(\frac{\partial^2 q}{\partial s \partial t} ds + \frac{\partial^2 q}{\partial t^2} dt\right)$$
+    $$=\frac{\partial q}{\partial s} d\dot{s} + \left[\dot{s} \frac{\partial^2 q}{\partial s^2} + \frac{\partial^2 q}{\partial s \partial t}\right]ds + \left[\frac{\partial^2 q}{\partial t \partial s} + \frac{\partial^2 q}{\partial t^2}\right]dt$$
+    $$\equiv \frac{\partial \dot{q}}{\partial \dot{s}} d\dot{s} + \frac{\partial \dot{q}}{\partial s} ds + \frac{\partial \dot{q}}{\partial t} dt$$
+    $$\rightarrow \dot{q} = \dot{q}(\dot{s}, s, t)$$
+    
+    首先先看一下 Lagrangian \(L\)：
+    
+    $$dL = \frac{\partial L}{\partial \dot{q}} d\dot{q} + \frac{\partial L}{\partial q} dq + \frac{\partial L}{\partial t} dt$$
+    $$=\frac{\partial L}{\partial \dot{q}} \left(\frac{\partial \dot{q}}{\partial \dot{s}} d\dot{s} + \frac{\partial \dot{q}}{\partial s} ds + \frac{\partial \dot{q}}{\partial t} dt\right) + \frac{\partial L}{\partial q} \left(\frac{\partial q}{\partial s} ds + \frac{\partial q}{\partial t} dt\right) + \frac{\partial L}{\partial t} dt$$
+    $$=\left(\frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial \dot{s}} d\dot{s} + \frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial s} ds + \frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial t} dt\right) + \left(\frac{\partial L}{\partial q} \frac{\partial q}{\partial s} ds + \frac{\partial L}{\partial q} \frac{\partial q}{\partial t} dt\right) + \frac{\partial L}{\partial t} dt$$
+    $$=\frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial \dot{s}} d\dot{s} + \left(\frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial s} + \frac{\partial L}{\partial q} \frac{\partial q}{\partial s}\right)ds + \left(\frac{\partial L}{\partial \dot{q}} \frac{\partial \dot{q}}{\partial t} + \frac{\partial L}{\partial q} \frac{\partial q}{\partial t}\right)dt + \frac{\partial L}{\partial t} dt$$
+    $$\equiv \frac{\partial L}{\partial \dot{s}} d\dot{s} + \frac{\partial L}{\partial s} ds + \frac{\partial L}{\partial t} dt$$
+    $$\rightarrow L = L(\dot{s}, s, t)$$
+    
+    確認在 Point Transformation 之後，Lagrangian \(L\) 在 \(s\) 座標下仍然只是 \(\dot{s}, s, t\)的函數。在此我們可以直接套用變分流程，就說明 Lagrangian \(L(\dot{s}, s, t)\) 滿足：
+    $$\frac{d}{dt} \frac{\partial L}{\partial \dot{s}} - \frac{\partial L}{\partial s} = 0$$
+    
+    當然，也可以採用數學直接計算。從原本的 Euler-Lagrange equation 出發：
+    $$\frac{d}{dt} \frac{\partial L}{\partial \dot{q}} - \frac{\partial L}{\partial q} = 0 \rightarrow \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{s}} \color{red}{\frac{\partial \dot{s}}{\partial \dot{q}}}\right) - \left(\frac{\partial L}{\partial \dot{s}} \frac{\partial \dot{s}}{\partial q} + \frac{\partial L}{\partial s} \frac{\partial s}{\partial q}\right) = 0$$
+    紅色利用 dot cancellation \(\color{red}{\frac{\partial \dot{s}}{\partial \dot{q}} = \frac{\partial s}{\partial q}}\)：
+    $$\rightarrow \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{s}} \color{red}{\frac{\partial s}{\partial q}}\right) - \left(\frac{\partial L}{\partial \dot{s}} \frac{\partial \dot{s}}{\partial q} + \frac{\partial L}{\partial s} \frac{\partial s}{\partial q}\right) = 0$$
+    $$\rightarrow \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{s}}\right) \frac{\partial s}{\partial q} + \frac{\partial L}{\partial \dot{s}} \frac{\partial \dot{s}}{\partial q} - \frac{\partial L}{\partial \dot{s}} \frac{\partial \dot{s}}{\partial q} - \frac{\partial L}{\partial s} \frac{\partial s}{\partial q} = 0$$
+    因為 \(\frac{d}{dt} \left(\frac{\partial s}{\partial q}\right) = \frac{\partial \dot{s}}{\partial q}\) (only if \(s = s(q, t)\))：
+    $$\rightarrow \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{s}}\right) \frac{\partial s}{\partial q} + \frac{\partial L}{\partial \dot{s}} \frac{\partial \dot{s}}{\partial q} - \frac{\partial L}{\partial \dot{s}} \frac{\partial \dot{s}}{\partial q} - \frac{\partial L}{\partial s} \frac{\partial s}{\partial q} = 0$$
+    $$\rightarrow \left[\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{s}}\right) - \frac{\partial L}{\partial s}\right] \frac{\partial s}{\partial q} = 0$$
+    因為 \(\frac{\partial s}{\partial q}\) 可逆且任意，所以：
+    $$\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{s}}\right) - \frac{\partial L}{\partial s} = 0$$
+    
+    在 \(s\) 座標下仍然滿足 Euler-Lagrange equation。在這邊可以注意到，\(s = s(q, t)\) 其實不一定是慣性座標，但仍然滿足 Euler-Lagrange equation，可見 Euler-Lagrange equation 強大的地方。
+    
+    </p>
+    
 
                                 <div class="post-meta">
                                     <span class="post-author">

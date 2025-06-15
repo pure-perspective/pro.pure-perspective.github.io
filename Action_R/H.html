@@ -118,37 +118,31 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>Impossibility of \(A_\mu  A^\mu\)  if keeping gauge invariance</h2>
                                     <h3></h3>
                                 </div>
                                 
-                                
-                                Impossibility of \(A_\mu  A^\mu\)  if keeping gauge invariance
-<p style="text-align:justify">
-如果保持規範不變的話，我們可以論證Action不會有\(A_\mu  A^\mu \)項，因為\(A^\mu\) 的變分\(A^\mu 	o A^\mu +\delta A^\mu \)會導致運動方程變化。
-$$S=-{1 \over c^2}  \int   A_\mu  A^\mu  d^4 x $$
-加入Gauge \(\partial ^\mu  G\)
-$$ ar{A} ^\mu =A^\mu +\partial ^\mu  G$$
-展開Action
-$$ar{S}=-{1 \over c^2}  \int    ar{A} _\mu   ar{A} ^\mu  d^4 x $$
-$$=-{1 \over c^2}  \int   (A_\mu +\partial _\mu  G)(A^\mu +\partial ^\mu  G) d^4 x $$
-$$=-{1 \over c^2}  \int   A_\mu  A^\mu  d^4 x -{1 \over c^2}  \int   2A^\mu \cdot \partial _\mu  Gd^4 x -{1 \over c^2}  \int   \partial _\mu  G\cdot \partial ^\mu  Gd^4 x $$
-因為Gauge \(\partial ^\mu  G\)獨立於4-Potential \(A^\mu\) ，\(A^\mu\) 的變分\(A^\mu 	o A^\mu +\delta A^\mu\) 不影響\(\partial ^\mu  G\)。我們比較對\(S\)變分和對\(ar{S}\)變分的差異：<br>
-<b>對\(S\)變分</b>
-$$\delta S=-{1 \over c^2}  \delta \int   A_\mu  A^\mu  d^4 x$$
-$$ =-{2 \over c^2}  \int   A_\mu  \delta A^\mu  d^4 x$$ 
-<br>
-<b>對\(ar{S}\)變分</b>
-$$\delta ar{S}=-{1 \over c^2}  \delta \int   A_\mu  A^\mu  d^4 x -{1 \over c^2}  \delta \int   2A_\mu  \partial ^\mu  Gd^4 x -\color{red}{0（\partial ^\mu  G沒有變分）}$$
-第一項就是原本的變分
-$$\delta ar{S}=-{2 \over c^2}  \int   A_\mu  \delta A^\mu  d^4 x -{2 \over c^2}  \delta \int   A^\mu \cdot \partial _\mu  Gd^4 x $$
-$$=-{2 \over c^2}  \int   (A_\mu +\partial _\mu  G)\delta A^\mu  d^4 x $$
-比對後會發現兩者不一樣，會導致規範不變被破壞。如果我們希望保持規範不變性，那就不會出現\(A_\mu  A^\mu\) 。當然，也許某一天實驗發現規範不變性是錯誤的，那有可能可以引入\(A_\mu  A^\mu \)項。
-</p>
-
-
-<section id="q">
-
+                                <p style="text-align:justify">
+                                    如果保持規範不變的話，我們可以論證Action不會有\(A_\mu  A^\mu \)項，因為\(A^\mu\) 的變分\(A^\mu \to A^\mu +\delta A^\mu \)會導致運動方程變化。
+                                    $$S=-{1 \over c^2}  \int   A_\mu  A^\mu  d^4 x $$
+                                    加入Gauge \(\partial ^\mu  G\)
+                                    $$ \bar{A} ^\mu =A^\mu +\partial ^\mu  G$$
+                                    展開Action
+                                    $$\bar{S}=-{1 \over c^2}  \int    \bar{A} _\mu   \bar{A} ^\mu  d^4 x $$
+                                    $$=-{1 \over c^2}  \int   (A_\mu +\partial _\mu  G)(A^\mu +\partial ^\mu  G) d^4 x $$
+                                    $$=-{1 \over c^2}  \int   A_\mu  A^\mu  d^4 x -{1 \over c^2}  \int   2A^\mu \cdot \partial _\mu  Gd^4 x -{1 \over c^2}  \int   \partial _\mu  G\cdot \partial ^\mu  Gd^4 x $$
+                                    因為Gauge \(\partial ^\mu  G\)獨立於4-Potential \(A^\mu\) ，\(A^\mu\) 的變分\(A^\mu \to A^\mu +\delta A^\mu\) 不影響\(\partial ^\mu  G\)。我們比較對\(S\)變分和對\(\bar{S}\)變分的差異：<br>
+                                    <b>對\(S\)變分</b>
+                                    $$\delta S=-{1 \over c^2}  \delta \int   A_\mu  A^\mu  d^4 x$$
+                                    $$ =-{2 \over c^2}  \int   A_\mu  \delta A^\mu  d^4 x$$ 
+                                    <br>
+                                    <b>對\(\bar{S}\)變分</b>
+                                    $$\delta \bar{S}=-{1 \over c^2}  \delta \int   A_\mu  A^\mu  d^4 x -{1 \over c^2}  \delta \int   2A_\mu  \partial ^\mu  Gd^4 x -\color{red}{0（\partial ^\mu  G沒有變分）}$$
+                                    第一項就是原本的變分
+                                    $$\delta \bar{S}=-{2 \over c^2}  \int   A_\mu  \delta A^\mu  d^4 x -{2 \over c^2}  \delta \int   A^\mu \cdot \partial _\mu  Gd^4 x $$
+                                    $$=-{2 \over c^2}  \int   (A_\mu +\partial _\mu  G)\delta A^\mu  d^4 x $$
+                                    比對後會發現兩者不一樣，會導致規範不變被破壞。如果我們希望保持規範不變性，那就不會出現\(A_\mu  A^\mu\) 。當然，也許某一天實驗發現規範不變性是錯誤的，那有可能可以引入\(A_\mu  A^\mu \)項。
+                                    </p>
 
 
                                 <div class="post-meta">

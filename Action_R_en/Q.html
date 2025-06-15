@@ -98,10 +98,10 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>硬體導論</h1>
+                <h1>Action Principle (Relativistic)</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="./main.html">硬體導論</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">Action Principle (Relativistic)</a></li>
                   <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
@@ -118,69 +118,35 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>An Introduction to Hilbert Variation</h2>
                                     <h3></h3>
                                 </div>
                                 
-                                
-                                An Introduction to Hilbert Variation
-
 <p style="text-align:justify">
-    Within the framework of traditional general relativity, the connection \(\Gamma^
-ho_{
-u\sigma}\) adopts the assumptions of "metric compatibility" and "torsion-free." The former, "metric compatibility," essentially means that the metric remains unchanged during "parallel transport" along the connection \(\Gamma^
-ho_{
-u\sigma}\):
+    Within the framework of traditional general relativity, the connection \(\Gamma^\rho_{\nu\sigma}\) adopts the assumptions of "metric compatibility" and "torsion-free." The former, "metric compatibility," essentially means that the metric remains unchanged during "parallel transport" along the connection \(\Gamma^\rho_{\nu\sigma}\):
     \[
-    
-abla_eta g_{\mu
-u} = g_{\mu
-u;\gamma} = g_{\mu
-u,\gamma} - g_{lpha
-u} \Gamma^lpha_{\mu\gamma} - g_{lpha\mu} \Gamma^lpha_{
-u\gamma} = 0
+    \nabla_\beta g_{\mu\nu} = g_{\mu\nu;\gamma} = g_{\mu\nu,\gamma} - g_{\alpha\nu} \Gamma^\alpha_{\mu\gamma} - g_{\alpha\mu} \Gamma^\alpha_{\nu\gamma} = 0
     \]
     In simpler terms, the length of an object does not change when transported from point A to point B.
 </p>
 <p style="text-align:justify">
-    The latter, "torsion-free," assumes that the two lower indices of the connection \(\Gamma^
-ho_{
-u\sigma}\) are symmetric:
+    The latter, "torsion-free," assumes that the two lower indices of the connection \(\Gamma^\rho_{\nu\sigma}\) are symmetric:
     \[
-    \Gamma^
-ho_{
-u\sigma} = \Gamma^
-ho_{\sigma
-u}
+    \Gamma^\rho_{\nu\sigma} = \Gamma^\rho_{\sigma\nu}
     \]
-    Mathematically, there is a theorem that proves that given a metric distribution, the torsion-free connection \(\Gamma^
-ho_{
-u\sigma}\) is uniquely determined. Readers interested in the details can refer to Theorem 6.6 in Loring W. Tu's book <i>Differential Geometry: Connections, Curvature, and Characteristic Classes</i>.
+    Mathematically, there is a theorem that proves that given a metric distribution, the torsion-free connection \(\Gamma^\rho_{\nu\sigma}\) is uniquely determined. Readers interested in the details can refer to Theorem 6.6 in Loring W. Tu's book <i>Differential Geometry: Connections, Curvature, and Characteristic Classes</i>.
 </p>
 <p style="text-align:justify">
     These two conditions lead to the relationship between the connection and the metric:
     \[
-    \Gamma^lpha_{\mu\gamma} = rac{1}{2} g^{lpha
-u} \left( g_{
-u\mu,\gamma} + g_{
-u\gamma,\mu} - g_{\mu\gamma,
-u} 
-ight)
+    \Gamma^\alpha_{\mu\gamma} = \frac{1}{2} g^{\alpha\nu} \left( g_{\nu\mu,\gamma} + g_{\nu\gamma,\mu} - g_{\mu\gamma,\nu} \right)
     \]
-    This indicates that the connection \(\Gamma^
-ho_{
-u\sigma}\) is related to the first derivative of the metric. Furthermore, it can be shown that \(R^lpha_{\mueta
-u}\), \(R_{\mu
-u}\), and \(R\) are related to the second derivative of the metric.
+    This indicates that the connection \(\Gamma^\rho_{\nu\sigma}\) is related to the first derivative of the metric. Furthermore, it can be shown that \(R^\alpha_{\mu\beta\nu}\), \(R_{\mu\nu}\), and \(R\) are related to the second derivative of the metric.
 </p>
 <p style="text-align:justify">
     The gravitational Lagrangian density \(L_G\) is expressed as:
     \[
-    L_G = rac{c^4}{16\pi G} R \sqrt{-g} = L_G \left( g_{\mu
-u}, g_{\mu
-u,lpha}, g_{\mu
-u,lphaeta} 
-ight)
+    L_G = \frac{c^4}{16\pi G} R \sqrt{-g} = L_G \left( g_{\mu\nu}, g_{\mu\nu,\alpha}, g_{\mu\nu,\alpha\beta} \right)
     \]
     Hilbert derived Einstein's field equations through variation with respect to the metric. However, from this perspective, \(L_G\) depends on the second derivative of the metric.
 </p>
@@ -188,14 +154,9 @@ ight)
     As mentioned earlier, the Ostrogradsky instability implies that \(L\) should depend only on the first derivative of the field; otherwise, it may lead to unbounded energy. In the next section, we will use the Palatini variation, treating the connection field and the metric field as independent fields and varying them separately, which leads to the same conclusions.
 </p>
 <p style="text-align:justify">
-    In this case, since the connection field and the metric field are independent, \(R_{\mu
-u}\) only involves the first derivative of the connection. Therefore, \(L_G\) can be written as:
+    In this case, since the connection field and the metric field are independent, \(R_{\mu\nu}\) only involves the first derivative of the connection. Therefore, \(L_G\) can be written as:
     \[
-    L_G = rac{c^4}{16\pi G} g^{\mu
-u} R_{\mu
-u} \sqrt{-g} = L_G \left( g^{\mu
-u}, \Gamma^lpha_{\mu\gamma}, \Gamma^lpha_{\mu\gamma,eta} 
-ight)
+    L_G = \frac{c^4}{16\pi G} g^{\mu\nu} R_{\mu\nu} \sqrt{-g} = L_G \left( g^{\mu\nu}, \Gamma^\alpha_{\mu\gamma}, \Gamma^\alpha_{\mu\gamma,\beta} \right)
     \]
     This safely avoids the problem of second derivatives.
 </p>
@@ -203,10 +164,10 @@ ight)
 
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Action Principle (Relativistic)</a>
                                     </span>
                                 </div><!-- /.post-meta -->
                             

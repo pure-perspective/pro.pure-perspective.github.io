@@ -98,10 +98,10 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>硬體導論</h1>
+                <h1>Action Principle (Relativistic)</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="./main.html">硬體導論</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">Action Principle (Relativistic)</a></li>
                   <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
@@ -118,181 +118,101 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>Classical Field Theory</h2>
                                     <h3></h3>
                                 </div>
                                 
                                 
-                                Classical Field Theory
 <p style="text-align:justify">
-In classical field theory, the continuous field amplitude \(\eta\) is extended to classical field quantities, which can be scalar fields \(\phi\), vector fields \(V^\mu\), tensor fields \(T^{\mu
-u}\), and so on. Starting with a simple scalar field \(\phi =\phi (x^\mu  )\), which is a function of spacetime, we find the equation of motion for \(\phi\) using the variational principle. The action is written as:
-
-$$S=\int  \mathcal{L}[\phi ,\partial _\mu  \phi ] d^4 x $$
-
-Assuming the Lagrangian density \(\mathcal{L}\) is a function of \(\phi\) and \(\partial _\mu  \phi\), and varying \(\phi 	o \phi +\delta \phi\):
-
-$$\phi 	o \phi +\delta \phi 、\partial _\mu  \phi 	o \partial _\mu  \phi +\delta \partial _\mu  \phi $$
-
-<a href="../Image/PoLA/P37.png"><img src="../Image/PoLA/P37.png" alt="Substitute text" width=98% height="auto"></a><br>
-
-The variation of the action is:
-
-$$\delta S=\delta \int   \mathcal{L}[\phi ,\partial _\mu  \phi ] d^4 x =\int   {\partial \mathcal{L} \over \partial \phi}  \delta \phi +{\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}  \delta \partial _\mu  \phi  d^4 x $$
-$$=\int   {\partial \mathcal{L} \over \partial \phi}  \delta \phi -\partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )} 
-ight)\delta \phi  d^4 x +\int   \partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}  \delta \phi 
-ight)  d^4 x $$
-
-$$=\int   \left[{\partial \mathcal{L} \over \partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )} 
-ight)
-ight]\delta \phi  d^4 x + ∮_{\partial V}   {\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}  \delta \phi  d^3 x $$
-
-$$=\int   \left[{\partial \mathcal{L} \over \partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )} 
-ight)
-ight]\delta \phi  d^4 x +0$$
-
-Since \(\delta \phi\) is arbitrary, for any classical physical quantity \(\phi\), it must satisfy the Euler-Lagrange equation:
-
-$${\partial \mathcal{L} \over \partial \phi} -\partial _\mu  {\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}=0$$
-
-Similarly, we can return to the example of the continuous field \(\mathcal{L}={1 \over 2} 
-ho(\partial _t \eta )^2-{1 \over 2} Y( 
-abla \eta )^2\), which satisfies:
-
-$${\partial \mathcal{L} \over \partial \phi} -\partial _t {\partial \mathcal{L}\over\partial (\partial _t \phi ) }- 
-abla {\partial \mathcal{L}\over \partial ( 
-abla \phi ) }=0$$
-
-This quickly yields:
-
-$$-
-ho\partial _t^2 \eta +Y 
-abla ^2 \eta =0	o  
-abla ^2 \eta ={1\over v^2}  \partial _t^2 \eta $$
-
-If we generalize the scalar field \(\phi\) to vector fields, such as 4-displacement \(x^
-u\) or 4-potential \(A^
-u\), the above variation only needs to replace \(\phi\) with \(A^
-u\), yielding:
-
-$${\partial \mathcal{L}\over \partial x^
-u}-{d\over d	au}  {\partial \mathcal{L}\over (\partial U^
-u )}=0 \quad (Lorentz-force)$$
-$${\partial \mathcal{L}\over \partial A^
-u  }-\partial _\mu  {\partial \mathcal{L}\over\partial (\partial _\mu  A^
-u  ) }=0 \quad (Field-equation)$$
-
-Returning to the action for the electromagnetic field:
-
-$$S=S_P+S_{PF}+S_F$$
-$$=-\int   P_\mu  U^\mu  d	au  -\int   {e\over c}  A_\mu  U^\mu  d	au  -\int   {1 \over 16 \pi c} F_{\mu 
-u}  F^{\mu 
-u}   d^4 x $$
-$$=\int   -
-ho_m c-{1 \over c^2}  A_\mu  J^\mu -{1 \over 16 \pi c} F_{\mu 
-u}  F^{\mu 
-u}   d^4 x $$
-
-First, we calculate the Lorentz force:
-
-$${\partial \mathcal{L}\over \partial x^
-u}-{d\over d	au}  {\partial \mathcal{L}\over (\partial U^
-u )}=0$$
-
-The only terms related to \(x^
-u\) are in \(S_P\) and \(S_{PF}\), so we handle them:
-
-$$\mathcal{L}=-P_\mu  U^\mu -{e\over c}  A_\mu  U^\mu $$
-
-$${\partial \left(-{e\over c}  A_\mu  U^\mu  
-ight)\over\partial x^
-u} -{d\over d	au}  {\partial \left(-P_\mu  U^\mu -{e\over c}  A_\mu  U^\mu  
-ight)\over\partial U^
-u  }=0$$
-
-$$	o -{e\over c}  U^\mu  (\partial _
-u A_\mu  )-{d\over d	au}  \left(-P_
-u-{e\over c}  A_
-u  
-ight)=0$$
-$$	o-{e\over c}  U^\mu  (\partial _
-u A_\mu  )+{dP_
-u \over d	au } +{e\over c}   {dA_
-u \over d	au } =0$$
-$$	o -{e\over c}  U^\mu  (\partial _
-u A_\mu  )+{dP_
-u \over d	au } +{e\over c}   {\partial A_
-u \over \partial x^\mu  }  {dx^\mu \over d	au} =0$$
-$$	o -{e\over c}  U^\mu  (\partial _
-u A_\mu  )+{dP_
-u \over d	au } +{e\over c}  U^\mu  (\partial _\mu  A_
-u  )=0$$
-$$	o {dP_
-u \over d	au } +{e\over c}  U^\mu  (\partial _\mu  A_
-u -\partial _
-u A_\mu  )=0$$
-$$	o {dP_\mu \over d	au } =-{e\over c}  U^
-u F_{
-u\mu} $$
-$$	o {dP_\mu \over d	au } ={e\over c}  F_{\mu 
-u} U^
-u$$
-
-We quickly obtain the Lorentz force. Next, we handle the field equation:
-
-$$\partial ^\mu  {\partial \mathcal{L}\over \partial (\partial ^\mu  A^
-u  ) }-{\partial \mathcal{L} \over \partial A^
-u   }=0$$
-$$\partial ^\mu  \left[-{1 \over 8 \pi c} F_{lphaeta}   {\partial F^{lphaeta}\over \partial (\partial ^\mu  A^
-u)  } 
-ight]+{1 \over c^2}  J_
-u=0$$
-
-Since:
-
-$${\partial F^{lphaeta} \over \partial (\partial ^\mu  A^
-u  )} ={\partial (\partial ^lpha A^eta -\partial ^eta  A^lpha ) \over \partial (\partial ^\mu  A^
-u  )}= \delta ^lpha _\mu   \delta ^eta  _
-u- \delta ^eta  _\mu   \delta ^lpha _
-u$$
-
-We have:
-
-$$\partial ^\mu  \left[-{1 \over 8 \pi c} F_{lphaeta}  ( \delta ^lpha _\mu   \delta ^eta  _nu- \delta ^eta  _\mu   \delta ^lpha _
-u )
-ight]+{1 \over c^2}  J_
-u=0$$
-$$\partial ^\mu  \left[-{1 \over 8 \pi c} F_{\mu
-u}+{1 \over 8 \pi c} F_{
-u\mu}  
-ight]+{1 \over c^2}  J_
-u=0$$
-
-Since \(-F_{\mu
-u}=F_{
-u\mu}\):
-
-$$\partial ^\mu  \left[{1 \over 4 \pi c} F_{
-u\mu}  
-ight]+{1 \over c^2}  J_
-u=0$$
-$$\partial _
-u  F^{\mu 
-u} =-{4\pi \over c} J^\mu $$
-
-</p>
-
-
-
-
+    In classical field theory, the continuous field amplitude \(\eta\) is extended to classical field quantities, which can be scalar fields \(\phi\), vector fields \(V^\mu\), tensor fields \(T^{\mu\nu}\), and so on. Starting with a simple scalar field \(\phi =\phi (x^\mu  )\), which is a function of spacetime, we find the equation of motion for \(\phi\) using the variational principle. The action is written as:
+    
+    $$S=\int  \mathcal{L}[\phi ,\partial _\mu  \phi ] d^4 x $$
+    
+    Assuming the Lagrangian density \(\mathcal{L}\) is a function of \(\phi\) and \(\partial _\mu  \phi\), and varying \(\phi \to \phi +\delta \phi\):
+    
+    $$\phi \to \phi +\delta \phi 、\partial _\mu  \phi \to \partial _\mu  \phi +\delta \partial _\mu  \phi $$
+    
+    <a href="../Image/PoLA/P37.png"><img src="../Image/PoLA/P37.png" alt="Substitute text" width=98% height="auto"></a><br>
+    
+    The variation of the action is:
+    
+    $$\delta S=\delta \int   \mathcal{L}[\phi ,\partial _\mu  \phi ] d^4 x =\int   {\partial \mathcal{L} \over \partial \phi}  \delta \phi +{\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}  \delta \partial _\mu  \phi  d^4 x $$
+    $$=\int   {\partial \mathcal{L} \over \partial \phi}  \delta \phi -\partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )} \right)\delta \phi  d^4 x +\int   \partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}  \delta \phi \right)  d^4 x $$
+    
+    $$=\int   \left[{\partial \mathcal{L} \over \partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )} \right)\right]\delta \phi  d^4 x + ∮_{\partial V}   {\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}  \delta \phi  d^3 x $$
+    
+    $$=\int   \left[{\partial \mathcal{L} \over \partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )} \right)\right]\delta \phi  d^4 x +0$$
+    
+    Since \(\delta \phi\) is arbitrary, for any classical physical quantity \(\phi\), it must satisfy the Euler-Lagrange equation:
+    
+    $${\partial \mathcal{L} \over \partial \phi} -\partial _\mu  {\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}=0$$
+    
+    Similarly, we can return to the example of the continuous field \(\mathcal{L}={1 \over 2} \rho(\partial _t \eta )^2-{1 \over 2} Y( \nabla \eta )^2\), which satisfies:
+    
+    $${\partial \mathcal{L} \over \partial \phi} -\partial _t {\partial \mathcal{L}\over\partial (\partial _t \phi ) }- \nabla {\partial \mathcal{L}\over \partial ( \nabla \phi ) }=0$$
+    
+    This quickly yields:
+    
+    $$-\rho\partial _t^2 \eta +Y \nabla ^2 \eta =0\to  \nabla ^2 \eta ={1\over v^2}  \partial _t^2 \eta $$
+    
+    If we generalize the scalar field \(\phi\) to vector fields, such as 4-displacement \(x^\nu\) or 4-potential \(A^\nu\), the above variation only needs to replace \(\phi\) with \(A^\nu\), yielding:
+    
+    $${\partial \mathcal{L}\over \partial x^\nu}-{d\over d\tau}  {\partial \mathcal{L}\over (\partial U^\nu )}=0 \quad (Lorentz-force)$$
+    $${\partial \mathcal{L}\over \partial A^\nu  }-\partial _\mu  {\partial \mathcal{L}\over\partial (\partial _\mu  A^\nu  ) }=0 \quad (Field-equation)$$
+    
+    Returning to the action for the electromagnetic field:
+    
+    $$S=S_P+S_{PF}+S_F$$
+    $$=-\int   P_\mu  U^\mu  d\tau  -\int   {e\over c}  A_\mu  U^\mu  d\tau  -\int   {1 \over 16 \pi c} F_{\mu \nu}  F^{\mu \nu}   d^4 x $$
+    $$=\int   -\rho_m c-{1 \over c^2}  A_\mu  J^\mu -{1 \over 16 \pi c} F_{\mu \nu}  F^{\mu \nu}   d^4 x $$
+    
+    First, we calculate the Lorentz force:
+    
+    $${\partial \mathcal{L}\over \partial x^\nu}-{d\over d\tau}  {\partial \mathcal{L}\over (\partial U^\nu )}=0$$
+    
+    The only terms related to \(x^\nu\) are in \(S_P\) and \(S_{PF}\), so we handle them:
+    
+    $$\mathcal{L}=-P_\mu  U^\mu -{e\over c}  A_\mu  U^\mu $$
+    
+    $${\partial \left(-{e\over c}  A_\mu  U^\mu  \right)\over\partial x^\nu} -{d\over d\tau}  {\partial \left(-P_\mu  U^\mu -{e\over c}  A_\mu  U^\mu  \right)\over\partial U^\nu  }=0$$
+    
+    $$\to -{e\over c}  U^\mu  (\partial _\nu A_\mu  )-{d\over d\tau}  \left(-P_\nu-{e\over c}  A_\nu  \right)=0$$
+    $$\to-{e\over c}  U^\mu  (\partial _\nu A_\mu  )+{dP_\nu \over d\tau } +{e\over c}   {dA_\nu \over d\tau } =0$$
+    $$\to -{e\over c}  U^\mu  (\partial _\nu A_\mu  )+{dP_\nu \over d\tau } +{e\over c}   {\partial A_\nu \over \partial x^\mu  }  {dx^\mu \over d\tau} =0$$
+    $$\to -{e\over c}  U^\mu  (\partial _\nu A_\mu  )+{dP_\nu \over d\tau } +{e\over c}  U^\mu  (\partial _\mu  A_\nu  )=0$$
+    $$\to {dP_\nu \over d\tau } +{e\over c}  U^\mu  (\partial _\mu  A_\nu -\partial _\nu A_\mu  )=0$$
+    $$\to {dP_\mu \over d\tau } =-{e\over c}  U^\nu F_{\nu\mu} $$
+    $$\to {dP_\mu \over d\tau } ={e\over c}  F_{\mu \nu} U^\nu$$
+    
+    We quickly obtain the Lorentz force. Next, we handle the field equation:
+    
+    $$\partial ^\mu  {\partial \mathcal{L}\over \partial (\partial ^\mu  A^\nu  ) }-{\partial \mathcal{L} \over \partial A^\nu   }=0$$
+    $$\partial ^\mu  \left[-{1 \over 8 \pi c} F_{\alpha\beta}   {\partial F^{\alpha\beta}\over \partial (\partial ^\mu  A^\nu)  } \right]+{1 \over c^2}  J_\nu=0$$
+    
+    Since:
+    
+    $${\partial F^{\alpha\beta} \over \partial (\partial ^\mu  A^\nu  )} ={\partial (\partial ^\alpha A^\beta -\partial ^\beta  A^\alpha ) \over \partial (\partial ^\mu  A^\nu  )}= \delta ^\alpha _\mu   \delta ^\beta  _\nu- \delta ^\beta  _\mu   \delta ^\alpha _\nu$$
+    
+    We have:
+    
+    $$\partial ^\mu  \left[-{1 \over 8 \pi c} F_{\alpha\beta}  ( \delta ^\alpha _\mu   \delta ^\beta  _nu- \delta ^\beta  _\mu   \delta ^\alpha _\nu )\right]+{1 \over c^2}  J_\nu=0$$
+    $$\partial ^\mu  \left[-{1 \over 8 \pi c} F_{\mu\nu}+{1 \over 8 \pi c} F_{\nu\mu}  \right]+{1 \over c^2}  J_\nu=0$$
+    
+    Since \(-F_{\mu\nu}=F_{\nu\mu}\):
+    
+    $$\partial ^\mu  \left[{1 \over 4 \pi c} F_{\nu\mu}  \right]+{1 \over c^2}  J_\nu=0$$
+    $$\partial _\nu  F^{\mu \nu} =-{4\pi \over c} J^\mu $$
+    
+    </p>
+    
 
 
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Action Principle (Relativistic)</a>
                                     </span>
                                 </div><!-- /.post-meta -->
                             

@@ -98,10 +98,10 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>硬體導論</h1>
+                <h1>Action Principle (Relativistic)</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="./main.html">硬體導論</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">Action Principle (Relativistic)</a></li>
                   <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
@@ -118,141 +118,103 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>Noether Theorem in Field Theory</h2>
                                     <h3></h3>
                                 </div>
                                 
                                 
-                                Noether Theorem in Field Theory
 <p style="text-align:justify">
-When discussing variational principles, Noether's theorem is an essential companion. Noether's theorem states that if a system's Lagrangian \(\phi\) possesses a continuous transformation \(\phi 	o \phi +\delta lpha\) that leaves the action invariant (\(\delta S=0\)), there exists a corresponding conserved current. This can be applied to:
-
-$$Time-translation-invariance \leftrightarrow  Energy-conservation$$
-$$Spatial-translation-invariance \leftrightarrow  Momentum-conservation$$
-
-The generalized proof is as follows: Given the Lagrangian density \(\mathcal{L}[\phi (x^lpha ),\partial _\mu  \phi (x^lpha ),x^\mu  ]\), we now consider variations with respect to both the field \(\phi\) and spacetime coordinates \(x^\mu\):
-
-$$x^\mu 	o  ar{x} ^\mu =x^\mu +\delta x^\mu $$
-$$\phi 	o ar{\phi}=\phi +\delta \phi $$
-
-However, since \(\phi =\phi (x^lpha )\) is a function of spacetime, after the variations of both \(\phi\) and \(x^\mu\), \(\phi (x^lpha )	o ar{\phi} ( ar{x} ^lpha )\) can be expressed as \(ar{\phi} ( ar{x} ^lpha )\equiv \phi (x^lpha )+\Delta\phi \), where:
-
-$$\Delta\phi =ar{\phi} ( ar{x} ^lpha )-\phi (x^lpha )$$
-$$=ar{\phi} ( ar{x} ^lpha )-\phi ( ar{x} ^lpha )+\phi ( ar{x} ^lpha )-\phi (x^lpha )$$
-$$=\delta \phi +{\partial \phi \over \partial x^lpha } \delta x^lpha$$
-
-Noether's theorem examines the difference in the action after variation:
-
-$$\delta S=\delta \int   \mathcal{L}[\phi (x^lpha ),\partial _\mu  \phi (x^lpha ),x^\mu  ] d^4 x $$
-$$=\int   \mathcal{L}[ar{\phi} ( ar{x} ^lpha ),\partial _\mu  ar{\phi} ( ar{x} ^lpha ), ar{x} ^\mu  ] d^4 x -\int   \mathcal{L}[\phi (x^lpha ),\partial _\mu  \phi (x^lpha ),x^\mu  ] d^4 x $$
-
-It is clear that even the integral's 4-volume \(d^4 ar{x}\) changes. Consider the differential product:
-
-\(\delta S=\delta \int   \mathcal{L}d^4 x =\int   \delta\mathcal{L} d ^4 x +\int  \mathcal{L}\delta d^4 x \)
-
-The first term, \(\delta \mathcal{L}\), must be handled with care:
-
-$$\delta \mathcal{L}=\mathcal{L}[ar{\phi} ( ar{x} ^lpha ),\partial _\mu  ar{\phi} ( ar{x} ^lpha ), ar{x} ^\mu  ]-\mathcal{L}[\phi (x^lpha ),\partial _\mu  \phi (x^lpha ),x^\mu  ]$$
-$$=\mathcal{L}[ar{\phi} ( ar{x} ^lpha ),\partial _\mu  ar{\phi} ( ar{x} ^lpha ), ar{x} ^\mu  ]-\mathcal{L}[\phi ( ar{x} ^lpha ),\partial _\mu  \phi ( ar{x} ^lpha ), ar{x} ^\mu  ]+\mathcal{L}[\phi ( ar{x} ^lpha ),\partial _\mu  \phi ( ar{x} ^lpha ), ar{x} ^\mu  ]-\mathcal{L}[\phi (x^lpha ),\partial _\mu  \phi (x^lpha ),x^\mu  ]$$
-$$={\mathcal{L}[\phi +\delta \phi ,\partial _\mu  \phi +\delta (\partial _\mu  \phi ), ar{x} ^\mu  ]-L[\phi ,\partial _\mu  \phi , ar{x} ^\mu  ]}+{\mathcal{L}[\phi ,\partial _\mu  \phi , ar{x} ^\mu  ]-L[\phi ,\partial _\mu  \phi ,x^\mu  ]}$$
-$$={{\partial \mathcal{L}\over\partial \phi}  \delta \phi +{\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta (\partial _\mu  \phi )}+{{\partial \mathcal{L}\over \partial x^\mu  } \delta x^\mu  }$$
-
-Using \(\partial _\mu \) to bring to the front:
-
-$$={{\partial \mathcal{L}\over\partial \phi}  \delta \phi -\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )} 
-ight)\delta \phi +\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi 
-ight)}+{{\partial \mathcal{L}\over \partial x^\mu  } \delta x^\mu  }$$
-
-Note that \(\left[{\partial \mathcal{L}\over\partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )} 
-ight)
-ight]\delta \phi\) is the Euler-Lagrange equation, which equals zero. Therefore:
-
-$$\delta \mathcal{L}=\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi 
-ight)+\partial _\mu  \mathcal{L}*\delta x^\mu $$
-
-The second term, \(\delta d^4 x\), involves the Jacobian:
-
-$$\int  \mathcal{L}\delta d^4 x =\int  \mathcal{L}d^4 ar{x}  -\int  \mathcal{L}d^4 x $$
-$$d^4 ar{x}=J\left({\partial  ar{x} ^\mu \over\partial x^
-u  }
-ight) d^4 x$$
-
-\(J\left({\partial  ar{x} ^\mu \over\partial x^
-u  }
-ight)\) is the Jacobian determinant:
-
-$${\partial  ar{x} ^\mu \over\partial x^
-u  }={\partial (x^\mu +\delta x^\mu  )\over\partial x^
-u }= \delta ^\mu  _
-u +\partial _
-u  \delta x^\mu $$
-
-The Jacobian determinant is calculated as:
-
-$$J\left({\partial  ar{x} ^\mu \over\partial x^
-u  }
-ight)=1+\partial _\mu  \delta x^\mu $$
-
-So:
-
-$$\int  \mathcal{L}\delta d^4 x =\int  \mathcal{L}*\partial  _\mu  \delta x^\mu   d^4 x $$
-
-Combining the two terms:
-
-$$\delta S=\delta \int   \mathcal{L}d^4 x =\int   \left[\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi 
-ight)+\partial _\mu  \mathcal{L}*\delta x^\mu  
-ight] d^4 x +\int   \left[\mathcal{L} *\partial  _\mu  \delta x^\mu  
-ight]  d^4 x $$
-
-$$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi 
-ight)+\partial _\mu  (\mathcal{L}\delta x^\mu  )  d^4 x $$
-$$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi +\mathcal{L}\delta x^\mu  
-ight)  d^4 x $$
-$$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Delta\phi -\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}
-ight)\delta x^lpha 
-ight)  d^4 x$$
-
-Set
-
-$$\left(egin{matrix} \delta x^lpha \ \Delta\phi \end{matrix}
-ight)=arepsilon\left(egin{matrix} Χ^lpha \ \Psi \end{matrix}
-ight)$$
-
-\(Χ^lpha\) and \(\Psi\) are symmetry generators:
-
-$$\delta S=arepsilon \int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Psi-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}
-ight) Χ^lpha 
-ight)  d^4 x =0$$
-
-Since \(arepsilon \) is arbitrary:
-
-$$\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Psi-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}
-ight) Χ^lpha 
-ight)\equiv \partial _\mu  N^\mu =0$$
-
-Define the Noether current:
-
-$$N^\mu \equiv {\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Psi-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}
-ight) Χ^lpha $$
-
-Where \({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}\) corresponds to the conserved current for the symmetry transformation \(\Psi\) of the field \(\phi\), and \(\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}
-ight)\) corresponds to the conserved current under the transformation \(Χ^lpha\) of spacetime \(x^\mu\).
-
-<br><br>
-
-For vector fields \(lpha^
-u\):
-
-$$N^\mu \equiv {\partial \mathcal{L}\over\partial (\partial _\mu  lpha^
-u )}  \Psi^
-u-\left({\partial \mathcal{L}\over\partial (\partial _\mu  lpha^
-u )}  \partial _lpha lpha^
-u- \delta ^\mu  _lpha \mathcal{L}
-ight) Χ^lpha $$
-</p>
-
-
-
+    When discussing variational principles, Noether's theorem is an essential companion. Noether's theorem states that if a system's Lagrangian \(\phi\) possesses a continuous transformation \(\phi \to \phi +\delta \alpha\) that leaves the action invariant (\(\delta S=0\)), there exists a corresponding conserved current. This can be applied to:
+    
+    $$Time-translation-invariance \leftrightarrow  Energy-conservation$$
+    $$Spatial-translation-invariance \leftrightarrow  Momentum-conservation$$
+    
+    The generalized proof is as follows: Given the Lagrangian density \(\mathcal{L}[\phi (x^\alpha ),\partial _\mu  \phi (x^\alpha ),x^\mu  ]\), we now consider variations with respect to both the field \(\phi\) and spacetime coordinates \(x^\mu\):
+    
+    $$x^\mu \to  \bar{x} ^\mu =x^\mu +\delta x^\mu $$
+    $$\phi \to \bar{\phi}=\phi +\delta \phi $$
+    
+    However, since \(\phi =\phi (x^\alpha )\) is a function of spacetime, after the variations of both \(\phi\) and \(x^\mu\), \(\phi (x^\alpha )\to \bar{\phi} ( \bar{x} ^\alpha )\) can be expressed as \(\bar{\phi} ( \bar{x} ^\alpha )\equiv \phi (x^\alpha )+\Delta\phi \), where:
+    
+    $$\Delta\phi =\bar{\phi} ( \bar{x} ^\alpha )-\phi (x^\alpha )$$
+    $$=\bar{\phi} ( \bar{x} ^\alpha )-\phi ( \bar{x} ^\alpha )+\phi ( \bar{x} ^\alpha )-\phi (x^\alpha )$$
+    $$=\delta \phi +{\partial \phi \over \partial x^\alpha } \delta x^\alpha$$
+    
+    Noether's theorem examines the difference in the action after variation:
+    
+    $$\delta S=\delta \int   \mathcal{L}[\phi (x^\alpha ),\partial _\mu  \phi (x^\alpha ),x^\mu  ] d^4 x $$
+    $$=\int   \mathcal{L}[\bar{\phi} ( \bar{x} ^\alpha ),\partial _\mu  \bar{\phi} ( \bar{x} ^\alpha ), \bar{x} ^\mu  ] d^4 x -\int   \mathcal{L}[\phi (x^\alpha ),\partial _\mu  \phi (x^\alpha ),x^\mu  ] d^4 x $$
+    
+    It is clear that even the integral's 4-volume \(d^4 \bar{x}\) changes. Consider the differential product:
+    
+    \(\delta S=\delta \int   \mathcal{L}d^4 x =\int   \delta\mathcal{L} d ^4 x +\int  \mathcal{L}\delta d^4 x \)
+    
+    The first term, \(\delta \mathcal{L}\), must be handled with care:
+    
+    $$\delta \mathcal{L}=\mathcal{L}[\bar{\phi} ( \bar{x} ^\alpha ),\partial _\mu  \bar{\phi} ( \bar{x} ^\alpha ), \bar{x} ^\mu  ]-\mathcal{L}[\phi (x^\alpha ),\partial _\mu  \phi (x^\alpha ),x^\mu  ]$$
+    $$=\mathcal{L}[\bar{\phi} ( \bar{x} ^\alpha ),\partial _\mu  \bar{\phi} ( \bar{x} ^\alpha ), \bar{x} ^\mu  ]-\mathcal{L}[\phi ( \bar{x} ^\alpha ),\partial _\mu  \phi ( \bar{x} ^\alpha ), \bar{x} ^\mu  ]+\mathcal{L}[\phi ( \bar{x} ^\alpha ),\partial _\mu  \phi ( \bar{x} ^\alpha ), \bar{x} ^\mu  ]-\mathcal{L}[\phi (x^\alpha ),\partial _\mu  \phi (x^\alpha ),x^\mu  ]$$
+    $$={\mathcal{L}[\phi +\delta \phi ,\partial _\mu  \phi +\delta (\partial _\mu  \phi ), \bar{x} ^\mu  ]-L[\phi ,\partial _\mu  \phi , \bar{x} ^\mu  ]}+{\mathcal{L}[\phi ,\partial _\mu  \phi , \bar{x} ^\mu  ]-L[\phi ,\partial _\mu  \phi ,x^\mu  ]}$$
+    $$={{\partial \mathcal{L}\over\partial \phi}  \delta \phi +{\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta (\partial _\mu  \phi )}+{{\partial \mathcal{L}\over \partial x^\mu  } \delta x^\mu  }$$
+    
+    Using \(\partial _\mu \) to bring to the front:
+    
+    $$={{\partial \mathcal{L}\over\partial \phi}  \delta \phi -\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )} \right)\delta \phi +\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi \right)}+{{\partial \mathcal{L}\over \partial x^\mu  } \delta x^\mu  }$$
+    
+    Note that \(\left[{\partial \mathcal{L}\over\partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )} \right)\right]\delta \phi\) is the Euler-Lagrange equation, which equals zero. Therefore:
+    
+    $$\delta \mathcal{L}=\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi \right)+\partial _\mu  \mathcal{L}*\delta x^\mu $$
+    
+    The second term, \(\delta d^4 x\), involves the Jacobian:
+    
+    $$\int  \mathcal{L}\delta d^4 x =\int  \mathcal{L}d^4 \bar{x}  -\int  \mathcal{L}d^4 x $$
+    $$d^4 \bar{x}=J\left({\partial  \bar{x} ^\mu \over\partial x^\nu  }\right) d^4 x$$
+    
+    \(J\left({\partial  \bar{x} ^\mu \over\partial x^\nu  }\right)\) is the Jacobian determinant:
+    
+    $${\partial  \bar{x} ^\mu \over\partial x^\nu  }={\partial (x^\mu +\delta x^\mu  )\over\partial x^\nu }= \delta ^\mu  _\nu +\partial _\nu  \delta x^\mu $$
+    
+    The Jacobian determinant is calculated as:
+    
+    $$J\left({\partial  \bar{x} ^\mu \over\partial x^\nu  }\right)=1+\partial _\mu  \delta x^\mu $$
+    
+    So:
+    
+    $$\int  \mathcal{L}\delta d^4 x =\int  \mathcal{L}*\partial  _\mu  \delta x^\mu   d^4 x $$
+    
+    Combining the two terms:
+    
+    $$\delta S=\delta \int   \mathcal{L}d^4 x =\int   \left[\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi \right)+\partial _\mu  \mathcal{L}*\delta x^\mu  \right] d^4 x +\int   \left[\mathcal{L} *\partial  _\mu  \delta x^\mu  \right]  d^4 x $$
+    
+    $$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi \right)+\partial _\mu  (\mathcal{L}\delta x^\mu  )  d^4 x $$
+    $$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi +\mathcal{L}\delta x^\mu  \right)  d^4 x $$
+    $$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Delta\phi -\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _\alpha \phi - \delta ^\mu  _\alpha \mathcal{L}\right)\delta x^\alpha \right)  d^4 x$$
+    
+    Set
+    
+    $$\left(\begin{matrix} \delta x^\alpha \\ \Delta\phi \end{matrix}\right)=\varepsilon\left(\begin{matrix} Χ^\alpha \\ \Psi \end{matrix}\right)$$
+    
+    \(Χ^\alpha\) and \(\Psi\) are symmetry generators:
+    
+    $$\delta S=\varepsilon \int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Psi-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _\alpha \phi - \delta ^\mu  _\alpha \mathcal{L}\right) Χ^\alpha \right)  d^4 x =0$$
+    
+    Since \(\varepsilon \) is arbitrary:
+    
+    $$\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Psi-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _\alpha \phi - \delta ^\mu  _\alpha \mathcal{L}\right) Χ^\alpha \right)\equiv \partial _\mu  N^\mu =0$$
+    
+    Define the Noether current:
+    
+    $$N^\mu \equiv {\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Psi-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _\alpha \phi - \delta ^\mu  _\alpha \mathcal{L}\right) Χ^\alpha $$
+    
+    Where \({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}\) corresponds to the conserved current for the symmetry transformation \(\Psi\) of the field \(\phi\), and \(\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _\alpha \phi - \delta ^\mu  _\alpha \mathcal{L}\right)\) corresponds to the conserved current under the transformation \(Χ^\alpha\) of spacetime \(x^\mu\).
+    
+    <br><br>
+    
+    For vector fields \(\alpha^\nu\):
+    
+    $$N^\mu \equiv {\partial \mathcal{L}\over\partial (\partial _\mu  \alpha^\nu )}  \Psi^\nu-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \alpha^\nu )}  \partial _\alpha \alpha^\nu- \delta ^\mu  _\alpha \mathcal{L}\right) Χ^\alpha $$
+    </p>
+    
+    
 
 
 
@@ -260,10 +222,10 @@ ight) Χ^lpha $$
 
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                        <a href="#"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Action Principle (Relativistic)</a>
                                     </span>
                                 </div><!-- /.post-meta -->
                             

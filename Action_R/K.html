@@ -118,143 +118,60 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>古典場論</h2>
                                     <h3></h3>
                                 </div>
                                 
                                 
-                                古典場論
 <p style="text-align:justify">
-在古典場論中，物理學將連續場的振幅\(\eta\) 推廣到古典場的物理量，可以是純量場\(\phi\) 、向量場\(V^\mu\) 、張量場\(T^{\mu
-u}\)等等。先可慮簡單的純量場\(\phi =\phi (x^\mu  )\)是時空函數，通過Variational principle找到\(\phi\) 的EoM。先寫下Action，假設Lagrangian dendity \(\mathcal{L}\)是\(\phi\) ,\(\partial _\mu  \phi\) 的函數，並通過\(\phi 	o \phi +\delta \phi \)的變分
-$$S=\int  \mathcal{L}[\phi ,\partial _\mu  \phi ] d^4 x $$
-$$\phi 	o \phi +\delta \phi 、\partial _\mu  \phi 	o \partial _\mu  \phi +\delta \partial _\mu  \phi $$
-<a href="../Image/PoLA/P37.png"><img src="../Image/PoLA/P37.png" alt="取代文字" width=98% height="auto"></a><br>
-$$\delta S=\delta \int   \mathcal{L}[\phi ,\partial _\mu  \phi ] d^4 x =\int   {\partial \mathcal{L} \over \partial \phi}  \delta \phi +{\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}  \delta \partial _\mu  \phi  d^4 x $$
-$$=\int   {\partial \mathcal{L} \over \partial \phi}  \delta \phi -\partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )} 
-ight)\delta \phi  d^4 x +\int   \partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}  \delta \phi 
-ight)  d^4 x $$
-$$=\int   \left[{\partial \mathcal{L} \over \partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )} 
-ight)
-ight]\delta \phi  d^4 x + ∮_{\partial V}   {\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}  \delta \phi  d^3 x $$
-$$=\int   \left[{\partial \mathcal{L} \over \partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )} 
-ight)
-ight]\delta \phi  d^4 x +0$$
-因為\(\delta \phi\) 是任意，所以對任何古典物理量\(\phi\) ，必須滿足Euler-Lagrange eq
-$${\partial \mathcal{L} \over \partial \phi} -\partial _\mu  {\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}=0$$
-同樣的，我們可以回到連續場的例子，\(\mathcal{L}={1 \over 2} 
-ho(\partial _t \eta )^2-{1 \over 2} Y( 
-abla \eta )^2\)，滿足
-$${\partial \mathcal{L} \over \partial \phi} -\partial _t {\partial \mathcal{L}\over\partial (\partial _t \phi ) }- 
-abla {\partial \mathcal{L}\over \partial ( 
-abla \phi ) }=0$$
-可以迅速得到
-$$-
-ho\partial _t^2 \eta +Y 
-abla ^2 \eta =0	o  
-abla ^2 \eta ={1\over v^2}  \partial _t^2 \eta $$
-如果我們將純量場\phi 推廣成向量場，例如4-displacement \(x^
-u\) 、4-potential \(A^
-u\) ，剛剛的變分只需將\(\phi\) 改寫成\(A^
-u\) ，即可得
-$${\partial \mathcal{L}\over \partial x^
-u}-{d\over d	au}  {\partial \mathcal{L}\over (\partial U^
-u )}=0:Lorentz-force$$
-$${\partial \mathcal{L}\over \partial A^
-u  }-\partial _\mu  {\partial \mathcal{L}\over\partial (\partial _\mu  A^
-u  ) }=0:Field-equation$$
-回到電磁場的Action
-$$S=S_P+S_{PF}+S_F$$
-$$=-\int   P_\mu  U^\mu  d	au  -\int   {e\over c}  A_\mu  U^\mu  d	au  -\int   {1 \over 16 \pi c} F_{\mu 
-u}  F^{\mu 
-u}   d^4 x $$
-$$=\int   -
-ho_m c-{1 \over c^2}  A_\mu  J^\mu -{1 \over 16 \pi c} F_{\mu 
-u}  F^{\mu 
-u}   d^4 x $$
-先計算Lorentz force
-$${\partial \mathcal{L}\over \partial x^
-u}-{d\over d	au}  {\partial \mathcal{L}\over (\partial U^
-u )}=0$$
-跟\(x^
-u\)有關的只有\(S_P\) 、\(S_{PF}\)，所以處理
-$$\mathcal{L}=-P_\mu  U^\mu -{e\over c}  A_\mu  U^\mu $$
-$${\partial \left(-{e\over c}  A_\mu  U^\mu  
-ight)\over \partial x^
-u }-{d\over d	au}  {\partial \left(-P_\mu  U^\mu -{e\over c}  A_\mu  U^\mu  
-ight) \over \partial U^
-u  }=0$$
-$$	o -{e\over c}  U^\mu  (\partial _
-u A_\mu  )-{d\over d	au}  \left(-P_
-u-{e\over c}  A_
-u  
-ight)=0$$
-$$	o-{e\over c}  U^\mu  (\partial _
-u A_\mu  )+{dP_
-u \over d	au } +{e\over c}   {dA_
-u \over d	au } =0$$
-$$	o -{e\over c}  U^\mu  (\partial _
-u A_\mu  )+{dP_
-u \over d	au } +{e\over c}   {\partial A_
-u \over \partial x^\mu  }  {dx^\mu \over d	au} =0$$
-$$	o -{e\over c}  U^\mu  (\partial _
-u A_\mu  )+{dP_
-u \over d	au } +{e\over c}  U^\mu  (\partial _\mu  A_
-u  )=0$$
-$$	o {dP_
-u \over d	au } +{e\over c}  U^\mu  (\partial _\mu  A_
-u -\partial _
-u A_\mu  )=0$$
-$$	o {dP_
-u \over d	au } +{e\over c}  U^\mu  F_{\mu
-u}=0$$
-$$	o {dP_\mu \over d	au } =-{e\over c}  U^
-u F_{
-u\mu} $$
-$$	o {dP_\mu \over d	au } ={e\over c}  F_{\mu 
-u} U^
-u$$
-迅速得到Lorentz force。<br>
-再來處理Field equation，
-$$\partial ^\mu  {\partial \mathcal{L}\over \partial (\partial ^\mu  A^
-u  ) }-{\partial \mathcal{L} \over \partial A^
-u   }=0$$
-$$\partial ^\mu  \left[-{1 \over 8 \pi c} F_{lphaeta}   {\partial F^{lphaeta}\over \partial (\partial ^\mu  A^
-u)  } 
-ight]+{1 \over c^2}  J_
-u=0$$
-因為
-$${\partial F^{lphaeta} \over \partial (\partial ^\mu  A^
-u  )} ={\partial (\partial ^lpha A^eta -\partial ^eta  A^lpha ) \over \partial (\partial ^\mu  A^
-u  )}= \delta ^lpha _\mu   \delta ^eta  _
-u- \delta ^eta  _\mu   \delta ^lpha _
-u$$
-$$\partial ^\mu  \left[-{1 \over 8 \pi c} F_{lphaeta}  ( \delta ^lpha _\mu   \delta ^eta  _
-u- \delta ^eta  _\mu   \delta ^lpha _
-u )
-ight]+{1 \over c^2}  J_
-u=0$$
-$$\partial ^\mu  \left[-{1 \over 8 \pi c} F_{\mu
-u}+{1 \over 8 \pi c} F_{
-u\mu}  
-ight]+{1 \over c^2}  J_
-u=0$$
-因為\(-F_{\mu
-u}=F_{
-u\mu} \)
-$$\partial ^\mu  \left[{1 \over 4 \pi c} F_{
-u\mu}  
-ight]+{1 \over c^2}  J_
-u=0$$
-$$\partial _
-u  F^{\mu 
-u} =-{4\pi \over c} J^\mu $$
-
-</p>
-
-
-<section id="t">
-
+    在古典場論中，物理學將連續場的振幅\(\eta\) 推廣到古典場的物理量，可以是純量場\(\phi\) 、向量場\(V^\mu\) 、張量場\(T^{\mu\nu}\)等等。先可慮簡單的純量場\(\phi =\phi (x^\mu  )\)是時空函數，通過Variational principle找到\(\phi\) 的EoM。先寫下Action，假設Lagrangian dendity \(\mathcal{L}\)是\(\phi\) ,\(\partial _\mu  \phi\) 的函數，並通過\(\phi \to \phi +\delta \phi \)的變分
+    $$S=\int  \mathcal{L}[\phi ,\partial _\mu  \phi ] d^4 x $$
+    $$\phi \to \phi +\delta \phi 、\partial _\mu  \phi \to \partial _\mu  \phi +\delta \partial _\mu  \phi $$
+    <a href="../Image/PoLA/P37.png"><img src="../Image/PoLA/P37.png" alt="取代文字" width=98% height="auto"></a><br>
+    $$\delta S=\delta \int   \mathcal{L}[\phi ,\partial _\mu  \phi ] d^4 x =\int   {\partial \mathcal{L} \over \partial \phi}  \delta \phi +{\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}  \delta \partial _\mu  \phi  d^4 x $$
+    $$=\int   {\partial \mathcal{L} \over \partial \phi}  \delta \phi -\partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )} \right)\delta \phi  d^4 x +\int   \partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}  \delta \phi \right)  d^4 x $$
+    $$=\int   \left[{\partial \mathcal{L} \over \partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )} \right)\right]\delta \phi  d^4 x + ∮_{\partial V}   {\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}  \delta \phi  d^3 x $$
+    $$=\int   \left[{\partial \mathcal{L} \over \partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over \partial (\partial _\mu  \phi )} \right)\right]\delta \phi  d^4 x +0$$
+    因為\(\delta \phi\) 是任意，所以對任何古典物理量\(\phi\) ，必須滿足Euler-Lagrange eq
+    $${\partial \mathcal{L} \over \partial \phi} -\partial _\mu  {\partial \mathcal{L}\over \partial (\partial _\mu  \phi )}=0$$
+    同樣的，我們可以回到連續場的例子，\(\mathcal{L}={1 \over 2} \rho(\partial _t \eta )^2-{1 \over 2} Y( \nabla \eta )^2\)，滿足
+    $${\partial \mathcal{L} \over \partial \phi} -\partial _t {\partial \mathcal{L}\over\partial (\partial _t \phi ) }- \nabla {\partial \mathcal{L}\over \partial ( \nabla \phi ) }=0$$
+    可以迅速得到
+    $$-\rho\partial _t^2 \eta +Y \nabla ^2 \eta =0\to  \nabla ^2 \eta ={1\over v^2}  \partial _t^2 \eta $$
+    如果我們將純量場\phi 推廣成向量場，例如4-displacement \(x^\nu\) 、4-potential \(A^\nu\) ，剛剛的變分只需將\(\phi\) 改寫成\(A^\nu\) ，即可得
+    $${\partial \mathcal{L}\over \partial x^\nu}-{d\over d\tau}  {\partial \mathcal{L}\over (\partial U^\nu )}=0:Lorentz-force$$
+    $${\partial \mathcal{L}\over \partial A^\nu  }-\partial _\mu  {\partial \mathcal{L}\over\partial (\partial _\mu  A^\nu  ) }=0:Field-equation$$
+    回到電磁場的Action
+    $$S=S_P+S_{PF}+S_F$$
+    $$=-\int   P_\mu  U^\mu  d\tau  -\int   {e\over c}  A_\mu  U^\mu  d\tau  -\int   {1 \over 16 \pi c} F_{\mu \nu}  F^{\mu \nu}   d^4 x $$
+    $$=\int   -\rho_m c-{1 \over c^2}  A_\mu  J^\mu -{1 \over 16 \pi c} F_{\mu \nu}  F^{\mu \nu}   d^4 x $$
+    先計算Lorentz force
+    $${\partial \mathcal{L}\over \partial x^\nu}-{d\over d\tau}  {\partial \mathcal{L}\over (\partial U^\nu )}=0$$
+    跟\(x^\nu\)有關的只有\(S_P\) 、\(S_{PF}\)，所以處理
+    $$\mathcal{L}=-P_\mu  U^\mu -{e\over c}  A_\mu  U^\mu $$
+    $${\partial \left(-{e\over c}  A_\mu  U^\mu  \right)\over \partial x^\nu }-{d\over d\tau}  {\partial \left(-P_\mu  U^\mu -{e\over c}  A_\mu  U^\mu  \right) \over \partial U^\nu  }=0$$
+    $$\to -{e\over c}  U^\mu  (\partial _\nu A_\mu  )-{d\over d\tau}  \left(-P_\nu-{e\over c}  A_\nu  \right)=0$$
+    $$\to-{e\over c}  U^\mu  (\partial _\nu A_\mu  )+{dP_\nu \over d\tau } +{e\over c}   {dA_\nu \over d\tau } =0$$
+    $$\to -{e\over c}  U^\mu  (\partial _\nu A_\mu  )+{dP_\nu \over d\tau } +{e\over c}   {\partial A_\nu \over \partial x^\mu  }  {dx^\mu \over d\tau} =0$$
+    $$\to -{e\over c}  U^\mu  (\partial _\nu A_\mu  )+{dP_\nu \over d\tau } +{e\over c}  U^\mu  (\partial _\mu  A_\nu  )=0$$
+    $$\to {dP_\nu \over d\tau } +{e\over c}  U^\mu  (\partial _\mu  A_\nu -\partial _\nu A_\mu  )=0$$
+    $$\to {dP_\nu \over d\tau } +{e\over c}  U^\mu  F_{\mu\nu}=0$$
+    $$\to {dP_\mu \over d\tau } =-{e\over c}  U^\nu F_{\nu\mu} $$
+    $$\to {dP_\mu \over d\tau } ={e\over c}  F_{\mu \nu} U^\nu$$
+    迅速得到Lorentz force。<br>
+    再來處理Field equation，
+    $$\partial ^\mu  {\partial \mathcal{L}\over \partial (\partial ^\mu  A^\nu  ) }-{\partial \mathcal{L} \over \partial A^\nu   }=0$$
+    $$\partial ^\mu  \left[-{1 \over 8 \pi c} F_{\alpha\beta}   {\partial F^{\alpha\beta}\over \partial (\partial ^\mu  A^\nu)  } \right]+{1 \over c^2}  J_\nu=0$$
+    因為
+    $${\partial F^{\alpha\beta} \over \partial (\partial ^\mu  A^\nu  )} ={\partial (\partial ^\alpha A^\beta -\partial ^\beta  A^\alpha ) \over \partial (\partial ^\mu  A^\nu  )}= \delta ^\alpha _\mu   \delta ^\beta  _\nu- \delta ^\beta  _\mu   \delta ^\alpha _\nu$$
+    $$\partial ^\mu  \left[-{1 \over 8 \pi c} F_{\alpha\beta}  ( \delta ^\alpha _\mu   \delta ^\beta  _\nu- \delta ^\beta  _\mu   \delta ^\alpha _\nu )\right]+{1 \over c^2}  J_\nu=0$$
+    $$\partial ^\mu  \left[-{1 \over 8 \pi c} F_{\mu\nu}+{1 \over 8 \pi c} F_{\nu\mu}  \right]+{1 \over c^2}  J_\nu=0$$
+    因為\(-F_{\mu\nu}=F_{\nu\mu} \)
+    $$\partial ^\mu  \left[{1 \over 4 \pi c} F_{\nu\mu}  \right]+{1 \over c^2}  J_\nu=0$$
+    $$\partial _\nu  F^{\mu \nu} =-{4\pi \over c} J^\mu $$
+    
+    </p>
+    
 
 
                                 <div class="post-meta">

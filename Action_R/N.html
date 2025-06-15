@@ -118,120 +118,76 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>場論中的諾特定理Noether theorem-Field theory</h2>
                                     <h3></h3>
                                 </div>
                                 
-                                
-                                場論中的諾特定理Noether theorem-Field theory
-<p style="text-align:justify">
-提到變分法就一定要與諾特定理做搭配。諾特定理表明如果系統中Lagrangian的物理量\(\phi\) 存在連續變\(\phi 	o \phi +\delta lpha\)，使得\(\mathcal{L}	o \mathcal{L}+{\delta \mathcal{L}\over\delta lpha}\)，卻保持對稱性（不變性）\(\delta S=0\)，那麼就存在一個守恆流與之對應。這可以應用到：<br>
-$$時間平移不變\leftrightarrow 能量守恆$$
-$$空間平移不變\leftrightarrow 動量守恆$$
-
-廣義的證明如下，給定Lagrangian dendity \(\mathcal{L}[\phi (x^lpha ),\partial _\mu  \phi (x^lpha ),x^\mu  ]\)，之前的變分法是針對物理量\(\phi \) 做變分，現在我們同時針對物理量\(\phi\) 和時空\(x^\mu\) 變分
-$$x^\mu 	o  ar{x} ^\mu =x^\mu +\delta x^\mu $$
-$$\phi 	o ar{\phi}=\phi +\delta \phi $$
-但是\(\phi =\phi (x^lpha )\)是時空的函數，經過物理量\(\phi\) 和時空\(x^\mu \)同時變分後，包含自身的變分和受到時空變分的影響\(\phi (x^lpha )	o ar{\phi} ( ar{x} ^lpha )\)，令\(ar{\phi} ( ar{x} ^lpha )\equiv \phi (x^lpha )+\Delta\phi \)，
-$$\Delta\phi =ar{\phi} ( ar{x} ^lpha )-\phi (x^lpha )$$
-$$=ar{\phi} ( ar{x} ^lpha )-\phi ( ar{x} ^lpha )+\phi ( ar{x} ^lpha )-\phi (x^lpha )$$
-$$=\delta \phi +{\partial \phi \over \partial x^lpha } \delta x^lpha$$
-諾特定理探討變分後Action的差別：
-$$\delta S=\delta \int   \mathcal{L}[\phi (x^lpha ),\partial _\mu  \phi (x^lpha ),x^\mu  ] d^4 x $$
-$$=\int   \mathcal{L}[ar{\phi} ( ar{x} ^lpha ),\partial _ar{\mu}  ar{\phi} ( ar{x} ^lpha ), ar{x} ^\mu  ] d^4 ar{x} -\int   \mathcal{L}[\phi (x^lpha ),\partial _\mu  \phi (x^lpha ),x^\mu  ] d^4 x $$
-很明顯可以發現到連積分的4-volune \(d^4 ar{x}\)都發生變化。可以用乘法的微分來思考
-$$\delta S=\delta \int   \mathcal{L}d^4 x =\int   \delta\mathcal{L} d ^4 x +\int  \mathcal{L}\delta d^4 x $$
-第一項\(\delta \mathcal{L}\)在處理時要非常小心
-$$\delta \mathcal{L}=\mathcal{L}[ar{\phi} ( ar{x} ^lpha ),\partial _ar{\mu}  ar{\phi} ( ar{x} ^lpha ), ar{x} ^\mu  ]-\mathcal{L}[\phi (x^lpha ),\partial _\mu  \phi (x^lpha ),x^\mu  ]$$
-$$=\mathcal{L}[ar{\phi} ( ar{x} ^lpha ),\partial _ar{\mu}  ar{\phi} ( ar{x} ^lpha ), ar{x} ^\mu  ]-\mathcal{L}[\phi ( ar{x} ^lpha ),\partial _ar{\mu}  \phi ( ar{x} ^lpha ), ar{x} ^\mu  ]+\mathcal{L}[\phi ( ar{x} ^lpha ),\partial _ar{\mu}  \phi ( ar{x} ^lpha ), ar{x} ^\mu  ]-\mathcal{L}[\phi (x^lpha ),\partial _\mu  \phi (x^lpha ),x^\mu  ]$$
-$$={\mathcal{L}[\phi +\delta \phi ,\partial _ar{\mu}  \phi +\delta (\partial _ar{\mu}  \phi ), ar{x} ^\mu  ]-L[\phi ,\partial _ar{\mu}  \phi , ar{x} ^\mu  ]}+{\mathcal{L}[\phi ,\partial _ar{\mu}  \phi , ar{x} ^\mu  ]-L[\phi ,\partial _\mu  \phi ,x^\mu  ]}$$
-$$={{\partial \mathcal{L}\over\partial \phi}  \delta \phi +{\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta (\partial _\mu  \phi )}+{{\partial \mathcal{L}\over \partial x^\mu  } \delta x^\mu  }$$
-
-
-利用\(\partial _\mu \)拉到前面去
-$$={{\partial \mathcal{L}\over\partial \phi}  \delta \phi -\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )} 
-ight)\delta \phi +\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi 
-ight)}+{{\partial \mathcal{L}\over \partial x^\mu  } \delta x^\mu  }$$
-可以注意到\(\left[{\partial \mathcal{L}\over\partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )} 
-ight)
-ight]\delta \phi\) 是Euler-Lagrange eq等於零。所以
-$$\delta \mathcal{L}=\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi 
-ight)+\partial _\mu  \mathcal{L}*\delta x^\mu $$
-
-
-第二項\(\delta d^4 x\)要用到Jacobian
-$$\int  \mathcal{L}\delta d^4 x =\int  \mathcal{L}d^4 ar{x}  -\int  \mathcal{L}d^4 x $$
-$$d^4 ar{x}=J\left({\partial  ar{x} ^\mu \over\partial x^
-u  }
-ight) d^4 x$$
-\(J\left({\partial  ar{x} ^\mu \over\partial x^
-u  }
-ight)\)為Jacobian determinant
-$${\partial  ar{x} ^\mu \over\partial x^
-u  }={\partial (x^\mu +\delta x^\mu  )\over\partial x^
-u }= \delta ^\mu  _
-u +\partial _
-u  \delta x^\mu $$
-Jacobian determinant計算出來為 
-$$J\left({\partial  ar{x} ^\mu \over\partial x^
-u  }
-ight)=1+\partial _\mu  \delta x^\mu $$
-所以
-$$\int  \mathcal{L}\delta d^4 x =\int  \mathcal{L}*\partial  _\mu  \delta x^\mu   d^4 x $$
-
-合併兩項
-$$\delta S=\delta \int   \mathcal{L}d^4 x =\int   \left[\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi 
-ight)+\partial _\mu  L*\delta x^\mu  
-ight] d^4 x +\int   \left[\mathcal{L} *\partial  _\mu  \delta x^\mu  
-ight]  d^4 x $$
-$$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi 
-ight)+\partial _\mu  \mathcal{L}*\delta x^\mu +\mathcal{L} *\partial  _\mu  \delta x^\mu   d^4 x $$
-$$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi 
-ight)+\partial _\mu  (\mathcal{L}\delta x^\mu  )  d^4 x $$
-$$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi +\mathcal{L}\delta x^\mu  
-ight)  d^4 x =0$$
-其中\(\delta \phi \)是\(\phi\) 自身的變分，不包含受到\(\delta x^\mu\) 的影響，我們想要考慮廣義一點，改寫成\(\Delta\phi \)可以包含受到\(\delta x^\mu \)的影響。因為\(\Delta\phi =\delta \phi +\partial _lpha \phi *\delta x^lpha\)，所以
-$$\delta S=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  (\Delta\phi -\partial _lpha \phi *\delta x^lpha )+\mathcal{L}\delta x^\mu  
-ight)  d^4 x $$
-$$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Delta\phi -\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}
-ight)\delta x^lpha 
-ight)  d^4 x$$ 
-令
-
-$$\left(egin{matrix} \delta x^lpha \ \Delta\phi \end{matrix}
-ight)=arepsilon\left(egin{matrix} Χ^lpha \ \Psi \end{matrix}
-ight)$$
-\(Χ^lpha\)、\(\Psi\)為Symmetry generators，
-$$\delta S=arepsilon \int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Psi-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha L
-ight) Χ^lpha 
-ight)  d^4 x =0$$
-因為\(arepsilon \)是任意的，所以
-$$\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Psi-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}
-ight) Χ^lpha 
-ight)\equiv \partial _\mu  N^\mu =0$$
-定義諾特流(Noether current)
-
-$$N^\mu \equiv {\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Psi-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}
-ight) Χ^lpha $$
-
-其中，\({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}\) 是對應到物理量\(\phi \)在對稱變換\(\Psi\)的守恆流，\(\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _lpha \phi - \delta ^\mu  _lpha \mathcal{L}
-ight)\)是對應時空\(x^\mu\) 變化\(Χ^lpha\)下的守恆流。<br><br>
-
-如果是向量場\(lpha^
-u\)，
-$$N^\mu \equiv {\partial \mathcal{L}\over\partial (\partial _\mu  lpha^
-u )}  \Psi^
-u-\left({\partial \mathcal{L}\over\partial (\partial _\mu  lpha^
-u )}  \partial _lpha lpha^
-u- \delta ^\mu  _lpha \mathcal{L}
-ight) Χ^lpha $$
-</p>
-
-
-
-
-<section id="x">
-
+                                <p style="text-align:justify">
+                                    提到變分法就一定要與諾特定理做搭配。諾特定理表明如果系統中Lagrangian的物理量\(\phi\) 存在連續變\(\phi \to \phi +\delta \alpha\)，使得\(\mathcal{L}\to \mathcal{L}+{\delta \mathcal{L}\over\delta \alpha}\)，卻保持對稱性（不變性）\(\delta S=0\)，那麼就存在一個守恆流與之對應。這可以應用到：<br>
+                                    $$時間平移不變\leftrightarrow 能量守恆$$
+                                    $$空間平移不變\leftrightarrow 動量守恆$$
+                                    
+                                    廣義的證明如下，給定Lagrangian dendity \(\mathcal{L}[\phi (x^\alpha ),\partial _\mu  \phi (x^\alpha ),x^\mu  ]\)，之前的變分法是針對物理量\(\phi \) 做變分，現在我們同時針對物理量\(\phi\) 和時空\(x^\mu\) 變分
+                                    $$x^\mu \to  \bar{x} ^\mu =x^\mu +\delta x^\mu $$
+                                    $$\phi \to \bar{\phi}=\phi +\delta \phi $$
+                                    但是\(\phi =\phi (x^\alpha )\)是時空的函數，經過物理量\(\phi\) 和時空\(x^\mu \)同時變分後，包含自身的變分和受到時空變分的影響\(\phi (x^\alpha )\to \bar{\phi} ( \bar{x} ^\alpha )\)，令\(\bar{\phi} ( \bar{x} ^\alpha )\equiv \phi (x^\alpha )+\Delta\phi \)，
+                                    $$\Delta\phi =\bar{\phi} ( \bar{x} ^\alpha )-\phi (x^\alpha )$$
+                                    $$=\bar{\phi} ( \bar{x} ^\alpha )-\phi ( \bar{x} ^\alpha )+\phi ( \bar{x} ^\alpha )-\phi (x^\alpha )$$
+                                    $$=\delta \phi +{\partial \phi \over \partial x^\alpha } \delta x^\alpha$$
+                                    諾特定理探討變分後Action的差別：
+                                    $$\delta S=\delta \int   \mathcal{L}[\phi (x^\alpha ),\partial _\mu  \phi (x^\alpha ),x^\mu  ] d^4 x $$
+                                    $$=\int   \mathcal{L}[\bar{\phi} ( \bar{x} ^\alpha ),\partial _\bar{\mu}  \bar{\phi} ( \bar{x} ^\alpha ), \bar{x} ^\mu  ] d^4 \bar{x} -\int   \mathcal{L}[\phi (x^\alpha ),\partial _\mu  \phi (x^\alpha ),x^\mu  ] d^4 x $$
+                                    很明顯可以發現到連積分的4-volune \(d^4 \bar{x}\)都發生變化。可以用乘法的微分來思考
+                                    $$\delta S=\delta \int   \mathcal{L}d^4 x =\int   \delta\mathcal{L} d ^4 x +\int  \mathcal{L}\delta d^4 x $$
+                                    第一項\(\delta \mathcal{L}\)在處理時要非常小心
+                                    $$\delta \mathcal{L}=\mathcal{L}[\bar{\phi} ( \bar{x} ^\alpha ),\partial _\bar{\mu}  \bar{\phi} ( \bar{x} ^\alpha ), \bar{x} ^\mu  ]-\mathcal{L}[\phi (x^\alpha ),\partial _\mu  \phi (x^\alpha ),x^\mu  ]$$
+                                    $$=\mathcal{L}[\bar{\phi} ( \bar{x} ^\alpha ),\partial _\bar{\mu}  \bar{\phi} ( \bar{x} ^\alpha ), \bar{x} ^\mu  ]-\mathcal{L}[\phi ( \bar{x} ^\alpha ),\partial _\bar{\mu}  \phi ( \bar{x} ^\alpha ), \bar{x} ^\mu  ]+\mathcal{L}[\phi ( \bar{x} ^\alpha ),\partial _\bar{\mu}  \phi ( \bar{x} ^\alpha ), \bar{x} ^\mu  ]-\mathcal{L}[\phi (x^\alpha ),\partial _\mu  \phi (x^\alpha ),x^\mu  ]$$
+                                    $$={\mathcal{L}[\phi +\delta \phi ,\partial _\bar{\mu}  \phi +\delta (\partial _\bar{\mu}  \phi ), \bar{x} ^\mu  ]-L[\phi ,\partial _\bar{\mu}  \phi , \bar{x} ^\mu  ]}+{\mathcal{L}[\phi ,\partial _\bar{\mu}  \phi , \bar{x} ^\mu  ]-L[\phi ,\partial _\mu  \phi ,x^\mu  ]}$$
+                                    $$={{\partial \mathcal{L}\over\partial \phi}  \delta \phi +{\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta (\partial _\mu  \phi )}+{{\partial \mathcal{L}\over \partial x^\mu  } \delta x^\mu  }$$
+                                    
+                                    
+                                    利用\(\partial _\mu \)拉到前面去
+                                    $$={{\partial \mathcal{L}\over\partial \phi}  \delta \phi -\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )} \right)\delta \phi +\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi \right)}+{{\partial \mathcal{L}\over \partial x^\mu  } \delta x^\mu  }$$
+                                    可以注意到\(\left[{\partial \mathcal{L}\over\partial \phi} -\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )} \right)\right]\delta \phi\) 是Euler-Lagrange eq等於零。所以
+                                    $$\delta \mathcal{L}=\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi \right)+\partial _\mu  \mathcal{L}*\delta x^\mu $$
+                                    
+                                    
+                                    第二項\(\delta d^4 x\)要用到Jacobian
+                                    $$\int  \mathcal{L}\delta d^4 x =\int  \mathcal{L}d^4 \bar{x}  -\int  \mathcal{L}d^4 x $$
+                                    $$d^4 \bar{x}=J\left({\partial  \bar{x} ^\mu \over\partial x^\nu  }\right) d^4 x$$
+                                    \(J\left({\partial  \bar{x} ^\mu \over\partial x^\nu  }\right)\)為Jacobian determinant
+                                    $${\partial  \bar{x} ^\mu \over\partial x^\nu  }={\partial (x^\mu +\delta x^\mu  )\over\partial x^\nu }= \delta ^\mu  _\nu +\partial _\nu  \delta x^\mu $$
+                                    Jacobian determinant計算出來為 
+                                    $$J\left({\partial  \bar{x} ^\mu \over\partial x^\nu  }\right)=1+\partial _\mu  \delta x^\mu $$
+                                    所以
+                                    $$\int  \mathcal{L}\delta d^4 x =\int  \mathcal{L}*\partial  _\mu  \delta x^\mu   d^4 x $$
+                                    
+                                    合併兩項
+                                    $$\delta S=\delta \int   \mathcal{L}d^4 x =\int   \left[\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi \right)+\partial _\mu  L*\delta x^\mu  \right] d^4 x +\int   \left[\mathcal{L} *\partial  _\mu  \delta x^\mu  \right]  d^4 x $$
+                                    $$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi \right)+\partial _\mu  \mathcal{L}*\delta x^\mu +\mathcal{L} *\partial  _\mu  \delta x^\mu   d^4 x $$
+                                    $$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi \right)+\partial _\mu  (\mathcal{L}\delta x^\mu  )  d^4 x $$
+                                    $$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \delta \phi +\mathcal{L}\delta x^\mu  \right)  d^4 x =0$$
+                                    其中\(\delta \phi \)是\(\phi\) 自身的變分，不包含受到\(\delta x^\mu\) 的影響，我們想要考慮廣義一點，改寫成\(\Delta\phi \)可以包含受到\(\delta x^\mu \)的影響。因為\(\Delta\phi =\delta \phi +\partial _\alpha \phi *\delta x^\alpha\)，所以
+                                    $$\delta S=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  (\Delta\phi -\partial _\alpha \phi *\delta x^\alpha )+\mathcal{L}\delta x^\mu  \right)  d^4 x $$
+                                    $$=\int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Delta\phi -\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _\alpha \phi - \delta ^\mu  _\alpha \mathcal{L}\right)\delta x^\alpha \right)  d^4 x$$ 
+                                    令
+                                    
+                                    $$\left(\begin{matrix} \delta x^\alpha \\ \Delta\phi \end{matrix}\right)=\varepsilon\left(\begin{matrix} Χ^\alpha \\ \Psi \end{matrix}\right)$$
+                                    \(Χ^\alpha\)、\(\Psi\)為Symmetry generators，
+                                    $$\delta S=\varepsilon \int   \partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Psi-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _\alpha \phi - \delta ^\mu  _\alpha L\right) Χ^\alpha \right)  d^4 x =0$$
+                                    因為\(\varepsilon \)是任意的，所以
+                                    $$\partial _\mu  \left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Psi-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _\alpha \phi - \delta ^\mu  _\alpha \mathcal{L}\right) Χ^\alpha \right)\equiv \partial _\mu  N^\mu =0$$
+                                    定義諾特流(Noether current)
+                                    
+                                    $$N^\mu \equiv {\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \Psi-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _\alpha \phi - \delta ^\mu  _\alpha \mathcal{L}\right) Χ^\alpha $$
+                                    
+                                    其中，\({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}\) 是對應到物理量\(\phi \)在對稱變換\(\Psi\)的守恆流，\(\left({\partial \mathcal{L}\over\partial (\partial _\mu  \phi )}  \partial _\alpha \phi - \delta ^\mu  _\alpha \mathcal{L}\right)\)是對應時空\(x^\mu\) 變化\(Χ^\alpha\)下的守恆流。<br><br>
+                                    
+                                    如果是向量場\(\alpha^\nu\)，
+                                    $$N^\mu \equiv {\partial \mathcal{L}\over\partial (\partial _\mu  \alpha^\nu )}  \Psi^\nu-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \alpha^\nu )}  \partial _\alpha \alpha^\nu- \delta ^\mu  _\alpha \mathcal{L}\right) Χ^\alpha $$
+                                    </p>
+                                    
+                                    
 
 
                                 <div class="post-meta">

@@ -98,10 +98,10 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>硬體導論</h1>
+                <h1>Action Principle (Classical)</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="./main.html">硬體導論</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">Action Principle (Classical)</a></li>
                   <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
@@ -118,60 +118,42 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>Non-uniqueness of the Lagrangian</h2>
                                     <h3></h3>
                                 </div>
                                 
-                                
-                                Non-uniqueness of the Lagrangian
 <p style="text-align:justify">
-In the theoretical mechanics course, it is taught that adding a total time derivative term \(f=f(q,t)\) to the Lagrangian, i.e., \(L→L+{df\over dt}\), does not change the EoM. This can be explained in two parts. The first is the simplest, from the variation of the endpoints:
-$$\delta S=\delta \int _a^b (L+{df\over dt})dt$$
-$$=\delta \left[\int _a^b Ldt+\int _a^b  {df\over dt} dt 
-ight]$$
-$$=\delta \left[\int _a^b Ldt+f(b)-f(a)
-ight]$$
-$$=\delta \int _a^b Ldt+\delta f(b)-\delta f(a)$$
-But since the endpoints are not varied, \(\delta f(b)=\delta f(a)=0\), naturally,
-$$\delta \int _a^b \left(L+{df\over dt}
-ight)dt=\delta \int _a^b Ldt=0$$
-
-The second approach is to directly expand and observe whether \(L+\dot{f}\) satisfies
-\({d\over dt}  {\partial \over\partial \dot{x}}\left( L+\dot{f} 
-ight)  -{\partial   \over\partial x}\left( L+\dot{f} 
-ight)=0\).
-
-$${d\over dt}  {\partial \over\partial \dot{x}}\left( L+\dot{f} 
-ight)  -{\partial   \over\partial x}\left( L+\dot{f} 
-ight)={d\over dt}  {\partial L\over\partial \dot{x}}  -{\partial L\over\partial x}+\color{red}{{d\over dt}  {\partial \dot{f} \over\partial \dot{x}}  -{\partial \dot{f} \over\partial x}}$$
-The <font color="red">red term</font> allows us to observe two things, because \(f=f(x,t)\):
-$$df={\partial f\over\partial x} dx+{\partial f\over\partial \dot{x}}   d\dot{x} +{\partial f\over\partial t} dt$$
-$$	o \dot{f} ={\partial \over\partial x} \dot{x} +{\partial f\over\partial \dot{x}}   \ddot{x} +{\partial f\over\partial t}$$
-So,
-$${ \partial \dot{f} \over\partial \dot{x}} ={\partial f\over\partial x}	o dot\ cancellation$$<br>
-
-$${\partial \over\partial x} \dot{f}={\partial \over\partial x} \left({\partial \over\partial x} \dot{x} +{\partial f\over\partial \dot{x}}   \ddot{x} +{\partial f\over\partial t}
-ight)$$
-
-$$=\left({\partial \over\partial x}  {\partial f\over\partial x}
-ight) \dot{x} +\left({\partial \over\partial x}  {\partial f\over\partial \dot{x}}  
-ight) \ddot{x} +\left({\partial \over\partial x}  {\partial f\over\partial t}
-ight)$$
-$$={d\over dt} \left({\partial f\over\partial x}
-ight)	o{d\over dt},{\partial \over\partial x} commute $$
-
-We get the <font color="red">red term</font> to be zero:
-$$\color{red}{{d\over dt}  {\partial \dot{f} \over\partial \dot{x}  }-{\partial \dot{f} \over\partial x}={d\over dt}  {\partial f\over\partial x}-{d\over dt}  {\partial f\over\partial x}=0}$$
-Thus,
-$${d\over dt}  {\partial \over\partial \dot{x}}\left( L+\dot{f} 
-ight)  -{\partial   \over\partial x}\left( L+\dot{f} 
-ight)={d\over dt}  {\partial L\over\partial \dot{x}}  -{\partial L\over\partial x}=0$$
-Adding \(\dot{f}\) does not change the EoM.
-
-</p>
-
-
-
+    In the theoretical mechanics course, it is taught that adding a total time derivative term \(f=f(q,t)\) to the Lagrangian, i.e., \(L→L+{df\over dt}\), does not change the EoM. This can be explained in two parts. The first is the simplest, from the variation of the endpoints:
+    $$\delta S=\delta \int _a^b (L+{df\over dt})dt$$
+    $$=\delta \left[\int _a^b Ldt+\int _a^b  {df\over dt} dt \right]$$
+    $$=\delta \left[\int _a^b Ldt+f(b)-f(a)\right]$$
+    $$=\delta \int _a^b Ldt+\delta f(b)-\delta f(a)$$
+    But since the endpoints are not varied, \(\delta f(b)=\delta f(a)=0\), naturally,
+    $$\delta \int _a^b \left(L+{df\over dt}\right)dt=\delta \int _a^b Ldt=0$$
+    
+    The second approach is to directly expand and observe whether \(L+\dot{f}\) satisfies
+    \({d\over dt}  {\partial \over\partial \dot{x}}\left( L+\dot{f} \right)  -{\partial   \over\partial x}\left( L+\dot{f} \right)=0\).
+    
+    $${d\over dt}  {\partial \over\partial \dot{x}}\left( L+\dot{f} \right)  -{\partial   \over\partial x}\left( L+\dot{f} \right)={d\over dt}  {\partial L\over\partial \dot{x}}  -{\partial L\over\partial x}+\color{red}{{d\over dt}  {\partial \dot{f} \over\partial \dot{x}}  -{\partial \dot{f} \over\partial x}}$$
+    The <font color="red">red term</font> allows us to observe two things, because \(f=f(x,t)\):
+    $$df={\partial f\over\partial x} dx+{\partial f\over\partial \dot{x}}   d\dot{x} +{\partial f\over\partial t} dt$$
+    $$\to \dot{f} ={\partial \over\partial x} \dot{x} +{\partial f\over\partial \dot{x}}   \ddot{x} +{\partial f\over\partial t}$$
+    So,
+    $${ \partial \dot{f} \over\partial \dot{x}} ={\partial f\over\partial x}\to dot\ cancellation$$<br>
+    
+    $${\partial \over\partial x} \dot{f}={\partial \over\partial x} \left({\partial \over\partial x} \dot{x} +{\partial f\over\partial \dot{x}}   \ddot{x} +{\partial f\over\partial t}\right)$$
+    
+    $$=\left({\partial \over\partial x}  {\partial f\over\partial x}\right) \dot{x} +\left({\partial \over\partial x}  {\partial f\over\partial \dot{x}}  \right) \ddot{x} +\left({\partial \over\partial x}  {\partial f\over\partial t}\right)$$
+    $$={d\over dt} \left({\partial f\over\partial x}\right)\to{d\over dt},{\partial \over\partial x} commute $$
+    
+    We get the <font color="red">red term</font> to be zero:
+    $$\color{red}{{d\over dt}  {\partial \dot{f} \over\partial \dot{x}  }-{\partial \dot{f} \over\partial x}={d\over dt}  {\partial f\over\partial x}-{d\over dt}  {\partial f\over\partial x}=0}$$
+    Thus,
+    $${d\over dt}  {\partial \over\partial \dot{x}}\left( L+\dot{f} \right)  -{\partial   \over\partial x}\left( L+\dot{f} \right)={d\over dt}  {\partial L\over\partial \dot{x}}  -{\partial L\over\partial x}=0$$
+    Adding \(\dot{f}\) does not change the EoM.
+    
+    </p>
+    
 
 
 

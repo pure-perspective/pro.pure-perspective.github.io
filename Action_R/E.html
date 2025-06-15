@@ -118,118 +118,71 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>電磁學中的規範不變性Gauge Invariance</h2>
                                     <h3></h3>
                                 </div>
-                                
-                                
-                                電磁學中的規範不變性Gauge Invariance
-<p style="text-align:justify">
-在電磁學中，我們定義Potential \(\phi\)、\(\overrightarrow{A}\)和電場\(\overrightarrow{E}\)、磁場\(\overrightarrow{B}\)的關係：
-$$ \overrightarrow{E}=- 
-abla \phi -{1 \over c}  {\partial \overrightarrow{A}\over \partial t}$$
-$$\overrightarrow{B}= 
-abla ×\overrightarrow{A} $$
-但Potential \(\phi\) 、\(\overrightarrow{A}\)不唯一，可以引入一個Gauge function \(G(ct,\overrightarrow{x} )\)
-$$ar{\phi} =\phi +{1 \over c}  {\partial G \over \partial t}$$
-$$\overrightarrow{ar{A}}=\overrightarrow{A}- 
-abla G$$
-一樣保持電場\(\overrightarrow{E}\)、磁場\(\overrightarrow{B}\)不變
-$$\overrightarrow{ar{E}}=- 
-abla ar{\phi}-{1 \over c}  {\partial \overrightarrow{ar{A}}\over \partial t}$$
-$$=- 
-abla \phi - \color{red}{
-abla {1 \over c}  {\partial G \over \partial t}}-{1 \over c}  {\partial \overrightarrow{A}\over \partial t}+\color{red}{{1 \over c}  {\partial ( 
-abla G)\over\partial t}}$$
-$$=- 
-abla \phi -{1 \over c}  {\partial \overrightarrow{A}\over \partial t}=\overrightarrow{E}$$<br>
-$$\overrightarrow{ar{B}}= 
-abla ×\overrightarrow{ar{A}}= 
-abla ×\overrightarrow{A}- 
-abla × 
-abla G= 
-abla ×\overrightarrow{A}=\overrightarrow{B} $$
-
-
-<table cellpadding="1" border="1">
-<tr><td>
-Note  \(
-abla × 
-abla G=0\)
-$$( 
-abla × 
-abla G)_i=arepsilon _{ijk} \partial _j \partial _k G$$
-$$={1 \over 2} arepsilon _{ijk} \partial _j \partial _k G+{1 \over 2} arepsilon _{ijk} \partial _j \partial _k G$$
-$$={1 \over 2} arepsilon _{ijk} \partial _j \partial _k G+{1 \over 2} arepsilon _{i\color{red}{kj}} \partial _\color{red}{k} \partial _\color{red}{j} G$$
-$$={1 \over 2} arepsilon _{ijk} \partial _j \partial _k G \color{red}{-}{1 \over 2} arepsilon _{i\color{red}{jk}} \partial _j \partial _k G=0$$
-</td></tr>
-</table>
-
-
-在相對論中，上述的操作可以寫為4-Potential的形式：
-$$(ar{\phi},\overrightarrow{ar{A}} )=(\phi ,\overrightarrow{A} )+(\partial _{ct} G,- 
-abla G)=(\phi ,\overrightarrow{A} )+(\partial _{ct},- 
-abla )G$$
-回憶
-$$\partial ^\mu =(\partial _{ct},- 
-abla )$$
-故寫成
- $$ar{A} ^\mu =A^\mu +\partial ^\mu  G$$
-
-
-<table cellpadding="1" border="1">
-<tr><td>
-Coulomb gauge condition：非相對論性Non-relativistic
-$$ 
-abla \cdot \overrightarrow{A}=0$$
-</td></tr>
-</table>
-
-<table cellpadding="1" border="1">
-<tr><td>
-Lorenz gauge condition：相對論性，滿足Lorentz transformation
-$$ 
-abla \cdot \overrightarrow{A}+{1 \over c}  {\partial \phi \over \partial t}=0$$
-寫成Scalar form
-$$\partial _\mu  A^\mu =0$$
-所以滿足相對論轉換。
-</td></tr>
-</table>
-
-剛剛已經寫下電場\(\overrightarrow{E}\)、磁場\(\overrightarrow{B}\)在加入Gauge之下保持不變
-$$\overrightarrow{ar{E}}=\overrightarrow{E}$$
-$$\overrightarrow{ar{B}}=\overrightarrow{B}$$
-這其實說明，\(F^{\mu 
-u}\) 也在加入Gauge之下保持不變：
-$$ ar{F} ^{\mu 
-u} =F^{\mu 
-u} $$
-當然我們也可以寫下證明
-$$ar{F} ^{\mu 
-u} =\partial ^\mu   ar{A} ^
-u -\partial ^
-u   ar{A} ^\mu$$
-$$=\partial ^\mu  (A^
-u +\partial ^
-u  G)-\partial ^
-u  (A^\mu +\partial ^\mu  G)$$
-$$=\partial ^\mu  A^
-u +\color{red}{\partial ^\mu  \partial ^
-u  G}-\partial ^
-u  A^\mu -\color{red}{\partial ^
-u  \partial ^\mu  G}$$
-$$=\partial ^\mu  A^
-u -\partial ^
-u  A^\mu =F^{\mu 
-u} $$
-
-</p>
-
-
-
-
-<section id="n">
-
+                                <p style="text-align:justify">
+                                    在電磁學中，我們定義Potential \(\phi\)、\(\overrightarrow{A}\)和電場\(\overrightarrow{E}\)、磁場\(\overrightarrow{B}\)的關係：
+                                    $$ \overrightarrow{E}=- \nabla \phi -{1 \over c}  {\partial \overrightarrow{A}\over \partial t}$$
+                                    $$\overrightarrow{B}= \nabla ×\overrightarrow{A} $$
+                                    但Potential \(\phi\) 、\(\overrightarrow{A}\)不唯一，可以引入一個Gauge function \(G(ct,\overrightarrow{x} )\)
+                                    $$\bar{\phi} =\phi +{1 \over c}  {\partial G \over \partial t}$$
+                                    $$\overrightarrow{\bar{A}}=\overrightarrow{A}- \nabla G$$
+                                    一樣保持電場\(\overrightarrow{E}\)、磁場\(\overrightarrow{B}\)不變
+                                    $$\overrightarrow{\bar{E}}=- \nabla \bar{\phi}-{1 \over c}  {\partial \overrightarrow{\bar{A}}\over \partial t}$$
+                                    $$=- \nabla \phi - \color{red}{\nabla {1 \over c}  {\partial G \over \partial t}}-{1 \over c}  {\partial \overrightarrow{A}\over \partial t}+\color{red}{{1 \over c}  {\partial ( \nabla G)\over\partial t}}$$
+                                    $$=- \nabla \phi -{1 \over c}  {\partial \overrightarrow{A}\over \partial t}=\overrightarrow{E}$$<br>
+                                    $$\overrightarrow{\bar{B}}= \nabla ×\overrightarrow{\bar{A}}= \nabla ×\overrightarrow{A}- \nabla × \nabla G= \nabla ×\overrightarrow{A}=\overrightarrow{B} $$
+                                    
+                                    
+                                    <table cellpadding="1" border="1">
+                                    <tr><td>
+                                    Note  \(\nabla × \nabla G=0\)
+                                    $$( \nabla × \nabla G)_i=\varepsilon _{ijk} \partial _j \partial _k G$$
+                                    $$={1 \over 2} \varepsilon _{ijk} \partial _j \partial _k G+{1 \over 2} \varepsilon _{ijk} \partial _j \partial _k G$$
+                                    $$={1 \over 2} \varepsilon _{ijk} \partial _j \partial _k G+{1 \over 2} \varepsilon _{i\color{red}{kj}} \partial _\color{red}{k} \partial _\color{red}{j} G$$
+                                    $$={1 \over 2} \varepsilon _{ijk} \partial _j \partial _k G \color{red}{-}{1 \over 2} \varepsilon _{i\color{red}{jk}} \partial _j \partial _k G=0$$
+                                    </td></tr>
+                                    </table>
+                                    
+                                    
+                                    在相對論中，上述的操作可以寫為4-Potential的形式：
+                                    $$(\bar{\phi},\overrightarrow{\bar{A}} )=(\phi ,\overrightarrow{A} )+(\partial _{ct} G,- \nabla G)=(\phi ,\overrightarrow{A} )+(\partial _{ct},- \nabla )G$$
+                                    回憶
+                                    $$\partial ^\mu =(\partial _{ct},- \nabla )$$
+                                    故寫成
+                                     $$\bar{A} ^\mu =A^\mu +\partial ^\mu  G$$
+                                    
+                                    
+                                    <table cellpadding="1" border="1">
+                                    <tr><td>
+                                    Coulomb gauge condition：非相對論性Non-relativistic
+                                    $$ \nabla \cdot \overrightarrow{A}=0$$
+                                    </td></tr>
+                                    </table>
+                                    
+                                    <table cellpadding="1" border="1">
+                                    <tr><td>
+                                    Lorenz gauge condition：相對論性，滿足Lorentz transformation
+                                    $$ \nabla \cdot \overrightarrow{A}+{1 \over c}  {\partial \phi \over \partial t}=0$$
+                                    寫成Scalar form
+                                    $$\partial _\mu  A^\mu =0$$
+                                    所以滿足相對論轉換。
+                                    </td></tr>
+                                    </table>
+                                    
+                                    剛剛已經寫下電場\(\overrightarrow{E}\)、磁場\(\overrightarrow{B}\)在加入Gauge之下保持不變
+                                    $$\overrightarrow{\bar{E}}=\overrightarrow{E}$$
+                                    $$\overrightarrow{\bar{B}}=\overrightarrow{B}$$
+                                    這其實說明，\(F^{\mu \nu}\) 也在加入Gauge之下保持不變：
+                                    $$ \bar{F} ^{\mu \nu} =F^{\mu \nu} $$
+                                    當然我們也可以寫下證明
+                                    $$\bar{F} ^{\mu \nu} =\partial ^\mu   \bar{A} ^\nu -\partial ^\nu   \bar{A} ^\mu$$
+                                    $$=\partial ^\mu  (A^\nu +\partial ^\nu  G)-\partial ^\nu  (A^\mu +\partial ^\mu  G)$$
+                                    $$=\partial ^\mu  A^\nu +\color{red}{\partial ^\mu  \partial ^\nu  G}-\partial ^\nu  A^\mu -\color{red}{\partial ^\nu  \partial ^\mu  G}$$
+                                    $$=\partial ^\mu  A^\nu -\partial ^\nu  A^\mu =F^{\mu \nu} $$
+                                    
+                                    </p>
 
 
                                 <div class="post-meta">

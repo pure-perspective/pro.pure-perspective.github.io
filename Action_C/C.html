@@ -118,71 +118,51 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>Lagrangian的不唯一性</h2>
                                     <h3></h3>
                                 </div>
                                 
                                 
-                                Lagrangian的不唯一性
 <p style="text-align:justify">
-理論力學的課程中，都有學過當\(Lagrangian\)添加一個函數\(f=f(q,t)\)時間的全微分項\({df\over dt}\)，\(L→L+{df\over dt}\)並不會改變EoM。這可以從兩個部分來看。第一種是最簡單的從變分的端點，
-$$\delta S=\delta \int _a^b (L+{df\over dt})dt$$
-$$=\delta \left[\int _a^b Ldt+\int _a^b  {df\over dt} dt 
-ight]$$
-$$=\delta \left[\int _a^b Ldt+f(b)-f(a)
-ight]$$
-$$=\delta \int _a^b Ldt+\delta f(b)-\delta f(a)$$
-但因為端點不做變分，所以\(\delta f(b)=\delta f(a)=0\)，自然的
-$$\delta \int _a^b \left(L+{df\over dt}
-ight)dt=\delta \int _a^b Ldt=0$$
-
-
-
-另外一種是直接展開，觀察\(L+\dot{f}\) 是否滿足
-\({d\over dt}  {\partial \over\partial \dot{x}}\left( L+\dot{f} 
-ight)  -{\partial   \over\partial x}\left( L+\dot{f} 
-ight)=0\)
-
-
-$${d\over dt}  {\partial \over\partial \dot{x}}\left( L+\dot{f} 
-ight)  -{\partial   \over\partial x}\left( L+\dot{f} 
-ight)={d\over dt}  {\partial L\over\partial \dot{x}}  -{\partial L\over\partial x}+\color{red}{{d\over dt}  {\partial \dot{f} \over\partial \dot{x}}  -{\partial \dot{f} \over\partial x}}$$
-<font color="red">紅色項</font>我們可以觀察兩件事，因為\(f=f(x,t)\)
-$$df={\partial f\over\partial x} dx+{\partial f\over\partial \dot{x}}   d\dot{x} +{\partial f\over\partial t} dt$$
-$$	o \dot{f} ={\partial \over\partial x} \dot{x} +{\partial f\over\partial \dot{x}}   \ddot{x} +{\partial f\over\partial t}$$
-所以
-$${ \partial \dot{f} \over\partial \dot{x}} ={\partial f\over\partial x}	o dot\ cancellation$$<br>
-
-
-$${\partial \over\partial x} \dot{f}={\partial \over\partial x} \left({\partial \over\partial x} \dot{x} +{\partial f\over\partial \dot{x}}   \ddot{x} +{\partial f\over\partial t}
-ight)$$
-
-
-$$=\left({\partial \over\partial x}  {\partial f\over\partial x}
-ight) \dot{x} +\left({\partial \over\partial x}  {\partial f\over\partial \dot{x}}  
-ight) \ddot{x} +\left({\partial \over\partial x}  {\partial f\over\partial t}
-ight)$$
-$$={d\over dt} \left({\partial f\over\partial x}
-ight)	o{d\over dt},{\partial \over\partial x} commute $$
-
-
-會得到<font color="red">紅色項</font>為零
-$$\color{red}{{d\over dt}  {\partial \dot{f} \over\partial \dot{x}  }-{\partial \dot{f} \over\partial x}={d\over dt}  {\partial f\over\partial x}-{d\over dt}  {\partial f\over\partial x}=0}$$
-故
-$${d\over dt}  {\partial \over\partial \dot{x}}\left( L+\dot{f} 
-ight)  -{\partial   \over\partial x}\left( L+\dot{f} 
-ight)={d\over dt}  {\partial L\over\partial \dot{x}}  -{\partial L\over\partial x}=0$$
-添加\(\dot{f}\) 不會改變EoM。
-
-
-</p>
-
-
-
-
-										HERE"d1">
-
-
+    理論力學的課程中，都有學過當\(Lagrangian\)添加一個函數\(f=f(q,t)\)時間的全微分項\({df\over dt}\)，\(L→L+{df\over dt}\)並不會改變EoM。這可以從兩個部分來看。第一種是最簡單的從變分的端點，
+    $$\delta S=\delta \int _a^b (L+{df\over dt})dt$$
+    $$=\delta \left[\int _a^b Ldt+\int _a^b  {df\over dt} dt \right]$$
+    $$=\delta \left[\int _a^b Ldt+f(b)-f(a)\right]$$
+    $$=\delta \int _a^b Ldt+\delta f(b)-\delta f(a)$$
+    但因為端點不做變分，所以\(\delta f(b)=\delta f(a)=0\)，自然的
+    $$\delta \int _a^b \left(L+{df\over dt}\right)dt=\delta \int _a^b Ldt=0$$
+    
+    
+    
+    另外一種是直接展開，觀察\(L+\dot{f}\) 是否滿足
+    \({d\over dt}  {\partial \over\partial \dot{x}}\left( L+\dot{f} \right)  -{\partial   \over\partial x}\left( L+\dot{f} \right)=0\)
+    
+    
+    $${d\over dt}  {\partial \over\partial \dot{x}}\left( L+\dot{f} \right)  -{\partial   \over\partial x}\left( L+\dot{f} \right)={d\over dt}  {\partial L\over\partial \dot{x}}  -{\partial L\over\partial x}+\color{red}{{d\over dt}  {\partial \dot{f} \over\partial \dot{x}}  -{\partial \dot{f} \over\partial x}}$$
+    <font color="red">紅色項</font>我們可以觀察兩件事，因為\(f=f(x,t)\)
+    $$df={\partial f\over\partial x} dx+{\partial f\over\partial \dot{x}}   d\dot{x} +{\partial f\over\partial t} dt$$
+    $$\to \dot{f} ={\partial \over\partial x} \dot{x} +{\partial f\over\partial \dot{x}}   \ddot{x} +{\partial f\over\partial t}$$
+    所以
+    $${ \partial \dot{f} \over\partial \dot{x}} ={\partial f\over\partial x}\to dot\ cancellation$$<br>
+    
+    
+    $${\partial \over\partial x} \dot{f}={\partial \over\partial x} \left({\partial \over\partial x} \dot{x} +{\partial f\over\partial \dot{x}}   \ddot{x} +{\partial f\over\partial t}\right)$$
+    
+    
+    $$=\left({\partial \over\partial x}  {\partial f\over\partial x}\right) \dot{x} +\left({\partial \over\partial x}  {\partial f\over\partial \dot{x}}  \right) \ddot{x} +\left({\partial \over\partial x}  {\partial f\over\partial t}\right)$$
+    $$={d\over dt} \left({\partial f\over\partial x}\right)\to{d\over dt},{\partial \over\partial x} commute $$
+    
+    
+    會得到<font color="red">紅色項</font>為零
+    $$\color{red}{{d\over dt}  {\partial \dot{f} \over\partial \dot{x}  }-{\partial \dot{f} \over\partial x}={d\over dt}  {\partial f\over\partial x}-{d\over dt}  {\partial f\over\partial x}=0}$$
+    故
+    $${d\over dt}  {\partial \over\partial \dot{x}}\left( L+\dot{f} \right)  -{\partial   \over\partial x}\left( L+\dot{f} \right)={d\over dt}  {\partial L\over\partial \dot{x}}  -{\partial L\over\partial x}=0$$
+    添加\(\dot{f}\) 不會改變EoM。
+    
+    
+    </p>
+    
+    
 
                                 <div class="post-meta">
                                     <span class="post-author">
