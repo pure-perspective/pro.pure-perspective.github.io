@@ -66,9 +66,9 @@
 
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                                 <li><a href="../CCC_en/main.html">The Superconducting Critical Coupling Constant Theory</a></li>
-                                <li class="active"><a href="../Action_C_en/main.html">Action Principle (Classical)</a></li>
+                                <li><a href="../Action_C_en/main.html">Action Principle (Classical)</a></li>
                                 <li><a href="../Action_R_en/main.html">Action Principle (Relativistic)</a></li>
-                                <li><a href="../Noether_en/main.html">Noether's Theorem</a></li>
+                                <li class="active"><a href="../Noether_en/main.html">Noether's Theorem</a></li>
                                 <li><a href="../STM_en/main.html">STM</a></li>
                             </ul>
 
@@ -98,10 +98,10 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>Action Principle (Classical)</h1>
+                <h1>Noether's Theorem</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="./main.html">Action Principle (Classical)</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">Noether's Theorem</a></li>
                   <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
@@ -118,58 +118,158 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>Classical Noether's Theorem</h2>
+                                    <h2>Ostrogradsky Instability and Higher-Order Derivatives</h2>
                                     <h3></h3>
                                 </div>
                                 
+                                
 <p style="text-align:justify">
-    Classical Noether's Theorem
-    Noether's theorem, as an important theorem in classical mechanics, is also the key reason why Lagrangian and Hamiltonian mechanics transcend Newtonian mechanics. The statement of Noether's theorem is that when a system satisfies the EoM or the principle of least action, if we apply a variation \(\delta \alpha\) to the Action S and still have \(\delta S=0\), Noether's theorem indicates that there is a corresponding conserved quantity. Here we discuss simultaneous variations in time \(t\) and the physical trajectory \(q\):
-    $$q \to \bar{q} = q+\delta q$$
-    $$t \to \bar{t} =t+\delta t$$
-    However, it is worth noting that the trajectory \(q\), as a function of time \(t\), will be affected not only by its own variation but also by the change in time. Define \(\Delta q\) to represent the total effect:
-    $$\Delta q\equiv \bar{q} (\bar{t}  )-q(t)$$
-    $$=\bar{q} (\bar{t}  )-q(\bar{t}  )+q(\bar{t}  )-q(t)$$
-    $$=\delta q+\dot{q} \delta t$$
-    Consider the difference before and after the variation:
-    $$\delta S=\delta \int  L dt=\int  \delta L dt+\int  L d\delta t$$
-    The first term can be expanded as:
-    $$\delta L=L \left(\bar{q} (\bar{t}  ),\dot{\bar{q}}(\bar{t}  ),\bar{t}  \right)-L\left(q(t),\dot{q} (t),t\right)$$
-    $$=L \left(\bar{q} (\bar{t}  ),\dot{\bar{q}}(\bar{t}  ),\bar{t}  \right)-L\left(q(\bar{t}  ),\dot{q} (\bar{t}  ),\bar{t}  \right)+L\left(q(\bar{t}  ),\dot{q} (\bar{t}  ),\bar{t}  \right)-L\left(q(t),\dot{q} (t),t\right)$$
-    
-    $$={\partial L\over\partial q}  \delta q+{\partial L\over \partial \dot{q} }  \delta \dot{q} +{dL\over dt}  \delta t$$
-    
-    $$={\partial L\over\partial q}  \delta q-\left({d\over dt}   {\partial L\over \partial \dot{q} }\right) \delta q+{d\over dt}  \left({\partial L\over \partial \dot{q} }  \delta q\right)+{dL\over dt}  \delta t$$
-    
-    $$=\left[{\partial L\over\partial q} -{d\over dt}   {\partial L\over \partial \dot{q} }\right]\delta q+{d\over dt}  \left({\partial L\over \partial \dot{q} }  \delta q\right)+{dL\over dt}  \delta t$$
-    Since the Lagrangian satisfies the EoM:
-    $${\partial L\over\partial q} -{d\over dt}   {\partial L\over \partial \dot{q} } =0 $$
-    The first term simplifies to:
-    $$\delta L={d\over dt}  \left({\partial L\over \partial \dot{q} }  \delta q\right)+{dL\over dt}  \delta t$$
-    The second term can be rewritten as:
-    $$\int  L d\delta t=\int   L {d\delta t\over dt}  dt$$
-    Combining the two terms:
-    $$\delta S=\int  \left[{d\over dt}  \left({\partial L\over \partial \dot{q} }  \delta q\right)+{dL\over dt}  \delta t\right]  dt+\int   {L d\delta t\over dt}  dt$$
-    $$=\int   {d\over dt}  \left[{\partial L\over \partial \dot{q} }  \delta q+L\delta t\right]   dt$$
-    
-    However, since \(\delta q\) is just the variation of the trajectory itself, the total variation \(\Delta q\) must be considered. Using
-    $$\delta q=\Delta q-\dot{q} \delta t$$
-    Substitute into the equation:
-    $$\delta S=\int   {d\over dt}  \left[{\partial L\over \partial \dot{q} }  \left(\Delta q-\delta t \right)+L\delta t\right]   dt$$
-    $$=\int   {d\over dt}  \left[{\partial L\over \partial \dot{q} }  \Delta q-\left({\partial L\over \partial \dot{q} }  \dot{q} -L\right)\delta t\right]   dt$$
-    
-    If the variation leaves the action unchanged, i.e., \(\delta S=0\), then:
-    $$ {d\over dt}  \left[{\partial L\over \partial \dot{q} }  \Delta q\right]=0 \to {\partial L\over \partial \dot{q} }  \Delta q =const.$$
-    $$ {d\over dt}  \left[ \left({\partial L\over \partial \dot{q} }  \dot{q} -L\right)\delta t\right]=0 \to \left({\partial L\over \partial \dot{q} }  \dot{q} -L\right)\delta t = const.$$
-    The conserved quantity corresponding to the invariance under trajectory \(q\) variation is:
-    $${\partial L\over \partial \dot{q} } =p$$
-    This is momentum conservation.<br>
-    The conserved quantity corresponding to the invariance under time \(t\) variation is:
-    $$H={\partial L\over \partial \dot{q} }  \dot{q} -L$$
-    This is energy conservation.
-    </p>
-    
 
+    Traditionally, we can use various methods to determine that the EoM is at most a second-order differential equation. For example, in Newtonian mechanics, we only need to know one of the following boundary conditions:<br>
+    </p>
+    <ol>
+        <li><p style="text-align:justify">Initial position and time \((q, t_i)\) and final position and time \((q_f, t_f)\)</p></li>
+        <li><p style="text-align:justify">Initial position and time \((q_i, t_i)\) and initial velocity \( \dot{q}_i \)</p></li>
+    </ol>
+    <p style="text-align:justify">
+    to uniquely determine the motion of an object. In other words, the physical path only depends on one of the aforementioned conditions. This corresponds to the EoM being a second-order differential equation, such as \(F = m \ddot{x}\), where the initial conditions only require the initial position and velocity. In the Lagrangian framework, the EoM is given by the Euler-Lagrange equation:
+    \[
+    \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} - \frac{\partial L}{\partial q} = 0
+    \]
+    Note that \(\frac{d}{dt}\) increases the order of differentiation. For the EoM to remain a second-order differential equation, the Lagrangian \(L\) must only be a function of \(L(\dot{q}, q, t)\). <br><br>
+
+Beyond empirical and experimental observations suggesting that the EoM is second-order and \(L\) is limited to \(L(\dot{q}, q, t)\), there is a more severe issue: if the Lagrangian \(L\) includes higher-order derivatives, the system's Hamiltonian \(H\) (i.e., energy \(E\)) has no lower bound. This is referred to as the Ostrogradsky instability. A lack of a lower bound for \(E\) is a severe issue in physics. In quantum mechanics, it implies the absence of a ground state, allowing particles to occupy infinitely negative energy states. In statistical mechanics, the partition function
+    \[
+    Z = \sum_{E_i} e^{-\frac{E_i}{k_B T}}
+    \]
+    diverges (\(Z \to +\infty \because \exists E_i  \to -\infty \)), making it impossible to determine the probability of different configurations
+    \[
+    \rho_i = \frac{1}{Z} e^{-\frac{E_i}{k_B T}}
+    \]
+    and rendering all physical quantities unpredictable.
+    </p>
+<br><br>
+    <h3>The Hamiltonian of a Traditional Lagrangian</h3>
+    <p style="text-align:justify">
+    Returning to the traditional Lagrangian \(L(\dot{q}, q, t)\), the Hamiltonian is defined as:
+    \[
+    H = \frac{\partial L}{\partial \dot{q}} \dot{q} - L
+    \]
+    According to Landau's arguments, due to the isotropy (homogeneity in space and time) and frame independence (i.e., the principle of relativity, ensuring physics is unaffected by the choice of coordinate systems or signs), the Lagrangian \(L\) only includes terms like \(\dot{q}^{2n}\) and \(q^{2n}\), which are even powers. Additionally, \(L\) must be a scalar. More specifically, since \(\overrightarrow{\dot{q}}\) and \(\overrightarrow{q}\) are vectors, to satisfy the above requirements, they transform as \(\overrightarrow{\dot{q}} \to \overrightarrow{\dot{q}} \cdot \overrightarrow{\dot{q}} = |\dot{q}|^2\) and \(\overrightarrow{q} \to \overrightarrow{q} \cdot \overrightarrow{q} = |q|^2\), depending only on magnitudes and not directions, ensuring even powers.
+    The simplest harmonic oscillator is:
+    \[
+    L = \frac{m}{2} \dot{q}^2 - \frac{k}{2} q^2 \implies H = \frac{\partial L}{\partial \dot{q}} \dot{q} - L = \frac{m}{2} \dot{q}^2 + \frac{k}{2} q^2
+    \]
+    Notably, \(\frac{\partial L}{\partial \dot{q}} \dot{q} = m \dot{q}^2 \) remains even powers, ensuring the energy \(E\) has a lower bound.
+    </p>
+<br><br>
+    <h3>When \(L\) Includes Higher-Order Derivatives</h3>
+    <p style="text-align:justify">
+    If we allow the Lagrangian \(L\) to include second derivatives, i.e., \(L = L(\ddot{q}, \dot{q}, q, t)\), we can derive the EoM using the principle of variation:
+    
+    
+        \[
+        \delta L = \frac{\partial L}{\partial \ddot{q}} \delta \ddot{q} + \frac{\partial L}{\partial \dot{q}} \delta \dot{q} + \frac{\partial L}{\partial q} \delta q
+        \]
+        \[
+        = \frac{\partial L}{\partial \ddot{q}} \frac{d}{dt} \delta \dot{q} + \frac{\partial L}{\partial \dot{q}} \frac{d}{dt} \delta q + \frac{\partial L}{\partial q} \delta q
+        \]
+        \[
+        = \frac{d}{dt} \left(\frac{\partial L}{\partial \ddot{q}} \delta \dot{q}\right) - \frac{d}{dt} \left(\frac{\partial L}{\partial \ddot{q}}\right) \delta \dot{q} + \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}} \delta q\right) - \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}}\right) \delta q + \frac{\partial L}{\partial q} \delta q
+        \]
+        \[
+        = \frac{d}{dt} \left(\frac{\partial L}{\partial \ddot{q}} \delta \dot{q} + \frac{\partial L}{\partial \dot{q}} \delta q\right) - \frac{d}{dt} \left[\frac{d}{dt} \left(\frac{\partial L}{\partial \ddot{q}}\right) \delta q\right] + \frac{d^2}{dt^2} \left(\frac{\partial L}{\partial \ddot{q}}\right) \delta q + \left(\frac{\partial L}{\partial q} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}}\right) \delta q
+        \]
+        \[
+        = \frac{d}{dt} \left[\frac{\partial L}{\partial \ddot{q}} \delta \dot{q} + \left(\frac{\partial L}{\partial \dot{q}} - \frac{d}{dt} \frac{\partial L}{\partial \ddot{q}}\right) \delta q\right] + \left(\frac{\partial L}{\partial q} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} + \frac{d^2}{dt^2} \frac{\partial L}{\partial \ddot{q}}\right) \delta q
+        \]
+    
+    
+        The first term represents the boundary term, while the second term gives the EoM:
+    
+    
+        \[
+        \frac{d^2}{dt^2} \frac{\partial L}{\partial \ddot{q}} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} + \frac{\partial L}{\partial q} = 0
+        \]
+    
+    
+        The EoM involves \(\frac{d^2}{dt^2} \frac{\partial L}{\partial \ddot{q}}\), leading to a fourth-order differential equation. Such an equation requires not only the initial position \(q(0)\), initial velocity \(\dot{q}(0)\), and initial acceleration \(\ddot{q}(0)\), but also the initial jerk \(\dddot{q}(0)\). Even though \(L\) includes only second derivatives, the EoM demands consideration of third derivatives, which seems unreasonable.
+    </p>
+    <br><br>
+    <h3>The Effect on the Hamiltonian</h3>
+    <p style="text-align:justify">
+        Starting from the Lagrangian \(L\), consider the following formula:
+    
+    
+        \[
+        \frac{dL}{dt} = \frac{\partial L}{\partial \ddot{q}} \frac{d\ddot{q}}{dt} + \frac{\partial L}{\partial \dot{q}} \frac{d\dot{q}}{dt} + \frac{\partial L}{\partial q} \frac{dq}{dt} + \frac{\partial L}{\partial t}
+        \]
+    
+    
+        Rearranging and simplifying, we get:
+    
+    
+        \[
+        \frac{\partial L}{\partial t} = \frac{dL}{dt} - \frac{\partial L}{\partial \ddot{q}} \frac{d\ddot{q}}{dt} - \frac{\partial L}{\partial \dot{q}} \frac{d\dot{q}}{dt} - \frac{\partial L}{\partial q} \dot{q}
+        \]
+        \[
+        = \frac{dL}{dt} - \frac{d}{dt} \left( \frac{\partial L}{\partial \ddot{q}} \ddot{q} \right) + \frac{d}{dt} \left( \frac{\partial L}{\partial \ddot{q}} \right) \ddot{q} - \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} \right) + \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right) \dot{q} - \frac{\partial L}{\partial q} \dot{q}
+        \]
+        \[
+        = \frac{d}{dt} \left[ L - \frac{\partial L}{\partial \ddot{q}} \ddot{q} + \left( \frac{d}{dt} \frac{\partial L}{\partial \ddot{q}} - \frac{\partial L}{\partial \dot{q}} \right) \dot{q} \right] - \left( \frac{d^2}{dt^2} \frac{\partial L}{\partial \ddot{q}} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} + \frac{\partial L}{\partial q} \right) \dot{q}
+        \]
+    
+    
+        The second term corresponds to EoM = 0, while the first term gives the Hamiltonian:
+    
+    
+        \[
+        H = \frac{\partial L}{\partial \ddot{q}} \ddot{q} + \left( \frac{\partial L}{\partial \dot{q}} - \frac{d}{dt} \frac{\partial L}{\partial \ddot{q}} \right) \dot{q} - L
+        \]
+    
+    
+        In the previous discussion, based on isotropy and the principle of relativity, we can infer that \(\ddot{q}\), \(\dot{q}\), and \(q\) in the Lagrangian \(L\) are all even powers. Therefore:
+    
+    
+        \[
+        \frac{\partial L}{\partial \ddot{q}} \ddot{q}, \quad \frac{\partial L}{\partial \dot{q}} \dot{q}
+        \]
+    
+    
+        remain even and always positive. However:
+    
+    
+        \[
+        \left( \frac{d}{dt}  \frac{\partial L}{\partial \ddot{q}} \right) \dot{q}
+        \]
+    
+    
+        introduces odd terms involving \(\ddot{q}\) and \(\dot{q}\), allowing the Hamiltonian \(H\) to lack a lower bound. This is the essence of Ostrogradsky instability.
+</p>
+<br><br>
+
+<table width="100%" cellpadding="1" border="1">
+<tr><td>
+    <h3>More General Case</h3>
+    <p style="text-align:justify">
+    For readers interested in a more general case, consider \(L = L\left(\frac{d^n q}{dt^n}, \dots, \frac{dq}{dt}, q, t\right)\). The corresponding EoM and Hamiltonian are:
+    \[
+    \sum_{i=0}^n (-1)^i \frac{d^i}{dt^i} \left[ \frac{\partial L}{\partial \left(\frac{d^i q}{dt^i}\right)} \right] = 0
+    \]
+    \[
+    H = \sum_{i=1}^n \sum_{j=1}^i (-1)^{i-j} \left[ \frac{d^{i-j}}{dt^{i-j}} \frac{\partial L}{\partial \left(\frac{d^i q}{dt^i}\right)} \right] \frac{d^j q}{dt^j} - L
+    \]
+    Key observations:</p>
+    <ol>
+        <li><p style="text-align:justify">If \(L\) depends on \(n\)-th derivatives, the EoM becomes a \(2n\)-th order differential equation, requiring initial conditions up to \((2n-1)\)-th derivatives. \(2n-1 \geq n\), with equality holding when \(n=1\). Therefore, to ensure that the initial conditions do not exceed the order of derivatives that \(L\) depends on, \(n\) can only be \(1\).</p></li>
+        <li><p style="text-align:justify">For \(n > 1\), the Hamiltonian \(H\) introduces odd-power terms, causing \(H\) to lack a lower bound.</p></li>
+    </ol>
+    <p style="text-align:justify">
+    These arguments suggest that restricting \(L\) to first-order derivatives is more reasonable.</p>
+</td></tr>
+</table>
+
+</p>
 
 
                                 <p>
@@ -182,7 +282,7 @@
                                         <a href="../About_en/main.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Action Principle (Classical)</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Noether's Theorem</a>
                                     </span>
                                 </div><!-- /.post-meta -->
                             
@@ -204,7 +304,7 @@ fetch("lessons.json")
       html += `<a class="btn btn-gray" href="${prev.file}">← Previous</a> `;
     }
 
-    html += `<a class="btn btn-gray" href="../Action_C/${current}" style="margin: 0 10px;">中文版</a>`;
+    html += `<a class="btn btn-gray" href="../Noether/${current}" style="margin: 0 10px;">中文版</a>`;
 
     if (index < pages.length - 1) {
       const next = pages[index + 1];

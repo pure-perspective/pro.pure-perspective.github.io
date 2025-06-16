@@ -13,8 +13,6 @@
     { "title": "古典場論", "file": "K.html" },
     { "title": "場論中的Lagrangian density不唯一性", "file": "L.html" },
     { "title": "不破壞EoM的其他可能", "file": "M.html" },
-    { "title": "場論中的諾特定理Noether theorem-Field theory", "file": "N.html" },
-    { "title": "諾特定理與對稱性-時空與能量動量守恆", "file": "O.html" },
     { "title": "邁向廣義相對論", "file": "P.html" },
     { "title": "淺談希爾伯特變分", "file": "Q.html" }
 ]

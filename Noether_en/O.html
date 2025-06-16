@@ -66,9 +66,9 @@
 
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                                 <li><a href="../CCC_en/main.html">The Superconducting Critical Coupling Constant Theory</a></li>
-                                <li class="active"><a href="../Action_C_en/main.html">Action Principle (Classical)</a></li>
+                                <li><a href="../Action_C_en/main.html">Action Principle (Classical)</a></li>
                                 <li><a href="../Action_R_en/main.html">Action Principle (Relativistic)</a></li>
-                                <li><a href="../Noether_en/main.html">Noether's Theorem</a></li>
+                                <li class="active"><a href="../Noether_en/main.html">Noether's Theorem</a></li>
                                 <li><a href="../STM_en/main.html">STM</a></li>
                             </ul>
 
@@ -98,10 +98,10 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>Action Principle (Classical)</h1>
+                <h1>Noether's Theorem</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="./main.html">Action Principle (Classical)</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">Noether's Theorem</a></li>
                   <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
@@ -118,158 +118,60 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>Ostrogradsky Instability and Higher-Order Derivatives</h2>
+                                    <h2>Noether Theorem and Symmetry - Spacetime and Energy-Momentum Conservation</h2>
                                     <h3></h3>
                                 </div>
                                 
-                                
 <p style="text-align:justify">
-
-    Traditionally, we can use various methods to determine that the EoM is at most a second-order differential equation. For example, in Newtonian mechanics, we only need to know one of the following boundary conditions:<br>
-    </p>
-    <ol>
-        <li><p style="text-align:justify">Initial position and time \((q, t_i)\) and final position and time \((q_f, t_f)\)</p></li>
-        <li><p style="text-align:justify">Initial position and time \((q_i, t_i)\) and initial velocity \( \dot{q}_i \)</p></li>
-    </ol>
-    <p style="text-align:justify">
-    to uniquely determine the motion of an object. In other words, the physical path only depends on one of the aforementioned conditions. This corresponds to the EoM being a second-order differential equation, such as \(F = m \ddot{x}\), where the initial conditions only require the initial position and velocity. In the Lagrangian framework, the EoM is given by the Euler-Lagrange equation:
-    \[
-    \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} - \frac{\partial L}{\partial q} = 0
-    \]
-    Note that \(\frac{d}{dt}\) increases the order of differentiation. For the EoM to remain a second-order differential equation, the Lagrangian \(L\) must only be a function of \(L(\dot{q}, q, t)\). <br><br>
-
-Beyond empirical and experimental observations suggesting that the EoM is second-order and \(L\) is limited to \(L(\dot{q}, q, t)\), there is a more severe issue: if the Lagrangian \(L\) includes higher-order derivatives, the system's Hamiltonian \(H\) (i.e., energy \(E\)) has no lower bound. This is referred to as the Ostrogradsky instability. A lack of a lower bound for \(E\) is a severe issue in physics. In quantum mechanics, it implies the absence of a ground state, allowing particles to occupy infinitely negative energy states. In statistical mechanics, the partition function
-    \[
-    Z = \sum_{E_i} e^{-\frac{E_i}{k_B T}}
-    \]
-    diverges (\(Z \to +\infty \because \exists E_i  \to -\infty \)), making it impossible to determine the probability of different configurations
-    \[
-    \rho_i = \frac{1}{Z} e^{-\frac{E_i}{k_B T}}
-    \]
-    and rendering all physical quantities unpredictable.
-    </p>
-<br><br>
-    <h3>The Hamiltonian of a Traditional Lagrangian</h3>
-    <p style="text-align:justify">
-    Returning to the traditional Lagrangian \(L(\dot{q}, q, t)\), the Hamiltonian is defined as:
-    \[
-    H = \frac{\partial L}{\partial \dot{q}} \dot{q} - L
-    \]
-    According to Landau's arguments, due to the isotropy (homogeneity in space and time) and frame independence (i.e., the principle of relativity, ensuring physics is unaffected by the choice of coordinate systems or signs), the Lagrangian \(L\) only includes terms like \(\dot{q}^{2n}\) and \(q^{2n}\), which are even powers. Additionally, \(L\) must be a scalar. More specifically, since \(\overrightarrow{\dot{q}}\) and \(\overrightarrow{q}\) are vectors, to satisfy the above requirements, they transform as \(\overrightarrow{\dot{q}} \to \overrightarrow{\dot{q}} \cdot \overrightarrow{\dot{q}} = |\dot{q}|^2\) and \(\overrightarrow{q} \to \overrightarrow{q} \cdot \overrightarrow{q} = |q|^2\), depending only on magnitudes and not directions, ensuring even powers.
-    The simplest harmonic oscillator is:
-    \[
-    L = \frac{m}{2} \dot{q}^2 - \frac{k}{2} q^2 \implies H = \frac{\partial L}{\partial \dot{q}} \dot{q} - L = \frac{m}{2} \dot{q}^2 + \frac{k}{2} q^2
-    \]
-    Notably, \(\frac{\partial L}{\partial \dot{q}} \dot{q} = m \dot{q}^2 \) remains even powers, ensuring the energy \(E\) has a lower bound.
-    </p>
-<br><br>
-    <h3>When \(L\) Includes Higher-Order Derivatives</h3>
-    <p style="text-align:justify">
-    If we allow the Lagrangian \(L\) to include second derivatives, i.e., \(L = L(\ddot{q}, \dot{q}, q, t)\), we can derive the EoM using the principle of variation:
+    When discussing spacetime symmetry, we fix the field \(\phi \) such that it is unaffected by variations (\(\Psi=0\)). We are left with:
     
+    $$\partial _\mu  \left[\left({\partial \mathcal{L}\over\partial \left(\partial _\mu  \phi\right) }  \partial _\alpha \phi - \delta ^\mu  _\alpha L \right) Χ^\alpha \right]=0$$
     
-        \[
-        \delta L = \frac{\partial L}{\partial \ddot{q}} \delta \ddot{q} + \frac{\partial L}{\partial \dot{q}} \delta \dot{q} + \frac{\partial L}{\partial q} \delta q
-        \]
-        \[
-        = \frac{\partial L}{\partial \ddot{q}} \frac{d}{dt} \delta \dot{q} + \frac{\partial L}{\partial \dot{q}} \frac{d}{dt} \delta q + \frac{\partial L}{\partial q} \delta q
-        \]
-        \[
-        = \frac{d}{dt} \left(\frac{\partial L}{\partial \ddot{q}} \delta \dot{q}\right) - \frac{d}{dt} \left(\frac{\partial L}{\partial \ddot{q}}\right) \delta \dot{q} + \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}} \delta q\right) - \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}}\right) \delta q + \frac{\partial L}{\partial q} \delta q
-        \]
-        \[
-        = \frac{d}{dt} \left(\frac{\partial L}{\partial \ddot{q}} \delta \dot{q} + \frac{\partial L}{\partial \dot{q}} \delta q\right) - \frac{d}{dt} \left[\frac{d}{dt} \left(\frac{\partial L}{\partial \ddot{q}}\right) \delta q\right] + \frac{d^2}{dt^2} \left(\frac{\partial L}{\partial \ddot{q}}\right) \delta q + \left(\frac{\partial L}{\partial q} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}}\right) \delta q
-        \]
-        \[
-        = \frac{d}{dt} \left[\frac{\partial L}{\partial \ddot{q}} \delta \dot{q} + \left(\frac{\partial L}{\partial \dot{q}} - \frac{d}{dt} \frac{\partial L}{\partial \ddot{q}}\right) \delta q\right] + \left(\frac{\partial L}{\partial q} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} + \frac{d^2}{dt^2} \frac{\partial L}{\partial \ddot{q}}\right) \delta q
-        \]
+    We define the energy-momentum tensor \(T^{\mu\nu}\):
     
+    $$T^{\mu\nu}\equiv {{\partial L}\over{\partial \left( \partial _\nu \phi \right)}}  \partial ^\mu  \phi -\eta ^{\mu\nu} L$$
     
-        The first term represents the boundary term, while the second term gives the EoM:
+    The conservation current \(\partial _\nu T^{\mu\nu}=0\) represents:
     
+    $$\partial _\nu T^{0\nu}=0 \text{ Energy conservation}$$
+    $$\partial _\nu T^{i\nu}=0 \text{ Momentum conservation}$$
     
-        \[
-        \frac{d^2}{dt^2} \frac{\partial L}{\partial \ddot{q}} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} + \frac{\partial L}{\partial q} = 0
-        \]
+    In relativity, the energy-momentum tensor for a free particle is:
     
+    $$T^{\mu\nu}\equiv mU^\mu  U^\nu$$
     
-        The EoM involves \(\frac{d^2}{dt^2} \frac{\partial L}{\partial \ddot{q}}\), leading to a fourth-order differential equation. Such an equation requires not only the initial position \(q(0)\), initial velocity \(\dot{q}(0)\), and initial acceleration \(\ddot{q}(0)\), but also the initial jerk \(\dddot{q}(0)\). Even though \(L\) includes only second derivatives, the EoM demands consideration of third derivatives, which seems unreasonable.
-    </p>
+    For a classical particle, returning to non-relativistic terms, the trajectory \(q\) only depends on \(t\):
+    
+    $$T^{\mu\nu}=T^{00}={\partial L\over \partial \dot{q} }  \dot{q} -L=H$$
+    
+    \(T^{00}\) is the Hamiltonian, representing energy conservation:
+    
+    $$\partial _\nu T^{0\nu}=\partial _0 T^{00}={dH \over dt}=0$$
+    
+    The energy does not change with time!
+    
     <br><br>
-    <h3>The Effect on the Hamiltonian</h3>
-    <p style="text-align:justify">
-        Starting from the Lagrangian \(L\), consider the following formula:
+    
+    Classical Noether theorem can be stated as:
+    
+    <table width="100%" cellpadding="1" border="1">
+    <tr><td>$$Classical Non-relativistic$$</td><td>$$Relativistic$$</td></tr>
+    <tr><td>$$S=\int  Ldt $$</td><td>$$S=\int \mathcal{L}d^4 x$$</td></tr>
+    <tr><td>$$N\equiv {\partial L\over\partial \dot{q} _i } Q_i-\left({\partial L\over\partial \dot{q} _i } \dot{q} _i-L\right)T$$</td>
+    <td>$$N^\mu \equiv {\partial \mathcal{L}\over\partial (\partial _\mu  \alpha^\nu ) }  \Psi^\nu-\left({\partial \mathcal{L}\over\partial (\partial _\mu  \alpha^\nu ) }  \partial _\alpha \alpha^\nu- \delta ^\mu  _\alpha L\right) Χ^\alpha $$</td></tr>
+    </table>
+    
+    In classical mechanics, time \(t\) plays the role corresponding to spacetime \(x^\mu\), so time symmetry represents energy conservation. Other symmetries \(Q_i\) can represent spatial \(q_i\) or angular \(\theta_i\) coordinates, with:
+    
+    $${\partial L\over\partial \dot{q} _i }  \text{ Momentum conservation}$$
+    $${\partial L\over \partial \dot{\theta}_i }  \text{ Angular momentum conservation}$$
+    
+    </p>
     
     
-        \[
-        \frac{dL}{dt} = \frac{\partial L}{\partial \ddot{q}} \frac{d\ddot{q}}{dt} + \frac{\partial L}{\partial \dot{q}} \frac{d\dot{q}}{dt} + \frac{\partial L}{\partial q} \frac{dq}{dt} + \frac{\partial L}{\partial t}
-        \]
     
-    
-        Rearranging and simplifying, we get:
-    
-    
-        \[
-        \frac{\partial L}{\partial t} = \frac{dL}{dt} - \frac{\partial L}{\partial \ddot{q}} \frac{d\ddot{q}}{dt} - \frac{\partial L}{\partial \dot{q}} \frac{d\dot{q}}{dt} - \frac{\partial L}{\partial q} \dot{q}
-        \]
-        \[
-        = \frac{dL}{dt} - \frac{d}{dt} \left( \frac{\partial L}{\partial \ddot{q}} \ddot{q} \right) + \frac{d}{dt} \left( \frac{\partial L}{\partial \ddot{q}} \right) \ddot{q} - \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} \right) + \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right) \dot{q} - \frac{\partial L}{\partial q} \dot{q}
-        \]
-        \[
-        = \frac{d}{dt} \left[ L - \frac{\partial L}{\partial \ddot{q}} \ddot{q} + \left( \frac{d}{dt} \frac{\partial L}{\partial \ddot{q}} - \frac{\partial L}{\partial \dot{q}} \right) \dot{q} \right] - \left( \frac{d^2}{dt^2} \frac{\partial L}{\partial \ddot{q}} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} + \frac{\partial L}{\partial q} \right) \dot{q}
-        \]
-    
-    
-        The second term corresponds to EoM = 0, while the first term gives the Hamiltonian:
-    
-    
-        \[
-        H = \frac{\partial L}{\partial \ddot{q}} \ddot{q} + \left( \frac{\partial L}{\partial \dot{q}} - \frac{d}{dt} \frac{\partial L}{\partial \ddot{q}} \right) \dot{q} - L
-        \]
-    
-    
-        In the previous discussion, based on isotropy and the principle of relativity, we can infer that \(\ddot{q}\), \(\dot{q}\), and \(q\) in the Lagrangian \(L\) are all even powers. Therefore:
-    
-    
-        \[
-        \frac{\partial L}{\partial \ddot{q}} \ddot{q}, \quad \frac{\partial L}{\partial \dot{q}} \dot{q}
-        \]
-    
-    
-        remain even and always positive. However:
-    
-    
-        \[
-        \left( \frac{d}{dt}  \frac{\partial L}{\partial \ddot{q}} \right) \dot{q}
-        \]
-    
-    
-        introduces odd terms involving \(\ddot{q}\) and \(\dot{q}\), allowing the Hamiltonian \(H\) to lack a lower bound. This is the essence of Ostrogradsky instability.
-</p>
-<br><br>
 
-<table width="100%" cellpadding="1" border="1">
-<tr><td>
-    <h3>More General Case</h3>
-    <p style="text-align:justify">
-    For readers interested in a more general case, consider \(L = L\left(\frac{d^n q}{dt^n}, \dots, \frac{dq}{dt}, q, t\right)\). The corresponding EoM and Hamiltonian are:
-    \[
-    \sum_{i=0}^n (-1)^i \frac{d^i}{dt^i} \left[ \frac{\partial L}{\partial \left(\frac{d^i q}{dt^i}\right)} \right] = 0
-    \]
-    \[
-    H = \sum_{i=1}^n \sum_{j=1}^i (-1)^{i-j} \left[ \frac{d^{i-j}}{dt^{i-j}} \frac{\partial L}{\partial \left(\frac{d^i q}{dt^i}\right)} \right] \frac{d^j q}{dt^j} - L
-    \]
-    Key observations:</p>
-    <ol>
-        <li><p style="text-align:justify">If \(L\) depends on \(n\)-th derivatives, the EoM becomes a \(2n\)-th order differential equation, requiring initial conditions up to \((2n-1)\)-th derivatives. \(2n-1 \geq n\), with equality holding when \(n=1\). Therefore, to ensure that the initial conditions do not exceed the order of derivatives that \(L\) depends on, \(n\) can only be \(1\).</p></li>
-        <li><p style="text-align:justify">For \(n > 1\), the Hamiltonian \(H\) introduces odd-power terms, causing \(H\) to lack a lower bound.</p></li>
-    </ol>
-    <p style="text-align:justify">
-    These arguments suggest that restricting \(L\) to first-order derivatives is more reasonable.</p>
-</td></tr>
-</table>
 
-</p>
 
 
                                 <p>
@@ -282,7 +184,7 @@ Beyond empirical and experimental observations suggesting that the EoM is second
                                         <a href="../About_en/main.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Action Principle (Classical)</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Noether's Theorem</a>
                                     </span>
                                 </div><!-- /.post-meta -->
                             
@@ -304,7 +206,7 @@ fetch("lessons.json")
       html += `<a class="btn btn-gray" href="${prev.file}">← Previous</a> `;
     }
 
-    html += `<a class="btn btn-gray" href="../Action_C/${current}" style="margin: 0 10px;">中文版</a>`;
+    html += `<a class="btn btn-gray" href="../Noether/${current}" style="margin: 0 10px;">中文版</a>`;
 
     if (index < pages.length - 1) {
       const next = pages[index + 1];

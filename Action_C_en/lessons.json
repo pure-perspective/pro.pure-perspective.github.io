@@ -4,9 +4,5 @@
     { "title": "Simplified Variation Notation", "file": "B.html" },
     { "title": "Non-uniqueness of the Lagrangian", "file": "C.html" },
     { "title": "Point Transformation, Form Invariant, and the Principle of Relativity", "file": "D.html" },
-    { "title": "Lagrangian in Momentum Space", "file": "E.html" },
-    { "title": "Classical Noether's Theorem", "file": "F.html" },
-    { "title": "Conservation Laws Derivation in Conventional Textbooks", "file": "G.html" },
-    { "title": "Maximal Symmetry Action", "file": "H.html" },
-    { "title": "Ostrogradsky Instability and Higher-Order Derivatives", "file": "I.html" }
+    { "title": "Lagrangian in Momentum Space", "file": "E.html" }
 ]

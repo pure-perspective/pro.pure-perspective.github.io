@@ -4,9 +4,5 @@
     { "title": "簡化變分表示法", "file": "B.html" },
     { "title": "Lagrangian的不唯一性", "file": "C.html" },
     { "title": "Point Transformation、Form Invariant和Principle of Relativity", "file": "D.html" },
-    { "title": "動量空間的Lagrangian", "file": "E.html" },
-    { "title": "古典諾特定理", "file": "F.html" },
-    { "title": "一般教科書上守恆量的推導", "file": "G.html" },
-    { "title": "Maximal Symmetry Action", "file": "H.html" },
-    { "title": "Ostrogradsky instability與高次微分", "file": "I.html" }
+    { "title": "動量空間的Lagrangian", "file": "E.html" }
 ]

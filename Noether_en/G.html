@@ -68,7 +68,7 @@
                                 <li><a href="../CCC_en/main.html">The Superconducting Critical Coupling Constant Theory</a></li>
                                 <li><a href="../Action_C_en/main.html">Action Principle (Classical)</a></li>
                                 <li><a href="../Action_R_en/main.html">Action Principle (Relativistic)</a></li>
-                                <li><a href="../Noether_en/main.html">Noether's Theorem</a></li>
+                                <li class="active"><a href="../Noether_en/main.html">Noether's Theorem</a></li>
                                 <li><a href="../STM_en/main.html">STM</a></li>
                             </ul>
 
@@ -83,7 +83,7 @@
                             </ul>
 
                         </li>
-                        <li  class="active"><a href="../About_en/main.html">About Me</a></li>
+                        <li><a href="../About_en/main.html">About Me</a></li>
                         <!--<li><a href="./QC_hardware/main.html">硬體導論</a></li>-->
                         <li><a href="../index.html">中文版</a></li>
                         
@@ -98,10 +98,10 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>硬體導論</h1>
+                <h1>Noether's Theorem</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="./main.html">硬體導論</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">Noether's Theorem</a></li>
                   <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
@@ -118,25 +118,116 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
+                                    <h2>Conservation Laws Derivation in Conventional Textbooks</h2>
                                     <h3></h3>
                                 </div>
                                 
                                 
-                                <p style="text-align:justify">
-                                    ▲
-                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
+<h3>Momentum Conservation</h3>
+<p style="text-align:justify">
+    
+        For momentum conservation, we can directly start from the EoM:
+        \[
+        \frac{\partial L}{\partial q} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} = 0 \implies \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} = \frac{\partial L}{\partial q}.
+        \]
+        If \(L\) is not an explicit function of the trajectory \(q\), then \(\frac{\partial L}{\partial q} = 0\), which implies:
+        \[
+        \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} = 0.
+        \]
+        This means the momentum:
+        \[
+        p = \frac{\partial L}{\partial \dot{q}} = \text{constant}.
+        \]
+        Another implication of \(\frac{\partial L}{\partial q} = 0\) is that when \(q \to q + \delta q\) (with \(\dot{q}\) unchanged), we have:
+        \[
+        \delta L = \frac{\partial L}{\partial q} \delta q = 0.
+        \]
+    </p>
+    <h3>Energy Conservation and Hamiltonian</h3>
+<p style="text-align:justify">
+        Next, we discuss the Hamiltonian \(H\):
+        \[
+        \frac{dL}{dt} = \frac{\partial L}{\partial \dot{q}} \frac{d\dot{q}}{dt} + \frac{\partial L}{\partial q} \frac{dq}{dt} + \frac{\partial L}{\partial t}.
+        \]
+        Rearranging and simplifying, we get:
+        \[
+        \frac{\partial L}{\partial t} = \frac{dL}{dt} - \frac{\partial L}{\partial \dot{q}} \frac{d\dot{q}}{dt} - \frac{\partial L}{\partial q} \dot{q}.
+        \]
+        \[
+        = \frac{dL}{dt} - \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} \right) + \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right) \dot{q} - \frac{\partial L}{\partial q} \dot{q}.
+        \]
+        \[
+        = -\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} - L \right) + \left( \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} - \frac{\partial L}{\partial q} \right) \dot{q}.
+        \]
+        The second term corresponds to \(EoM = 0\), so:
+        \[
+        \frac{\partial L}{\partial t} = -\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} - L \right).
+        \]
+        If \(L\) is not an explicit function of time \(t\), then \(\frac{\partial L}{\partial t} = 0\), which implies:
+        \[
+        \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} - L \right) = 0.
+        \]
+        The energy:
+        \[
+        E = \frac{\partial L}{\partial \dot{q}} \dot{q} - L = \text{constant}.
+        \]
+        Another implication of \(\frac{\partial L}{\partial t} = 0\) is that when \(t \to t + \delta t\) (with \(q, \dot{q}\) unchanged), we have:
+        \[
+        \delta L = \frac{\partial L}{\partial t} \delta t = 0.
+        \]
+    </p>
+    <h3>Global and Local Transformations</h3>
+<p style="text-align:justify">
+        In the previous section, we discussed the symmetry of the action \(S\), i.e., \(\delta S = 0\). In this section, we consider \(L\) being independent of \(q\) or \(t\), i.e., \(\delta L = 0\). The difference between the two is reflected in:
+        \[
+        \delta S = \delta \left( \int L \, dt \right) = \int \delta L \, dt + \int L \delta dt,
+        \]
+        where the second term introduces a difference. From the previous derivation:
+        \[
+        \int L \delta dt = \int L \frac{d \delta t}{dt} dt.
+        \]
+        If \(\frac{d \delta t}{dt} = 0\), then \(\delta L = 0 \iff \delta S = 0\).
+        A more detailed comparison is shown in the following table:
+</p>
+    <table width="100%" border="1" cellpadding="5">
+        <tr>
+            <td>\[\delta L = 0\]</td>
+            <td>\[\delta S = 0\]</td>
+        </tr>
+        <tr>
+            <td>\[\frac{\partial L}{\partial q} = \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} = 0\]</td>
+            <td>\[\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \Delta q \right) = 0\]</td>
+        </tr>
+        <tr>
+            <td>
+\[
+\frac{\partial L}{\partial t} = -\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} - L \right)=0
+\]
+</td>
+<td>
+                \[\frac{d}{dt} \left[ \left( \frac{\partial L}{\partial \dot{q}} \dot{q} - L \right) \delta t \right] = 0\]
+            </td>
+        </tr>
+    </table>
+<p style="text-align:justify">
+        When the variation \(\Delta q\) is not a function of time (i.e., \(\frac{d}{dt} \Delta q = 0\)), the results of \(\delta L = 0\) and \(\delta S = 0\) are identical. Similarly, when \(\frac{d}{dt} \delta t = 0\), the conservation laws from both approaches are equivalent.
+<br><br>
+        This introduces the concept of global transformations and local transformations. A global transformation assumes the variation is time-independent, meaning the changes at all time points are fixed. A local transformation allows the variation to be time-dependent, providing greater freedom in changes at each time point. Clearly, global transformations are a special case of local transformations. Discussing \(\delta L = 0\) quickly leads to conserved quantities for global transformations, while local transformations pave the way for new directions, such as gauge theory, which we may discuss in future writings.
+    </p>
 
-                                    </span><br><br>
-                                    </p>
 
 
+                                <p>
+                                    <span style="font-size: 0.5em; line-height: 0.8;">
+                                        Originally written in Chinese by the author, these articles are translated into English to invite cross-language resonance.
+                                    </span>
+                                </p>
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="../About/main.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                        <a href="../About_en/main.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Noether's Theorem</a>
                                     </span>
                                 </div><!-- /.post-meta -->
                             
@@ -155,14 +246,14 @@ fetch("lessons.json")
 
     if (index > 0) {
       const prev = pages[index - 1];
-      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+      html += `<a class="btn btn-gray" href="${prev.file}">← Previous</a> `;
     }
 
-    html += `<a class="btn btn-gray" href="../QC_hardware_en/${current}" style="margin: 0 10px;">English Version</a>`;
+    html += `<a class="btn btn-gray" href="../Noether/${current}" style="margin: 0 10px;">中文版</a>`;
 
     if (index < pages.length - 1) {
       const next = pages[index + 1];
-      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+      html += `<a class="btn btn-gray" href="${next.file}">Next →</a>`;
     }
 
     document.getElementById("prev-next-nav").innerHTML = html;
