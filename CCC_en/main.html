@@ -117,8 +117,12 @@
                         <article class="blog-post">
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
+                                
+                               
+
+
                                 <div style="text-align: center;">
-                                    <h2>Theory of Superconducting Critical Coupling Constants</h2>
+                                    <h2>Theory of Superconducting Critical Coupling Constants:Brief</h2>
                                     <h3>Superconductivity Enhancement Methods</h3>
                                 </div>
                                 
@@ -153,24 +157,19 @@
     <p style="text-align:justify">
     According to the theory, I focused on the chemical design including high phonon frequency, multiple carriers, and small lattice constants. I synthesized a series of high-entropy oxides (HEO) based on \(Bi_2Sr_2Ca_2Cu_3O_x\) and \(YBa_2Cu_3O_x\) superconductors. The micro structure of the HEO compounds was analyzed by ZEISS Gemini SEM and Bruker D2 PHASER XRD.
     </p>
-    <h2>\(\to\) <a href="./Intro-CCC.html">More Details</a></h2>
-                                    
-                                 
                                 
-                                <p style="text-align:justify">
-                                    ▲
-                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
 
-                                    </span><br><br>
-                                    </p>
-
-
+    <p>
+        <span style="font-size: 0.5em; line-height: 0.8;">
+            Originally written in Chinese by the author, these articles are translated into English to invite cross-language resonance.
+        </span>
+    </p>
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="../About/main.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                        <a href="../About_en/main.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>The Critical Coupling Constants</a>
                                     </span>
                                 </div><!-- /.post-meta -->
                             
@@ -189,14 +188,14 @@ fetch("lessons.json")
 
     if (index > 0) {
       const prev = pages[index - 1];
-      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+      html += `<a class="btn btn-gray" href="${prev.file}">← Previous</a> `;
     }
 
-    html += `<a class="btn btn-gray" href="../QC_hardware_en/${current}" style="margin: 0 10px;">English Version</a>`;
+    html += `<a class="btn btn-gray" href="../CCC/${current}" style="margin: 0 10px;">中文版</a>`;
 
     if (index < pages.length - 1) {
       const next = pages[index + 1];
-      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+      html += `<a class="btn btn-gray" href="${next.file}">Next →</a>`;
     }
 
     document.getElementById("prev-next-nav").innerHTML = html;

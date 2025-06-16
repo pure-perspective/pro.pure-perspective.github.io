@@ -65,7 +65,7 @@
                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">物理筆記<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
 
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                                <li><a href="../CCC/main.html">超導臨界耦合常數理論</a></li>
+                                <li class="active"><a href="../CCC/main.html">超導臨界耦合常數理論</a></li>
                                 <li><a href="../Action_C/main.html">古典最小作用量原理</a></li>
                                 <li><a href="../Action_R/main.html">相對論性最小作用量原理</a></li>
                                 <li><a href="../Noether/main.html">諾特定理</a></li>
@@ -83,7 +83,7 @@
                             </ul>
 
                         </li>
-                        <li  class="active"><a href="../About/main.html">About Me</a></li>
+                        <li><a href="../About/main.html">About Me</a></li>
                         <!--<li><a href="./QC_hardware/main.html">硬體導論</a></li>-->
                         <li><a href="../index_en.html">English</a></li>
                         
@@ -118,25 +118,77 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>超導量子電腦-硬體技術與廠商指引(2025)</h2>
-                                    <h3></h3>
+                                    <h2>超導臨界耦合常數理論：簡介</h2>
+                                    <h3>超導性提升方法</h3>
                                 </div>
                                 
+                                <p style="text-align:justify">
+                                    <a href="https://doi.org/10.1038/s41598-023-33809-5">
+                                        <h4>DOI:10.1038/s41598-023-33809-5</h4>
+                                    </a>
+                                </p>
                                 
                                 <p style="text-align:justify">
-                                    ▲
-                                    <br><span style="font-size: 0.7em; line-height: 0.8;">
-
-                                    </span><br><br>
-                                    </p>
-
+                                    我的博士論文主題為「臨界耦合常數對超導性提升的影響」。論文中清楚闡述了：<b>當耦合強度接近臨界耦合常數時，超導穹頂現象會出現</b>。調控聲子頻率 \(\Omega\)、載子數量 \(Z\)、以及施加壓力 \(P\) 是三種提升超導轉變溫度 \(T_c\) 的關鍵手段。我擴展了 <b>BCS-McMillan 理論</b>，整合這三種因素對超導性的影響，形成統一描述。
+                                </p>
+                                
+                                <div id="QM"></div>
+                                <br><br>
+                                <h4>超導性的量子哈密頓量</h4>
+                                <p>
+                                    超導性的量子哈密頓量為：
+                                    $$
+                                    \hat{H} \left| \Psi \right> =\left[ \sum\limits_{k\sigma} \xi_k \hat{c}_{k\sigma}^\dagger \hat{c}_{k\sigma} + \frac{1}{N}\sum\limits_{kk^\prime} \frac{g_{eff}}{M\Omega^2} \hat{c}_{k\uparrow}^\dagger \hat{c}_{k\downarrow}^\dagger \hat{c}_{-k^\prime \downarrow} \hat{c}_{k^\prime \uparrow} \right] \left| \Psi \right>
+                                    $$
+                                
+                                    可推導出耦合常數 \(\lambda\) 與 \(T_c\) 的明確表達式為：
+                                    $$
+                                    \lambda =  { C \sqrt[3]{Zn_{ion}}\over M\Omega ^2}
+                                    $$
+                                    和
+                                    $$
+                                    T_c \sim \Omega\cdot \exp\left(-{1 \over  \lambda}\right) = \Omega\cdot \exp\left[-{M\Omega ^2 \over C \sqrt[3]{Zn_{ion}}}\right]
+                                    $$
+                                
+                                    其中 \(C\) 為常數，\(M\) 為離子質量，\(Z\) 為原子價數，\(n_{ion}\) 為離子密度。
+                                
+                                    當對 \(\Omega\) 求導，有：
+                                    $$
+                                    {dT_c \over d\Omega}\sim {T_c \over \Omega}\cdot \left[1-{2\over \lambda}\right]
+                                    $$
+                                
+                                    當 \(\lambda = 2\) 時導數為零，定義對應於聲子頻率的臨界耦合常數為 \(\lambda_c^\Omega = 2\)。類似地，可以推導出另外兩個臨界耦合常數：
+                                    \(\lambda_c^Z= {5 \over 3}\)，與 \(\lambda_c^P={4 \over 3}\)。
+                                </p>
+                                
+                                <img src="../Image/Critical coupling.png" alt="取代文字" style="max-width: 60%; max-height: 600px; height: auto;"><br>
+                                
+                                <p style="text-align:justify">
+                                    這些臨界耦合常數與實驗結果一致，並可將超導性依據耦合強度分為三類：
+                                    弱耦合（\(\lambda_c < \lambda_c^P\)），中等耦合（\(\lambda_c^P < \lambda_c^\Omega\)），與強耦合（\(\lambda_c > \lambda_c^\Omega\)）。
+                                    每一區段有對應的不同提升策略，特別的是弱耦合與強耦合區域的提升策略恰好相反，
+                                    但最終都會導引超導性進入中等耦合區，並在該區域進一步提升 \(T_c\)。
+                                
+                                    具體而言，假設耦合常數 \(\lambda\) 位於區間 \(\lambda_c^P<\lambda<\lambda_c^Z\)。此時可透過下列三步驟達成「鋸齒式提升」：
+                                    <br>1. 先調整 \(Z\)，使 \(\lambda = \lambda_c^Z\)，稱為 \(\lambda_1\)。
+                                    <br>2. 接著增加壓力 \(P\)，會導致 \(\lambda\) 下降，當 \(\lambda = \lambda_c^P\) 時，\(T_c\) 再次被最大化，稱為 \(\lambda_2\)。
+                                    <br>3. 這時可以再減少 \(Z\)，提升 \(\lambda\)，當 \(\lambda = \lambda_c^Z\) 時又達到新一波的最大值，稱為 \(\lambda_3\)。
+                                
+                                    重複第2與第3步驟，即可像「鋸齒式爬山」般逐步提升 \(T_c\)。
+                                </p>
+                                
+                                <a href="../Image/CCC/zigzag.png"><img src="../Image/CCC/zigzag.png" alt="取代文字" style="max-width: 100%; max-height: 600px; height: auto;"></a>
+                                <p style="text-align:justify">
+                                    根據上述理論，我聚焦於化學設計，包括高頻聲子、複數載子、與小晶格常數。我以 \(Bi_2Sr_2Ca_2Cu_3O_x\) 和 \(YBa_2Cu_3O_x\) 為基礎，合成了一系列高熵氧化物 (HEO) 超導材料，並使用 ZEISS Gemini SEM 與 Bruker D2 PHASER XRD 進行微結構分析。
+                                </p>
+                                
 
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="../About/main.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                        <a href="../About_en/"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>The Critical Coupling Constants Theory</a>
                                     </span>
                                 </div><!-- /.post-meta -->
                             
@@ -158,7 +210,7 @@ fetch("lessons.json")
       html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
     }
 
-    html += `<a class="btn btn-gray" href="../QC_hardware_en/${current}" style="margin: 0 10px;">English Version</a>`;
+    html += `<a class="btn btn-gray" href="../CCC_en/${current}" style="margin: 0 10px;">English Version</a>`;
 
     if (index < pages.length - 1) {
       const next = pages[index + 1];

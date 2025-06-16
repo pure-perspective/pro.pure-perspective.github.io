@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Favicon
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/PP.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/PP.png">
+
+    <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</title>
+    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <link rel="canonical" href="https://www.insight-ihbar.com/QC_hardware_2025.html" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+
+                <div class="navbar-header">                   
+                    <a href="../index.html" class="site-title">𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</a>
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">物理筆記<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                <li><a href="../CCC/main.html">超導臨界耦合常數理論</a></li>
+                                <li><a href="../Action_C/main.html">古典最小作用量原理</a></li>
+                                <li><a href="../Action_R/main.html">相對論性最小作用量原理</a></li>
+                                <li><a href="../Noether/main.html">諾特定理</a></li>
+                                <li><a href="../STM/main.html">STM</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">工程筆記<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                              <li><a href="../CVT/main.html">確動式CVT專利</a></li>
+                              <li><a href="../EA-1/main.html">EA-1 低溫電性量測</a></li>
+                              <li><a href="../EA-2/main.html">EA-2 自動粉末配粉機</a></li>
+                              <li><a href="../TWing/main.html">雙主翼風洞實驗</a></li>
+                            </ul>
+
+                        </li>
+                        <li  class="active"><a href="../About/main.html">About Me</a></li>
+                        <!--<li><a href="./QC_hardware/main.html">硬體導論</a></li>-->
+                        <li><a href="../index_en.html">English</a></li>
+                        
+                    </ul>
+
+                </div>
+
+            </div>   
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <h1>About Me</h1>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">About Me</a></li>
+                  <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
+                </ol>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="blog-post">
+                            <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
+                            <div class="post-content">
+                                <!--<div style="text-align: center;">
+                                    <h2>關於𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</h2>
+                                    <h3>深入的量子科技知識平台</h3>
+                                </div>-->
+                                <div style="text-align: center;">
+                                    <h2>自傳
+                                        <a class="linkedin-bg" href="https://www.linkedin.com/in/peir-ru-wang">
+                                        <i class="fab fa-linkedin fa"></i>
+                                        </a>
+                                    </h2>
+                                    <h3></h3>
+                                </div>
+                                
+                                <h2>經歷</h2>
+                                <table style="width:98%; border-collapse: collapse; text-align: left; font-family: sans-serif;">
+                                  <thead>
+                                    <tr style="background-color: #f2f2f2;">
+                                      <th style="padding: 10px;">職稱</th>
+                                      <th style="padding: 10px;">機構</th>
+                                      <th style="padding: 10px;">主題</th>
+                                      <th style="padding: 10px;">期間</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td style="padding: 10px;">創辦人</td>
+                                      <td style="padding: 10px;">
+                                        <a href="https://www.quantum-perspectives.com/">Quantum Perspectives CO., LTD.</a>
+                                      </td>
+                                      <td style="padding: 10px;">量子研究、顧問與產品轉售</td>
+                                      <td style="padding: 10px;">2025.03–</td>
+                                    </tr>
+                                    <tr>
+                                      <td style="padding: 10px;">研究員</td>
+                                      <td style="padding: 10px;">
+                                        <a href="https://www.insight-ihbar.com/About_en/Wang.html">𝒊𝑁𝑆𝐼𝐺𝐻𝑇 𝒊ℏ</a>
+                                      </td>
+                                      <td style="padding: 10px;">量子位元與量子教育</td>
+                                      <td style="padding: 10px;">2024.10–</td>
+                                    </tr>
+                                    <tr>
+                                      <td style="padding: 10px;">研究員</td>
+                                      <td style="padding: 10px;">
+                                        <a href="../action/Pure-Perspective.html">𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒 研究小組</a>
+                                      </td>
+                                      <td style="padding: 10px;">
+                                        <ul style="margin: 0; padding-left: 20px;">
+                                          <li><a href="#HE-SC">高熵超導研究</a></li>
+                                          <li>基礎物理<sup>\(a,b,c\)</sup></li>
+                                        </ul>
+                                      </td>
+                                      <td style="padding: 10px;">2024.10–</td>
+                                    </tr>
+                                    <tr>
+                                      <td style="padding: 10px;">博士後研究</td>
+                                      <td style="padding: 10px;">國立清華大學</td>
+                                      <td style="padding: 10px;">
+                                        <a href="../STM_en/main.html">\(TaS_2\) 的 STM 研究</a>
+                                      </td>
+                                      <td style="padding: 10px;">2024.03–2024.09</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                
+                                <p style="text-align:justify">
+                                <span style="font-size: 0.7em; line-height: 0.8;">
+                                    \( ^a \) <b>Peir-Ru Wang(王培儒)</b>,  Yen-Cheng Chang(張晏誠), <a href="https://arxiv.org/abs/2503.15031">Canonical Energy-Momentum Tensor of Abelian Fields</a>, arXiv:2503.15031 <br>
+                                    \( ^b \) <b>Peir-Ru Wang(王培儒)</b>, <a href="../action/Image/Non_abelian.pdf">Canonical Energy-Momentum Tensor of Non-Abelian Fields(PDF)</a> <br>
+                                    \( ^c \) <b>Peir-Ru Wang(王培儒)</b>, <a href="../action/Image/GR_2.pdf">Canonical Noether Current of General Relativity(PDF)</a> <br>
+                                    </span>
+                                </p>
+                                
+                                <h2>學歷</h2>
+                                <table style="width: 98%; border-collapse: collapse; font-family: sans-serif; text-align: left;">
+                                  <thead>
+                                    <tr style="background-color: #f0f0f0;">
+                                      <th style="padding: 10px;">學位</th>
+                                      <th style="padding: 10px;">領域</th>
+                                      <th style="padding: 10px;">學校</th>
+                                      <th style="padding: 10px;">重點成果</th>
+                                      <th style="padding: 10px;">期間</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td style="padding: 10px;">博士</td>
+                                      <td style="padding: 10px;">材料科學</td>
+                                      <td style="padding: 10px;">國立清華大學</td>
+                                      <td style="padding: 10px;">
+                                        <ul style="margin: 0; padding-left: 20px;">
+                                          <li><a href="../CCC_en/main.html">超導臨界耦合常數理論</a> <sup>1</sup></li>
+                                          <li><a href="../About_en/TA.html">物理系教學助教獎</a></li>
+                                        </ul>
+                                      </td>
+                                      <td style="padding: 10px;">2016.09–2024.01</td>
+                                    </tr>
+                                    <tr>
+                                      <td style="padding: 10px;">學士</td>
+                                      <td style="padding: 10px;">
+                                        動力機械工程（主修）<br>物理學（輔系）
+                                      </td>
+                                      <td style="padding: 10px;">國立清華大學</td>
+                                      <td style="padding: 10px;">
+                                        <ul style="margin: 0; padding-left: 20px;">
+                                          <li><a href="../CVT_en/main.html">CVT 發明專利</a> <sup>2</sup></li>
+                                          <li><a href="../TWing_en/main.html">翼列機空氣動力會議論文</a> <sup>3</sup></li>
+                                        </ul>
+                                      </td>
+                                      <td style="padding: 10px;">2012.09–2016.06</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                
+                                <p style="text-align:justify">
+                                    <span style="font-size: 0.7em; line-height: 0.8;">
+                                        \( ^1 \) <b>Peir-Ru Wang(王培儒)</b> <span style="vertical-align: super;">&#x2709;</span>, Jien-Wei Yeh(葉均蔚), Yi-Hsien Lee(李奕賢), <a href="https://doi.org/10.1038/s41598-023-33809-5">The effect of critical coupling constants on superconductivity enhancement</a>, Scientific Reports 13, 6475 (2023) <br>
+                                        <span style="vertical-align: super;">&#x2709;</span>Corresponding Author<br>
+                                        \( ^2 \) <b>Pair-Ru Wang(王培儒)</b>, Zi-Yang Zheng(鄭子暘), Hsiao-Wei Chiang(蔣小偉), Continuously Variable Transmission, <a href="./US-patent.pdf">US 10030745 B2</a>, <a href="./TWBN-I580876.pdf">TW I580876</a><br>
+                                        \( ^3 \) <b>Peir-Ru Wang(王培儒)</b>, Zi-Yang Zheng(鄭子暘), Hsiao-Wei Chiang(蔣小偉), <a href="../Image/tandem/Tandem-Wing-article.pdf">Low Speed Wind Tunnel Study of Variable Tandem Wing Aircraft Design: Earlier-on Experiment and Study</a>, A.A.S.R.C Conference (2014)
+                                        </span>
+                                </p>
+                                
+               
+<h2 style="text-align:center">個人簡介</h2>
+<p style="text-align:justify">
+我出於好奇心驅使，學習橫跨多個學科領域，包括<b>機械工程、物理和材料科學</b>。高中畢業後，我對力學和空氣動力學的興趣引導我進入<b>清華大學動力機械工程學系</b>就讀。我對力學的著迷最終促成了連續可變傳動裝置的<b>發明專利</b>，而我對空氣動力學的熱情則讓我於 A.A.S.R.C. 2014 年會上發表了一篇關於串聯翼設計的論文。<br><br>
+
+在此期間，我逐漸對物理產生了興趣，特別是超導材料。這份熱情引導我攻讀<b>材料科學與工程博士學位</b>，在那裡我開始從<b>理論和材料研究的角度探索提升超導性</b>的方法。運用我的機械工程知識，我建造了自動化量測與粉末混合機器人，加速了研究進程。<br><br>
+
+此外，我透過修習<b>廣義相對論、量子場論與統計力學</b>等課程來維持我對基礎物理的熱忱，並在物理系擔任助教，期間榮獲<b>傑出助教獎</b>。我多元的背景和專業知識使我能為複雜問題提供創新的解決方案。<br><br>
+
+目前，我是一名<b>材料科學與工程的博士後研究員</b>，研究<b>二維超導量子材料</b>。未來，我希望能於<b>量子與材料科學</b>領域尋求發展，致力於將尖端技術應用於實際場景。
+</p>
+
+<br><br><br><br><br>
+<div id="Qubit"></div>
+<h2 style="text-align:center">超導量子位元的研究與學習</h2>
+<p style="text-align:justify">
+最近，我成立了一個小型教育與研究團隊——<a href="../action/Pure-Perspective.html">純粹觀點研究群 (Pure-Perspective Research Group)</a>，致力於推進超導量子位元物理的知識。我的工作內容包含研究超導控制電路的哈密頓量，並利用 Python 模擬與視覺化在布洛赫球上的量子位元狀態演化。我們目前的研究聚焦於李群與規範理論的數學框架，並著重其在量子位元控制與拓撲物理上的應用。
+</p>
+
+<a href="../Image/Ramsey-2v.gif">
+    <img src="../Image/Ramsey-2v.gif" alt="拉姆西實驗模擬" style="width: 70%; height: auto;">
+  </a>
+<p style="text-align:justify">
+▲理想與失諧(detuned)的\(\frac{\pi}{2}-\frac{\pi}{2}\)控制模擬，即拉姆西實驗(Ramsey experiment)。
+</p>
+
+<a href="../Image/Ramsey-5v.gif">
+    <img src="../Image/Ramsey-5v.gif" alt="不同延遲時間的拉姆西實驗模擬" style="width: 70%; height: auto;">
+  </a>
+<p style="text-align:justify">
+▲在拉姆西實驗中，模擬不同延遲時間下失諧的\(\frac{\pi}{2}-\frac{\pi}{2}\)控制。
+</p>
+<div class="text-left"></div>
+    <h3><span class="blue">相關量子位元科普：</span></h3>
+</div>
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-xs-6">
+        <div class="portfolio-item">
+            <img src="../Image/SCQ-ele.jpg" class="img-res" alt="">
+            <h4 class="portfolio-item-title">超導量子位元<br>(基礎篇)</h4>
+            <a href="https://insight-ihbar.com/SCQ_elementary_en/main.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div></div>
+    <div class="col-lg-4 col-md-4 col-xs-6">
+        <div class="portfolio-item">
+            <img src="../Image/SCQ-adv.jpg" class="img-res" alt="">
+            <h4 class="portfolio-item-title">超導量子位元<br>(進階篇)</h4>
+            <a href="https://insight-ihbar.com/SCQ_advanced_en/main.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div></div>
+
+    <div class="col-lg-4 col-md-4 col-xs-6">
+        <div class="portfolio-item">
+            <img src="../Image/SCQ-hardware.jpg" class="img-res" alt="">
+            <h4 class="portfolio-item-title">硬體介紹</h4>
+            <a href="https://insight-ihbar.com/QC_hardware_en/main.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div></div>
+</div>
+
+<br><br><br><br><br>
+<div id="HE-SC"></div>
+<h2 style="text-align:center">高熵超導體的研究與學習</h2>
+<p style="text-align:justify">
+
+此外，我們探索了\(YBCO\)的高熵對應物，並發現這些高熵對應物對摻雜表現出更高的容忍度。 <a href="./Intro-CCC.html#2025-1">(\( \to\)高熵\(YBCO\)的近期進展 )</a>
+</p>
+<a href="../Image/CCC/delta 0.png"><img src="../Image/CCC/delta 0.png" alt="XRD圖" style="width: 45%; height: auto;"></a>
+<a href="../Image/CCC/delta 1 BCN.png"><img src="../Image/CCC/delta 1 BCN.png" alt="XRD圖" style="width: 45%; height: auto;"></a>
+
+<p style="text-align:justify">
+▲\(YBCO\)的高熵對應物對摻雜表現出更高的容忍度，此結果由其結構變化的XRD分析所證實。
+</p>
+
+<br><br><br><br><br>
+<div id="STM"></div>
+<h2 style="text-align:center">博士後研究進展</h2>
+<p style="text-align:justify"> 我的研究聚焦於二維量子材料，特別是二維過渡金屬硫屬化物 (TMDs)，包括 \(TaS_2\)、\(NbS_2\) 和 \(VS_2\)。這些凡德瓦層狀材料展現出超導性、電荷密度波與莫列現象等極具潛力的特性。<br>
+<br>
+博士期間，我研究的是超導塊材，現在我則在少層材料的物理方面獲得更多經驗。TMDs 為此研究提供了一個絕佳的平台，同時我也在精進我的掃描穿隧顯微鏡 (STM) 技術。最近，我一直在使用 STM 探索以化學氣相沉積法(CVD)生長的具有螺旋結構的\(TaS_2\)。<br>
+<br>
+
+<a href="../Image/STM/untitled8-cut-2.jpeg"><img src="../Image/STM/untitled8-cut-2.jpeg" alt="TaS2 STM圖像" width="100%" height="auto"></a><br>
+▲ 我認為這是一張令人印象深刻的圖像，它展示了\(TaS_2\)從化學計量相（左）到非化學計量相（右）的轉變。這是化學氣相沉積法的強大之處，它能微調化學成分，為物理研究提供一個豐富的平台！（點擊放大）<br>
+</p>
+
+<div class="text-left">
+    <h3><span class="blue">相關博士後專案：</span></h3>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-xs-6">
+        <div class="portfolio-item">
+            <img src="../Image/STM-Si-1.5V_Port.PNG" class="img-res" alt="">
+            <h4 class="portfolio-item-title">STM<br>(掃描穿隧顯微鏡)</h4>
+            <a href="../STM_en/main.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div></div>
+</div>
+
+
+<br><br><br><br><br>
+
+
+<h2 style="text-align:center">博士研究簡介</h2>
+<p style="text-align:justify">
+我的博士研究聚焦於如何在常壓下透過材料設計來提升超導性。觀察超導體的臨界溫度，會發現它隨著化合物組成的多樣性而增加。從此趨勢外插，可以預期含有12種或更多元素的氧化物可能實現室溫超導。如果我們從常用的80種元素中選出12種，將有至少 \(C_{12}^{80}≅10^{14}\) 種可能的組合！我從三個方面提升了研究效率：<br>
+<br>
+1. 提出臨界耦合常數理論，並利用此理論設計化學式。\(\to\)<a href="../CCC_en/main.html"><b>臨界耦合常數理論</b></a><br>
+2. 自動化製備氧化物粉末成分以提升效率。\(\to\)<a href="../EA-2_en/main.html"><b>實驗室自動化 II: EA-2 Scamander</b></a><br>
+3. 自動化電阻率-溫度 (𝝆-T) 量測，可同時測量多個樣品。\(\to\)<a href="../EA-1_en/main.html"><b>實驗室自動化 I: EA-1 Veronica</b></a><br>
+<br>
+
+<a href="../Image/PhD5.png"><img src="../Image/PhD5.png" alt="博士研究簡介" width=100% height="auto"></a>
+▲博士研究簡介。（點擊放大）
+</p>
+<br>
+<div class="text-left">
+    <h3><span class="blue">相關博士專案：</span></h3>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-xs-6">
+        <div class="portfolio-item">
+            <img src="../Image/CCC.png" class="img-res" alt="" style="width: auto; height: 100%;">
+            <h4 class="portfolio-item-title">超導臨界耦合常數理論</h4>
+            <a href="../CCC_en/main.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div></div>
+    <div class="col-lg-4 col-md-4 col-xs-6">
+        <div class="portfolio-item">
+            <img src="../Image/EA-1 platform.jpg" class="img-res" alt="">
+            <h4 class="portfolio-item-title">EA-1 Veronica<br>電阻率量測儀器</h4>
+            <a href="../EA-1_en/main.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div></div>
+    
+    <div class="col-lg-4 col-md-4 col-xs-6">
+        <div class="portfolio-item">
+            <img src="../Image/EA-2-full-2.jpg" class="img-res" alt="">
+            <h4 class="portfolio-item-title">EA-2 Scamander<br>粉末混合機器人</h4>
+            <a href="../EA-2_en/main.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div></div>
+</div>
+
+<br><br><br><br><br>
+
+<h2 style="text-align:center">物理助教經歷</h2>
+<p style="text-align:justify">
+我擁有物理系的輔系學位，並修習過理論力學、電磁學和量子物理等課程。我對最小作用量變分原理與諾特定理特別感興趣，它們揭示了對稱性與守恆律之間的關係。作為多門物理課程的助教，我因傑出的努力而在2019年榮獲清華大學傑出教學助理獎。<br>
+\(\to\)<a href="../About_en/TA.html"><b>物理助教</b></a><br>
+</p>
+<br>
+
+<br><br><br><br><br>
+<h2 style="text-align:center">學士學位</h2>
+<p style="text-align:justify">
+我在學士學位期間研究了兩個專案：<br>
+1. 自適應確動式連續可變傳動裝置（CVT）的發明專利。\(\to\)<a href="../CVT_en/main.html"><b>CVT專利</b></a><br>
+2. 第二個專案是可變串聯翼飛行器的空氣動力學研究。\(\to\)<a href="../TWing_en/main.html"><b>串聯翼飛行器</b></a><br>
+<br>
+</p>
+<div class="text-left">
+    <h3><span class="blue">相關學士專案：</span></h3>
+</div>
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-xs-6">
+        <div class="portfolio-item">
+            <img src="../Image/Patent_portfolio.png" class="img-res" alt="" style="width: auto; height: 100%;">
+            <h4 class="portfolio-item-title">確動式<br>CVT</h4>
+            <a href="../CVT_en/main.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div></div>
+    <div class="col-lg-4 col-md-4 col-xs-6">
+        <div class="portfolio-item">
+            <img src="../Image/Tandem_Wing_port.jpg" class="img-res" alt="" style="width: auto; height: 100%;">
+            <h4 class="portfolio-item-title">串聯翼<br>風洞測試</h4>
+            <a href="../TWing_en/main.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div></div>
+    
+    
+</div>
+
+<br><br><br><br><br>
+<h3>跨領域學習與應用的能力</h3>
+<p style="text-align:justify">
+在清華大學的12年裡，我學習橫跨了<b>機械工程</b>、<b>物理</b>、<b>材料科學</b>與<b>數學</b>等多個學科領域。我保持著好奇心與強大的學習能力，整合多個領域的知識，以推進超導理論的建立，並實現量測與粉末混合流程的自動化。
+</p>
+                                <!-- <div class="post-meta">
+                                    <span class="post-author">
+                                        <a href="../About/Wang.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
+                                    </span>
+                                    <span class="post-category">
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>硬體導論</a>
+                                    </span>
+                                </div>/.post-meta -->
+                            
+                                <div id="prev-next-nav" class="text-center"></div>
+
+                                <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    // 過濾掉 disabled 的頁面
+    pages = pages.filter(p => p.enabled !== false);
+
+    const current = location.pathname.split("/").pop();
+    const index = pages.findIndex(p => p.file === current);
+    let html = "";
+
+    if (index > 0) {
+      const prev = pages[index - 1];
+      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
+    }
+
+    html += `<a class="btn btn-gray" href="../About_en/${current}" style="margin: 0 10px;">English Version</a>`;
+
+    if (index < pages.length - 1) {
+      const next = pages[index + 1];
+      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
+    }
+
+    document.getElementById("prev-next-nav").innerHTML = html;
+  });
+</script>
+
+                            </div><!-- /.post-content -->
+                        </article><!-- /.blog-post -->
+                        
+                    </div>
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <!--<div class="widget search-form">
+                                <h4 class="widget-title">Search the blog</h4>
+                                <form class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" required>
+                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div> /.search-form -->
+                            <!--<div class="widget widget-recent-posts">
+                                <h4 class="widget-title">Recent posts</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Inside The Lipsum</a></li>
+                                    <li><a href="#">Oscar Wilde</a></li>
+                                    <li><a href="#">Jeffrey Ween</a></li>
+                                    <li><a href="#">Responsive Design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </div> /.widget-recent-posts -->
+                            
+
+                            <div class="widget">
+                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
+                                <div id="lesson-list_2"></div>
+                            </div>
+                            <script>
+fetch("lessons.json")
+  .then(res => res.json())
+  .then(pages => {
+    const current = location.pathname.split("/").pop();
+    const list = pages
+      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
+      .map(p => {
+        const isActive = p.file === current ? "active" : "";
+        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
+      })
+      .join("");
+    document.getElementById("lesson-list_2").innerHTML = list;
+  });
+</script>
+
+  
+                        </div><!-- /.sidebar -->
+                        
+                    </aside>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+        <section class="site-section subpage-site-section section-related-projects">
+            <div class="container">
+                <div class="text-left">
+                    <h3>Related Projects</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="../Image/CCC.png" class="img-res" alt="">
+                            <h4 class="portfolio-item-title">超導<br>臨界耦合常數理論</h4>
+                            <a href="../QC_hardware/main.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </div><!-- /.portfolio-item -->
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="../Image/Patent_portfolio.png" class="img-res" alt="">
+                            <h4 class="portfolio-item-title">Positive Motion CVT<br>確動式無段變速</h4>
+                            <a href="../QC_hardware/main.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </div><!-- /.portfolio-item -->
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="../Image/EA-1 platform.jpg" class="img-res" alt="">
+                            <h4 class="portfolio-item-title">EA-1 Veronica<br>低溫電性量測</h4>
+                            <a href="../QC_hardware/main.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </div><!-- /.portfolio-item -->
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="portfolio-item">
+                            <img src="../Image/STM-Si-1.5V_Port.PNG" class="img-res" alt="">
+                            <h4 class="portfolio-item-title">STM<br>掃描穿隧式電子顯微鏡</h4>
+                            <a href="../STM/main.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </div><!-- /.portfolio-item -->
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a href="../index.html" class="site-title">𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</a>
+                    <p>
+                        <b><span class="blue">水</span>
+                        <span class="black">木</span>
+                        <span class="blue">湛</span>
+                        <span class="black">清</span>
+                        <span class="black">華</span></b><br>
+                        <span style="font-size: 0.7em; line-height: 0.8;">－《文選．謝混．遊西池詩》<br>
+                        致12年的清華歲月 2012-2024</span>
+                    </p>
+                </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li>
+                        <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37400800000">+374 (00) 80 00 00 </a></li>
+                        <li><i class="fa fa-fax" aria-hidden="true"></i><a href="+37400900000">+374 (00) 90 00 00</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><p>Hsinchu 300, Taiwan (R.O.C.)</p></li>-->
+                    </ul>
+                </div>
+                <!--<div class="clearfix visible-xs"></div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <h3>Featured links</h3>
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Porfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <!--<a class="twitter-bg" href="#"><i class="fab fa-twitter"></i></a>-->
+                            <!--<<a class="facebook-bg" href="https://www.facebook.com/people/Quantum-Perspectives/61576446849628/"><i class="fab fa-facebook"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/%E9%87%8F%E5%AD%90%E9%81%A0%E8%A6%8BQuantum-Perspectives/61576883632888/"><i class="fab fa-facebook-f"></i></a>-->
+                            <!--<a class="pinterest" href="#"><i class="fa-solid fa-microscope"></i></a>-->
+                            <!--<a class="facebook-bg" href="https://www.facebook.com/people/Insight-hbar/61576811775374/"><i class="fab fa-facebook-f"></i></a>-->
+                            <a class="linkedin-bg" href="https://www.linkedin.com/in/peir-ru-wang"><i class="fab fa-linkedin"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p><span style="font-size: 16px;">𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</span></p>
+                            <p>All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        details.dark-background {
+          background-color: #f5f5f5;
+          border: 1px solid #ddd;
+          padding: 10px;
+          border-radius: 5px;
+        }
+        details.dark-background summary {
+          cursor: pointer;
+          font-weight: bold;
+          background-color: #e0e0e0;
+          padding: 5px;
+          border-radius: 3px;
+        }
+      </style>
+    <style>
+        .blue {
+            color: rgb(62, 134, 196); /* 蓝色 */
+        }
+.black {
+            color: rgb(0, 0, 0); /* 黑色 */
+        }
+.green {
+            color: rgb(69, 185, 147); /* 率色 */
+        }
+.blue_2{
+	color:#417cb0
+	}
+    </style>
+</body>
+</html>
