@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="Discover insights on Noether&#x27;s Theorem, Lagrangian mechanics, and Ostrogradsky instability with detailed explanations and mathematical formulas.">
+    <meta name="keywords" content="Noether&#x27;s Theorem, Ostrogradsky instability, Higher-order derivatives in Lagrangian, Quantum mechanics energy bounds, Hamiltonian in physics, Lagrangian mechanics, Second-order differential equations, Quantum field theory, Physics mathematical formulas, Theoretical physics concepts">
     <link rel="canonical" href="https://www.pure-perpective.org/Noether_en/I.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -111,15 +111,15 @@
                                 </div>
                                 
                                 
-<p style="text-align:justify">
+<p >
 
     Traditionally, we can use various methods to determine that the EoM is at most a second-order differential equation. For example, in Newtonian mechanics, we only need to know one of the following boundary conditions:<br>
     </p>
     <ol>
-        <li><p style="text-align:justify">Initial position and time \((q, t_i)\) and final position and time \((q_f, t_f)\)</p></li>
-        <li><p style="text-align:justify">Initial position and time \((q_i, t_i)\) and initial velocity \( \dot{q}_i \)</p></li>
+        <li><p >Initial position and time \((q, t_i)\) and final position and time \((q_f, t_f)\)</p></li>
+        <li><p >Initial position and time \((q_i, t_i)\) and initial velocity \( \dot{q}_i \)</p></li>
     </ol>
-    <p style="text-align:justify">
+    <p >
     to uniquely determine the motion of an object. In other words, the physical path only depends on one of the aforementioned conditions. This corresponds to the EoM being a second-order differential equation, such as \(F = m \ddot{x}\), where the initial conditions only require the initial position and velocity. In the Lagrangian framework, the EoM is given by the Euler-Lagrange equation:
     \[
     \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} - \frac{\partial L}{\partial q} = 0
@@ -138,7 +138,7 @@ Beyond empirical and experimental observations suggesting that the EoM is second
     </p>
 <br><br>
     <h3>The Hamiltonian of a Traditional Lagrangian</h3>
-    <p style="text-align:justify">
+    <p >
     Returning to the traditional Lagrangian \(L(\dot{q}, q, t)\), the Hamiltonian is defined as:
     \[
     H = \frac{\partial L}{\partial \dot{q}} \dot{q} - L
@@ -152,7 +152,7 @@ Beyond empirical and experimental observations suggesting that the EoM is second
     </p>
 <br><br>
     <h3>When \(L\) Includes Higher-Order Derivatives</h3>
-    <p style="text-align:justify">
+    <p >
     If we allow the Lagrangian \(L\) to include second derivatives, i.e., \(L = L(\ddot{q}, \dot{q}, q, t)\), we can derive the EoM using the principle of variation:
     
     
@@ -185,7 +185,7 @@ Beyond empirical and experimental observations suggesting that the EoM is second
     </p>
     <br><br>
     <h3>The Effect on the Hamiltonian</h3>
-    <p style="text-align:justify">
+    <p >
         Starting from the Lagrangian \(L\), consider the following formula:
     
     
@@ -239,7 +239,7 @@ Beyond empirical and experimental observations suggesting that the EoM is second
 <table width="100%" cellpadding="1" border="1">
 <tr><td>
     <h3>More General Case</h3>
-    <p style="text-align:justify">
+    <p >
     For readers interested in a more general case, consider \(L = L\left(\frac{d^n q}{dt^n}, \dots, \frac{dq}{dt}, q, t\right)\). The corresponding EoM and Hamiltonian are:
     \[
     \sum_{i=0}^n (-1)^i \frac{d^i}{dt^i} \left[ \frac{\partial L}{\partial \left(\frac{d^i q}{dt^i}\right)} \right] = 0
@@ -249,10 +249,10 @@ Beyond empirical and experimental observations suggesting that the EoM is second
     \]
     Key observations:</p>
     <ol>
-        <li><p style="text-align:justify">If \(L\) depends on \(n\)-th derivatives, the EoM becomes a \(2n\)-th order differential equation, requiring initial conditions up to \((2n-1)\)-th derivatives. \(2n-1 \geq n\), with equality holding when \(n=1\). Therefore, to ensure that the initial conditions do not exceed the order of derivatives that \(L\) depends on, \(n\) can only be \(1\).</p></li>
-        <li><p style="text-align:justify">For \(n > 1\), the Hamiltonian \(H\) introduces odd-power terms, causing \(H\) to lack a lower bound.</p></li>
+        <li><p >If \(L\) depends on \(n\)-th derivatives, the EoM becomes a \(2n\)-th order differential equation, requiring initial conditions up to \((2n-1)\)-th derivatives. \(2n-1 \geq n\), with equality holding when \(n=1\). Therefore, to ensure that the initial conditions do not exceed the order of derivatives that \(L\) depends on, \(n\) can only be \(1\).</p></li>
+        <li><p >For \(n > 1\), the Hamiltonian \(H\) introduces odd-power terms, causing \(H\) to lack a lower bound.</p></li>
     </ol>
-    <p style="text-align:justify">
+    <p >
     These arguments suggest that restricting \(L\) to first-order derivatives is more reasonable.</p>
 </td></tr>
 </table>

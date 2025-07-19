@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="深入了解2025年超導量子電腦的核心硬體，包括QPU、稀釋製冷機及相關技術挑戰，掌握全球主要製造商與未來發展趨勢。">
+    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 量子計算硬體, 廣義相對論, 愛因斯坦場方程, 希爾伯特-愛因斯坦作用量, 黎曼幾何, 量子場論">
     <link rel="canonical" href="https://www.pure-perpective.org/Action_R/P.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -111,16 +111,16 @@
                                 </div>
                                 
 
-            <p style="text-align:justify">
+            <p >
                 古典場論的大基礎：電磁學和廣義相對論。古典電磁學因為線性的特性，常作為許多物理理論的試驗典範，常利用電磁學作為相對論性最小作用原理的示範基礎，量子化的量子場論也率先由量子電動力學打頭陣。
             </p>
-            <p style="text-align:justify">
+            <p >
                 另一方面，廣義相對論透過等效性原理與廣義化的相對性原理，成功將重力效應整合進時空的曲率中，將時空的物理實在性提供了新的見解。同樣的，愛因斯坦場方程式也可以透過希爾伯特-愛因斯坦作用量 (Hilbert-Einstein action) 變分推得。
             </p>
-            <p style="text-align:justify">
+            <p >
                 希爾伯特-愛因斯坦作用量由希爾伯特在 1915 年，幾乎與愛因斯坦同時得到愛因斯坦場方程式。廣義相對論核心的數學模型為（偽）黎曼幾何（pseudo-Riemann geometry），簡單來說利用流形 (manifold) 的切叢 (Tangent bundle) 上給予逐點可變的度規 \(g_{\mu\nu}\)（metric），賦予其相異於平直的歐式空間新的結構，屬於非歐幾何重要的一個分支。
             </p>
-            <p style="text-align:justify">
+            <p >
                 希爾伯特-愛因斯坦作用量寫為：
                 \[
                 S = \int \mathcal{L} \sqrt{-g} \, d^4x = \frac{c^4}{16\pi G} \int R \sqrt{-g} \, d^4x + \int \mathcal{L}_M \sqrt{-g} \, d^4x
@@ -131,14 +131,14 @@
                 \]
                 \(R = g^{\mu\nu} R_{\mu\nu} = g^{\mu\nu} \delta^\beta_\alpha R^\alpha_{\mu\beta\nu}\) 是 Ricci scalar，\(R_{\mu\nu}\) 是 Ricci curvature tensor，\(R^\alpha_{\mu\beta\nu}\) 是 Riemann curvature tensor（黎曼曲率張量），\(g = \det(g_{\mu\nu})\)，\(\mathcal{L}_M\) 是物質的 Lagrangian density。
             </p>
-            <p style="text-align:justify">
+            <p >
                 曲率張量 \(R^\alpha_{\mu\beta\nu}\) 定義如下：
                 \[
                 R^\rho_{\sigma\mu\nu} = \partial_\mu \Gamma^\rho_{\nu\sigma} - \partial_\nu \Gamma^\rho_{\mu\sigma} + \Gamma^\rho_{\mu\lambda} \Gamma^\lambda_{\nu\sigma} - \Gamma^\rho_{\nu\lambda} \Gamma^\lambda_{\mu\sigma}
                 \]
                 其中 \(\Gamma^\rho_{\nu\sigma}\) 是切叢聯絡（Tangent connection），在基礎的廣義相對論教科書中稱為 Christoffel symbol，可以簡單理解為非平直座標係下不同點基底向量的變化。
             </p>
-            <p style="text-align:justify">
+            <p >
                 有趣的是，切叢聯絡 \(\Gamma^\rho_{\nu\sigma}\) 與曲率張量 \(R^\alpha_{\mu\beta\nu}\) 在數學語言中，地位與電磁場的 \(A_\sigma\)、\(F_{\beta\mu}\) 相同。事實上，只要把切叢聯絡 \(\Gamma^\rho_{\nu\sigma}\) 與曲率張量 \(R^\alpha_{\mu\beta\nu}\) 的前兩個指標「藏起來」，可以得到：
                 \[
                 \Gamma^\rho_{\nu\sigma} = \left(\Gamma^\rho_\nu \right)_\sigma = 
@@ -148,10 +148,10 @@
                 R^\alpha_{\mu\beta\nu} = \left(R^\alpha_\mu \right)_{\beta\nu} = \mathbf{R}_{\beta\nu} \leftrightarrow F_{\beta\nu}
                 \]
             </p>
-            <p style="text-align:justify">
+            <p >
                 前兩個指標實際上不是向量指標，而是「李代數（Lie algebra）指標」。讀者們如果有機會學習規範理論（或稱為 Yang-Mills Theory），可以進一步理解如何將電磁作用 \(U(1)\)、弱交互作用 \(SU(2)\)、強交互作用 \(SU(3)\) 整合為主叢聯絡（Principal connection）。
             </p>
-            <p style="text-align:justify">
+            <p >
                 事實上，可以深入比較廣義相對論和規範理論的相似之處，或參考諾貝爾獎得主楊振寧的著名論文 <a href="https://doi.org/10.1103/PhysRevD.12.3845" target="_blank">10.1103/PhysRevD.12.3845</a>、科普文章「楊振寧與當代數學」、或 Singer 在「The Mathematical Heritage of Hermann Weyl (1988, American Mathematical Society)」的文章。
             </p>
 

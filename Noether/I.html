@@ -24,8 +24,8 @@
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <title>𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</title>
-    <meta name="description" content="深入解析2025年超導量子電腦的構建，涵蓋量子處理器(QPU)、稀釋製冷機、控制電子、低溫佈線等核心硬體。提供全球主要製造商、價格範圍、技術挑戰與未來趨勢的詳細指引。">
-    <meta name="keywords" content="超導量子電腦, 量子位元, Qubit, QPU, 稀釋製冷機, IBM, Google, QuantWare, Bluefors, 低溫系統, 控制電子, Josephson Junction, Transmon, Fluxonium, 量子計算硬體, SEO">
+    <meta name="description" content="深入探討Ostrogradsky不穩定性與高次微分的影響，解析二階以上拉格朗日方程的能量下限問題與物理意義。">
+    <meta name="keywords" content="超導量子電腦, 量子物理, 諾特定理, Ostrogradsky不穩定性, 高次微分方程, Lagrangian, Hamiltonian, 量子計算硬體, 物理筆記, 量子力學">
     <link rel="canonical" href="https://www.pure-perpective.org/Noether/I.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -112,16 +112,16 @@
                                 
                                 
 
-<p style="text-align:justify">
+<p >
 
 
     傳統上，我們可以透過許多方式，判斷 EoM 最多是二次微分方程式。例如邊界條件，在牛頓力學中只需要知道以下其中一個資訊：
 </p>
     <ol>
-        <li><p style="text-align:justify">起始位置時間 \((q, t_i)\) 與終點位置時間 \((q_f, t_f)\)</p></li>
-        <li><p style="text-align:justify">起始位置時間 \((q_i, t_i)\) 與起始速度 \( \dot{q}_i \)</p></li>
+        <li><p >起始位置時間 \((q, t_i)\) 與終點位置時間 \((q_f, t_f)\)</p></li>
+        <li><p >起始位置時間 \((q_i, t_i)\) 與起始速度 \( \dot{q}_i \)</p></li>
     </ol>
-    <p style="text-align:justify">
+    <p >
     就可以唯一決定物體的運動行為。換句話說，物理的路徑只跟前述條件擇一有關。這對應到 EoM 是二次微分方程式，例如 \(F = m \ddot{x}\)，起始條件只需要起始位置與起始速度。在 Lagrangian 體系中，EoM 是 Euler-Lagrange equation：
     \[
     \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} - \frac{\partial L}{\partial q} = 0
@@ -139,7 +139,7 @@
     </p>
 <br><br>
     <h3>傳統 Lagrangian 的 Hamiltonian</h3>
-    <p style="text-align:justify">
+    <p >
     我們先回到傳統 Lagrangian \(L(\dot{q}, q, t)\) 對應的 Hamiltonian：
     \[
     H = \frac{\partial L}{\partial \dot{q}} \dot{q} - L
@@ -155,7 +155,7 @@
 <br><br>
     <h3>當 \(L\) 包含二次導數</h3>
     
-    <p style="text-align:justify">
+    <p >
     如果我們允許 Lagrangian \(L\) 包含二次導數，即 \(L = L(\ddot{q}, \dot{q}, q, t)\)，首先可以用變分原理推導出 EoM：
     
         \[
@@ -184,7 +184,7 @@ EoM 因為 \(\frac{d^2}{dt^2} \frac{\partial L}{\partial \ddot{q}}\)，這導致
     </p>
 <br><br>
     <h3>Hamiltonian 的影響</h3>
-    <p style="text-align:justify">
+    <p >
 從 Lagrangian \(L\) 開始，我們考慮以下公式：
         \[
         \frac{dL}{dt} = \frac{\partial L}{\partial \ddot{q}} \frac{d\ddot{q}}{dt} + \frac{\partial L}{\partial \dot{q}} \frac{d\dot{q}}{dt} + \frac{\partial L}{\partial q} \frac{dq}{dt} + \frac{\partial L}{\partial t}
@@ -222,7 +222,7 @@ EoM 因為 \(\frac{d^2}{dt^2} \frac{\partial L}{\partial \ddot{q}}\)，這導致
 <table width="100%" cellpadding="1" border="1">
 <tr><td>
     <h3>更一般的情況</h3>
-    <p style="text-align:justify">
+    <p >
         如果讀者有興趣，可以考慮 \(L = L\left(\frac{d^n q}{dt^n}, \dots, \frac{dq}{dt}, q, t\right)\)，對應的 EoM 和 Hamiltonian 為：
     \[
     \sum_{i=0}^n (-1)^i \frac{d^i}{dt^i} \left[ \frac{\partial L}{\partial \left(\frac{d^i q}{dt^i}\right)} \right] = 0
@@ -233,10 +233,10 @@ EoM 因為 \(\frac{d^2}{dt^2} \frac{\partial L}{\partial \ddot{q}}\)，這導致
     可以注意幾點：
     </p>
     <ol>
-        <li><p style="text-align:justify">如果 \(L\) 依賴於 \(n\) 次導數，則 EoM 會變成 \(2n\) 次微分方程，起始條件會依賴到 \(2n-1\) 次微分，\(2n-1≥n\)，等號成立於\(n=1\)，故不讓起始條件超出原本\(L\)依賴的次數僅可能為\(1\)。</p></li>
-        <li><p style="text-align:justify">一旦 \(n > 1\)，Hamiltonian \(H\) 會出現奇次項，導致 \(H\) 沒有下限。</p></li>
+        <li><p >如果 \(L\) 依賴於 \(n\) 次導數，則 EoM 會變成 \(2n\) 次微分方程，起始條件會依賴到 \(2n-1\) 次微分，\(2n-1≥n\)，等號成立於\(n=1\)，故不讓起始條件超出原本\(L\)依賴的次數僅可能為\(1\)。</p></li>
+        <li><p >一旦 \(n > 1\)，Hamiltonian \(H\) 會出現奇次項，導致 \(H\) 沒有下限。</p></li>
     </ol>
-    <p style="text-align:justify">以上論述使得 \(L\) 依賴於一次導數較為合理。</p>
+    <p >以上論述使得 \(L\) 依賴於一次導數較為合理。</p>
 </td></tr>
 </table>
 
