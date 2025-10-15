@@ -1,5 +1,5 @@
 [
-    { "title": "About Me", "file": "main.html" },
-    { "title": "CV", "file": "CV.html" },
+    { "title": "Profile", "file": "main.html" },
+    { "title": "Brief About Me", "file": "CV.html" },
     { "title": "TA Award", "file": "TA.html" }
 ]
