@@ -167,34 +167,13 @@
                                     </span>
                                 </div><!-- /.post-meta -->
                             
-                                <div id="prev-next-nav" class="text-center"></div>
+                                <div id="prev-next-nav" class="text-center">
+                                    <a class="btn btn-gray" href="I.html">← 上一頁</a> 
+                                    <a class="btn btn-gray" href="../Action_R_en/J.html" style="margin: 0 10px;">English Version</a>
+                                    <a class="btn btn-gray" href="K.html">下一頁 →</a>
+                                </div>
 
-                                <script>
-fetch("lessons.json")
-  .then(res => res.json())
-  .then(pages => {
-    // 過濾掉 disabled 的頁面
-    pages = pages.filter(p => p.enabled !== false);
-
-    const current = location.pathname.split("/").pop();
-    const index = pages.findIndex(p => p.file === current);
-    let html = "";
-
-    if (index > 0) {
-      const prev = pages[index - 1];
-      html += `<a class="btn btn-gray" href="${prev.file}">← 上一頁</a> `;
-    }
-
-    html += `<a class="btn btn-gray" href="../Action_R_en/${current}" style="margin: 0 10px;">English Version</a>`;
-
-    if (index < pages.length - 1) {
-      const next = pages[index + 1];
-      html += `<a class="btn btn-gray" href="${next.file}">下一頁 →</a>`;
-    }
-
-    document.getElementById("prev-next-nav").innerHTML = html;
-  });
-</script>
+                                
 
                             </div><!-- /.post-content -->
                         </article><!-- /.blog-post -->
@@ -215,49 +194,28 @@ fetch("lessons.json")
                     </div>
                     <aside class="col-md-3">
                         <div class="sidebar">
-                            <!--<div class="widget search-form">
-                                <h4 class="widget-title">Search the blog</h4>
-                                <form class="form-group">
-                                    <input type="text" class="form-control" placeholder="Search" required>
-                                    <button class="btn btn-green" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                </form>
-                            </div> /.search-form -->
-                            <!--<div class="widget widget-recent-posts">
-                                <h4 class="widget-title">Recent posts</h4>
-                                <ul class="list-unstyled">
-                                    <li><a href="#">Inside The Lipsum</a></li>
-                                    <li><a href="#">Oscar Wilde</a></li>
-                                    <li><a href="#">Jeffrey Ween</a></li>
-                                    <li><a href="#">Responsive Design</a></li>
-                                    <li><a href="#">Development</a></li>
-                                </ul>
-                            </div> /.widget-recent-posts -->
-                            
-
                             <div class="widget">
-                                <!--<h4 class="widget-title"><a href="./main.html">科普版：目錄</a></h4>-->
-                                <div id="lesson-list_2"></div>
+                                <div id="lesson-list_2">
+                                <div class="lesson-link "><a href="main.html">淺談Particle與EM Field交互作用下的Action</a></div>
+                                <div class="lesson-link "><a href="A.html">Free Particle Action的變分</a></div>
+                                <div class="lesson-link "><a href="B.html">Charge Particle與EM Field作用下的變分與運動方程</a></div>
+                                <div class="lesson-link "><a href="C.html">4-Volume 與Lagrangian Density</a></div>
+                                <div class="lesson-link "><a href="D.html">Maxwell's equations</a></div>
+                                <div class="lesson-link "><a href="E.html">電磁學中的規範不變性Gauge Invariance</a></div>
+                                <div class="lesson-link "><a href="F.html">規範不變與Action的變分性</a></div>
+                                <div class="lesson-link "><a href="G.html">淺談Gauge Invariance和Continuity equation</a></div>
+                                <div class="lesson-link "><a href="H.html">Impossibility of Square Term if keeping gauge invariance</a></div>
+                                <div class="lesson-link "><a href="I.html">淺談量子場論中的平方項-光子質量</a></div>
+                                <div class="lesson-link active"><a href="J.html">連續場與波動方程</a></div>
+                                <div class="lesson-link "><a href="K.html">古典場論</a></div>
+                                <div class="lesson-link "><a href="L.html">場論中的Lagrangian density不唯一性</a></div>
+                                <div class="lesson-link "><a href="M.html">不破壞EoM的其他可能</a></div>
+                                <div class="lesson-link "><a href="P.html">邁向廣義相對論</a></div>
+                                <div class="lesson-link "><a href="Q.html">淺談希爾伯特變分</a></div>
+                                </div>
                             </div>
-                            <script>
-fetch("lessons.json")
-  .then(res => res.json())
-  .then(pages => {
-    const current = location.pathname.split("/").pop();
-    const list = pages
-      .filter(p => p.enabled !== false) // ← 這行：只顯示 enabled 沒被關閉的項目
-      .map(p => {
-        const isActive = p.file === current ? "active" : "";
-        return `<div class="lesson-link ${isActive}"><a href="${p.file}">${p.title}</a></div>`;
-      })
-      .join("");
-    document.getElementById("lesson-list_2").innerHTML = list;
-  });
-</script>
-
   
-                        </div><!-- /.sidebar -->
-                        
-                    </aside>
+                        </div></aside>
                 </div>
             </div>
         </section><!-- /.section-portfolio -->
