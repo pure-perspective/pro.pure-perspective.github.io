@@ -23,19 +23,19 @@
     <link href="../assets/css/style.css" rel="stylesheet">
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
-    <title>Non-uniqueness of the Lagrangian</title>
-    <meta name="description" content="Explore the non-uniqueness of the Lagrangian in classical physics with clear explanations and detailed derivations. Understand key concepts effectively.">
-    <meta name="keywords" content="- Non-uniqueness of the Lagrangian explanation  
-- Lagrangian mechanics classical physics concepts  
-- Action principle physics detailed derivations  
-- Classical physics theoretical mechanics course  
-- Understanding Lagrangian dynamics and equations  
-- Quantum computing and Lagrangian applications  
-- Superconducting qubits and Lagrangian theory  
-- Josephson junctions and physical explanations  
-- Physics concepts and non-uniqueness insights  
-- Low temperature systems and quantum control">
-    <link rel="canonical" href="https://www.pure-perspective.org/Action_C_en/C.html">
+    <title>一般教科書上守恆量的推導</title>
+    <meta name="description" content="以諾特定理為核心，解析一般教科書中動量與能量等守恆量的推導，並以 MathJax 展示特殊符號、多行對齊、標籤與引用等公式排版技巧。">
+    <meta name="keywords" content="- 諾特定理
+- 動量守恆
+- 能量守恆
+- Hamiltonian
+- 物理筆記
+- 規範理論
+- 全域變換
+- 局域變換
+- 量子計算
+- 教科書解析">
+    <link rel="canonical" href="https://www.pure-perspective.org/Noether/A.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -43,6 +43,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+  <meta name="keywords" content="諾特定理, 守恆量推導, 動量守恆, 能量守恆, 哈密頓量, 對稱性, 規範理論, 全域變換, 局域變換, MathJax 公式排版技巧">
 </head>
 <body>
 
@@ -51,39 +52,39 @@
             <div class="container">
 
                 <div class="navbar-header">                   
-                    <a href="../index_en.html" class="site-title">𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</a>
+                    <a href="../index.html" class="site-title">𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</a>
                 </div><!-- /.navbar-header -->
 
                 <div class="collapse navbar-collapse" id="agency-navbar-collapse">
 
                     <ul class="nav navbar-nav navbar-right">
 
-                        <li><a href="../index_en.html">Home</a></li>
-                        <li><a href="https://www.insight-ihbar.com/index.html">Quantum</a></li>
-                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Physics<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="https://www.insight-ihbar.com/index_ch.html">量子科技</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">物理筆記<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
 
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                                <li><a href="../CCC_en/main.html">The Superconducting Critical Coupling Constant Theory</a></li>
-                                <li class="active"><a href="../Action_C_en/main.html">Action Principle (Classical)</a></li>
-                                <li><a href="../Action_R_en/main.html">Action Principle (Relativistic)</a></li>
-                                <li><a href="../Noether_en/main.html">Noether's Theorem</a></li>
-                                <li><a href="../STM_en/main.html">STM</a></li>
+                                <li><a href="../CCC/main.html">超導臨界耦合常數理論</a></li>
+                                <li><a href="../Action_C/main.html">古典最小作用量原理</a></li>
+                                <li><a href="../Action_R/main.html">相對論性最小作用量原理</a></li>
+                                <li class="active"><a href="../Noether/main.html">諾特定理</a></li>
+                                <li><a href="../STM/main.html">STM</a></li>
                             </ul>
 
                         </li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Engineering<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">工程筆記<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
 
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                              <li><a href="../CVT_en/main.html">CVT Patent</a></li>
-                              <li><a href="../EA-1_en/main.html">EA-1 Resistivity Measurement Apparatus</a></li>
-                              <li><a href="../EA-2_en/main.html">EA-2 Powder Mixture Robot</a></li>
-                              <li><a href="../TWing_en/main.html">Tandem Wing Wind Tunnel Test</a></li>
+                              <li><a href="../CVT/main.html">確動式CVT專利</a></li>
+                              <li><a href="../EA-1/main.html">EA-1 低溫電性量測</a></li>
+                              <li><a href="../EA-2/main.html">EA-2 自動粉末配粉機</a></li>
+                              <li><a href="../TWing/main.html">雙主翼風洞實驗</a></li>
                             </ul>
 
                         </li>
-                        <li><a href="../About_en/main.html">About Me</a></li>
-                        <!--<li><a href="./QC_hardware/main.html">硬體導論</a></li>-->
-                        <li><a href="../index.html">中文版</a></li>
+                        <li><a href="../About/main.html">About Me</a></li>
+                        <!--<li><a href="./QC_hardware/main.html">諾特定理</a></li>-->
+                        <li><a href="../index_en.html">English</a></li>
                         
                     </ul>
 
@@ -96,10 +97,10 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>Action Principle (Classical)</h1>
+                <h1>諾特定理</h1>
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="./main.html">Action Principle (Classical)</a></li>
+                  <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">諾特定理</a></li>
                   <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
@@ -116,63 +117,96 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>Non-uniqueness of the Lagrangian</h2>
+                                    <h2>一般教科書上守恆量的推導</h2>
                                     <h3></h3>
                                 </div>
                                 
-<p >
-    In the theoretical mechanics course, it is taught that adding a total time derivative term \(f=f(q,t)\) to the Lagrangian, i.e., \(L→L+{df\over dt}\), does not change the EoM. This can be explained in two parts. The first is the simplest, from the variation of the endpoints:
-    $$\delta S=\delta \int _a^b (L+{df\over dt})dt$$
-    $$=\delta \left[\int _a^b Ldt+\int _a^b  {df\over dt} dt \right]$$
-    $$=\delta \left[\int _a^b Ldt+f(b)-f(a)\right]$$
-    $$=\delta \int _a^b Ldt+\delta f(b)-\delta f(a)$$
-    But since the endpoints are not varied, \(\delta f(b)=\delta f(a)=0\), naturally,
-    $$\delta \int _a^b \left(L+{df\over dt}\right)dt=\delta \int _a^b Ldt=0$$
-    
-    The second approach is to directly expand and observe whether \(L+\dot{f}\) satisfies
-    \({d\over dt}  {\partial \over\partial \dot{x}}\left( L+\dot{f} \right)  -{\partial   \over\partial x}\left( L+\dot{f} \right)=0\).
-    
-    $${d\over dt}  {\partial \over\partial \dot{x}}\left( L+\dot{f} \right)  -{\partial   \over\partial x}\left( L+\dot{f} \right)={d\over dt}  {\partial L\over\partial \dot{x}}  -{\partial L\over\partial x}+\color{red}{{d\over dt}  {\partial \dot{f} \over\partial \dot{x}}  -{\partial \dot{f} \over\partial x}}$$
-    The <font color="red">red term</font> allows us to observe two things, because \(f=f(x,t)\):
-    $$df={\partial f\over\partial x} dx+{\partial f\over\partial \dot{x}}   d\dot{x} +{\partial f\over\partial t} dt$$
-    $$\to \dot{f} ={\partial \over\partial x} \dot{x} +{\partial f\over\partial \dot{x}}   \ddot{x} +{\partial f\over\partial t}$$
-    So,
-    $${ \partial \dot{f} \over\partial \dot{x}} ={\partial f\over\partial x}\to dot\ cancellation$$<br>
-    
-    $${\partial \over\partial x} \dot{f}={\partial \over\partial x} \left({\partial \over\partial x} \dot{x} +{\partial f\over\partial \dot{x}}   \ddot{x} +{\partial f\over\partial t}\right)$$
-    
-    $$=\left({\partial \over\partial x}  {\partial f\over\partial x}\right) \dot{x} +\left({\partial \over\partial x}  {\partial f\over\partial \dot{x}}  \right) \ddot{x} +\left({\partial \over\partial x}  {\partial f\over\partial t}\right)$$
-    $$={d\over dt} \left({\partial f\over\partial x}\right)\to{d\over dt},{\partial \over\partial x} commute $$
-    
-    We get the <font color="red">red term</font> to be zero:
-    $$\color{red}{{d\over dt}  {\partial \dot{f} \over\partial \dot{x}  }-{\partial \dot{f} \over\partial x}={d\over dt}  {\partial f\over\partial x}-{d\over dt}  {\partial f\over\partial x}=0}$$
-    Thus,
-    $${d\over dt}  {\partial \over\partial \dot{x}}\left( L+\dot{f} \right)  -{\partial   \over\partial x}\left( L+\dot{f} \right)={d\over dt}  {\partial L\over\partial \dot{x}}  -{\partial L\over\partial x}=0$$
-    Adding \(\dot{f}\) does not change the EoM.
-    
-    </p>
-    
+                                
+
+                                <h2>MathJax 全功能展示：特殊符號 + 對齊 + 引用</h2>
+
+                                <h3>1. 特殊標註符號 (Cancel & Brackets)</h3>
+                                
+                                <div class="desc">刪除線 (\cancel):</div>
+                                $$ \cancel{3x} + y = 0 $$
+                            
+                                <div class="desc">下方大括號 (\underbrace):</div>
+                                $$ \underbrace{a + b + c}_{Term 1} $$
+                            
+                                <div class="desc">下方方括號 (\underbracket):</div>
+                                $$ \underbracket{x^2 + 2xy + y^2}_{Expansion} $$
+                            
+                            
+                                <h3>2. 多行對齊環境 (Align)</h3>
+                            
+                                <div class="desc">無編號推導 (\begin{align*}):</div>
+                                <div class="code-hint">使用 * 星號隱藏編號</div>
+                                $$
+                                \begin{align*}
+                                   (a + b)^2 &= (a + b)(a + b) \\
+                                             &= a^2 + ab + ba + b^2 \\
+                                             &= a^2 + 2ab + b^2
+                                \end{align*}
+                                $$
+                            
+                                <div class="desc">自動編號公式 (\begin{align}):</div>
+                                <div class="code-hint">每一行都會自動編號 (1), (2)...</div>
+                                $$
+                                \begin{align}
+                                   f(x) &= x^2 + 2x + 1 \\
+                                   g(x) &= y^3 - 9
+                                \end{align}
+                                $$
+                            
+                            
+                                <h3>3. 標籤與引用 (Label & Ref)</h3>
+                            
+                                <div class="desc">步驟 A：定義公式並加上 Label</div>
+                                <div class="code-hint">語法：\label{eq:my_formula}</div>
+                                
+                                $$
+                                \begin{equation}
+                                  x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+                                  \label{eq:quadratic}
+                                \end{equation}
+                                $$
+                            
+                                <br>
+                            
+                                <div class="desc">步驟 B：在文字中引用它</div>
+                                <div class="ref-demo">
+                                    <p>
+                                        如上面的公式 
+                                        <strong style="color: #c0392b;">\eqref{eq:quadratic}</strong> 
+                                        所示，這就是一元二次方程式的解法。
+                                    </p>
+                                    <p>
+                                        <small>(試著點擊上面的紅色數字，它會自動滾動回公式位置。)</small>
+                                    </p>
+                                </div>
+                            
 
 
 
-                                <p>
-                                    <span style="font-size: 0.5em; line-height: 0.8;">
-                                        Originally written in Chinese by the author, these articles are translated into English to invite cross-language resonance.
-                                    </span>
-                                </p>
+
+
+
+
+
+
                                 <div class="post-meta">
                                     <span class="post-author">
-                                        <a href="../About_en/main.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
+                                        <a href="../About/main.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">王培儒</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Action Principle (Classical)</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>諾特定理</a>
                                     </span>
                                 </div><!-- /.post-meta -->
                             
                                 <div id="prev-next-nav" class="text-center">
-                                    <a class="btn btn-gray" href="B.html">← Previous</a> 
-                                    <a class="btn btn-gray" href="../Action_C/C.html" style="margin: 0 10px;">中文版</a>
-                                    <a class="btn btn-gray" href="D.html">Next →</a>
+                                    <a class="btn btn-gray" href="main.html">← 上一頁</a> 
+                                    <a class="btn btn-gray" href="../Noether_en/G.html" style="margin: 0 10px;">English Version</a>
+                                    <a class="btn btn-gray" href="H.html">下一頁 →</a>
                                 </div>
 
                                 
@@ -198,12 +232,12 @@
                         <div class="sidebar">
                             <div class="widget">
                                 <div id="lesson-list_2">
-                                <div class="lesson-link "><a href="main.html">Introduction</a></div>
-                                <div class="lesson-link "><a href="A.html">Elementary Variational Method</a></div>
-                                <div class="lesson-link "><a href="B.html">Simplified Variation Notation</a></div>
-                                <div class="lesson-link active"><a href="C.html">Non-uniqueness of the Lagrangian</a></div>
-                                <div class="lesson-link "><a href="D.html">Point Transformation, Form Invariant, and the Principle of Relativity</a></div>
-                                <div class="lesson-link "><a href="E.html">Lagrangian in Momentum Space</a></div>
+                                <div class="lesson-link "><a href="main.html">古典諾特定理</a></div>
+                                <div class="lesson-link active"><a href="G.html">一般教科書上守恆量的推導</a></div>
+                                <div class="lesson-link "><a href="H.html">Maximal Symmetry Action</a></div>
+                                <div class="lesson-link "><a href="I.html">Ostrogradsky instability與高次微分</a></div>
+                                <div class="lesson-link "><a href="N.html">場論中的諾特定理Noether theorem-Field theory</a></div>
+                                <div class="lesson-link "><a href="O.html">諾特定理與對稱性-時空與能量動量守恆</a></div>
                                 </div>
                             </div>
   
@@ -218,11 +252,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-4 col-xs-6">
-                    <a href="../index_en.html" class="site-title"><span class="blue">𝑃𝑢𝑟𝑒</span> 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</a>
+                    <a href="../index.html" class="site-title">𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</a>
                     <p>
-                        <span style="font-size: 0.7em; line-height: 0.8;">
-                        Unforgettable years at <span class="purple">Tsing Hua</span><br>
-                        2012-2024</span>
+                        <b><span class="blue">水</span>
+                        <span class="black">木</span>
+                        <span class="blue">湛</span>
+                        <span class="black">清</span>
+                        <span class="black">華</span></b><br>
+                        <span style="font-size: 0.7em; line-height: 0.8;">－《文選．謝混．遊西池詩》<br>
+                        致12年的<span class="purple">清華</span>歲月 2012-2024</span>
                     </p>
                 </div>
                 <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6 ">
@@ -316,6 +354,21 @@
 
     }
     </style>
-  
+  <script>
+    MathJax = {
+      loader: {
+        // 載入必要的擴充套件：cancel (刪除線) 和 mathtools (給 underbracket 用)
+        load: ['[tex]/cancel', '[tex]/mathtools'] 
+      },
+      tex: {
+        // 1. 啟用上述套件
+        packages: {'[+]': ['cancel', 'mathtools']},
+        // 2. 啟用自動編號與 Label 功能 (關鍵設定)
+        tags: 'ams' 
+      }
+    };
+    </script>
+    
+    
 </body>
 </html>

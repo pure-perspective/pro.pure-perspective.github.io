@@ -4,5 +4,7 @@
     { "title": "Maximal Symmetry Action", "file": "H.html" },
     { "title": "Ostrogradsky Instability and Higher-Order Derivatives", "file": "I.html" },
     { "title": "Noether Theorem in Field Theory", "file": "N.html" },
-    { "title": "Noether Theorem and Symmetry - Spacetime and Energy-Momentum Conservation", "file": "O.html" }
+    { "title": "Noether Theorem and Symmetry - Spacetime and Energy-Momentum Conservation", "file": "O.html" },
+    { "title": "Abelian Noether's Canonical Energy Momentum Tensor", "file": "A.html" },
+    { "title": "Non-Abelian Noether's Canonical Energy Momentum Tensor", "file": "B.html" }
 ]

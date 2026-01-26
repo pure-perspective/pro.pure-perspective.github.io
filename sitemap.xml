@@ -181,6 +181,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.pure-perspective.org/Noether_en/B.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.pure-perspective.org/Noether_en/N.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -196,7 +201,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.pure-perspective.org/Noether_en/Cx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.pure-perspective.org/Noether_en/Cx_converted.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.pure-perspective.org/Noether_en/I.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.pure-perspective.org/Noether_en/exanple_converted.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -207,6 +227,16 @@
   </url>
   <url>
     <loc>https://www.pure-perspective.org/Noether_en/main.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.pure-perspective.org/Noether_en/exanple.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.pure-perspective.org/Noether_en/A.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -357,6 +387,11 @@
   </url>
   <url>
     <loc>https://www.pure-perspective.org/Noether/main.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.pure-perspective.org/Noether/A.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -23,8 +23,8 @@
     <link href="../assets/css/style.css" rel="stylesheet">
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
-    <title>Conservation Laws Derivation in Conventional Textbooks</title>
-    <meta name="description" content="Explore Noether&#x27;s Theorem and its derivations of conservation laws in classical mechanics with detailed explanations and mathematical insights.">
+    <title>Non-Abelian Noether&#x27;s Canonical Energy Momentum Tensor</title>
+    <meta name="description" content="Derive the non-Abelian canonical energy-momentum tensor via Noether’s theorem for Yang–Mills fields, with detailed variations, EoM, and formulas.">
     <meta name="keywords" content="- Noether&#x27;s Theorem conservation laws  
 - classical mechanics physics research  
 - energy conservation Hamiltonian mechanics  
@@ -34,7 +34,7 @@
 - local and global transformations physics  
 - detailed derivations of physics concepts  
 - advanced physics education resources">
-    <link rel="canonical" href="https://www.pure-perspective.org/Noether_en/G.html">
+    <link rel="canonical" href="https://www.pure-perspective.org/Noether_en/B.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -42,6 +42,14 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+  <meta name="keywords" content="Non-Abelian Noether theorem canonical energy-momentum tensor  
+Yang–Mills fields Noether current derivation  
+Gauge symmetry conservation laws field theory  
+Canonical stress-energy tensor Yang–Mills gauge theory  
+Lie algebra gauge potential field strength tensor  
+Noether theorem spacetime variations energy momentum conservation  
+Yang–Mills Lagrangian equations of motion derivation  
+Non-Abelian gauge theory structure constants Killing form">
 </head>
 <body>
 
@@ -115,102 +123,207 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>Conservation Laws Derivation in Conventional Textbooks</h2>
+                                    <h2>Non-Abelian Noether's Canonical Energy Momentum Tensor</h2>
                                     <h3></h3>
                                 </div>
                                 
-                                
-<h3>Momentum Conservation</h3>
-<p >
-    
-        For momentum conservation, we can directly start from the EoM:
-        \[
-        \frac{\partial L}{\partial q} - \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} = 0 \implies \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} = \frac{\partial L}{\partial q}.
-        \]
-        If \(L\) is not an explicit function of the trajectory \(q\), then \(\frac{\partial L}{\partial q} = 0\), which implies:
-        \[
-        \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} = 0.
-        \]
-        This means the momentum:
-        \[
-        p = \frac{\partial L}{\partial \dot{q}} = \text{constant}.
-        \]
-        Another implication of \(\frac{\partial L}{\partial q} = 0\) is that when \(q \to q + \delta q\) (with \(\dot{q}\) unchanged), we have:
-        \[
-        \delta L = \frac{\partial L}{\partial q} \delta q = 0.
-        \]
-    </p>
-    <h3>Energy Conservation and Hamiltonian</h3>
-<p >
-        Next, we discuss the Hamiltonian \(H\):
-        \[
-        \frac{dL}{dt} = \frac{\partial L}{\partial \dot{q}} \frac{d\dot{q}}{dt} + \frac{\partial L}{\partial q} \frac{dq}{dt} + \frac{\partial L}{\partial t}.
-        \]
-        Rearranging and simplifying, we get:
-        \[
-        \frac{\partial L}{\partial t} = \frac{dL}{dt} - \frac{\partial L}{\partial \dot{q}} \frac{d\dot{q}}{dt} - \frac{\partial L}{\partial q} \dot{q}.
-        \]
-        \[
-        = \frac{dL}{dt} - \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} \right) + \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right) \dot{q} - \frac{\partial L}{\partial q} \dot{q}.
-        \]
-        \[
-        = -\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} - L \right) + \left( \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} - \frac{\partial L}{\partial q} \right) \dot{q}.
-        \]
-        The second term corresponds to \(EoM = 0\), so:
-        \[
-        \frac{\partial L}{\partial t} = -\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} - L \right).
-        \]
-        If \(L\) is not an explicit function of time \(t\), then \(\frac{\partial L}{\partial t} = 0\), which implies:
-        \[
-        \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} - L \right) = 0.
-        \]
-        The energy:
-        \[
-        E = \frac{\partial L}{\partial \dot{q}} \dot{q} - L = \text{constant}.
-        \]
-        Another implication of \(\frac{\partial L}{\partial t} = 0\) is that when \(t \to t + \delta t\) (with \(q, \dot{q}\) unchanged), we have:
-        \[
-        \delta L = \frac{\partial L}{\partial t} \delta t = 0.
-        \]
-    </p>
-    <h3>Global and Local Transformations</h3>
-<p >
-        In the previous section, we discussed the symmetry of the action \(S\), i.e., \(\delta S = 0\). In this section, we consider \(L\) being independent of \(q\) or \(t\), i.e., \(\delta L = 0\). The difference between the two is reflected in:
-        \[
-        \delta S = \delta \left( \int L \, dt \right) = \int \delta L \, dt + \int L \delta dt,
-        \]
-        where the second term introduces a difference. From the previous derivation:
-        \[
-        \int L \delta dt = \int L \frac{d \delta t}{dt} dt.
-        \]
-        If \(\frac{d \delta t}{dt} = 0\), then \(\delta L = 0 \iff \delta S = 0\).
-        A more detailed comparison is shown in the following table:
+                                <p>We denote \(p\) is a point in spacetime, \(\mathbf{B}(p)\) as Lie algebra valued gauge potential 1-form of the Yang-Mills field, and the field strength is \(\mathbf{F} \equiv d\mathbf{B} + [\mathbf{B} \wedge \mathbf{B}]\). We will discuss the effect of the variation on gauge potential and the spacetime variation.  We denote the variation on gauge potential, \(\mathbf{B} \rightarrow \mathbf{\tilde{B}}= \mathbf{B} + \delta \mathbf{B}\), and the spacetime variation drag by a vector field \(\delta x\) denote as:
+</p>\[
+p \rightarrow \tilde{p} = f_{\delta x}(p)
+\]<p>
+The total variation of gauge 1-form is
+</p>\[
+\Delta \mathbf{B} = \mathbf{\tilde{B}}(\tilde{p}) - \textbf{B}(p) = \delta \mathbf{B} + \hat{\mathcal{L}}_{\delta x} \mathbf{B}
+\]<p>
+In local coordinate \(p \rightarrow \{x^\mu\}\), the expressions are
+</p>\[
+\mathbf{B}(p) \rightarrow B^a_\mu(x^\gamma) \hat{T}_a 
+\]<p>
+where \(\hat{T}_a\) is the generator of Lie algebra. The field strength in local coordinate</p>
+\begin{align} \label{eq:Guv}
+\mathbf{F} \rightarrow \mathbf{F}_{\mu\nu} 
+&=  \hat{T}_a \partial_\mu B_\nu^a - \hat{T}_a \partial_\nu B_\mu^a + \lambda [B_\mu^a \hat{T}_a, B_\nu^b \hat{T}_b] \nonumber \\
+&= \hat{T}_a \left( \partial_\mu B_\nu^a -  \partial_\nu B_\mu^a+ \lambda f_{bc}^a B_\mu^b B_\nu^c \right)
+\end{align}
+<p>where
+</p>\[
+[\hat{T}_a, \hat{T}_b] = f_{ab}^c \hat{T}_c
+\]<p>
+and
+</p>\[ F_{\mu\nu}^a =  \partial_\mu B_\nu^a -  \partial_\nu B_\mu^a + \lambda f^a_{bc}B^b_\mu B^c_\nu \]<p>
+. \(f^c_{ab}\) is the structure constant of Lie algebra. The local coordinate representation of variations are
+</p>\[p \rightarrow x^\nu = x^\nu + \delta x^\nu\]<p>
+</p>\[\Delta B^a_\mu = \delta B^a_\mu + \partial_\nu B^a_\mu \delta x^\nu + B^a_\nu \partial_\mu \delta x^\nu\]<p>
+
+The Lagrangian \(\mathscr{L}_{YM}\) of Yang-Mills field is</p>
+\begin{align} \label{eq:Lagrangian}
+\mathscr{L}_{YM} = Tr\left( -\frac{1}{16\pi c} g^{\mu\alpha} g^{\nu\beta} \mathbf{F}_{\mu\nu} \mathbf{F} _{\alpha\beta} \sqrt{-g} \right) =  -\frac{1}{16\pi c} K_{ab} g^{\mu\alpha} g^{\nu\beta} F^a_{\mu\nu} F^b_{\alpha\beta} \sqrt{-g}
+\end{align}
+<p>Here, we denote the Killing form/metric as
+</p>\[
+K_{ab} = Tr(f_{ad}^c f_{be}^d) = f^c_{ad} f^d_{bc}
+\]<p>
+
+
+The action \(S\)
+</p>\[
+S = \int d^4x \, \mathscr{L}_{YM}[B^a_\nu(x^\gamma), B^a_{\nu,\mu}(x^\gamma), x^\gamma]
+\]<p>
+
+We derive the equation of motion (EoM) and the Noether theorem follow the standard procedure [1]. The variation of action \(\Delta S\) divides into two terms:
+
+</p>\[
+\Delta S = \int \Delta d^4 x *  \mathscr{L}_{YM} + \int d^4 x * \Delta \mathscr{L}_{YM}
+\]<p>
+The first term is the variation of the volume form, which is \autocite{ryder1996quantum}
+</p>\[
+\Delta d^4 x = \partial_\gamma \delta x^\gamma \cdot d^4x
+\]<p>
+The second term is the variation of \(\mathscr{L}_{YM}\)</p>
+\begin{align} \label{eq:Delta_L}
+\Delta \mathscr{L}_{YM} &= \mathscr{L}_{YM}[\tilde{B}^a_\nu(\tilde{x}^\gamma), \tilde{B}^a_{\nu,\mu}(\tilde{x}^\gamma), \tilde{x}^\gamma] - \mathscr{L}_{YM}[B^a_\nu(x^\gamma), B^a_{\nu,\mu}(x^\gamma), x^\gamma]  \nonumber \\
+& = \left[ \frac{\partial \mathscr{L}_{YM}}{\partial B^a_\nu}  \delta B^a_\nu + \frac{\partial \mathscr{L}_{YM}}{\partial (\partial_\mu B^a_\nu)}  \delta (\partial_\mu B^a_\nu) \right] (x^\gamma)  + \left[ {\mathscr{L}_{YM}}_{, \gamma} \delta x^\gamma \right] (x^\gamma)  + O(\delta^2)
+\end{align}
+<p>
+Hence the \(\Delta S\) is</p>
+\begin{align} \label{eq:Delta_S}
+    \Delta S = \int  \left[ \frac{\partial \mathscr{L}_{YM}}{\partial B^a_\nu} - \partial_\mu\left(\frac{\partial\mathscr{L}_{YM}}{\partial(\partial_\mu B^a_\nu)}\right) \right] \delta B^a_\nu d^4 x +  \int \left[ \partial_\mu\left(\frac{\partial \mathscr{L}_{YM}}{\partial (\partial_\mu B^a_\nu)}\delta B^a_\nu\right) + (\mathscr{L}_{YM} \delta x^\gamma)_{,\gamma}\right] d^4 x 
+\end{align}
+<p>
+The EoM is
+</p>\[
+\frac{\partial \mathscr{L}_{YM}}{\partial B^a_\nu} - \partial_\mu \left( \frac{\partial \mathscr{L}_{YM}}{\partial(\partial_\mu B^a_\nu)}\right) = 0
+\]<p>
+
+Using \(\delta B_\nu^a = \Delta B_\nu^a - B_{\nu,\gamma}^a \delta x^\gamma - B_\gamma^a \delta x_{,\nu}^\gamma\):</p>
+\begin{align*} 
+    \Delta S &=  \int \{EoM\} \delta B^a_\nu d^4 x + \int \partial_\mu\left[\frac{\partial \mathscr{L}_{YM}}{\partial(\partial_\mu B^a_\nu)} (\Delta B^a_\nu - B^a_{\nu,\gamma}\delta x^\gamma - B^a_\gamma \delta x_{,\nu}^\gamma) + \delta^\mu_\gamma\mathscr{L}_{YM} \delta x^\gamma\right]d^4x\\
+     &=  \int \{EoM\} \delta B^a_\nu d^4 x + \int  \underbracket[0.4pt][0pt]{\partial_\mu}_{(*)} \left[ \frac{\partial \mathscr{L}_{YM}}{\partial(\partial_\mu B^a_\nu)}\Delta B^a_\nu -  \left( \frac{\partial \mathscr{L}_{YM}}{\partial(\partial_\mu B^a_\nu)}B^a_{\nu,\gamma} \delta x^\gamma + \underbracket[0.4pt][0pt]{\frac{\partial \mathscr{L}_{YM}}{\partial(\partial_\mu B^a_\nu)}B^a_\gamma \delta x^\gamma_{,\nu}}_{(*)} - \delta^\mu_\gamma \mathscr{L}_{YM}\delta x^\gamma\right)\right]d^4x
+\end{align*}
+<p>Evaluate the \((*)\) term:</p>
+
+ \begin{align} \label{eq:(*)}
+\underbracket[0.4pt][0pt]{\partial_\mu \left[ \frac{\partial \mathscr{L}_{YM}}{\partial(\partial_\mu B^a_\nu)} B^a_{\gamma} \delta x^\gamma_{,\nu} \right]}_{(*)}
+&= \underbracket[0.4pt][0pt]{\left[ \frac{\partial \mathscr{L}_{YM}}{\partial (\partial_\mu B^a_\nu)}  B^a_\gamma \delta x^\gamma \right]_{,\nu \mu}}_{(*1)} -\partial_\mu   \left[\underbracket[0.4pt][0pt]{ \left( \frac{\partial \mathscr{L}_{YM}}{ \partial (\partial_\mu B^a_\nu)}\right)_{,\nu}  B^a_\gamma \delta x^\gamma }_{(*2)} \right] - \partial_\mu \left[\underbracket[0.4pt][0pt]{\frac{\partial \mathscr{L}_{YM}}{\partial(\partial_\mu B^a_\nu)}B^a_{\gamma,\nu} \delta x^\gamma }_{(*3)} \right]
+\\
+&=\underbracket[0.4pt][0pt]{
+0}_{(*1)} 
+\textcolor{red}{+}\partial_\mu   
+\left[
+\underbracket[0.4pt][0pt]{ 
+\left( 
+\frac{\partial \mathscr{L}_{YM}}{ \partial \left(
+\partial_{\textcolor{red}{\nu}} B^a_{\textcolor{red}{\mu}}\right) }
+\right)_{,\nu}  
+B^a_\gamma \delta x^\gamma 
+}_{(*2)} 
+\right] 
+\textcolor{blue}{
+-\partial_\mu\left[\left( 
+\frac{\partial \mathscr{L}_{YM}}{ \partial 
+ B^a_\mu} \right) 
+B^a_\gamma \delta x^\gamma \right]}
+\textcolor{blue}{
++\partial_\mu\left[\left( 
+\frac{\partial \mathscr{L}_{YM}}{ \partial 
+ B^a_\mu} \right) 
+B^a_\gamma \delta x^\gamma \right]}
+-\partial_\mu \left[\underbracket[0.4pt][0pt]{\frac{\partial \mathscr{L}_{YM}}{\partial(\partial_\mu B^a_\nu)}B^a_{\gamma,\nu} \delta x^\gamma }_{(*3)} \right]
+\\
+&=\underbracket[0.4pt][0pt]{
+0}_{(*1)} 
++\partial_\mu   
+\left[
+\underbracket[0.4pt][0pt]{ 
+\left[
+\left( 
+\frac{\partial \mathscr{L}_{YM}}{ \partial \left(
+\partial_{\nu} B^a_{\mu}\right) }
+\right)_{,\nu}  
+-\frac{\partial \mathscr{L}_{YM}}{ \partial 
+ B^a_\mu}
+\right]
+B^a_\gamma \delta x^\gamma 
+}_{(*2)} 
+\right] 
++\partial_\mu \left[\frac{\partial\mathscr{L}_{YM}}{\partial(\partial_{\mu}B_{\nu}^{a})} \lambda f_{bn}^{a} B^{b}_\gamma B_{\nu}^{n}\delta x^\gamma  \right]
+-\partial_\mu \left[\underbracket[0.4pt][0pt]{\frac{\partial \mathscr{L}_{YM}}{\partial(\partial_\mu B^a_\nu)}B^a_{\gamma,\nu} \delta x^\gamma }_{(*3)} \right]
+\end{align}
+
+<p>
+We first calculate \(\frac{\partial \mathscr{L}_{YM}}{\partial (\partial_\mu B_\nu^a)}\) for later use:
 </p>
-    <table width="100%" border="1" cellpadding="5">
-        <tr>
-            <td>\[\delta L = 0\]</td>
-            <td>\[\delta S = 0\]</td>
-        </tr>
-        <tr>
-            <td>\[\frac{\partial L}{\partial q} = \frac{d}{dt} \frac{\partial L}{\partial \dot{q}} = 0\]</td>
-            <td>\[\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \Delta q \right) = 0\]</td>
-        </tr>
-        <tr>
-            <td>
-\[
-\frac{\partial L}{\partial t} = -\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \dot{q} - L \right)=0
+\begin{align} \label{eq:Non-ab_partial}
+\frac{\partial \mathscr{L}_{YM}}{\partial (\partial_\mu B_\nu^a)} = -\frac{1}{4\pi c} K_{ab} g^{\alpha\mu} g^{\beta\nu} F_{\alpha\beta}^b \sqrt{-g}
+\end{align}
+
+
+
+
+
+<p>
+The \((*1)\) term term:</p>
+\begin{align} \label{eq:(*1)}
+\left( \frac{\partial \mathscr{L}_{YM}}{\partial (\partial_\mu B_\nu^a)} B_\gamma^a \delta x^\gamma \right)_{,\nu\mu} 
+=\left( -\frac{1}{4\pi c} K_{ab} g^{\alpha\mu} g^{\beta\nu} F_{\alpha\beta}^b \sqrt{-g} B_\gamma^a \delta x^\gamma \right)_{,\nu\mu}  = 0
+\end{align}
+<p>due to the antisymmetric of \(F_{\mu\nu}\) and the symmetric of second order derivative \( \{_{,\nu\mu}\}\).</p>
+
+<p>
+The \((*2)\) term is:</p>
+\begin{align} \label{eq:(*2)}
+\underbracket[0.4pt][0pt]{ \left( \frac{\partial \mathscr{L}_{YM}}{ \partial (\partial_\mu B^a_\nu)}\right)_{,\nu}  B^a_\gamma \delta x^\gamma}_{(*2)} = \frac{\partial\mathscr{L}_{YM}}{\partial(\partial_{\mu}B_{\nu}^{{a}})}\left( \lambda f_{{b}n}^{{a}}B_{\nu}^{n}   B^{{b}}_\gamma \delta x^\gamma \right)
+\end{align}
+
+<p>
+We now have:
+
+Hence \((*)\) becomes:
+</p>\[
+\underbracket[0.4pt][0pt]{\partial_\mu \left[ \frac{\partial \mathscr{L}_{YM}}{\partial(\partial_\mu B^a_\nu)} B^a_{\gamma} \delta x^\gamma_{,\nu} \right]}_{(*)} 
+=-\partial_\mu \left[\underbracket[0.4pt][0pt]{-\frac{\partial\mathscr{L}_{YM}}{\partial(\partial_{\mu}B_{\nu}^{a})} \lambda f_{bn}^{a} B^{b}_\gamma B_{\nu}^{n}\delta x^\gamma }_{(*2)} \right]-\partial_\mu \left[\underbracket[0.4pt][0pt]{\frac{\partial \mathscr{L}_{YM}}{\partial(\partial_\mu B^a_\nu)}B^a_{\gamma,\nu} \delta x^\gamma }_{(*3)}\right]
 \]
-</td>
-<td>
-                \[\frac{d}{dt} \left[ \left( \frac{\partial L}{\partial \dot{q}} \dot{q} - L \right) \delta t \right] = 0\]
-            </td>
-        </tr>
-    </table>
-<p >
-        When the variation \(\Delta q\) is not a function of time (i.e., \(\frac{d}{dt} \Delta q = 0\)), the results of \(\delta L = 0\) and \(\delta S = 0\) are identical. Similarly, when \(\frac{d}{dt} \delta t = 0\), the conservation laws from both approaches are equivalent.
-<br><br>
-        This introduces the concept of global transformations and local transformations. A global transformation assumes the variation is time-independent, meaning the changes at all time points are fixed. A local transformation allows the variation to be time-dependent, providing greater freedom in changes at each time point. Clearly, global transformations are a special case of local transformations. Discussing \(\delta L = 0\) quickly leads to conserved quantities for global transformations, while local transformations pave the way for new directions, such as gauge theory, which we may discuss in future writings.
-    </p>
+
+\begin{align*}
+\Delta S &= \int \{EoM\} \delta B_\nu^a \, d^4x + \int  \partial_\mu \left[ \frac{\partial \mathscr{L}_{YM}}{\partial(\partial_\mu B_\nu^a)} \Delta B_\nu^a - \frac{\partial \mathscr{L}_{YM}}{\partial(\partial_\mu B_\nu^a)} \left( B^a_{\nu, \gamma} - \underbracket[0.4pt][0pt]{B^a_{\gamma,\nu}  }_{(*3)} +\underbracket[0.4pt][0pt]{ \lambda f_{bn}^{a} B^{b}_\gamma B_{\nu}^{n} }_{(*2)}\right) \delta x^\gamma + \delta^\mu_\gamma \mathscr{L}_{YM} \delta x^\gamma \right]  \, d^4x \\
+&=\int \{EoM\} \delta B_\nu^a \, d^4x + \int  \partial_\mu \left[ \frac{\partial \mathscr{L}_{YM}}{\partial(\partial_\mu B_\nu^a)} \Delta B_\nu^a - \left( \frac{\partial \mathscr{L}_{YM}}{\partial(\partial_\mu B_\nu^a)} F^a_{\gamma\nu} - \delta^\mu_\gamma \mathscr{L}_{YM}\right) \delta x^\gamma \right] \, d^4x
+\end{align*}
+<p>
+Hence we have</p>
+\begin{align*}
+\left(t_{YM}\right)^\mu_\gamma &= \frac{\partial \mathscr{L}_{YM}}{\partial(\partial_\mu B_\nu^a)} F^a_{\gamma\nu} - \delta^\mu_\gamma \mathscr{L}_{YM}\\
+&= \left(  -\frac{1}{4\pi c} K_{ab} g^{\alpha\mu} g^{\beta\nu} F_{\alpha\beta}^b \sqrt{-g} \right)F^a_{\gamma\nu} - \delta^\mu_\gamma \left( -\frac{1}{16\pi c} K_{ab} g^{\mu\alpha} g^{\nu\beta} F^a_{\mu\nu} F^b_{\alpha\beta} \sqrt{-g} \right)\\
+&=  -\frac{1}{4\pi c} F^{\mu\nu}_a F^a_{\gamma\nu} \sqrt{-g} + \delta^\mu_\gamma \frac{1}{16\pi c} F^{\alpha\beta}_a F^a_{\alpha\beta} \sqrt{-g} 
+\end{align*}
+
+
+\begin{align*}
+g_{\psi\mu}g^{\phi\gamma}\left(t_{YM}\right)^\mu_\gamma 
+&= g_{\psi\mu}g^{\phi\gamma}\left( -\frac{1}{4\pi c} F^{\mu\nu}_a F^a_{\gamma\nu} \sqrt{-g} + \delta^\mu_\gamma \frac{1}{16\pi c} F^{\alpha\beta}_a F^a_{\alpha\beta} \sqrt{-g} 
+\right)\\
+&=  -\frac{1}{4\pi c} g_{\psi\mu}g^{\phi\gamma} F^{\mu\nu}_a F^a_{\gamma\nu} \sqrt{-g} 
++g_{\psi\mu}g^{\psi\gamma} \delta^\mu_\gamma \frac{1}{16\pi c} F^{\alpha\beta}_a F^a_{\alpha\beta} \sqrt{-g} \\
+&=  -\frac{1}{4\pi c} g_{\psi\mu}g^{\phi\gamma} 
+g^{\mu\zeta}g^{\nu\xi}F^a_{\zeta\xi} F^a_{\gamma\nu} \sqrt{-g} 
++\delta^\phi_\psi \frac{1}{16\pi c} F^{\alpha\beta}_a F^a_{\alpha\beta} \sqrt{-g} \\
+&=  -\frac{1}{4\pi c} g^{\phi\gamma} 
+g^{\nu\xi}F^a_{\psi\xi} F^a_{\gamma\nu} \sqrt{-g} 
++\delta^\phi_\psi \frac{1}{16\pi c} F^{\alpha\beta}_a F^a_{\alpha\beta} \sqrt{-g} \\
+&=  -\frac{1}{4\pi c} g_{\psi\mu}g^{\phi\gamma} 
+g^{\mu\zeta}g^{\nu\xi}F^a_{\zeta\xi} F^a_{\gamma\nu} \sqrt{-g} 
++\delta^\phi_\psi \frac{1}{16\pi c} F^{\alpha\beta}_a F^a_{\alpha\beta} \sqrt{-g} \\
+&=  -\frac{1}{4\pi c} F^a_{\psi\xi} F_a^{\phi\xi} \sqrt{-g} 
++\delta^\phi_\psi \frac{1}{16\pi c} F^{\alpha\beta}_a F^a_{\alpha\beta} \sqrt{-g} \\
+&=\left(t_{YM}\right)^\phi_\psi 
+\end{align*}
+
+
+
+
+
+
+
+
 
 
 
@@ -229,9 +342,8 @@
                                 </div><!-- /.post-meta -->
                             
                                 <div id="prev-next-nav" class="text-center">
-                                    <a class="btn btn-gray" href="main.html">← Previous</a> 
-                                    <a class="btn btn-gray" href="../Noether/G.html" style="margin: 0 10px;">中文版</a>
-                                    <a class="btn btn-gray" href="H.html">Next →</a>
+                                    <a class="btn btn-gray" href="A.html">← Previous</a> 
+                                    <a class="btn btn-gray" href="../Noether/B.html" style="margin: 0 10px;">中文版</a>
                                 </div>
 
                                 
@@ -258,13 +370,13 @@
                             <div class="widget">
                                 <div id="lesson-list_2">
                                 <div class="lesson-link "><a href="main.html">Classical Noether's Theorem</a></div>
-                                <div class="lesson-link active"><a href="G.html">Conservation Laws Derivation in Conventional Textbooks</a></div>
+                                <div class="lesson-link "><a href="G.html">Conservation Laws Derivation in Conventional Textbooks</a></div>
                                 <div class="lesson-link "><a href="H.html">Maximal Symmetry Action</a></div>
                                 <div class="lesson-link "><a href="I.html">Ostrogradsky Instability and Higher-Order Derivatives</a></div>
                                 <div class="lesson-link "><a href="N.html">Noether Theorem in Field Theory</a></div>
                                 <div class="lesson-link "><a href="O.html">Noether Theorem and Symmetry - Spacetime and Energy-Momentum Conservation</a></div>
                                 <div class="lesson-link "><a href="A.html">Abelian Noether's Canonical Energy Momentum Tensor</a></div>
-                                <div class="lesson-link "><a href="B.html">Non-Abelian Noether's Canonical Energy Momentum Tensor</a></div>
+                                <div class="lesson-link active"><a href="B.html">Non-Abelian Noether's Canonical Energy Momentum Tensor</a></div>
                                 </div>
                             </div>
   
@@ -377,6 +489,20 @@
 
     }
     </style>
+    <script>
+        MathJax = {
+          loader: {
+            // 載入必要的擴充套件：cancel (刪除線) 和 mathtools (給 underbracket 用)
+            load: ['[tex]/cancel', '[tex]/mathtools'] 
+          },
+          tex: {
+            // 1. 啟用上述套件
+            packages: {'[+]': ['cancel', 'mathtools']},
+            // 2. 啟用自動編號與 Label 功能 (關鍵設定)
+            tags: 'ams' 
+          }
+        };
+    </script>
   
 </body>
 </html>

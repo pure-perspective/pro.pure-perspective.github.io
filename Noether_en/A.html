@@ -23,19 +23,18 @@
     <link href="../assets/css/style.css" rel="stylesheet">
     <link href="../assets/css/responsive.css" rel="stylesheet">
 
-    <title>Non-uniqueness of the Lagrangian</title>
-    <meta name="description" content="Explore the non-uniqueness of the Lagrangian in classical physics with clear explanations and detailed derivations. Understand key concepts effectively.">
-    <meta name="keywords" content="- Non-uniqueness of the Lagrangian explanation  
-- Lagrangian mechanics classical physics concepts  
-- Action principle physics detailed derivations  
-- Classical physics theoretical mechanics course  
-- Understanding Lagrangian dynamics and equations  
-- Quantum computing and Lagrangian applications  
-- Superconducting qubits and Lagrangian theory  
-- Josephson junctions and physical explanations  
-- Physics concepts and non-uniqueness insights  
-- Low temperature systems and quantum control">
-    <link rel="canonical" href="https://www.pure-perspective.org/Action_C_en/C.html">
+    <title>Abelian Noether&#x27;s Canonical Energy Momentum Tensor</title>
+    <meta name="description" content="Derive the Abelian canonical energy-momentum tensor for electromagnetism using Noether’s theorem, with clear variational steps and field-theory details.">
+    <meta name="keywords" content="- Noether&#x27;s Theorem conservation laws  
+- classical mechanics physics research  
+- energy conservation Hamiltonian mechanics  
+- mathematical insights in physics  
+- symmetry in action and variations  
+- momentum conservation laws explanation  
+- local and global transformations physics  
+- detailed derivations of physics concepts  
+- advanced physics education resources">
+    <link rel="canonical" href="https://www.pure-perspective.org/Noether_en/A.html">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -43,6 +42,16 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+  <meta name="keywords" content="Noether&#x27;s theorem energy momentum tensor derivation  
+Abelian gauge theory canonical stress energy tensor  
+Electromagnetism Lagrangian field strength tensor Fμν  
+Noether current conservation laws in field theory  
+Variational calculus action principle electromagnetism  
+Symmetric gauge invariant energy momentum tensor  
+Classical field theory Noether theorem tutorial  
+Electromagnetic canonical energy momentum tensor formula  
+Spacetime symmetry and energy momentum conservation  
+Advanced physics derivations Noether theorem electromagnetism">
 </head>
 <body>
 
@@ -64,9 +73,9 @@
 
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                                 <li><a href="../CCC_en/main.html">The Superconducting Critical Coupling Constant Theory</a></li>
-                                <li class="active"><a href="../Action_C_en/main.html">Action Principle (Classical)</a></li>
+                                <li><a href="../Action_C_en/main.html">Action Principle (Classical)</a></li>
                                 <li><a href="../Action_R_en/main.html">Action Principle (Relativistic)</a></li>
-                                <li><a href="../Noether_en/main.html">Noether's Theorem</a></li>
+                                <li class="active"><a href="../Noether_en/main.html">Noether's Theorem</a></li>
                                 <li><a href="../STM_en/main.html">STM</a></li>
                             </ul>
 
@@ -96,10 +105,10 @@
     <div id="hero" class="hero overlay subpage-hero blog-hero">
         <div class="hero-content">
             <div class="hero_2-text">
-                <h1>Action Principle (Classical)</h1>
+                <h1>Noether's Theorem</h1>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../index_en.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="./main.html">Action Principle (Classical)</a></li>
+                  <li class="breadcrumb-item"><a href="./main.html">Noether's Theorem</a></li>
                   <!--<li class="breadcrumb-item active">約瑟夫森節</li>-->
                 </ol>
             </div><!-- /.hero-text -->
@@ -116,42 +125,120 @@
                             <!--<img src="../assets/img/portfolio-1.jpg" class="img-res" alt="">-->
                             <div class="post-content">
                                 <div style="text-align: center;">
-                                    <h2>Non-uniqueness of the Lagrangian</h2>
+                                    <h2>Abelian Noether's Canonical Energy Momentum Tensor</h2>
                                     <h3></h3>
                                 </div>
                                 
-<p >
-    In the theoretical mechanics course, it is taught that adding a total time derivative term \(f=f(q,t)\) to the Lagrangian, i.e., \(L→L+{df\over dt}\), does not change the EoM. This can be explained in two parts. The first is the simplest, from the variation of the endpoints:
-    $$\delta S=\delta \int _a^b (L+{df\over dt})dt$$
-    $$=\delta \left[\int _a^b Ldt+\int _a^b  {df\over dt} dt \right]$$
-    $$=\delta \left[\int _a^b Ldt+f(b)-f(a)\right]$$
-    $$=\delta \int _a^b Ldt+\delta f(b)-\delta f(a)$$
-    But since the endpoints are not varied, \(\delta f(b)=\delta f(a)=0\), naturally,
-    $$\delta \int _a^b \left(L+{df\over dt}\right)dt=\delta \int _a^b Ldt=0$$
-    
-    The second approach is to directly expand and observe whether \(L+\dot{f}\) satisfies
-    \({d\over dt}  {\partial \over\partial \dot{x}}\left( L+\dot{f} \right)  -{\partial   \over\partial x}\left( L+\dot{f} \right)=0\).
-    
-    $${d\over dt}  {\partial \over\partial \dot{x}}\left( L+\dot{f} \right)  -{\partial   \over\partial x}\left( L+\dot{f} \right)={d\over dt}  {\partial L\over\partial \dot{x}}  -{\partial L\over\partial x}+\color{red}{{d\over dt}  {\partial \dot{f} \over\partial \dot{x}}  -{\partial \dot{f} \over\partial x}}$$
-    The <font color="red">red term</font> allows us to observe two things, because \(f=f(x,t)\):
-    $$df={\partial f\over\partial x} dx+{\partial f\over\partial \dot{x}}   d\dot{x} +{\partial f\over\partial t} dt$$
-    $$\to \dot{f} ={\partial \over\partial x} \dot{x} +{\partial f\over\partial \dot{x}}   \ddot{x} +{\partial f\over\partial t}$$
-    So,
-    $${ \partial \dot{f} \over\partial \dot{x}} ={\partial f\over\partial x}\to dot\ cancellation$$<br>
-    
-    $${\partial \over\partial x} \dot{f}={\partial \over\partial x} \left({\partial \over\partial x} \dot{x} +{\partial f\over\partial \dot{x}}   \ddot{x} +{\partial f\over\partial t}\right)$$
-    
-    $$=\left({\partial \over\partial x}  {\partial f\over\partial x}\right) \dot{x} +\left({\partial \over\partial x}  {\partial f\over\partial \dot{x}}  \right) \ddot{x} +\left({\partial \over\partial x}  {\partial f\over\partial t}\right)$$
-    $$={d\over dt} \left({\partial f\over\partial x}\right)\to{d\over dt},{\partial \over\partial x} commute $$
-    
-    We get the <font color="red">red term</font> to be zero:
-    $$\color{red}{{d\over dt}  {\partial \dot{f} \over\partial \dot{x}  }-{\partial \dot{f} \over\partial x}={d\over dt}  {\partial f\over\partial x}-{d\over dt}  {\partial f\over\partial x}=0}$$
-    Thus,
-    $${d\over dt}  {\partial \over\partial \dot{x}}\left( L+\dot{f} \right)  -{\partial   \over\partial x}\left( L+\dot{f} \right)={d\over dt}  {\partial L\over\partial \dot{x}}  -{\partial L\over\partial x}=0$$
-    Adding \(\dot{f}\) does not change the EoM.
-    
-    </p>
-    
+                                <p>The Lagrangian \(\mathscr{L}_{EM}\) and the action \(S\) of electromagnetic field are</p>
+\begin{align*}
+ \mathscr{L}_{EM} = -\frac{1}{16\pi c} g^{\mu\alpha}g^{\nu\beta}F_{\alpha\beta}F_{\mu\nu}\sqrt{-g} 
+\end{align*}<p>
+and
+</p>\[ S = \int d^4x \, \mathscr{L}_{EM}[A_\mu(x^\gamma), A_{\nu,\mu}(x^\gamma), x^\gamma] \]<p>
+We derive the equation of motion (EoM) and Noether theorem follow standard procedure. The variation of action \(\Delta S\) divides into two terms:
+</p>\[ \delta S = \int  \delta d^4x \cdot \mathscr{L}_{EM} + \int d^4x \cdot \delta \mathscr{L}_{EM} \]<p>
+The first term is the variation of volume form, which is \autocite{ryder1996quantum}
+</p>\[ \delta d^4x =  {\delta{X}^\gamma }_{,\gamma} \cdot d^4x \]<p>
+
+The second term is the variation of \(\mathscr{L}_{EM}\)</p>
+
+\begin{align} \label{eq:ab_lag}
+\Delta \mathscr{L}_{EM} &= \mathscr{L}_{EM}[\tilde{A}_\nu(\tilde{x}^\gamma), \tilde{A}_{\nu,\mu}(\tilde{x}^\gamma), \tilde{x}^\gamma] - \mathscr{L}_{EM}[A_\nu(x^\gamma), A_{\nu,\mu}(x^\gamma), x^\gamma] \\
+& = \left[ \frac{\partial \mathscr{L}_{EM}}{\partial A_\nu}  \delta A_\nu + \frac{\partial \mathscr{L}_{EM}}{\partial (\partial_\mu A_\nu)}  \delta (\partial_\mu A_\nu) \right] (x^\gamma)  + \left[ {\mathscr{L}_{EM}}_{, \gamma} \delta x^\gamma \right] (x^\gamma)  + O(\delta^2) \nonumber
+\end{align}
+
+
+
+
+
+
+<p>Hence, \(\Delta S\) is</p>
+
+\begin{align} \label{eq:Delta S_ab}
+    \Delta S = \int  \left[ \frac{\partial \mathscr{L}}{\partial A_\nu} - \partial_\mu\left(\frac{\partial\mathscr{L}_{EM}}{\partial(\partial_\mu A_\nu)}\right) \right] \delta A_\nu d^4 x +  \int \left[ \partial_\mu\left(\frac{\partial \mathscr{L}_{EM}}{\partial (\partial_\mu A_\nu)}\delta A_\nu\right) + (\mathscr{L}_{EM} \delta x^\gamma)_{,\gamma}\right] d^4 x 
+\end{align}
+
+<p>The EoM is
+</p>\[
+\frac{\partial \mathscr{L}_{EM}}{\partial A_\nu} - \partial_\mu \left( \frac{\partial \mathscr{L}_{EM}}{\partial(\partial_\mu A_\nu)} \right) = 0
+\]<p>
+Now we introduce the total variation:</p>
+ \[\Delta A = \delta A + \hat{\mathcal{L}}_{\delta x} A \]
+ <p>, instead of the traditional</p>
+  \[\Delta A_\nu=\delta A_\nu +\delta x^\mu \partial_\mu A_\nu\]
+  <p>. Using</p>
+   \[\delta A_\nu = \Delta A_\nu - A_{\nu,\gamma} \delta x^\gamma - A_\gamma \delta x^\gamma_{,\nu}\]
+  <p>,
+</p>
+\begin{align*}
+    \Delta S &=  \int \{EoM\} \delta A_\nu d^4 x + \int \partial_\mu\left[\frac{\partial \mathscr{L}_{EM}}{\partial(\partial_\mu A_\nu)} (\Delta A_\nu - A_{\nu,\gamma}\delta x^\gamma - A_\gamma \delta x_{,\nu}^\gamma) + \delta^\mu_\gamma\mathscr{L}_{EM} \delta x^\gamma\right]d^4x\\
+     &=  \int \{EoM\} \delta A_\nu d^4 x + \int \partial_\mu \left[ \frac{\partial \mathscr{L}_{EM}}{\partial(\partial_\mu A_\nu)}\Delta A_\nu -  \left( \frac{\partial \mathscr{L}_{EM}}{\partial(\partial_\mu A_\nu)}A_{\nu,\gamma} \delta x^\gamma + \underbracket[0.4pt][0pt]{\frac{\partial \mathscr{L}_{EM}}{\partial(\partial_\mu A_\nu)}A_\gamma \delta x^\gamma_{,\nu}}_{(*)} - \delta^\mu_\gamma \mathscr{L}_{EM}\delta x^\gamma\right)\right]d^4x
+\end{align*}
+<p>
+Evaluate the \((*)\) term:
+</p>
+\begin{align*}
+\underbracket[0.4pt][0pt]{\partial_\mu \left[ \frac{\partial \mathscr{L}_{EM}}{\partial(\partial_\mu A_\nu)} A_{\gamma} \delta x^\gamma_{,\nu} \right]}_{(*)}
+&= \underbracket[0.4pt][0pt]{\left[ \frac{\partial \mathscr{L}_{EM}}{\partial (\partial_\mu A_\nu)}  A_\gamma \delta x^\gamma \right]_{,\nu \mu}}_{(*1)} -\partial_\mu  \left[ \underbracket[0.4pt][0pt]{ \left( \frac{\partial \mathscr{L}_{EM}}{ \partial (\partial_\mu A_\nu)}\right)_{,\nu}  A_\gamma \delta x^\gamma}_{(*2)}\right] -\partial_\mu \left[ \underbracket[0.4pt][0pt]{\frac{\partial \mathscr{L}_{EM}}{\partial(\partial_\mu A_\nu)}A_{\gamma,\nu} \delta x^\gamma}_{(*3)} \right]
+\end{align*}
+<p>
+Note that
+\(\frac{\partial\mathscr{L}_{EM}}{\partial(\partial_\mu A_{\nu})}\) is</p>
+
+\begin{align} \label{eq:ab_partial}
+\frac{\partial \mathscr{L}_{EM}}{\partial(\partial_\mu A_\nu)}
+    &= -\frac{1}{4\pi c} g^{\mu\alpha}g^{\nu\beta} \sqrt{-g}  F_{\alpha\beta} 
+\end{align}
+
+
+
+
+<p>The \((*1)\) term</p>
+\begin{align} \label{eq:anti_ab}
+\underbracket[0.4pt][0pt]{\left[ \frac{\partial \mathscr{L}_{EM}}{\partial (\partial_\mu A_\nu)}  A_\gamma \delta x^\gamma\right]_{,\nu \mu}}_{(*1)} = \left[ -\frac{1}{4\pi c} g^{\mu\alpha}g^{\nu\beta} \sqrt{-g}  F_{\alpha\beta}  A_\gamma \delta x^\gamma \right]_{,\nu \mu}  = 0
+\end{align}
+<p>due to the antisymmetric of \(F_{\mu\nu}\) and the symmetric of second order derivative \( \{_{,\nu\mu}\}\).\\
+</p>
+
+
+<p>The \((*2)\) term:</p>
+\begin{align} \label{eq:*2_ab}
+\underbracket[0.4pt][0pt]{ \left( \frac{\partial \mathscr{L}_{EM}}{ \partial (\partial_\mu A_\nu)}\right)_{,\nu}  A_\gamma \delta x^\gamma}_{(*2)}=0
+\end{align}
+
+
+
+<p>Hence \((*)\) only left \((*3)\) term:</p>
+</p>\[
+\underbracket[0.4pt][0pt]{\partial_\mu\left[\frac{\partial \mathscr{L}_{EM}}{\partial(\partial_\mu A_\nu)} A_\gamma \delta x^\gamma \right]_{,\nu}}_{(*)} =-\partial_\mu\left[ \underbracket[0.4pt][0pt]{\frac{\partial \mathscr{L}_{EM}}{\partial(\partial_\mu A_\nu)} A_{\gamma, \nu} \delta x^\gamma }_{(3)} \right]
+\]<p>
+The final result,</p>
+\begin{align*}
+\Delta S &= \int \{EoM\}\delta A_\nu d^4 x + \int\partial_\mu \left[ \frac{\partial \mathscr{L}_{EM}}{\partial(\partial_\mu A_\nu)}\Delta A_\nu -  \left( \frac{\partial \mathscr{L}_{EM}}{\partial(\partial_\mu A_\nu)} A_{\nu,\gamma} \delta x^\gamma -  \underbracket[0.4pt][0pt]{ \frac{\partial \mathscr{L}_{EM}}{\partial(\partial_\mu A_\nu)} A_{\gamma, \nu}   \delta x^\gamma }_{(*)=(3)}  \right) - \delta^\mu_\gamma \mathscr{L}_{EM}\delta x^\gamma \right]d^4x \\
+&= \int \{EoM\}\delta A_\nu d^4 x + \int \partial_\mu \left[ \frac{\partial \mathscr{L}_{EM}}{\partial(\partial_\mu A_\nu)}\Delta A_\nu -  \left( \frac{\partial \mathscr{L}_{EM}}{\partial(\partial_\mu A_\nu)} F_{\gamma\nu} - \delta^\mu_\gamma \mathscr{L}_{EM} \right) \delta x^\gamma  \right]d^4x
+\end{align*}
+<p>
+Hence we have</p>
+\begin{align*}
+\left(t_{EM}\right)^\mu_\gamma &= \frac{\partial \mathscr{L}_{EM}}{\partial(\partial_\mu A_\nu)} F_{\gamma\nu} - \delta^\mu_\gamma \mathscr{L}_{EM} \\
+&=-\frac{1}{4\pi c} g^{\mu\alpha}g^{\nu\beta} F_{\alpha\beta} F_{\gamma\nu}\sqrt{-g} 
++ \delta^\mu_\gamma \frac{1}{16\pi c} g^{\varepsilon\alpha}g^{\nu\beta}F_{\alpha\beta}F_{\varepsilon\nu}\sqrt{-g}\\
+ &= -\frac{1}{4\pi c}F^{\mu\nu}F_{\gamma\nu}\sqrt{-g} + \delta^\mu_\gamma \frac{1}{16\pi c} F^{\alpha\beta}F_{\alpha\beta}\sqrt{-g}\\
+ &=\underbracket[0.4pt][0pt]{\left( -\frac{1}{4\pi c}F^{\mu\nu}F_{\gamma\nu} + \delta^\mu_\gamma \frac{1}{16\pi c} F^{\alpha\beta}F_{\alpha\beta}\right)}_{\left({T_{EM}}\right)^\mu_\gamma}\sqrt{-g} \\
+&=-\frac{1}{4\pi c}\delta^\mu_\varepsilon g^{\varepsilon\alpha} g^{\nu\beta} F_{\alpha\beta} F_{\gamma\nu}\sqrt{-g} 
++ \delta^\mu_\gamma \frac{1}{16\pi c} g^{\varepsilon\alpha}g^{\nu\beta}F_{\alpha\beta}F_{\varepsilon\nu}\sqrt{-g}\\
+&=\frac{1}{4\pi c}\left(-\delta^\mu_\varepsilon  F_{\alpha\beta} F_{\gamma\nu}
++ \delta^\mu_\gamma \frac{1}{4} F_{\alpha\beta}F_{\varepsilon\nu}\right)g^{\varepsilon\alpha} g^{\nu\beta} \sqrt{-g}
+\end{align*}
+. This symmetric and gauge invariant.</p>
+
+
+
+
+
+
+
+
 
 
 
@@ -165,14 +252,14 @@
                                         <a href="../About_en/main.html"><img class="img-res" src="../Image/IMG_0964_2.JPG" alt="">Peir-Ru Wang</a>
                                     </span>
                                     <span class="post-category">
-                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Action Principle (Classical)</a>
+                                        <a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Noether's Theorem</a>
                                     </span>
                                 </div><!-- /.post-meta -->
                             
                                 <div id="prev-next-nav" class="text-center">
-                                    <a class="btn btn-gray" href="B.html">← Previous</a> 
-                                    <a class="btn btn-gray" href="../Action_C/C.html" style="margin: 0 10px;">中文版</a>
-                                    <a class="btn btn-gray" href="D.html">Next →</a>
+                                    <a class="btn btn-gray" href="O.html">← Previous</a> 
+                                    <a class="btn btn-gray" href="../Noether/A.html" style="margin: 0 10px;">中文版</a>
+                                    <a class="btn btn-gray" href="B.html">Next →</a>
                                 </div>
 
                                 
@@ -198,12 +285,14 @@
                         <div class="sidebar">
                             <div class="widget">
                                 <div id="lesson-list_2">
-                                <div class="lesson-link "><a href="main.html">Introduction</a></div>
-                                <div class="lesson-link "><a href="A.html">Elementary Variational Method</a></div>
-                                <div class="lesson-link "><a href="B.html">Simplified Variation Notation</a></div>
-                                <div class="lesson-link active"><a href="C.html">Non-uniqueness of the Lagrangian</a></div>
-                                <div class="lesson-link "><a href="D.html">Point Transformation, Form Invariant, and the Principle of Relativity</a></div>
-                                <div class="lesson-link "><a href="E.html">Lagrangian in Momentum Space</a></div>
+                                <div class="lesson-link "><a href="main.html">Classical Noether's Theorem</a></div>
+                                <div class="lesson-link "><a href="G.html">Conservation Laws Derivation in Conventional Textbooks</a></div>
+                                <div class="lesson-link "><a href="H.html">Maximal Symmetry Action</a></div>
+                                <div class="lesson-link "><a href="I.html">Ostrogradsky Instability and Higher-Order Derivatives</a></div>
+                                <div class="lesson-link "><a href="N.html">Noether Theorem in Field Theory</a></div>
+                                <div class="lesson-link "><a href="O.html">Noether Theorem and Symmetry - Spacetime and Energy-Momentum Conservation</a></div>
+                                <div class="lesson-link active"><a href="A.html">Abelian Noether's Canonical Energy Momentum Tensor</a></div>
+                                <div class="lesson-link "><a href="B.html">Non-Abelian Noether's Canonical Energy Momentum Tensor</a></div>
                                 </div>
                             </div>
   
@@ -316,6 +405,20 @@
 
     }
     </style>
+    <script>
+        MathJax = {
+          loader: {
+            // 載入必要的擴充套件：cancel (刪除線) 和 mathtools (給 underbracket 用)
+            load: ['[tex]/cancel', '[tex]/mathtools'] 
+          },
+          tex: {
+            // 1. 啟用上述套件
+            packages: {'[+]': ['cancel', 'mathtools']},
+            // 2. 啟用自動編號與 Label 功能 (關鍵設定)
+            tags: 'ams' 
+          }
+        };
+    </script>
   
 </body>
 </html>
