@@ -1,0 +1,5 @@
+topology,pair,p2p_write_one_way_gbps,p2p_write_bidirectional_gbps,gpu_write_latency_us,note
+PIX,GPU0-GPU1,13.20,25.13,1.59-1.60,same PCIe switch
+PHB,GPU0-GPU5,10.28,19.71,2.05-2.07,across PCIe host bridge
+NV4,GPU7-GPU9,96.84-96.85,193.20-193.51,1.99-2.01,four bonded NVLinks
+SYS,GPU0-GPU10,,,16.20-18.17,no direct P2P; displayed bandwidth is staged fallback

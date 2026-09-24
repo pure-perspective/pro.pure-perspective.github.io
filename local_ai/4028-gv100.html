@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Peir-Ru Wang">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/PP.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/PP.png">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>4028 GV100 異構伺服器性能實測｜Pure Perspective</title>
+    <meta name="description" content="同一台 4028 伺服器混裝 11 張 GV100 GPU 的 CUDA P2P 與 NCCL 實測：比較 PIX、PHB、NV4、SYS，以及 2、5、6、10、11 GPU 的 scaling transition。">
+    <meta name="keywords" content="GV100,V100,V100S,Quadro GV100,CUDA,NCCL,P2P,NVLink,PIX,PHB,SYS,local AI,異構 GPU">
+    <link rel="canonical" href="https://www.pure-perspective.org/local_ai/4028-gv100.html">
+
+    <style>
+        :root {
+            --ink: #17212b;
+            --muted: #65727e;
+            --line: #dce3e8;
+            --soft: #f4f7f8;
+            --blue: #417cb0;
+            --cyan: #2a98a6;
+            --green: #45a777;
+            --violet: #745aa8;
+            --amber: #bd7a29;
+            --red: #a94b4b;
+        }
+        .benchmark-page { color: var(--ink); }
+        .benchmark-page h2 { margin-top: 54px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+        .benchmark-page h3 { margin-top: 32px; }
+        .benchmark-page p, .benchmark-page li { line-height: 1.85; }
+        .lead-panel {
+            margin: 0 0 30px;
+            padding: 26px 28px;
+            border-left: 5px solid var(--blue);
+            background: linear-gradient(135deg, #eef5f9, #f8fafb);
+            font-size: 17px;
+        }
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 12px;
+            margin: 25px 0 34px;
+        }
+        .metric-card {
+            min-height: 132px;
+            padding: 18px;
+            border: 1px solid var(--line);
+            border-top: 4px solid var(--blue);
+            background: #fff;
+        }
+        .metric-card .number { display: block; font-size: 30px; font-weight: 700; line-height: 1.15; color: var(--ink); }
+        .metric-card .unit { font-size: 13px; color: var(--muted); }
+        .metric-card .label { display: block; margin-top: 12px; font-size: 13px; line-height: 1.4; color: var(--muted); }
+        .note-box, .warning-box {
+            margin: 24px 0;
+            padding: 17px 20px;
+            border: 1px solid #cddde8;
+            background: #f4f9fc;
+        }
+        .warning-box { border-color: #ead5b7; background: #fff9ef; }
+        .data-table-wrap { margin: 22px 0 30px; overflow-x: auto; }
+        .data-table { width: 100%; min-width: 680px; border-collapse: collapse; font-size: 14px; }
+        .data-table th { padding: 11px 10px; border-bottom: 2px solid var(--ink); background: #f4f6f7; text-align: left; white-space: nowrap; }
+        .data-table td { padding: 11px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+        .data-table tr:hover td { background: #f8fafb; }
+        .chip { display: inline-block; padding: 3px 8px; border-radius: 3px; background: #edf2f5; font-size: 12px; font-weight: 600; }
+        .chip.nv { color: #2d6b4e; background: #e7f4ed; }
+        .chip.sys { color: #8c3d3d; background: #f8eaea; }
+        .topology-map {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin: 24px 0 30px;
+        }
+        .island {
+            padding: 18px;
+            border: 1px solid var(--line);
+            background: var(--soft);
+        }
+        .island-title { margin-bottom: 12px; font-size: 13px; font-weight: 700; letter-spacing: .08em; color: var(--muted); text-transform: uppercase; }
+        .gpu-row { display: flex; flex-wrap: wrap; gap: 7px; }
+        .gpu-node { padding: 8px 10px; border: 1px solid #b9c8d3; background: #fff; font-size: 12px; font-weight: 600; }
+        .gpu-node.fast { border-color: var(--green); color: #246b49; }
+        .gpu-node.nvlink { border: 2px solid var(--green); }
+        .sys-node { grid-column: 1 / -1; border-left: 5px solid var(--red); background: #fbf3f3; }
+        .bar-chart { margin: 24px 0 32px; }
+        .bar-row { display: grid; grid-template-columns: 160px 1fr 92px; align-items: center; gap: 12px; margin: 12px 0; }
+        .bar-label { font-size: 13px; font-weight: 600; }
+        .bar-track { height: 23px; background: #edf1f3; }
+        .bar-fill { height: 100%; min-width: 2px; background: var(--blue); }
+        .bar-fill.green { background: var(--green); }
+        .bar-fill.violet { background: var(--violet); }
+        .bar-value { text-align: right; font-variant-numeric: tabular-nums; font-size: 13px; }
+        .transition {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            margin: 25px 0 34px;
+            border: 1px solid var(--line);
+        }
+        .transition-step { position: relative; padding: 20px 16px; border-right: 1px solid var(--line); }
+        .transition-step:last-child { border-right: 0; }
+        .transition-step .count { font-size: 27px; font-weight: 700; }
+        .transition-step .bus { color: var(--blue); font-weight: 700; }
+        .transition-step .route { margin-top: 8px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+        .verdict { margin: 28px 0; padding: 24px; background: #17212b; color: #fff; }
+        .verdict h3 { margin: 0 0 14px; color: #fff; }
+        .verdict p { margin: 0; color: #e5edf2; }
+        .command {
+            margin: 15px 0;
+            padding: 14px 16px;
+            overflow-x: auto;
+            border-left: 4px solid var(--cyan);
+            background: #202b34;
+            color: #e7f2f5;
+            font-family: Menlo, Monaco, Consolas, monospace;
+            font-size: 12px;
+            white-space: pre;
+        }
+        .download-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 30px; }
+        .download-row a { border: 1px solid var(--line); padding: 9px 12px; background: #fff; }
+        .source-list { padding-left: 20px; }
+        .mini { color: var(--muted); font-size: 12px; }
+        .sidebar .lesson-link a { display: block; padding: 8px 0; }
+        @media (max-width: 991px) {
+            .metric-grid, .transition { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .transition-step:nth-child(2) { border-right: 0; }
+            .transition-step:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+        }
+        @media (max-width: 600px) {
+            .metric-grid, .topology-map, .transition { grid-template-columns: 1fr; }
+            .sys-node { grid-column: auto; }
+            .transition-step { border-right: 0; border-bottom: 1px solid var(--line); }
+            .transition-step:last-child { border-bottom: 0; }
+            .bar-row { grid-template-columns: 105px 1fr 72px; gap: 8px; }
+            .lead-panel { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="../index.html" class="site-title">𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</a>
+                </div>
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="https://www.insight-ihbar.com/index_ch.html">量子科技</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">物理筆記<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="../CCC/main.html">超導臨界耦合常數理論</a></li>
+                                <li><a href="../Action_C/main.html">古典最小作用量原理</a></li>
+                                <li><a href="../Action_R/main.html">相對論性最小作用量原理</a></li>
+                                <li><a href="../Noether/main.html">諾特定理</a></li>
+                                <li><a href="../STM/main.html">STM</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">工程筆記<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="../CVT/main.html">確動式 CVT 專利</a></li>
+                                <li><a href="../EA-1/main.html">EA-1 低溫電性量測</a></li>
+                                <li><a href="../EA-2/main.html">EA-2 自動粉末配粉機</a></li>
+                                <li><a href="../TWing/main.html">雙主翼風洞實驗</a></li>
+                                <li class="active"><a href="./4028-gv100.html">4028 GV100 異構實測</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../About/main.html">About Me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <h1>4028 GV100<br>異構伺服器性能實測</h1>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="./main.html">Local AI</a></li>
+                    <li class="breadcrumb-item"><a href="./4028-gv100.html">4028 GV100</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <main id="main" class="site-main benchmark-page">
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="blog-post">
+                            <div class="post-content">
+                                <div style="text-align:center;">
+                                    <h2 style="margin-top:0; border:0;">同一台、同一世代，卻不是同一種 GPU</h2>
+                                    <p class="mini">CUDA P2P、NVLink 與 NCCL AllReduce 實測｜2026-08-23</p>
+                                </div>
+
+                                <div class="lead-panel">
+                                    這台代號 <b>4028</b> 的伺服器並不是整齊的 8-GPU appliance，而是把 <b>11 張 Volta／GV100</b> 塞進兩個 NUMA domain：六張 Tesla V100、V100S、PG500、兩張 Quadro GV100，再加一張孤立的 16GB FHHL。真正棘手的不是「能不能看到 11 張卡」，而是每張卡的 HBM 時脈、PCIe 路徑、NVLink 與 NCCL transport 都不一樣。
+                                </div>
+
+                                <div class="metric-grid">
+                                    <div class="metric-card"><span class="number">11</span><span class="unit">GPU</span><span class="label">五種板卡名稱，同屬 GV100 世代</span></div>
+                                    <div class="metric-card"><span class="number">336</span><span class="unit">GiB HBM2</span><span class="label">10 × 32GB + 1 × 16GB</span></div>
+                                    <div class="metric-card"><span class="number">193.5</span><span class="unit">GB/s</span><span class="label">GPU 7 ↔ 9，NV4 雙向 P2P</span></div>
+                                    <div class="metric-card"><span class="number">16–18</span><span class="unit">µs</span><span class="label">GPU 10 跨 NUMA、無 P2P 延遲</span></div>
+                                </div>
+
+                                <div class="verdict">
+                                    <h3>先講結論</h3>
+                                    <p><b>GPU 0–4</b> 是最乾淨的五卡 PIX 島；<b>GPU 7 與 9</b> 是唯一的 NV4 高速雙卡組；第六張卡開始跨 PHB，NCCL scaling 立刻掉一階；<b>GPU 10</b> 位於另一個 NUMA、沒有 P2P、而且只有 16GB，不適合硬塞進 11 卡同步訓練。這台機器的最佳解不是「全部一起跑」，而是按拓樸切工作。</p>
+                                </div>
+
+                                <section id="platform">
+                                    <h2>測試平台與方法</h2>
+                                    <p>測試前先停止 8 個推論服務並確認 GPU 記憶體清空，完成後再全部恢復。CUDA device index 固定使用 <code>PCI_BUS_ID</code> 排序，避免 CUDA 與 <code>nvidia-smi</code> 編號錯位。所有 NCCL validation 都是 <b>0 errors</b>。</p>
+                                    <div class="data-table-wrap">
+                                        <table class="data-table">
+                                            <thead><tr><th>項目</th><th>版本／設定</th><th>備註</th></tr></thead>
+                                            <tbody>
+                                                <tr><td>Host</td><td>lab217（SSH alias: 4028）</td><td>雙 NUMA，GPU 0–9 在 NUMA 0；GPU 10 在 NUMA 1</td></tr>
+                                                <tr><td>Driver</td><td>580.173.02</td><td><code>nvidia-smi</code> 顯示 CUDA 13.0 相容上限</td></tr>
+                                                <tr><td>CUDA Samples</td><td>12.0.140 / sm_70</td><td><code>p2pBandwidthLatencyTest</code></td></tr>
+                                                <tr><td>NCCL</td><td>2.23.4 / CUDA 12.0 / sm_70</td><td>搭配 nccl-tests 2.13.11</td></tr>
+                                                <tr><td>AllReduce</td><td>1 GiB、float sum、out-of-place</td><td>另做重複單點與 transport log</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="warning-box"><b>版本細節：</b>驅動宣告 CUDA 13.0 相容，不代表拿 CUDA 13 預編譯 binary 就能測 Volta。這次使用保留 <code>sm_70</code> code object 的 CUDA 12 工具鏈，才是實際執行環境。</div>
+                                </section>
+
+                                <section id="cards">
+                                    <h2>五種 GV100：時脈與單卡 HBM 實測</h2>
+                                    <p>下表的「應用核心」與「記憶體時脈」是 4028 由 NVML 回報的固定 applications clock；「本機 copy」取自 CUDA sample 對角線，代表 device-local copy 的有效頻寬，不等同於廠商標示的理論峰值。</p>
+                                    <div class="data-table-wrap">
+                                        <table class="data-table">
+                                            <thead><tr><th>GPU</th><th>板卡</th><th>HBM2</th><th>應用／回報最高核心</th><th>HBM 時脈</th><th>理論／推算頻寬</th><th>本機 copy 實測</th></tr></thead>
+                                            <tbody>
+                                                <tr><td>0–5</td><td>Tesla V100-PCIE-32GB ×6</td><td>32GB</td><td>1230 / 1380 MHz</td><td>877 MHz</td><td>900 GB/s</td><td><b>804.21 GB/s</b>（平均）</td></tr>
+                                                <tr><td>6</td><td>Tesla V100S-PCIE-32GB</td><td>32GB</td><td>1245 / 1597 MHz</td><td>1107 MHz</td><td>約 1134 GB/s</td><td><b>1017.25 GB/s</b></td></tr>
+                                                <tr><td>7、9</td><td>Quadro GV100 ×2</td><td>32GB</td><td>1132 / 1912 MHz</td><td>850 MHz</td><td>870 GB/s</td><td><b>590.74 GB/s</b>（平均）</td></tr>
+                                                <tr><td>8</td><td>Tesla PG500-216</td><td>32GB</td><td>1260 / 1380 MHz</td><td>1107 MHz</td><td>約 1134 GB/s</td><td><b>1010.67 GB/s</b></td></tr>
+                                                <tr><td>10</td><td>Tesla V100-FHHL-16GB</td><td>16GB</td><td>937 / 1290 MHz</td><td>810 MHz</td><td>約 829 GB/s</td><td><b>748.68 GB/s</b></td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="bar-chart" aria-label="單卡本機 copy 頻寬比較">
+                                        <div class="bar-row"><div class="bar-label">V100S 32GB</div><div class="bar-track"><div class="bar-fill green" style="width:100%"></div></div><div class="bar-value">1017.25</div></div>
+                                        <div class="bar-row"><div class="bar-label">PG500-216</div><div class="bar-track"><div class="bar-fill green" style="width:99.4%"></div></div><div class="bar-value">1010.67</div></div>
+                                        <div class="bar-row"><div class="bar-label">V100 32GB 平均</div><div class="bar-track"><div class="bar-fill" style="width:79.1%"></div></div><div class="bar-value">804.21</div></div>
+                                        <div class="bar-row"><div class="bar-label">V100 FHHL 16GB</div><div class="bar-track"><div class="bar-fill" style="width:73.6%"></div></div><div class="bar-value">748.68</div></div>
+                                        <div class="bar-row"><div class="bar-label">Quadro GV100 平均</div><div class="bar-track"><div class="bar-fill violet" style="width:58.1%"></div></div><div class="bar-value">590.74 GB/s</div></div>
+                                    </div>
+
+                                    <p>V100S 與 PG500 的 1107 MHz HBM 約落在 1.01 TB/s，有效值接近推算峰值的 90%；六張標準 V100 也約 89%。最醒目的是 Quadro GV100：官方峰值為 870 GB/s，但 sample 只量到約 591 GB/s。它們的價值反而在彼此之間的 NV4，而不是單卡 HBM。</p>
+                                    <div class="warning-box"><b>功耗狀態不要混寫成規格：</b>15:23 的觀測畫面中 GPU 0–9 被限制在 190 W；18:33 查詢時已回到板卡預設 250 W。GPU 10 的固定上限為 150 W。本文保留兩個時間點，沒有把 190 W 當成板卡原生 TDP。</div>
+                                </section>
+
+                                <section id="topology">
+                                    <h2>實際拓樸：兩個 PIX 島、一組 NV4、一張 SYS 孤島</h2>
+                                    <div class="topology-map">
+                                        <div class="island">
+                                            <div class="island-title">NUMA 0 · PIX island A</div>
+                                            <div class="gpu-row">
+                                                <span class="gpu-node">0 V100</span><span class="gpu-node">1 V100</span><span class="gpu-node">2 V100</span><span class="gpu-node">3 V100</span><span class="gpu-node">4 V100</span>
+                                            </div>
+                                        </div>
+                                        <div class="island">
+                                            <div class="island-title">NUMA 0 · PIX island B</div>
+                                            <div class="gpu-row">
+                                                <span class="gpu-node">5 V100</span><span class="gpu-node fast">6 V100S</span><span class="gpu-node nvlink">7 Quadro</span><span class="gpu-node fast">8 PG500</span><span class="gpu-node nvlink">9 Quadro</span>
+                                            </div>
+                                            <p class="mini" style="margin:12px 0 0;">GPU 7 ↔ 9 另以 NV4 直連</p>
+                                        </div>
+                                        <div class="island sys-node">
+                                            <div class="island-title">NUMA 1 · SYS</div>
+                                            <div class="gpu-row"><span class="gpu-node">10 V100 FHHL 16GB</span></div>
+                                            <p class="mini" style="margin:12px 0 0;">經 UPI／SMP interconnect 連往 GPU 0–9；P2P read/write 均為 TNS</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="data-table-wrap">
+                                        <table class="data-table">
+                                            <thead><tr><th>路徑</th><th>代表 pair</th><th>單向 P2P write</th><th>雙向</th><th>GPU write latency</th><th>相對 PIX</th></tr></thead>
+                                            <tbody>
+                                                <tr><td><span class="chip">PIX</span></td><td>0 ↔ 1</td><td><b>13.20 GB/s</b></td><td>25.13 GB/s</td><td>1.59–1.60 µs</td><td>基準</td></tr>
+                                                <tr><td><span class="chip">PHB</span></td><td>0 ↔ 5</td><td><b>10.28 GB/s</b></td><td>19.71 GB/s</td><td>2.05–2.07 µs</td><td>約 0.78×</td></tr>
+                                                <tr><td><span class="chip nv">NV4</span></td><td>7 ↔ 9</td><td><b>96.84–96.85 GB/s</b></td><td>193.20–193.51 GB/s</td><td>1.99–2.01 µs</td><td>約 7.34×</td></tr>
+                                                <tr><td><span class="chip sys">SYS</span></td><td>0 ↔ 10</td><td>無直接 P2P</td><td>無直接 P2P</td><td><b>16.20–18.17 µs</b></td><td>約 10× latency</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p class="mini">PHB 不是單一固定速度：完整矩陣的單向值為 7.08–10.28 GB/s，雙向為 14.17–19.72 GB/s。GPU 10 的 sample 雖會顯示一般 memory-copy fallback 數字，但它不是 direct P2P，不能與 PIX／PHB／NV4 並排解讀。</p>
+                                </section>
+
+                                <section id="nccl">
+                                    <h2>NCCL：從 5 卡到 6 卡，第一次跨橋就掉速</h2>
+                                    <h3>先看同樣是兩張卡，路徑可以差十倍</h3>
+                                    <div class="data-table-wrap">
+                                        <table class="data-table">
+                                            <thead><tr><th>案例</th><th>GPU</th><th>algbw</th><th>busbw</th><th>解讀</th></tr></thead>
+                                            <tbody>
+                                                <tr><td>2 PIX</td><td>0、1</td><td>11.40 GB/s</td><td>11.40 GB/s</td><td>同一 PCIe switch</td></tr>
+                                                <tr><td>2 PHB</td><td>0、5</td><td>6.99 GB/s</td><td>6.99 GB/s</td><td>NCCL 預設改走 SHM</td></tr>
+                                                <tr><td>2 NV4</td><td>7、9</td><td><b>73.31 GB/s</b></td><td><b>73.31 GB/s</b></td><td>唯一真正高速雙卡島</td></tr>
+                                                <tr><td>2 SYS</td><td>0、10</td><td>6.90 GB/s</td><td>6.90 GB/s</td><td>跨 NUMA，無 direct P2P</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <h3>Scaling transition</h3>
+                                    <div class="transition">
+                                        <div class="transition-step"><div class="count">5 GPU</div><div class="bus">11.17 GB/s busbw</div><div class="route">0–4 全在 PIX island A<br>algbw 6.98</div></div>
+                                        <div class="transition-step"><div class="count">6 GPU</div><div class="bus">7.91 GB/s busbw</div><div class="route">加入 GPU 5，第一次跨 PHB<br>直接重測 6.75–6.89</div></div>
+                                        <div class="transition-step"><div class="count">10 GPU</div><div class="bus">6.88 GB/s busbw</div><div class="route">兩個五卡島組 ring<br>重測 6.63–6.87</div></div>
+                                        <div class="transition-step"><div class="count">11 GPU</div><div class="bus">7.60 GB/s busbw</div><div class="route">加入 NUMA 1／SYS GPU 10<br>algbw 僅 4.18</div></div>
+                                    </div>
+
+                                    <div class="bar-chart" aria-label="NCCL 多 GPU bus bandwidth 比較">
+                                        <div class="bar-row"><div class="bar-label">5 PIX</div><div class="bar-track"><div class="bar-fill green" style="width:100%"></div></div><div class="bar-value">11.17</div></div>
+                                        <div class="bar-row"><div class="bar-label">6 V100</div><div class="bar-track"><div class="bar-fill" style="width:70.8%"></div></div><div class="bar-value">7.91</div></div>
+                                        <div class="bar-row"><div class="bar-label">10 GPU</div><div class="bar-track"><div class="bar-fill" style="width:61.6%"></div></div><div class="bar-value">6.88</div></div>
+                                        <div class="bar-row"><div class="bar-label">11 GPU</div><div class="bar-track"><div class="bar-fill violet" style="width:68.0%"></div></div><div class="bar-value">7.60 GB/s</div></div>
+                                    </div>
+
+                                    <p><b>5→6 卡是整台機器最重要的 transition。</b>五張 PIX 的 ring 不必跨 PCIe Host Bridge；加上 GPU 5 後，ring 出現兩條跨島邊，NCCL 預設把這些 PHB 邊選成 <code>SHM/direct</code>，bus bandwidth 因而掉到約 7 GB/s 等級。</p>
+                                    <p>11 卡的 busbw 看似從 6.88 回升到 7.60 GB/s，不能直接說 scaling 變好。AllReduce 的 busbw 含拓樸正規化；實際 algbw 只有 4.18 GB/s，而且 GPU 10 只有 16GB、跨 NUMA、沒有 P2P。對真實訓練而言，它通常同時降低容量上限與同步效率。</p>
+                                </section>
+
+                                <section id="transport">
+                                    <h2>NCCL transport：支援 P2P，不代表 NCCL 預設會用</h2>
+                                    <p><code>nvidia-smi topo -p2p</code> 對 GPU 0–9 全部回報 OK，但 NCCL log 顯示：PIX 與 NV4 走 <code>P2P/direct</code>，跨 PHB 的 ring edge 卻自動選擇 <code>SHM/direct</code>。</p>
+                                    <div class="data-table-wrap">
+                                        <table class="data-table">
+                                            <thead><tr><th>Ring</th><th>順序</th><th>預設 SHM edge</th></tr></thead>
+                                            <tbody>
+                                                <tr><td>6 GPU</td><td>0 → 1 → 2 → 3 → 4 → 5</td><td>4→5、5→0</td></tr>
+                                                <tr><td>10 GPU</td><td>0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 9 → 8</td><td>4→5、8→0</td></tr>
+                                                <tr><td>11 GPU</td><td>0 → 1 → 2 → 3 → 4 → 5 → 6 → 7 → 9 → 8 → 10</td><td>4→5、8→10、10→0</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <p>強制 <code>NCCL_P2P_LEVEL=PHB</code> 後，6 與 10 GPU 明顯改善；11 GPU 反而略退。這不是一個能全機套用的萬用環境變數。</p>
+                                    <div class="data-table-wrap">
+                                        <table class="data-table">
+                                            <thead><tr><th>案例</th><th>預設／重測 busbw</th><th>強制 PHB P2P</th><th>結果</th></tr></thead>
+                                            <tbody>
+                                                <tr><td>2 PHB</td><td>6.99</td><td>7.78 GB/s</td><td>+11%</td></tr>
+                                                <tr><td>6 GPU</td><td>6.75–6.89</td><td><b>7.94 GB/s</b></td><td>約 +15–18%</td></tr>
+                                                <tr><td>10 GPU</td><td>6.63–6.87</td><td><b>7.87 GB/s</b></td><td>約 +15–19%</td></tr>
+                                                <tr><td>11 GPU</td><td>7.61–7.66</td><td>7.54 GB/s</td><td>略差，保留預設</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </section>
+
+                                <section id="deployment">
+                                    <h2>這台機器應該怎麼切</h2>
+                                    <div class="data-table-wrap">
+                                        <table class="data-table">
+                                            <thead><tr><th>工作型態</th><th>建議 GPU</th><th>原因</th></tr></thead>
+                                            <tbody>
+                                                <tr><td>五卡 data parallel</td><td><b>0–4</b></td><td>單一 PIX island，NCCL busbw 11.17 GB/s，是最乾淨的同步群組</td></tr>
+                                                <tr><td>六卡／十卡同步工作</td><td><b>0–5／0–9</b></td><td>可針對 job 測試 <code>NCCL_P2P_LEVEL=PHB</code>；不要設成整機永久值</td></tr>
+                                                <tr><td>64GB 雙卡模型平行</td><td><b>7、9</b></td><td>唯一 NV4 pair，實測雙向 193.5 GB/s；但 Quadro 單卡 HBM 有效頻寬較低</td></tr>
+                                                <tr><td>高 HBM bandwidth 單卡工作</td><td><b>6 或 8</b></td><td>本機 copy 都超過 1 TB/s</td></tr>
+                                                <tr><td>小模型／獨立推論／輔助任務</td><td><b>10</b></td><td>16GB、150W、NUMA 1、無 P2P；與主 ring 解耦更合理</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="verdict">
+                                        <h3>異構裝同機的真正成本</h3>
+                                        <p>總 VRAM 與 GPU 張數很好看，但排程單位必須是「拓樸群組」，不是「空閒卡」。只看 <code>nvidia-smi</code> 的 GPU-Util 或 P2P=OK，會同時漏掉 HBM 差異、NCCL transport 選擇、NUMA 邊界與最小 16GB 容量限制。</p>
+                                    </div>
+                                </section>
+
+                                <section id="reproduce">
+                                    <h2>重現指令與整理資料</h2>
+                                    <div class="command">CUDA_DEVICE_ORDER=PCI_BUS_ID ./p2pBandwidthLatencyTest</div>
+                                    <div class="command">CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=0,1 \
+./all_reduce_perf -b 1G -e 1G -f 2 -g 2</div>
+                                    <div class="command">NCCL_P2P_LEVEL=PHB CUDA_VISIBLE_DEVICES=0,1,2,3,4,5 \
+./all_reduce_perf -b 1G -e 1G -f 2 -g 6</div>
+                                    <div class="download-row">
+                                        <a href="data/hardware-summary.csv"><i class="fa fa-download" aria-hidden="true"></i> 板卡與時脈 CSV</a>
+                                        <a href="data/interconnect-summary.csv"><i class="fa fa-download" aria-hidden="true"></i> P2P 路徑 CSV</a>
+                                        <a href="data/nccl-summary.csv"><i class="fa fa-download" aria-hidden="true"></i> NCCL 結果 CSV</a>
+                                    </div>
+                                </section>
+
+                                <section id="references">
+                                    <h2>參考資料</h2>
+                                    <ul class="source-list">
+                                        <li><a href="https://www.nvidia.com/en-gb/data-center/tesla-v100/" target="_blank" rel="noopener">NVIDIA Tesla V100 官方產品資料</a></li>
+                                        <li><a href="https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/quadro-volta-gv100-data-sheet-us-nvidia-704619-r2-web.pdf" target="_blank" rel="noopener">NVIDIA Quadro GV100 Data Sheet</a></li>
+                                        <li><a href="https://github.com/NVIDIA/cuda-samples/tree/master/Samples/5_Domain_Specific/p2pBandwidthLatencyTest" target="_blank" rel="noopener">NVIDIA CUDA Samples: p2pBandwidthLatencyTest</a></li>
+                                        <li><a href="https://github.com/NVIDIA/nccl-tests" target="_blank" rel="noopener">NVIDIA nccl-tests</a></li>
+                                        <li><a href="https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/env.html" target="_blank" rel="noopener">NCCL Environment Variables 官方文件</a></li>
+                                    </ul>
+                                    <p class="mini">所有數值均來自 4028／lab217 的 2026-08-23 當日實測。單次 benchmark 不是跨機器的通用規格；韌體、power limit、CPU memory traffic 與 NCCL 版本都可能改變結果。</p>
+                                </section>
+
+                                <div class="post-meta">
+                                    <span class="post-author"><a href="../About/main.html"><img class="img-res" src="../WebP/IMG_0964_2.webp" alt="王培儒">王培儒</a></span>
+                                    <span class="post-category"><a href="./main.html"><i class="fa fa-folder" aria-hidden="true"></i>Local AI</a></span>
+                                </div>
+                            </div>
+                        </article>
+                    
+                        <div id="prev-next-nav" class="text-center">
+                                    <a class="btn btn-gray" href="main.html">← 上一頁</a> 
+                                </div>
+                    </div>
+
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <div class="widget">
+                                <div id="lesson-list_2">
+                                <div class="lesson-link "><a href="main.html">Local AI</a></div>
+                                <div class="lesson-link active"><a href="4028-gv100.html">4028 GV100 異構伺服器性能實測</a></div>
+                                </div>
+                            </div>
+                        </div></aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a href="../index.html" class="site-title">𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</a>
+                    <p><b><span style="color:#3e86c4;">水</span><span style="color:#000;">木</span><span style="color:#3e86c4;">湛</span><span style="color:#000;">清華</span></b><br><span style="font-size:.7em; line-height:.8;">－《文選．謝混．遊西池詩》<br>致12年的<span style="color:#7f1084;">清華</span>歲月 2012-2024</span></p>
+                </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links"><li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li></ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container"><div class="row"><div class="col-xs-8"><div class="social-links"><a class="linkedin-bg" href="https://www.linkedin.com/in/peir-ru-wang"><i class="fab fa-linkedin"></i></a></div></div><div class="col-xs-4"><div class="text-right"><p><span style="font-size:16px;">𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</span></p><p>All Rights Reserved</p></div></div></div></div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

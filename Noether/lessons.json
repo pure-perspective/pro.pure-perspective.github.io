@@ -1,8 +1,32 @@
 [
-    { "title": "古典諾特定理", "file": "main.html" },
-    { "title": "一般教科書上守恆量的推導", "file": "G.html" },
-    { "title": "Maximal Symmetry Action", "file": "H.html" },
-    { "title": "Ostrogradsky instability與高次微分", "file": "I.html" },
-    { "title": "場論中的諾特定理Noether theorem-Field theory", "file": "N.html" },
-    { "title": "諾特定理與對稱性-時空與能量動量守恆", "file": "O.html" }
+  {
+    "title": "古典諾特定理",
+    "file": "main.html",
+    "status": "revised"
+  },
+  {
+    "title": "一般教科書上守恆量的推導",
+    "file": "G.html",
+    "status": "revised"
+  },
+  {
+    "title": "Maximal Symmetry Action",
+    "file": "H.html",
+    "status": "revised"
+  },
+  {
+    "title": "Ostrogradsky instability與高次微分",
+    "file": "I.html",
+    "status": "revised"
+  },
+  {
+    "title": "場論中的諾特定理Noether theorem-Field theory",
+    "file": "N.html",
+    "status": "revised"
+  },
+  {
+    "title": "諾特定理與對稱性-時空與能量動量守恆",
+    "file": "O.html",
+    "status": "revised"
+  }
 ]

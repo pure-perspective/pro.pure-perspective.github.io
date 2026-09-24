@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Peir-Ru Wang">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/PP.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/PP.png">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+
+    <title>Local AI｜Pure Perspective</title>
+    <meta name="description" content="Pure Perspective 的 Local AI 實作筆記：記錄本地 GPU 伺服器、模型部署、拓樸測試與效能調校。">
+    <meta name="keywords" content="Local AI,GPU,CUDA,NCCL,模型部署,效能實測">
+    <link rel="canonical" href="https://www.pure-perspective.org/local_ai/main.html">
+
+    <style>
+        :root {
+            --ink: #17212b;
+            --muted: #65727e;
+            --line: #dce3e8;
+            --soft: #f4f7f8;
+            --blue: #417cb0;
+            --green: #45a777;
+        }
+        .local-ai-page { color: var(--ink); }
+        .series-intro {
+            margin-bottom: 36px;
+            padding: 26px 28px;
+            border-left: 5px solid var(--blue);
+            background: var(--soft);
+        }
+        .series-intro h2 { margin-top: 0; }
+        .series-intro p { margin-bottom: 0; line-height: 1.85; }
+        .article-card {
+            display: grid;
+            grid-template-columns: minmax(240px, 38%) 1fr;
+            margin-bottom: 28px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            background: #fff;
+        }
+        .article-card-image {
+            min-height: 290px;
+            background: #111820 url('../../ImagePool/GPU.png') center / cover no-repeat;
+        }
+        .article-card-body { padding: 28px; }
+        .article-card-body h2 { margin: 8px 0 14px; font-size: 26px; line-height: 1.35; }
+        .article-card-body p { line-height: 1.8; }
+        .article-meta { color: var(--muted); font-size: 12px; letter-spacing: .04em; }
+        .tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin: 18px 0 22px; }
+        .tag { padding: 4px 8px; background: #edf2f5; color: #43515d; font-size: 12px; font-weight: 600; }
+        .key-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 18px 0; }
+        .key { padding: 10px; border-top: 3px solid var(--green); background: #f7faf8; }
+        .key b { display: block; font-size: 18px; }
+        .key span { color: var(--muted); font-size: 11px; }
+        .article-card .btn { margin-top: 4px; }
+        .coming-next { margin-top: 38px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); }
+        .coming-next h3 { color: var(--ink); }
+        @media (max-width: 767px) {
+            .article-card { grid-template-columns: 1fr; }
+            .article-card-image { min-height: 220px; }
+            .key-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="../index.html" class="site-title">𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</a>
+                </div>
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="https://www.insight-ihbar.com/index_ch.html">量子科技</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">物理筆記<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="../CCC/main.html">超導臨界耦合常數理論</a></li>
+                                <li><a href="../Action_C/main.html">古典最小作用量原理</a></li>
+                                <li><a href="../Action_R/main.html">相對論性最小作用量原理</a></li>
+                                <li><a href="../Noether/main.html">諾特定理</a></li>
+                                <li><a href="../STM/main.html">STM</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">工程筆記<i class="fa fa-caret-down hidden-xs" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="../CVT/main.html">確動式 CVT 專利</a></li>
+                                <li><a href="../EA-1/main.html">EA-1 低溫電性量測</a></li>
+                                <li><a href="../EA-2/main.html">EA-2 自動粉末配粉機</a></li>
+                                <li><a href="../TWing/main.html">雙主翼風洞實驗</a></li>
+                                <li class="active"><a href="./main.html">Local AI</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../About/main.html">About Me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="hero" class="hero overlay subpage-hero blog-hero">
+        <div class="hero-content">
+            <div class="hero_2-text">
+                <h1>Local AI</h1>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="./main.html">Local AI</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <main id="main" class="site-main local-ai-page">
+        <section class="site-section subpage-site-section section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="series-intro">
+                            <h2>本地 AI 的工程現場</h2>
+                            <p>這裡整理本地 GPU 伺服器、模型部署、記憶體配置、互連拓樸與分散式運算的實作紀錄。重點不是規格表，而是硬體真正裝進系統後，CUDA、NCCL、NUMA 與服務排程如何彼此影響。</p>
+                        </div>
+
+                        <article class="article-card">
+                            <a class="article-card-image" href="./4028-gv100.html" aria-label="閱讀 4028 GV100 異構伺服器性能實測"></a>
+                            <div class="article-card-body">
+                                <div class="article-meta">2026-08-23 · GPU INFRASTRUCTURE</div>
+                                <h2><a href="./4028-gv100.html">4028 上各種 GV100 的性能實測</a></h2>
+                                <p>把五種 GV100、11 張 GPU 裝進同一台雙 NUMA 伺服器後，實測單卡 HBM、PIX／PHB／NV4／SYS，以及 NCCL 從 5、6、10 到 11 GPU 的 scaling transition。</p>
+                                <div class="key-row">
+                                    <div class="key"><b>11 GPU</b><span>336 GiB HBM2</span></div>
+                                    <div class="key"><b>193.5 GB/s</b><span>NV4 雙向 P2P</span></div>
+                                    <div class="key"><b>5→6</b><span>第一次 scaling cliff</span></div>
+                                </div>
+                                <div class="tag-row"><span class="tag">GV100</span><span class="tag">CUDA P2P</span><span class="tag">NCCL</span><span class="tag">NUMA</span></div>
+                                <a class="btn btn-gray" href="./4028-gv100.html">閱讀完整實測</a>
+                            </div>
+                        </article>
+
+                        <div class="coming-next">
+                            <h3>後續文章</h3>
+                            <p>Local AI 的新測試與部署紀錄會繼續加入這個系列；每篇文章使用獨立檔名，<code>main.html</code> 只維護索引。</p>
+                        </div>
+                    
+                        <div id="prev-next-nav" class="text-center">
+                                    <a class="btn btn-gray" href="4028-gv100.html">下一頁 →</a>
+                                </div>
+                    </div>
+
+                    <aside class="col-md-3">
+                        <div class="sidebar">
+                            <div class="widget">
+                                <div id="lesson-list_2">
+                                <div class="lesson-link active"><a href="main.html">Local AI</a></div>
+                                <div class="lesson-link "><a href="4028-gv100.html">4028 GV100 異構伺服器性能實測</a></div>
+                                </div>
+                            </div>
+                        </div></aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <a href="../index.html" class="site-title">𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</a>
+                    <p><b><span style="color:#3e86c4;">水</span><span style="color:#000;">木</span><span style="color:#3e86c4;">湛</span><span style="color:#000;">清華</span></b><br><span style="font-size:.7em; line-height:.8;">－《文選．謝混．遊西池詩》<br>致12年的<span style="color:#7f1084;">清華</span>歲月 2012-2024</span></p>
+                </div>
+                <div class="col-lg-offset-4 col-md-3 col-sm-4 col-md-offset-2 col-sm-offset-0 col-xs-6">
+                    <p class="site-title">𝐾𝐸𝐸𝑃 𝐼𝑁 𝑇𝑂𝑈𝐶𝐻</p>
+                    <ul class="list-unstyled contact-links"><li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@insight-ihbar.com">info@insight-ihbar.com</a></li></ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container"><div class="row"><div class="col-xs-8"><div class="social-links"><a class="linkedin-bg" href="https://www.linkedin.com/in/peir-ru-wang"><i class="fab fa-linkedin"></i></a></div></div><div class="col-xs-4"><div class="text-right"><p><span style="font-size:16px;">𝑃𝑢𝑟𝑒 𝑃𝑒𝑟𝑠𝑝𝑒𝑐𝑡𝑖𝑣𝑒</span></p><p>All Rights Reserved</p></div></div></div></div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/jquery.slicknav.min.js"></script>
+    <script src="../assets/js/jquery.countTo.min.js"></script>
+    <script src="../assets/js/jquery.shuffle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

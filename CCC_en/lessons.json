@@ -1,4 +1,12 @@
 [
-    { "title": "Brief Introduction", "file": "main.html" },
-    { "title": "The Superconducting Critical Couplping COnstants Theory", "file": "Intro-CCC.html" }
+  {
+    "title": "Brief Introduction",
+    "file": "main.html",
+    "status": "revised"
+  },
+  {
+    "title": "The Superconducting Critical Couplping COnstants Theory",
+    "file": "Intro-CCC.html",
+    "status": "revised"
+  }
 ]

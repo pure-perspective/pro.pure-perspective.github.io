@@ -1,8 +1,32 @@
 [
-    { "title": "Introduction", "file": "main.html" },
-    { "title": "Elementary Variational Method", "file": "A.html" },
-    { "title": "Simplified Variation Notation", "file": "B.html" },
-    { "title": "Non-uniqueness of the Lagrangian", "file": "C.html" },
-    { "title": "Point Transformation, Form Invariant, and the Principle of Relativity", "file": "D.html" },
-    { "title": "Lagrangian in Momentum Space", "file": "E.html" }
+  {
+    "title": "Introduction",
+    "file": "main.html",
+    "status": "revised"
+  },
+  {
+    "title": "Elementary Variational Method",
+    "file": "A.html",
+    "status": "revised"
+  },
+  {
+    "title": "Simplified Variation Notation",
+    "file": "B.html",
+    "status": "revised"
+  },
+  {
+    "title": "Non-uniqueness of the Lagrangian",
+    "file": "C.html",
+    "status": "revised"
+  },
+  {
+    "title": "Point Transformation, Form Invariant, and the Principle of Relativity",
+    "file": "D.html",
+    "status": "revised"
+  },
+  {
+    "title": "Lagrangian in Momentum Space",
+    "file": "E.html",
+    "status": "revised"
+  }
 ]

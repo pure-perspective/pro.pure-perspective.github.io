@@ -1,8 +1,32 @@
 [
-    { "title": "前言", "file": "main.html" },
-    { "title": "初階變分法", "file": "A.html" },
-    { "title": "簡化變分表示法", "file": "B.html" },
-    { "title": "Lagrangian的不唯一性", "file": "C.html" },
-    { "title": "Point Transformation、Form Invariant和Principle of Relativity", "file": "D.html" },
-    { "title": "動量空間的Lagrangian", "file": "E.html" }
+  {
+    "title": "前言",
+    "file": "main.html",
+    "status": "revised"
+  },
+  {
+    "title": "初階變分法",
+    "file": "A.html",
+    "status": "revised"
+  },
+  {
+    "title": "簡化變分表示法",
+    "file": "B.html",
+    "status": "revised"
+  },
+  {
+    "title": "Lagrangian的不唯一性",
+    "file": "C.html",
+    "status": "revised"
+  },
+  {
+    "title": "Point Transformation、Form Invariant和Principle of Relativity",
+    "file": "D.html",
+    "status": "revised"
+  },
+  {
+    "title": "動量空間的Lagrangian",
+    "file": "E.html",
+    "status": "revised"
+  }
 ]

@@ -1,0 +1,9 @@
+case,gpus,algbw_gbps,busbw_gbps,validation
+2 PIX,"0,1",11.40,11.40,0 errors
+2 PHB,"0,5",6.99,6.99,0 errors
+2 NV4,"7,9",73.31,73.31,0 errors
+2 SYS,"0,10",6.90,6.90,0 errors
+5 PIX,0-4,6.98,11.17,0 errors
+6 V100,0-5,4.74,7.91,0 errors
+10 GPU,0-9,3.82,6.88,0 errors
+11 GPU,0-10,4.18,7.60,0 errors

@@ -1,3 +1,7 @@
 [
-    { "title": "雙主翼風洞實驗", "file": "main.html" }
+  {
+    "title": "雙主翼風洞實驗",
+    "file": "main.html",
+    "status": "revised"
+  }
 ]

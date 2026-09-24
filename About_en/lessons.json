@@ -1,5 +1,17 @@
 [
-    { "title": "Profile", "file": "main.html" },
-    { "title": "Brief About Me", "file": "CV.html" },
-    { "title": "TA Award", "file": "TA.html" }
+  {
+    "title": "Profile",
+    "file": "main.html",
+    "status": "revised"
+  },
+  {
+    "title": "Brief About Me",
+    "file": "CV.html",
+    "status": "revised"
+  },
+  {
+    "title": "TA Award",
+    "file": "TA.html",
+    "status": "revised"
+  }
 ]

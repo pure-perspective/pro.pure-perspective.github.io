@@ -1,4 +1,12 @@
 [
-    { "title": "簡介", "file": "main.html" },
-    { "title": "超導臨界耦合常數理論", "file": "Intro-CCC.html" }
+  {
+    "title": "簡介",
+    "file": "main.html",
+    "status": "revised"
+  },
+  {
+    "title": "超導臨界耦合常數理論",
+    "file": "Intro-CCC.html",
+    "status": "revised"
+  }
 ]

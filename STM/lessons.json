@@ -1,3 +1,7 @@
 [
-    { "title": "STM", "file": "main.html" }
+  {
+    "title": "STM",
+    "file": "main.html",
+    "status": "revised"
+  }
 ]
